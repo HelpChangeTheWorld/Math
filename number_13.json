@@ -1,0 +1,19 @@
+{
+  "moduli": [
+    16,
+    27,
+    25,
+    7,
+    11,
+    13
+  ],
+  "M": 10810800,
+  "primitive_bases": [
+    10810800,
+    10810801,
+    21621601
+  ],
+  "congruence_checks": 750,
+  "cubic_integer_residual": -7580970550234874192400,
+  "lemma": "For any finite moduli, A=M,B=M+1,C=2M+1 are pairwise coprime and satisfy A^x+B^y=C^z modulo every modulus for all positive exponents. Thus these congruences alone cannot eliminate an entire exponent triple."
+}

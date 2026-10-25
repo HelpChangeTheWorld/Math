@@ -1,0 +1,264 @@
+[
+  {
+    "id": 81,
+    "attempt": "The root searched correlated six-bit uniform samplers and checked the complete ordered width-two Boolean-function class; an independent method reconstructed the same class.",
+    "result": "The exact minimum support is eight. S={0,4,13,14,26,31,33,35} has maximum acceptance error 1/4 over all 18,664 functions. Affine-parity arguments exclude every smaller support.",
+    "evidence": "sampler_search_8.json; method_candidate_8_verification.json; sampler_optimality_proof.md; sampler_search.py; method_oracle.py.",
+    "status": "finite_verified",
+    "scope_limit": "This proves a finite optimum for the specified six-bit model. It neither constructs samplers at growing lengths nor establishes P=BPP; the reported computation was performed by the root and independent verifier.",
+    "next_decision": "Seek a structural construction explaining the eight-point support and test a precisely stated extension to longer programs.",
+    "title": "P versus BPP",
+    "source_urls": [
+      "https://www.math.ias.edu/files/Book-online-Aug0619.pdf"
+    ]
+  },
+  {
+    "id": 82,
+    "attempt": "Generated the three prescribed odd-charge Tseitin CNFs, exhaustively checked assignments, and compared the identical least-variable Shannon proof with and without sharing canonical residual formulas.",
+    "result": "All formulas are unsatisfiable. Tree nodes versus distinct shared residuals are 55 versus 23 for K4, 167 versus 51 for K3,3, and 343 versus 99 for the cube.",
+    "evidence": "computation_batch.py, card82; computation_batch_results.json, item 82; computation_derivations.txt, item 82.",
+    "status": "finite_verified",
+    "scope_limit": "The parity contradiction also has an elementary algebraic proof, but these sharing counts concern one fixed branching representation on three graphs. They provide no general polynomial certificate-size bound.",
+    "next_decision": "Determine which separator restrictions yield a provable sharing bound before extending the input family.",
+    "title": "NP versus coNP",
+    "source_urls": [
+      "https://www.scottaaronson.com/papers/pnp.pdf"
+    ]
+  },
+  {
+    "id": 83,
+    "attempt": "Implemented the two-bit frontier update, proved its induction for arbitrary chains of two-vertex layers, and compared all 256 two-transition instances with graph traversal.",
+    "result": "All promised instances agree. Extending the method by discarding nonlayered edges fails on 1,024 of 4,096 four-vertex digraphs; the two-edge path 0→1→3 is an explicit witness.",
+    "evidence": "m_next(j)=OR_b[m(b) AND E(b,j)]; computation_batch_results.json, item 83; computation_derivations.txt, item 83.",
+    "status": "proved_restricted_statement",
+    "scope_limit": "Four frontier bits plus logarithmic indexing suffice for the promised layered class. The adversarial projection failure identifies exactly why this implementation does not decide unrestricted directed reachability.",
+    "next_decision": "Preserve the proven layered algorithm and specify what additional information would represent within-layer and backward reachability.",
+    "title": "L versus NL",
+    "source_urls": [
+      "https://www.math.ias.edu/files/Book-online-Aug0619.pdf"
+    ]
+  },
+  {
+    "id": 84,
+    "attempt": "Ran all fifteen exact rational chain-and-precision combinations for sixteen steps, rounding the first three coordinates downward and assigning the remaining mass to the fourth.",
+    "result": "Every one of 240 checks satisfies E_next≤(1−ε)E+3·2^(−b). At ε=1/2 the maximum acceptance errors are 3/64, 3/1024, and 3/16384 for b=4,8,12.",
+    "evidence": "computation_batch_results.json, item 84 stores every step; computation_derivations.txt proves contraction and the rounding bound.",
+    "status": "finite_verified",
+    "scope_limit": "The recurrence concerns this explicit contracting four-state family. Exact rational arithmetic here is not an implementation in logarithmic space, and arbitrary randomized configuration graphs need not contract.",
+    "next_decision": "Account for storage and recomputation costs before turning the error recurrence into a space-bounded algorithm.",
+    "title": "L versus BPL",
+    "source_urls": [
+      "https://www.math.ias.edu/files/Book-online-Aug0619.pdf"
+    ]
+  },
+  {
+    "id": 85,
+    "attempt": "Executed ordered decision-diagram quantifier elimination on 200 seeded six-variable formulas under the two alternating prefixes, checking each intermediate function against independent truth-table quantification.",
+    "result": "All 12,600 remaining truth entries agree. The largest reachable diagram contains 25 nodes including terminals across the tested elimination stages.",
+    "evidence": "computation_batch.py, BDD and card85; computation_batch_results.json records all formulas, outcomes, and stage sizes.",
+    "status": "finite_verified",
+    "scope_limit": "This verifies the prescribed representation and elimination operations on a finite sample. A small maximum on six variables does not control worst-case intermediate growth with variable count or quantifier alternation.",
+    "next_decision": "Construct an explicit adversarial family and derive its diagram-size recurrence before claiming an efficient general QBF method.",
+    "title": "P versus PSPACE",
+    "source_urls": [
+      "https://www.scottaaronson.com/papers/pnp.pdf"
+    ]
+  },
+  {
+    "id": 86,
+    "attempt": "Exhaustively optimized deterministic adaptive strategies of depth at most two in the specified hidden-handle Z/7Z game, then directly replayed each attaining tree on all seven secrets.",
+    "result": "Optimal inversion success is 3/7 in the baseline, 4/7 with one challenge-parity query, and 3/7 with a redundant copied handle-index bit.",
+    "evidence": "computation_priority.py; computation_priority_results.json, item 86 includes optimal strategy trees and seven-secret replay outcomes.",
+    "status": "finite_verified",
+    "scope_limit": "The finite oracle exposes only insertion indices; parity is deliberately extra algebraic information. These exact game optima establish neither security of any concrete encoding nor existence of one-way functions.",
+    "next_decision": "Analyze how the optimum changes with group order and query budget while preserving the same explicit oracle semantics.",
+    "title": "Existence of one-way functions",
+    "source_urls": [
+      "https://www.math.ias.edu/files/Book-online-Aug0619.pdf",
+      "https://arxiv.org/abs/2307.03065"
+    ]
+  },
+  {
+    "id": 87,
+    "attempt": "Expanded 100 seeded common-factor sums and 100 exact cancellation controls, applying the prescribed base-seven Kronecker substitution and checking monomial collisions coefficientwise.",
+    "result": "All 100 sums remain nonzero and all 100 cancellation controls remain zero. No distinct monomials collide; the maximum resulting univariate degree is 1,716.",
+    "evidence": "computation_batch_results.json, item 87; computation_derivations.txt proves injectivity for exponent digits between zero and six.",
+    "status": "finite_verified",
+    "scope_limit": "This confirms a known substitution under the explicit degree bound. Expansion and the rapidly increasing substituted degree do not give polynomial-time identity testing for unrestricted circuits.",
+    "next_decision": "Require a uniform cost bound for any proposed smaller substitution before counting common-factor examples as an efficiency improvement.",
+    "title": "Deterministic polynomial identity testing",
+    "source_urls": [
+      "https://www.scottaaronson.com/papers/pnp.pdf"
+    ]
+  },
+  {
+    "id": 88,
+    "attempt": "Built the coefficient-flattening matrices for (x1+y1)^k(x2+y2)^k, k=1,…,6, and compared their exact permutation-matrix ranks with sharing-aware circuit gate counts.",
+    "result": "Ranks are 4,9,16,25,36,49 while circuit sizes are 3,5,7,7,9,9. Already k=1 refutes the candidate inequality rank≤gate count.",
+    "evidence": "The sole nonzero entry in row(a,b) is column(k−a,k−b); computation_batch_results.json, item 88; computation_derivations.txt.",
+    "status": "failed_approach",
+    "scope_limit": "This rejects the raw rank-to-size inequality for general circuits. The weaker logarithmic inequality survives these six examples, which supplies neither its general proof nor a permanent lower bound.",
+    "next_decision": "Abandon raw flattening rank as an unrestricted circuit-size bound and test any replacement measure against reuse and products first.",
+    "title": "VP versus VNP",
+    "source_urls": [
+      "https://www.scottaaronson.com/papers/pnp.pdf"
+    ]
+  },
+  {
+    "id": 89,
+    "attempt": "Executed a revealed-prefix enumeration control on fifty balanced eight-bit semiprimes and derived its exact candidate-count formula, explicitly charging for searching unknown prefixes.",
+    "result": "Revealing 1,2,4,6 leading bits leaves 64,32,8,2 odd candidates. Enumerating all admissible prefixes always returns the original set of 64 odd eight-bit candidates.",
+    "evidence": "2^(t−1)·2^(L−t−1)=2^(L−2); computation_batch_results.json, item 89 stores factors, prefixes, and recovered divisors.",
+    "status": "failed_approach",
+    "scope_limit": "The calculation rejects treating the prefix as free in this plain enumeration baseline. It does not analyze a chosen lattice theorem or prove any lower bound for classical factoring.",
+    "next_decision": "Select an explicit partial-information lattice theorem and compare its total cost with this fully charged enumeration control.",
+    "title": "Efficient classical integer factoring",
+    "source_urls": [
+      "https://www.scottaaronson.com/papers/pnp.pdf"
+    ]
+  },
+  {
+    "id": 90,
+    "attempt": "Constructed the specified rook and Shrikhande graphs, computed an edge-neighborhood invariant, and verified it under one hundred random relabelings of each graph.",
+    "result": "Both graphs have degree six and two common neighbors per distinct pair. Those common neighbors are adjacent for every rook edge and nonadjacent for every Shrikhande edge, giving signatures {1:48} and {0:48}.",
+    "evidence": "computation_batch_results.json, item 90; computation_batch.py, graph90 and signature90.",
+    "status": "finite_verified",
+    "scope_limit": "The invariant rigorously distinguishes this known pair and survives relabeling. Success on two strongly regular graphs is not an algorithm or complexity bound for arbitrary graph isomorphism.",
+    "next_decision": "Find a pair sharing this invariant to identify the next concrete information the proposed method would need.",
+    "title": "Polynomial-time graph isomorphism",
+    "source_urls": [
+      "https://www.scottaaronson.com/papers/pnp.pdf"
+    ]
+  },
+  {
+    "id": 91,
+    "attempt": "Enumerated all 3^8 assignments on the 24 prescribed unique-game instances and derived the exact optimum criterion for arbitrary permutation constraints around a cycle.",
+    "result": "Every C8 optimum is 8/8 or 7/8, exactly as predicted by whether the composed permutation has a fixed point. Nonidentity K8 instances attain between 18/28 and 20/28.",
+    "evidence": "computation_batch_results.json, item 91 records constraints and optimal assignments; computation_derivations.txt gives the cycle proof.",
+    "status": "finite_verified",
+    "scope_limit": "The exhaustive optima provide a correctness baseline, not computational hardness. The proposed SDP comparison was not executed, and no integrality-gap claim follows from these exact values alone.",
+    "next_decision": "Use the saved optima to validate a precisely encoded SDP and distinguish numerical outputs from certified bounds.",
+    "title": "Unique Games Conjecture",
+    "source_urls": [
+      "https://www.math.ias.edu/files/Book-online-Aug0619.pdf"
+    ]
+  },
+  {
+    "id": 92,
+    "attempt": "Derived operator inequalities for the specified positive-product gadget and exactly evaluated its commuting four-projector control on all sixteen computational basis states.",
+    "result": "For 0≤hi,hj≤I, hi≤Gij≤I and ker(Gij)=ker(hi)∩ker(hj). Normalized ground energy cannot decrease. In the four-projector control the normalized spectral gap rises from 1/4 to 1/2.",
+    "evidence": "Gij=2hi−hi²+(I−hi)hj(I−hi); computation_derivations.txt, item 92; computation_batch_results.json, item 92.",
+    "status": "proved_restricted_statement",
+    "scope_limit": "The lemma preserves common zeros and gives one-sided energy control. It does not construct an iterated constant-promise-gap reduction preserving QMA-hardness; the control's spectral gap is a different quantity.",
+    "next_decision": "Determine the locality and promise-gap behavior under repeated application before proposing amplification of hard instances.",
+    "title": "Quantum PCP conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2510.01333"
+    ]
+  },
+  {
+    "id": 93,
+    "attempt": "Screened all 18,424 three-summand sub-tensors of the fixed Strassen tensor square; the captain independently certified an actual nonzero 3×3 flattening minor for every triple.",
+    "result": "Every triple has a rank-three flattening. Therefore no exact three-to-two replacement exists over Q or C while the other 46 summands remain fixed, without any coefficient-alphabet restriction.",
+    "evidence": "computation_priority_results.json, item 93; captain_strassen_minor_certificates.json; captain_priority_audit.py; computation_derivations.txt.",
+    "status": "proved_restricted_statement",
+    "scope_limit": "This closes the proposed local move for this decomposition. It neither proves the full tensor has rank 49 nor excludes replacements involving more summands or global decompositions, and says nothing decisive about ω=2.",
+    "next_decision": "Drop the three-to-two search and specify a genuinely larger replacement move with a new necessary-condition screen.",
+    "title": "Matrix multiplication exponent",
+    "source_urls": [
+      "https://arxiv.org/abs/1610.08364"
+    ]
+  },
+  {
+    "id": 94,
+    "attempt": "Ran both specified DPLL rules on 500 seeded formulas, checked their decisions against exhaustive truth tables, and logged the proposed clause-count potentials after propagation.",
+    "result": "All 1,000 decisions agree. Total recursive calls are 2,751 versus 2,308. Explicit branches make n+(1/2)m2 rise from 8 to 17/2 and n+(1/4)m2 rise from 8 to 33/4.",
+    "evidence": "computation_batch_results.json, item 94 contains original/residual clauses and increasing-potential witnesses; computation_derivations.txt.",
+    "status": "failed_approach",
+    "scope_limit": "These witnesses reject monotonicity of both weighted potentials, while the runtime totals describe only this finite sample. Neither a favorable sample average nor a corrected fixed-base recurrence would settle ETH.",
+    "next_decision": "Redesign the potential and prove its change symbolically for all permitted branch types before fitting a recurrence.",
+    "title": "Exponential Time Hypothesis",
+    "source_urls": [
+      "https://www.scottaaronson.com/papers/pnp.pdf"
+    ]
+  },
+  {
+    "id": 95,
+    "attempt": "Generated 480 benchmark graphs using separate training and testing seeds, fitted the predefined upper-threshold detectors only on training data, and evaluated held-out confusion counts.",
+    "result": "Across six settings, edge and signed-triangle detectors classify between 17 and 27 of 40 test graphs correctly. Exact combinatorial identities for both statistics passed eight additional direct small-graph checks.",
+    "evidence": "computation_batch_results.json, item 95 includes integer statistics, planted sets, thresholds, and confusion counts; computation_derivations.txt derives null moments.",
+    "status": "finite_verified",
+    "scope_limit": "These are small finite detection experiments with mixed outcomes, not clique recovery or asymptotic evidence sufficient to accept or refute the planted-clique conjecture. Test data were not used for threshold selection.",
+    "next_decision": "Use the derived signal-to-noise scaling to decide whether these baseline statistics merit a larger preregistered study.",
+    "title": "Planted clique conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/1806.07508"
+    ]
+  },
+  {
+    "id": 96,
+    "attempt": "Checked the exact bounded-combinatorics hypothesis in the primary MLC theorem, then constructed a concentric-annulus stress test for replacing its uniform bound by pointwise positivity.",
+    "result": "Choosing moduli m_j=2^(−j−1)>0 gives r_N=r0·exp(−2π(1−2^(−N))) and limiting radius r0·exp(−2π)>0. Positive modulus at every scale alone therefore does not force shrinking.",
+    "evidence": "computation_batch_results.json, item 96; computation_derivations.txt; Dudko–Lyubich §1.2, Theorems A–B.",
+    "status": "failed_approach",
+    "scope_limit": "The explicit disks are geometric controls, not renormalization domains or counterexamples to MLC. The theorem's constant depends on a fixed combinatorial bound and its parameter conclusion also invokes rigidity.",
+    "next_decision": "Identify a justified nonsummable modulus estimate for the proposed extension and retain a separate parameter-transfer proof obligation.",
+    "title": "Mandelbrot local-connectivity conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2512.24171",
+      "https://arxiv.org/html/2309.02107v2#S1.SS2"
+    ]
+  },
+  {
+    "id": 97,
+    "attempt": "Converted the fixed-point and genuine two-cycle multiplier conditions into exact rational inequalities and evaluated every entry of the three specified grids near −3/4.",
+    "result": "Thirty entries have certified attracting fixed points and thirty have certified attracting two-cycles. Fifteen remain unclassified, including the three repeated parabolic centers; none of those centers was accepted.",
+    "evidence": "computation_batch_results.json, item 97 stores rational margins; computation_derivations.txt proves the square-root elimination used for fixed points.",
+    "status": "finite_verified",
+    "scope_limit": "There are 75 listed entries, with repeated centers, rather than 75 distinct parameters. Low-period nonacceptance is not a proof of nonhyperbolicity and supplies no density theorem for general complex parameters.",
+    "next_decision": "Preserve these exact certificates as controls when extending the search to higher periods or nearby unclassified parameters.",
+    "title": "Density of hyperbolicity for complex quadratic polynomials",
+    "source_urls": [
+      "https://arxiv.org/abs/0805.1658"
+    ]
+  },
+  {
+    "id": 98,
+    "attempt": "Tried an asymptotic contradiction using invariance along the multiplicative Fourier orbit and the vanishing Cesàro square-coefficient average for nonatomic measures; counted the forced orbit exactly.",
+    "result": "There are 142 positive frequencies 2^a3^b≤10^6. Their forced contribution is only O(log²N/N), so even a fixed nonzero coefficient on this orbit does not contradict the vanishing average.",
+    "evidence": "computation_batch_results.json, item 98; computation_derivations.txt gives the orbit bound and a dominated-convergence proof of the nonatomic average.",
+    "status": "failed_approach",
+    "scope_limit": "This is a new failed cross-scale counting argument after the earlier finite-grid obstruction. It constructs no non-Lebesgue invariant nonatomic measure and does not resolve interactions with positive definiteness or ergodicity.",
+    "next_decision": "Seek a mechanism forcing positive-density Fourier information or another stronger constraint, rather than repeating sparse-orbit counting.",
+    "title": "Furstenberg's ×2, ×3 measure conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2410.22701"
+    ]
+  },
+  {
+    "id": 99,
+    "attempt": "Evaluated the integrability exponent exactly for all sixteen prescribed local corner models and generated their 96 symbolic cutoff-integral expressions, treating the logarithmic case separately.",
+    "result": "Thirteen models converge, two diverge by a power, and one diverges logarithmically. The classification is determined by the rational sign of β=2+p(1/α−1), without numerical extrapolation.",
+    "evidence": "I/π=α^(1−p)(1−δ^β)/β for β≠0; computation_batch_results.json, item 99; computation_derivations.txt handles β=0.",
+    "status": "finite_verified",
+    "scope_limit": "These calculations concern the explicit local power maps. They supply neither global distortion estimates nor Brennan's conjecture for arbitrary domains; no numerical quadrature was performed or claimed.",
+    "next_decision": "Identify a concrete multiscale domain where summing the verified local contributions introduces a new controllable difficulty.",
+    "title": "Brennan's conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2604.12240"
+    ]
+  },
+  {
+    "id": 100,
+    "attempt": "Derived the first Melnikov integral, computed both endpoint controls symbolically, and used continuity to test the actual rational perturbation pair (a,b)=(−1/10,1).",
+    "result": "At the separatrix I0→6/5 and I1→6/35; their ratio tends 1/7 and tends 0 at the center. Thus M=I1−I0/10 has at least one interior zero, with positive separatrix limit 9/175.",
+    "evidence": "computation_priority_results.json, item 100; computation_derivations.txt; captain_priority_audit.py and captain_priority_audit.json independently check the integrals.",
+    "status": "proved_restricted_statement",
+    "scope_limit": "The argument establishes an interior first-Melnikov zero, without simplicity, uniqueness, or a limit-cycle count. It provides no uniform bound for polynomial vector fields and does not solve Hilbert's sixteenth problem.",
+    "next_decision": "Test and then prove simplicity or controlled multiplicity of the interior zero before interpreting it as a cycle bifurcation.",
+    "title": "Hilbert's sixteenth problem, limit-cycle part",
+    "source_urls": [
+      "https://arxiv.org/abs/2411.09594"
+    ]
+  }
+]

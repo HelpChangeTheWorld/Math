@@ -1,0 +1,156 @@
+{
+  "n_cutoff": 2000,
+  "lines": [
+    {
+      "b": 1,
+      "prime_norm_count": 209,
+      "first_prime_inputs": [
+        1,
+        2,
+        4,
+        6,
+        10,
+        14,
+        16,
+        20,
+        24,
+        26
+      ],
+      "gcd_forced_composites": 0,
+      "roots_mod_small_primes": {
+        "2": 1,
+        "3": 0,
+        "5": 2,
+        "7": 0,
+        "11": 0,
+        "13": 2,
+        "17": 2,
+        "19": 0,
+        "23": 0,
+        "29": 2,
+        "31": 0
+      }
+    },
+    {
+      "b": 2,
+      "prime_norm_count": 217,
+      "first_prime_inputs": [
+        1,
+        3,
+        5,
+        7,
+        13,
+        15,
+        17,
+        27,
+        33,
+        35
+      ],
+      "gcd_forced_composites": 1000,
+      "roots_mod_small_primes": {
+        "2": 1,
+        "3": 0,
+        "5": 2,
+        "7": 0,
+        "11": 0,
+        "13": 2,
+        "17": 2,
+        "19": 0,
+        "23": 0,
+        "29": 2,
+        "31": 0
+      }
+    },
+    {
+      "b": 3,
+      "prime_norm_count": 144,
+      "first_prime_inputs": [
+        2,
+        8,
+        10,
+        20,
+        32,
+        38,
+        40,
+        52,
+        58,
+        62
+      ],
+      "gcd_forced_composites": 666,
+      "roots_mod_small_primes": {
+        "2": 1,
+        "3": 1,
+        "5": 2,
+        "7": 0,
+        "11": 0,
+        "13": 2,
+        "17": 2,
+        "19": 0,
+        "23": 0,
+        "29": 2,
+        "31": 0
+      }
+    },
+    {
+      "b": 4,
+      "prime_norm_count": 218,
+      "first_prime_inputs": [
+        1,
+        5,
+        9,
+        11,
+        15,
+        21,
+        25,
+        29,
+        31,
+        41
+      ],
+      "gcd_forced_composites": 1000,
+      "roots_mod_small_primes": {
+        "2": 1,
+        "3": 0,
+        "5": 2,
+        "7": 0,
+        "11": 0,
+        "13": 2,
+        "17": 2,
+        "19": 0,
+        "23": 0,
+        "29": 2,
+        "31": 0
+      }
+    },
+    {
+      "b": 8,
+      "prime_norm_count": 213,
+      "first_prime_inputs": [
+        3,
+        5,
+        7,
+        13,
+        17,
+        23,
+        33,
+        35,
+        37,
+        43
+      ],
+      "gcd_forced_composites": 1000,
+      "roots_mod_small_primes": {
+        "2": 1,
+        "3": 0,
+        "5": 2,
+        "7": 0,
+        "11": 0,
+        "13": 2,
+        "17": 2,
+        "19": 0,
+        "23": 0,
+        "29": 2,
+        "31": 0
+      }
+    }
+  ],
+  "not_computed": "No strip-to-line uniform error estimate."
+}

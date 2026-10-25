@@ -1,0 +1,26 @@
+{
+  "family": "F_H(t)=max(H-H^3*abs(t),0)",
+  "rows": [
+    {
+      "height": 2,
+      "slope_bound": 8,
+      "half_support_width": "1/4",
+      "integral_F_squared": "2/3"
+    },
+    {
+      "height": 4,
+      "slope_bound": 64,
+      "half_support_width": "1/16",
+      "integral_F_squared": "2/3"
+    },
+    {
+      "height": 8,
+      "slope_bound": 512,
+      "half_support_width": "1/64",
+      "integral_F_squared": "2/3"
+    }
+  ],
+  "general_identity": "For F(t)=max(H-D|t|,0), integral_R F(t)^(2k)dt = 2H^(2k+1)/(D(2k+1)).",
+  "conclusion": "Uniform second-moment control permits arbitrarily high peaks when the derivative bound is allowed to grow with height.",
+  "limit": "A proved elementary function-family obstruction, not a construction of zeta peaks or a zeta derivative estimate."
+}

@@ -1,0 +1,409 @@
+[
+  {
+    "id": 56,
+    "title": "Smooth four-dimensional Poincaré conjecture",
+    "attempt": "Computed the critical points and pole-chart Hessians of the height function on the standard unit sphere S4 in R5, making the simplest handle certificate explicit.",
+    "result": "There are exactly two critical points. Their Hessians are I4 and −I4, so the Morse indices are 0 and 4 and the associated handle description has one handle of each index.",
+    "evidence": [
+      "h±(x)=±sqrt(1−|x|²); Hess h±(0)=∓I4.",
+      "geometry_calculations.json (item 56)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This verifies the standard sphere only; it extracts no certificate for an arbitrary homotopy sphere or a published four-dimensional candidate.",
+    "next_decision": "Retain this calibration; a candidate-specific proof needs an actual handle description and justified simplifications.",
+    "source_urls": [
+      "https://arxiv.org/abs/2411.10051"
+    ]
+  },
+  {
+    "id": 57,
+    "title": "Smooth four-dimensional Schoenflies conjecture",
+    "attempt": "Constructed explicit parametrizations of both closed hemispheres bounded by the standard equatorial S3 in S4, and checked the sphere equation and inverses algebraically.",
+    "result": "Each hemisphere is smoothly diffeomorphic to the closed four-ball. The denominator in the inverse is at least one on its matching hemisphere, including the boundary.",
+    "evidence": [
+      "Φ±(y)=(2y/(1+r),±(1−r)/(1+r)), r=|y|²≤1.",
+      "4r+(1−r)²=(1+r)²; inverse y=x/(1±t).",
+      "geometry_calculations.json (item 57)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "The embedding is the standard equator. This gives no straightening map for a general smooth embedded three-sphere.",
+    "next_decision": "Use these maps to validate boundary conventions before attempting a nonstandard embedding.",
+    "source_urls": [
+      "https://arxiv.org/abs/2212.02004"
+    ]
+  },
+  {
+    "id": 58,
+    "title": "Andrews–Curtis conjecture",
+    "attempt": "Built a balanced two-generator presentation using eight elementary Andrews–Curtis moves from the trivial presentation, then executed and logged every inverse move with exact free reduction.",
+    "result": "The resulting presentation reduces back to the ordered relators x and y. The saved certificate contains the starting words, all eight reducing moves, and every intermediate state.",
+    "evidence": [
+      "geometry_calculations.py: apply_move, inverse_move, reduce_word; item 58 contains the replayable word certificate.",
+      "geometry_calculations.json (item 58)"
+    ],
+    "status": "finite_verified",
+    "scope_limit": "This deliberately generated example is known trivial by construction. No hard published candidate or stabilization question was resolved.",
+    "next_decision": "The move checker is ready; the next substantive input must be an independently specified candidate presentation.",
+    "source_urls": [
+      "https://arxiv.org/abs/2607.23611"
+    ]
+  },
+  {
+    "id": 59,
+    "title": "Slice–ribbon conjecture",
+    "attempt": "Examined the explicit disk (u,v,0,0) inside the unit four-ball and computed the radial Morse function to certify the ribbon condition for its boundary unknot.",
+    "result": "The restricted squared radius is u²+v². Its only interior critical point is a nondegenerate minimum; there are no interior maxima. Thus the disk is an explicit ribbon disk.",
+    "evidence": [
+      "∇r²=(2u,2v), Hess(r²)=2I2; boundary u²+v²=1.",
+      "geometry_calculations.json (item 59)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This solves only the unknot calibration and says nothing about a nontrivial slice candidate. No failed search is being interpreted as non-ribbonness.",
+    "next_decision": "Move to a specified slice knot only after its slicing certificate and diagram are available.",
+    "source_urls": [
+      "https://arxiv.org/abs/2603.23717"
+    ]
+  },
+  {
+    "id": 60,
+    "title": "Crossing-number additivity conjecture",
+    "attempt": "Multiplied the trefoil Jones polynomial by itself using exact integer convolution, then compared its breadth with the six-crossing connected-sum diagram.",
+    "result": "The product has lowest exponent 2 and highest exponent 8. Jones breadth gives a lower bound of six crossings, matching the diagram upper bound, so two trefoils have additive crossing number.",
+    "evidence": [
+      "(t+t³−t⁴)²=t²+2t⁴−2t⁵+t⁶−2t⁷+t⁸; 6≤c(T#T)≤6.",
+      "geometry_calculations.json (item 60)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is a familiar alternating example. The polynomial breadth need not attain crossing number for general knots.",
+    "next_decision": "Retain this exact control; a wider proof needs a lower bound effective when Jones breadth is deficient.",
+    "source_urls": [
+      "https://arxiv.org/abs/2511.18016",
+      "https://arxiv.org/abs/0907.5374"
+    ]
+  },
+  {
+    "id": 61,
+    "title": "Purely cosmetic surgery conjecture for knots in the three-sphere",
+    "attempt": "Derived the first homology of Dehn filling and applied it to every reduced slope p/q with −4≤p≤4 and 1≤q≤4.",
+    "result": "There are 23 slopes and 253 unordered pairs. Different absolute numerators eliminate 198 pairs for every knot; 55 pairs survive this necessary homological filter.",
+    "evidence": [
+      "H1(S3_{p/q}(K);Z)=Z/pZ because the longitude vanishes in exterior homology and filling kills pμ; p=0 gives Z.",
+      "geometry_calculations.json (item 61)"
+    ],
+    "status": "finite_verified",
+    "scope_limit": "Equal homology does not imply homeomorphism, and the surviving pairs are not verified cosmetic surgeries. The filter ignores orientation-sensitive invariants.",
+    "next_decision": "Apply stronger surgery invariants only to surviving pairs for a specified knot.",
+    "source_urls": [
+      "https://arxiv.org/abs/2512.20511"
+    ]
+  },
+  {
+    "id": 62,
+    "title": "Volume conjecture",
+    "attempt": "Evaluated the figure-eight colored Jones root-of-unity product formula at N=20,40,80 using independently repeated 70-digit and 130-digit Decimal calculations.",
+    "result": "The scaled logarithms are approximately 3.36473742636, 2.85816821563, and 2.52511086864. Both precision runs agree within 10^−65; these finite values remain above the known volume 2.02988321282.",
+    "evidence": [
+      "J_N=Σ(k=0..N−1) Π(j=1..k)4sin²(πj/N); output is (2π/N)log J_N.",
+      "geometry_calculations.json (item 62)"
+    ],
+    "status": "unresolved_attempt",
+    "scope_limit": "Precision agreement is numerical validation, not a rigorous interval enclosure. Three terms do not prove convergence, and the figure-eight case is already known.",
+    "next_decision": "Use this normalization control before evaluating a new knot; do not extrapolate a proof from the trend.",
+    "source_urls": [
+      "https://arxiv.org/abs/2502.18575"
+    ]
+  },
+  {
+    "id": 63,
+    "title": "11/8 conjecture",
+    "attempt": "Translated the 11/8 inequality and the older Furuta 10/8+2 inequality into exact integer conditions for forms 2k(−E8)⊕lH, then tabulated k=1 through 8.",
+    "result": "The target becomes l≥3k, while the older bound gives l≥2k+1. The interval between them contains 28 pairs in this finite table; k=1 has no gap.",
+    "evidence": [
+      "b2=16k+2l, σ=−16k; 11|σ|/8=22k; (10/8)|σ|+2=20k+2.",
+      "geometry_calculations.json (item 63)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "These are arithmetic gaps in one older bound, not realizable manifolds or a list of currently undecided forms. Stronger known restrictions were deliberately not applied.",
+    "next_decision": "Any realizability investigation must first apply the strongest known form-specific obstructions.",
+    "source_urls": [
+      "https://arxiv.org/abs/1812.04052"
+    ]
+  },
+  {
+    "id": 64,
+    "title": "Borel rigidity conjecture",
+    "attempt": "Proved the torus-to-torus case directly using equivariant lifts and checked an explicit five-dimensional integral automorphism and its inverse by exact matrix multiplication.",
+    "result": "A homotopy equivalence f:Tn→Tn inducing A∈GL(n,Z) is homotopic to the linear homeomorphism induced by A. The straight-line homotopy of lifts respects every integer translation.",
+    "evidence": [
+      "H_s(x)=(1−s)F(x)+sAx; H_s(x+z)=H_s(x)+Az; saved 5×5 matrices satisfy AA^−1=I.",
+      "geometry_calculations.json (item 64)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "Both manifolds here are tori. This does not prove rigidity for an arbitrary manifold merely homotopy equivalent to a torus, or for other aspherical manifolds.",
+    "next_decision": "Keep the lift argument as a control; the missing step is geometric identification of a general source manifold.",
+    "source_urls": [
+      "https://arxiv.org/abs/2507.11337"
+    ]
+  },
+  {
+    "id": 65,
+    "title": "Novikov conjecture",
+    "attempt": "Worked out every possible higher signature in dimension two, where positive-degree components of the Hirzebruch L-class cannot contribute.",
+    "result": "For closed oriented surfaces and an orientation-preserving homotopy equivalence h, naturality of cohomology pairing proves the required equality for every degree-two group-cohomology class; all other degrees contribute zero.",
+    "evidence": [
+      "L(M)=1; ⟨(f∘h)*a,[N]⟩=⟨f*a,h_*[N]⟩=⟨f*a,[M]⟩.",
+      "geometry_calculations.json (item 65)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is the elementary surface case. It does not control positive-degree L-classes in higher dimensions or establish the general conjecture.",
+    "next_decision": "Any extension must address those higher characteristic classes rather than reuse dimension-two vanishing.",
+    "source_urls": [
+      "https://arxiv.org/abs/2507.11337"
+    ]
+  },
+  {
+    "id": 66,
+    "title": "Farrell–Jones conjecture",
+    "attempt": "Specialized the Farrell–Jones assembly map to the infinite dihedral group and checked its explicit semidirect-product relation.",
+    "result": "The group Z⋊C2 contains Z with index two, so it is virtually cyclic. Consequently a point is a model for E_VCyc(G), and the assembly map is literally the identity.",
+    "evidence": [
+      "(n,ε)(m,δ)=(n+(−1)^εm,ε+δ mod2); rtr=t^−1; E_VCyc(G)=point.",
+      "geometry_calculations.json (item 66)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is an immediate known base case, not a new assembly calculation for a group outside the virtually cyclic family.",
+    "next_decision": "A nontrivial next attempt needs a specified group for which E_VCyc(G) is not already a point.",
+    "source_urls": [
+      "https://arxiv.org/abs/2507.11337"
+    ]
+  },
+  {
+    "id": 67,
+    "title": "Inverse Galois problem over the rational numbers",
+    "attempt": "Constructed an explicit rational polynomial realization of the finite group S3 and checked the two decisive algebraic conditions.",
+    "result": "The polynomial x³−2 is Eisenstein at 2, hence irreducible. Its discriminant is −108, which is not a rational square; the transitive cubic Galois group is therefore S3.",
+    "evidence": [
+      "disc(x³+ax+b)=−4a³−27b²; a=0,b=−2 gives −108.",
+      "geometry_calculations.json (item 67)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is a standard realization of one already realizable group. It supplies no construction for arbitrary finite groups and no new regular extension.",
+    "next_decision": "Use this example to validate a Galois-group certificate format before choosing a genuinely unresolved group-realization target.",
+    "source_urls": [
+      "https://arxiv.org/abs/1512.08708"
+    ]
+  },
+  {
+    "id": 68,
+    "title": "Tate conjecture",
+    "attempt": "Enumerated the split quadric x0x1−x2x3=0 over F7 and combined its point count with the intersection pairing of its two rational rulings.",
+    "result": "Exactly 64 of the 400 projective points lie on the quadric. Its two rulings have intersection matrix [[0,1],[1,0]], hence independent classes; the product P1×P1 description shows they span H².",
+    "evidence": [
+      "#Q(F7)=64=(7+1)²; det intersection matrix=−1; both ruling cycles are defined over F7 with Qℓ coefficients, ℓ≠7.",
+      "geometry_calculations.json (item 68)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This proves the divisor Tate statement for this split quadric using its known product decomposition, not from point counts alone.",
+    "next_decision": "A non-split surface requires actual Frobenius and cycle calculations instead of this product argument.",
+    "source_urls": [
+      "https://arxiv.org/abs/2505.07337"
+    ]
+  },
+  {
+    "id": 69,
+    "title": "Lefschetz standard conjecture",
+    "attempt": "Computed the Lefschetz operator for the complex abelian surface E×E with product polarization, then supplied algebraic correspondences realizing its inverse.",
+    "result": "In the saved bases H1→H3 is a permutation matrix squaring to identity. Integration on either elliptic factor, represented by E×E times the other diagonal, gives inverse correspondences whose sum inverts this map.",
+    "evidence": [
+      "h=a1∧b1+a2∧b2; h²=2a1∧b1∧a2∧b2. The H4→H0 inverse has coefficient 1/2.",
+      "geometry_restricted_proofs.md, item 69.",
+      "geometry_calculations.json (item 69)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This verifies one complex product-polarized surface. Matrix inversion alone would not suffice without the exhibited algebraic cycles.",
+    "next_decision": "Retain the correspondence certificate; extending to other varieties requires analogous algebraic inverse operators.",
+    "source_urls": [
+      "https://arxiv.org/abs/1002.5011"
+    ]
+  },
+  {
+    "id": 70,
+    "title": "Abundance conjecture",
+    "attempt": "Derived the canonical section counts on X=C×C×E×E, with genus-two C given by y²=x⁵−1 and elliptic E by y²=x³−x.",
+    "result": "K_X pulls back the globally generated canonical bundle on C×C, hence is nef and semiample. Riemann–Roch and Künneth give h0(mK_X)=(2m−1)² for m≥2; m=0..6 yield 1,4,9,25,49,81,121.",
+    "evidence": [
+      "h0(C,mK_C)=2m−1 for m≥2; h0(E,mK_E)=1; numerical dimension ν(K_X)=2.",
+      "geometry_restricted_proofs.md, item 70.",
+      "geometry_calculations.json (item 70)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is an explicit product fourfold. Its canonical map at m=1 includes genus-two hyperelliptic maps; it is not an embedding of C×C.",
+    "next_decision": "Use the exact count as a control; a non-product nef canonical divisor needs a different semiampleness argument.",
+    "source_urls": [
+      "https://arxiv.org/abs/2406.18233"
+    ]
+  },
+  {
+    "id": 71,
+    "title": "Termination of flips conjecture",
+    "attempt": "Tested the logical inference that a strictly decreasing nonnegative real progress measure would force every flip sequence to terminate.",
+    "result": "The exact recurrence x0=1 and x_(n+1)=x_n/(1+x_n) gives x_n=1/(n+1). Eleven values were computed as fractions, and induction proves an infinite strictly decreasing positive sequence.",
+    "evidence": [
+      "x_n−x_(n+1)=1/((n+1)(n+2))>0; inf x_n=0 is never reached.",
+      "geometry_calculations.json (item 71)"
+    ],
+    "status": "failed_approach",
+    "scope_limit": "These numbers are not flips or discrepancies of constructed varieties. The calculation rejects an insufficient termination argument, not the termination conjecture.",
+    "next_decision": "A proposed geometric measure must also have a proved well-founded value set or another finite-descent mechanism.",
+    "source_urls": [
+      "https://arxiv.org/abs/2305.01752"
+    ]
+  },
+  {
+    "id": 72,
+    "title": "Nagata’s conjecture on plane curves",
+    "attempt": "Built exact jet-interpolation matrices for ten explicit integer points and equal multiplicities m=1,2,3, taking maximum prohibited degrees d=3,6,9.",
+    "result": "The matrices have ranks 10/10, 28/28, and 55/55. Independently evaluated square minors modulo 1009 are 6,984,183; their nonvanishing certifies full column rank in characteristic zero.",
+    "evidence": [
+      "Points Pi=(i,(i²+i⁵) mod101), i=0..9; geometry_interpolation_certificates.json records every row, column, and selected minor.",
+      "geometry_calculations.json (item 72)"
+    ],
+    "status": "finite_verified",
+    "scope_limit": "This proves the indicated three multiplicities for very general ten points by openness, including lower degrees by inclusion. It covers neither all multiplicities nor arbitrary point counts.",
+    "next_decision": "Keep the exact minors; future work must introduce an argument controlling unbounded multiplicity.",
+    "source_urls": [
+      "https://arxiv.org/html/1202.0475v1"
+    ]
+  },
+  {
+    "id": 73,
+    "title": "Segre–Harbourne–Gimigliano–Hirschowitz conjecture",
+    "attempt": "Executed three mixed-multiplicity interpolation tests on ten points and a two-double-point special-case control, with exact modular minor certificates.",
+    "result": "For (d;m)=(4;2,1⁹),(4;2²,1⁸),(5;2⁵,1⁵), vector-space dimensions are 3,1,1. The conic control has dimension one, with explicit generator (y−2x)² and rank five.",
+    "evidence": [
+      "geometry_interpolation_certificates.json; in the control E=H−E1−E2, E²=−1, D=2E and D·E=−2.",
+      "geometry_calculations.json (item 73)"
+    ],
+    "status": "finite_verified",
+    "scope_limit": "The first three maximal-rank results hold for very general points. The special control uses eight zero multiplicities and verifies a familiar doubled-line mechanism only.",
+    "next_decision": "Use these positive and negative controls before interpreting a rank defect in a broader mixed system.",
+    "source_urls": [
+      "https://arxiv.org/html/1202.0475v1"
+    ]
+  },
+  {
+    "id": 74,
+    "title": "Hopf’s positive-curvature Euler-characteristic conjecture",
+    "attempt": "Evaluated the six-dimensional Euler form under constant positive sectional curvature, counting its Pfaffian pairings and checking the unit-sphere integral exactly.",
+    "result": "There are 15 pairings. The Euler density is 15κ³/(8π³) times volume, which is positive when κ>0. Multiplying by Vol(S6)=16π³/15 at κ=1 gives Euler characteristic two.",
+    "evidence": [
+      "(2π)^−3 Pf(Ω)=15κ³/(8π³)dvol; (15/8)(16/15)=2.",
+      "geometry_calculations.json (item 74)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This covers constant-curvature six-manifolds via Gauss–Bonnet. Variable positive sectional curvature does not make this substitution legitimate.",
+    "next_decision": "A broader argument must control the full curvature tensor in the Euler polynomial.",
+    "source_urls": [
+      "https://arxiv.org/abs/2507.16936"
+    ]
+  },
+  {
+    "id": 75,
+    "title": "Hopf’s S2 × S2 problem",
+    "attempt": "Applied the exact conformal sectional-curvature formula at a global minimum of an arbitrary smooth conformal factor on the standard product S2×S2.",
+    "result": "Every metric e^(2f)g_product has a plane with nonpositive curvature: choose a mixed plane at the minimum, where df=0 and Hess f is positive semidefinite. Thus no conformal deformation, of any amplitude, achieves everywhere positive curvature.",
+    "evidence": [
+      "K_new(X∧Y)=e^(−2f)[−Hess f(X,X)−Hess f(Y,Y)]≤0 at the minimum.",
+      "geometry_restricted_proofs.md, item 75.",
+      "geometry_calculations.json (item 75)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "Only the conformal class of the standard product metric is excluded. General nonconformal metrics remain outside the argument.",
+    "next_decision": "Discard this conformal search family as a route to a positively curved counterexample.",
+    "source_urls": [
+      "https://arxiv.org/abs/math/0411632"
+    ]
+  },
+  {
+    "id": 76,
+    "title": "Chern’s isoparametric conjecture for minimal hypersurfaces",
+    "attempt": "Constructed and checked a nonzero formal first-derivative tensor for principal curvatures (−3,−1,1,3), enforcing symmetry, differentiated mean/scalar constraints, and the scalar Simons norm identity.",
+    "result": "The tensor satisfies those necessary constraints with S=20 and |∇A|²=320, yet ∇K=(48√5,0,0,0). Therefore the proposed shortcut from these pointwise constraints to constant Gauss–Kronecker curvature fails.",
+    "evidence": [
+      "T111=2√5; symmetric T122=−4√5; symmetric T133=2√5; remaining entries zero. |T|²=S(S−4).",
+      "geometry_calculations.json (item 76)"
+    ],
+    "status": "failed_approach",
+    "scope_limit": "This formal jet is not a constructed local immersion or compact hypersurface. Higher-order compatibility and global realization were not proved.",
+    "next_decision": "Any repaired argument must use constraints beyond this verified first-derivative system.",
+    "source_urls": [
+      "https://arxiv.org/abs/2606.29246"
+    ]
+  },
+  {
+    "id": 77,
+    "title": "Symmetric Mahler conjecture in dimensions four and higher",
+    "attempt": "Derived exact primal and polar volumes for K_t=conv(±e1,…,±e4,±t(1,1,1,1)), throughout t≥1/2, using visible pyramids and clipped-cube integration.",
+    "result": "The volumes are t+1/4 and 32/(3t)−4/(3t³)+1/(4t⁴). Their product exceeds 32/3 because its gap has an explicitly positive polynomial numerator. At t=1 the product is 575/48.",
+    "evidence": [
+      "Product−32/3=(16u³+32u²+14u+1)/(48t⁴), u=2t−1≥0.",
+      "geometry_restricted_proofs.md, item 77.",
+      "geometry_calculations.json (item 77)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This proves the bound for one stated centrally symmetric polytope family, not all four-dimensional bodies. No novelty claim is made.",
+    "next_decision": "Remove this family from counterexample searches; a wider proof needs control beyond its special diagonal symmetry.",
+    "source_urls": [
+      "https://video.renyi.hu/video/artem-zvavitch-volume-product-and-mahler-conjecture-for-convex-bodies-407"
+    ]
+  },
+  {
+    "id": 78,
+    "title": "Zariski cancellation problem in characteristic zero",
+    "attempt": "Tested whether the kernel of one convenient locally nilpotent derivation can canonically identify a coordinate in the cancellation strategy.",
+    "result": "On C[x,y,z]/(xy−z²+1), the explicit derivations δ=(0,2z,x) and ε=(2z,0,y) both preserve the relation and are locally nilpotent. Yet x lies in ker δ while ε(x)=2z≠0.",
+    "evidence": [
+      "δ(xy−z²+1)=ε(xy−z²+1)=0; δ³y=ε³x=0; saved generator chains certify local nilpotence.",
+      "geometry_calculations.json (item 78)"
+    ],
+    "status": "failed_approach",
+    "scope_limit": "This surface calculation refutes the single-derivation invariance shortcut. It is not a counterexample to cancellation of complex affine three-space.",
+    "next_decision": "A canonical invariant must account for all relevant derivations or extra justified structure.",
+    "source_urls": [
+      "https://arxiv.org/abs/2208.14736"
+    ]
+  },
+  {
+    "id": 79,
+    "title": "Bounded negativity conjecture in characteristic zero",
+    "attempt": "Specified ten distinct points (i,i²,1) on the smooth projective conic yz−x²=0 and computed the strict transform after blowing up those points.",
+    "result": "The resulting fixed smooth projective surface contains an irreducible rational curve C with C²=−6. Its canonical intersection is four, and adjunction gives genus zero. Any negativity bound for this surface is at least six.",
+    "evidence": [
+      "C=2H−ΣEi; C²=4−10=−6; K·C=−6+10=4; 2g−2=−2.",
+      "geometry_calculations.json (item 79)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "One negative curve on one fixed surface does not violate bounded negativity. Allowing the number of blowups to vary changes the surface.",
+    "next_decision": "Further attempts must seek an unbounded sequence on this same fixed surface, not move the ambient surface.",
+    "source_urls": [
+      "https://arxiv.org/abs/2101.07187"
+    ]
+  },
+  {
+    "id": 80,
+    "title": "Four-dimensional sphere-packing problem",
+    "attempt": "Verified D4 covolume two and its 24 shortest vectors, then moved one coset in a two-coset description by s times the first coordinate vector.",
+    "result": "The original density is π²/16. Two explicit inter-coset vectors give squared minimum distance at most 2−2|s|+s²<2 for 0<|s|<2. At fixed cell volume, rescaling spheres therefore lowers density along this path.",
+    "evidence": [
+      "D4=L∪(b1+L), L=⟨2b1,b2,b3,b4⟩; vectors ±b1+se1 certify the bound.",
+      "geometry_calculations.json (item 80)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is one explicit periodic perturbation control, consistent with known periodic extremality. It neither searches all finite deformations nor proves global packing optimality.",
+    "next_decision": "Exclude this displacement path from improvement searches; different finite deformations require new certificates.",
+    "source_urls": [
+      "https://arxiv.org/abs/2206.15373",
+      "https://arxiv.org/abs/0808.2013"
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "field": "Q(sqrt(5))",
+  "unit": "epsilon=(1+sqrt(5))/2, norm -1",
+  "split_prime": 11,
+  "sqrt5_mod_121": 48,
+  "epsilon_mod_121": 85,
+  "epsilon_power10_mod_121": 111,
+  "valuation_log_epsilon": 1,
+  "proof": "epsilon^10=1+110 mod 121, so v_11(epsilon^10-1)=1. In log(1+u), every term after u has valuation at least 2. Thus log(epsilon^10), and hence log(epsilon), has valuation 1 and is nonzero.",
+  "conclusion": "This explicit unit certifies a nonzero rank-one logarithm in the quadratic calibration field.",
+  "limit": "An established quadratic case, not the planned five cubic fields or a general Leopoldt proof."
+}

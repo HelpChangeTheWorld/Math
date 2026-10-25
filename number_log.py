@@ -1,0 +1,219 @@
+"""Build the per-card work log from completed computations."""
+from pathlib import Path
+import json
+from fractions import Fraction
+
+OUT=Path(__file__).resolve().parent
+cards={d['id']:d for d in json.loads((OUT.parent/'math_revision2/all_100_proposals.json').read_text())}
+entries=[]
+
+def add(i,attempt,result,status,scope,next_decision,equation=''):
+    assert (OUT/f'number_{i}.json').exists()
+    entries.append({'id':i,'title':cards[i]['title'],'attempt':attempt,'result':result,
+      'evidence':f'number_compute.py; number_{i}.json'+('; '+equation if equation else ''),
+      'status':status,'scope_limit':scope,'next_decision':next_decision,
+      'source_urls':[cards[i]['source_url']]})
+
+add(6,
+'Executed all 4096 residue classes for twelve steps of the one-division shortcut S; derived each affine numerator and checked three positive representatives independently.',
+'All 12288 checks passed. In exactly 3302 classes, sufficiently large starting integers decrease at step twelve; 794 classes have no descent at that step. The largest integer threshold is 35, and contracting classes contain only two finite non-descending representatives.',
+'finite_verified',
+'This classifies a fixed twelve-step operation. It does not show that every trajectory eventually enters a descending class.',
+'Keep the exact branch inventory; require an adaptive covering argument before expanding the modulus.',
+'S^12(n)=(3^a n+b)/4096; descent requires (4096−3^a)n>b.')
+
+add(7,
+'Reduced the proposed range to N≤2000 and computed exact ordered Goldbach counts for every even N, plus six worked local-factor comparisons.',
+'All 999 even integers had a representation. Among N≥1000 the minimum ordered count was 32. For example R(1000)=56 and R(1260)=136; their local products through prime seven are respectively 175/96 and 35/8.',
+'finite_verified',
+'No logarithmic-integral residual, smoothing kernel, or uniform error estimate was computed; the original cutoff was 200000.',
+'Use the exported normalization controls to specify the missing residual inequality before another count scan.')
+
+add(8,
+'Executed all three rational divisor tapers at R=30 and 100 on both prescribed intervals, with exact weight numerators, prime labels, and prime-factor-count bins.',
+'Every taper lost to the simple coprimality wheel on both intervals. The best taper assigned prime pairs about 7.94% of its initial mass and 5.83% of its holdout mass; the wheel achieved 17% and 249/1999, about 12.46%. All six improved on uniform weighting, but none improved the stronger baseline.',
+'failed_approach',
+'This rejects this finite taper family as a promising enrichment improvement, not weighted sieves or the twin-prime conjecture.',
+'Park these tapers. Require a substantive structural change and a composite-mass argument before further tuning.')
+
+add(9,
+'Integrated the three polynomial kernels exactly, computed their squared derivative norms, and checked prime counts in the first 200 square intervals.',
+'All normalizations equal one; derivative energies are 120/7, 280/11, and 5040/143. Every checked interval contains a prime. In (25,36), the composite prime power 27 contributes log(3) times the kernel value to a von Mangoldt sum; for the first kernel that coefficient is 9720/14641.',
+'finite_verified',
+'The 200-interval census is smaller than proposed and supplies no short-interval zeta-zero estimate.',
+'Retain explicit prime-power subtraction in any positivity claim; compare kernels only after the analytic remainder is specified.')
+
+add(10,
+'Counted prime norms n²+b² exactly for n≤2000 on five Gaussian-integer lines, with root counts modulo primes through 31 and common-factor controls.',
+'For b=1,2,3,4,8, the prime counts were 209,217,144,218,213. All 1000 inputs sharing a factor with b=2,4,8 were composite; the same held for 666 such inputs at b=3. Local root counts differ between lines as expected.',
+'finite_verified',
+'The original cutoff was 20000. These are line counts, not a uniform strip estimate or an infinite prime-value result.',
+'Keep local obstructions explicit; do not infer control of b=1 from an average over several lines.')
+
+add(11,
+'Ran Lucas–Lehmer at all 31 prime exponents through 127 and compared it with every proper prime trial factor at most 1000.',
+'Twelve exponents passed the complete primality criterion. Twelve composite Mersenne numbers nevertheless survived the bounded factor sieve, beginning at exponent 41; the missed exponents are listed exactly. Thus bounded factor survival demonstrably fails as a primality surrogate on this reduced sample.',
+'finite_verified',
+'The proposed limits 1000 and one million were reduced to 127 and 1000 respectively; no divisor-tail bound was obtained.',
+'Use the missed composites as mandatory controls and stop interpreting a survivor count as a prime count.')
+
+add(12,
+'Derived and checked an exact abundancy pruning certificate and factored four successive divisor sums under explicitly chosen exponent-two assumptions.',
+'For d=3²5²7²=11025, σ(d)=22971>22050=2d. Since σ(N)/N≥σ(d)/d whenever d divides N, no perfect N can contain this divisor. The separate conditional chain begins σ(3²)=13 and σ(13²)=3·61; its exponent choices remain visible.',
+'proved_restricted_statement',
+'This is an established local exclusion, not a complete factor-chain search. Other exponents and the special Euler prime are untouched.',
+'Use this certificate as a verified pruning rule; require complete branch hypotheses before compressing other chains.')
+
+add(13,
+'Constructed one pairwise-coprime positive triple satisfying every proposed modulus for every exponent triple from three through seven, then checked all 750 congruences.',
+'With M=10810800, take A=M, B=M+1, C=2M+1. Their residues are 0,1,1 modulo each modulus, so every tested congruence holds. Their actual cubic equation has nonzero residual −7580970550234874192400. The construction works for any finite collection of moduli and all positive exponents.',
+'failed_approach',
+'It defeats elimination of entire exponent triples by these congruences alone, not stronger valuation constraints or global arithmetic methods.',
+'Stop adding isolated small moduli; identify a genuine global restriction excluding this local-survival mechanism.')
+
+add(14,
+'Solved the k=1 and k=2 subcases algebraically and checked the quadratic power-sum identity independently for 99 integer values of m.',
+'For k=1, the equation reduces to m(m−3)=0, giving the intended solution m=3. For k=2, it reduces to m(2m²−9m+1)=0. The quadratic discriminant is 73, strictly between 64 and 81, so no positive integer m≥2 solves that subcase.',
+'proved_restricted_statement',
+'These are elementary established subcases; no uniform conclusion for arbitrary exponents follows.',
+'Use the identities as exact controls for future congruence tables, and seek an argument that survives variable k.')
+
+add(15,
+'Factored all five polynomial families exactly at inputs 1≤n≤1000, recording primality, factor-count parity data, and survival of primes through 31.',
+'The three irreducible examples produced 112,581,74 primes; both reducible controls produced none. Yet (n+1)(n²+1) had 55 sieve survivors, all composite. Every value of n²+n+41 survived that small-prime sieve, while only 581 were prime, sharply separating local survival from actual primality.',
+'finite_verified',
+'The input cutoff was reduced from 10000. Controls were not locally matched, and these counts establish no uniform prime detector.',
+'Retain the composite survivors as adversarial examples; require an explicit global statistic before fitting any classifier.')
+
+add(16,
+'Computed exact joint prime counts through input 1000 and rational local products through primes 31 and 101 for all ten prescribed coefficient pairs.',
+'The joint counts for a=4,10,16,22,28,34,40,46,52,58 were 42,37,35,67,70,23,36,26,38,92. Every local factor was positive. The admissibility argument extends to every prime: modulo two and three there are allowed inputs, and a degree-three polynomial has fewer roots than any prime at least five.',
+'finite_verified',
+'The larger input cutoffs, integrals, and Euler-product tails were not computed. Truncated products are not asymptotic constants.',
+'Separate truncation sensitivity from count discrepancies before selecting a fixed pair for further analysis.')
+
+add(17,
+'Computed exact multiplicative orders at every eligible odd prime through 10000 for bases two, three, five and the excluded controls one and four.',
+'The three admissible bases were primitive at 470,476,492 tested primes. Small-index tests missed six, eight, and eight failures respectively. For example ord_683(2)=22, so the index is 31 and none of 2,3,5,7,11,13 detects it. Both excluded controls produced zero primitive roots at odd primes.',
+'finite_verified',
+'The proposed million-prime cutoff was reduced; a finite tail list gives no asymptotic bound.',
+'Use the explicit large-index failures to test any proposed truncation lemma rather than assuming small obstructions suffice.')
+
+add(18,
+'Reduced to x=100, computed every reduced-class progression error for q≤25, and enclosed logarithms rigorously using rational series with explicit tails.',
+'All 25 symbolic prime-power accounting identities passed. The summed maximum errors lie near 5.954689 for q=1, 113.255258 for moduli with largest prime factor at most 13, and 16.351010 for the remaining three moduli. Every displayed approximation has an outward rational enclosure in the output.',
+'finite_verified',
+'At this small scale the middle factorization band is empty. This is accounting calibration, not evidence for Elliott–Halberstam savings.',
+'Keep all modulus bands and prime powers in subsequent formulas; derive a dispersion estimate before interpreting band sizes asymptotically.')
+
+add(19,
+'Computed exact two-point Liouville correlations for shifts one through twenty at three cutoffs up to 100000, before and after removing primes at most seven.',
+'The proposed monotonic improvement fails: at X=1000 and shift one, the original signed sum is 14, while the rough-part sum is 236. Every factorization identity was checked, and the shift-zero control equals 100000 exactly. Removing small primes can therefore substantially increase the observed bias.',
+'failed_approach',
+'This rejects an unconditional monotonic-bias heuristic. It neither refutes Chowla nor proves that every conditional decomposition is unhelpful.',
+'Abandon monotonic improvement as a premise; any new conditional cancellation estimate must state and justify additional hypotheses.')
+
+add(20,
+'Integrated an explicit family of triangular peaks exactly to test whether bounded moments alone could force bounded peak heights.',
+'For F_H(t)=max(H−H³|t|,0), the second-moment integral is exactly 2/3 for every positive H, while the peak height is H and its half-support width is H^−2. Worked cases H=2,4,8 give widths 1/4,1/16,1/64. The derivative bound grows precisely fast enough to conceal the peaks.',
+'proved_restricted_statement',
+'These are toy Lipschitz functions, not zeta functions. The result isolates a missing hypothesis rather than disproving a zeta estimate.',
+'Demand independently proved zeta derivative or peak-width control before using a moment-to-pointwise argument.')
+
+add(21,
+'Tested the first 200 primes from 10007 through 11927 and enumerated all height-bounded 13-smooth integers for the three compatible primes.',
+'The compatible primes were 10391,10559,10799; their smooth sets had sizes 744,748,756, and their character sums equaled those sizes exactly. The modulo-17 residue subgroup also had the entire field as its sumset. Both calculations confirm that multiplicative containment and additive growth can coexist without cancellation.',
+'finite_verified',
+'The fixed smoothness threshold is calibration only. No contradictory character-sum estimate in the p^ε regime was obtained.',
+'Keep the cancellation inequality as the explicit missing step; reject expansion-only arguments that pass these negative controls.')
+
+add(22,
+'Expanded the defining q-product exactly through coefficient 200, checked fourteen prime-power Hecke recurrences, and tested the 691 congruence for every coefficient.',
+'All checks passed and no computed coefficient vanished. The prime-zero congruence reduces to p≡−1 modulo 691 because gcd(11,690)=1. Among primes through 10000, this necessary filter still admits 1381,5527,8291. They are filter survivors, not zeros of tau.',
+'finite_verified',
+'The original coefficient cutoff 50000 was reduced to 200. Neither a finite coefficient table nor one congruence excludes all possible zeros.',
+'Use the three surviving primes to audit any additional filter and attach a valid theorem to each exclusion.')
+
+add(23,
+'Derived the actual mod-two Galois images from the two cubics and enumerated their matrices; this is new work beyond the earlier point-count control.',
+'E1 has an irreducible cubic with discriminant −23, hence image S3≅GL2(F2). Two of its six matrices have trace one. E2 factors into a rational root and a quadratic of discriminant five, giving the order-two stabilizer; both matrices have trace zero. The exact local trace-one fractions are therefore 1/3 and zero.',
+'proved_restricted_statement',
+'Only modulus two is certified, with Frobenius comparisons restricted to good odd primes; higher moduli and growing resolution remain uncomputed.',
+'Use these genuine groups as baselines, then certify the next modular image before fitting trace predictions.')
+
+add(24,
+'Replaced the unprepared cubic computation with an explicit quadratic unit-log calibration in Q(√5) at the split prime eleven.',
+'Hensel lifting gives √5≡48 modulo 121, hence ε=(1+√5)/2≡85 and ε^10≡111=1+110. Thus v_11(ε^10−1)=1. Every higher term of log(1+u) has valuation at least two, proving v_11(log ε)=1 and a nonzero rank-one logarithm.',
+'proved_restricted_statement',
+'This reproduces an established quadratic case. No cubic unit basis, regulator matrix, or universal Leopoldt result was obtained.',
+'Use the nonzero valuation as a precision-control example before attempting the planned cubic fields.')
+
+add(25,
+'Certified exact rational root intervals and Mahler measures for two explicit members of the proposed small-coefficient polynomial family.',
+'For x²−x−1, the measure lies between 1.618033 and 1.618034. For x³−x−1, it lies between 1.324717 and 1.324718: there is one real root ρ>1 and the conjugate pair has squared modulus 1/ρ<1. Thus an attempted universal lower bound of 1.4 already fails on this known cubic.',
+'proved_restricted_statement',
+'These are two established examples, not the minimum over the full coefficient box or a degree-independent lower bound.',
+'Require every auxiliary-resultant inequality to accommodate the cubic control before broader enumeration.')
+
+add(26,
+'Executed the complete prescribed census of all 65536 subsets of the first sixteen odd primes, testing totient divisibility with exact integer remainders.',
+'Exactly seventeen subsets passed: the empty subset n=1 and sixteen single-prime subsets. None of the 65519 composite subsets passed. The closest composite ratio (n−1)/φ(n) to an integer occurred at n=3717740976339, with exact distance 4084631/929437286400.',
+'finite_verified',
+'This is complete only for the chosen prime set. It does not test arbitrarily large factors or establish any pruning formula.',
+'Use the full census as an oracle for future interval-pruning rules; require preservation of every positive control.')
+
+add(27,
+'Implemented complete inverse-totient recursion for every target value at most 100, retaining the special cost-one branch for prime two.',
+'Exactly 38 target values had preimages; none had exactly one, and the largest preimage was 420. For instance φ^−1(8)={15,16,20,24,30}. Each returned preimage passed an independent totient evaluation. Completeness follows by enumerating every prime-power contribution p^(e−1)(p−1) dividing the remaining target.',
+'finite_verified',
+'The target cutoff was reduced from 10000. The recursion certifies bounded values, not a partner construction for every integer.',
+'Use uncovered substitution patterns within these complete fibers to formulate one exact additional identity.')
+
+add(28,
+'Produced an exact continued-fraction witness for every denominator two through 2000, checking each witness independently by the numerator and denominator recurrence.',
+'All 1999 denominators have a witness with digits at most five under the stated convention allowing both finite representations. A separate exhaustive test of the smaller digit bound two fails already at denominator six. The output preserves every successful numerator and digit word, making the finite coverage directly checkable.',
+'finite_verified',
+'No unbounded repair operation or all-denominator theorem was produced; the weaker bound-two failures do not challenge Zaremba.',
+'Keep the witness table as calibration and demand a symbolic denominator-preserving identity before proposing a repair mechanism.')
+
+add(29,
+'Used rational enclosures for e and π to evaluate every primitive normalized quadratic polynomial in the stated six-monomial basis with coefficients between minus two and two.',
+'All 7448 canonical polynomials were certified nonzero; none remained unresolved. The smallest certified separation was attained by 2+2e−2π+e²−eπ, whose value lies between 0.002700225995587155 and 0.002700225995587156. Tail bounds and all subsequent interval operations use exact rational arithmetic.',
+'finite_verified',
+'This excludes a finite coefficient-and-degree family only; it supplies no algebraic-independence or Schanuel theorem.',
+'Record these exclusions as calibration and seek a uniform symbolic argument before increasing polynomial cutoffs.')
+
+add(30,
+'Reduced the logarithmic determinant search to integers two through ten, applied exact multiplicative-independence filters, and evaluated every retained determinant with rational intervals.',
+'All 4158 retained quadruples were certified nonzero. The smallest separation occurred for (a,b,c,d)=(4,5,6,8), with determinant between −0.001007536229224002 and −0.001007536229224001. The exact-zero control (2,4,3,9) was correctly excluded because two and four are multiplicatively dependent.',
+'finite_verified',
+'The original upper bound thirty was reduced to ten. No uniform logarithmic determinant bound or transcendence conclusion follows.',
+'Use the smallest determinant to test any proposed quantitative inequality, keeping its independence hypotheses explicit.')
+
+add(31,
+'Derived elementary bounds for the harmonic approximation remainder and computed its exact denominator-clearing ledger for n=1 through twelve.',
+'The remainder lies between 1/[2(n+1)] and 1/(2n). At n=12, the common denominator is 27720 and the cleared remainder lies between 13860/13 and 1155, already exceeding 1000. Moreover denominator clearing leaves D_n log n, so the expression is not an integer linear form in γ.',
+'proved_restricted_statement',
+'This audits the naive harmonic baseline, not the still-unselected integral construction, and proves nothing about irrationality.',
+'Reject decimal accuracy as the objective; require an explicit construction that controls both denominators and residual logarithms.')
+
+add(32,
+'Certified the first 4096 fractional binary digits of π from rational Machin bounds, then tested the explicit shortcut D_k(2N)≤D_k(N) on five scales and eight block lengths.',
+'The shortcut fails. For one-bit blocks, D_1(1024)=11/1024 but D_1(2048)=31/2048, which is larger. Four further increases occur in the tested grid. Every digit is certified because the upper and lower rational bounds yield the same scaled integer floor.',
+'failed_approach',
+'Normal sequences can show finite discrepancy increases. This refutes only the monotone-doubling shortcut, not π normality; no BBP orbit bound was proved.',
+'Abandon strict monotonicity and require a quantitatively justified error allowance in any future scale inequality.')
+
+assert [e['id'] for e in entries]==list(range(6,33))
+expected={'id','title','attempt','result','evidence','status','scope_limit','next_decision','source_urls'}
+for e in entries:
+    assert set(e)==expected
+    assert e['status'] in {'finite_verified','proved_restricted_statement','failed_approach','unresolved_attempt'}
+    words=sum(len(e[k].split()) for k in ['title','attempt','result','evidence','status','scope_limit','next_decision'])
+    assert 70<=words<=140,(e['id'],words)
+weights=json.loads((OUT/'number_8.json').read_text())
+for conf in weights['configurations']:
+    baseline=next(b for b in weights['baselines'] if b['lo']==conf['lo'])
+    assert Fraction(conf['normalized_prime_pair_mass'])<Fraction(baseline['wheel_fraction'])
+(OUT/'number_work.json').write_text(json.dumps(entries,ensure_ascii=False,indent=2)+'\n')
+print('Saved 27 completed work records. Every record has a canonical computation output.')

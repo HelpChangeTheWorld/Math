@@ -1,0 +1,20 @@
+{
+  "model": "H_(N,a) f(j)=[2f(j)-f(j-1)-f(j+1)]/a^2 on C^N, periodic indices, N>=3",
+  "eigenvectors": "v_k(j)=exp(2*pi*i*k*j/N)",
+  "eigenvalues": "lambda_k=4*a^(-2)*sin(pi*k/N)^2",
+  "gap": "Delta_(N,a)=4*a^(-2)*sin(pi/N)^2>0",
+  "limits": {
+    "fixed_a": "Delta tends to0 as N tends to infinity",
+    "fixed_L_equals_Na": "Delta tends to4*pi^2/L^2 as N tends to infinity",
+    "then_L_to_infinity": "4*pi^2/L^2 tends to0"
+  },
+  "sample_unit_spacing_gaps": {
+    "4": 1.9999999999999996,
+    "8": 0.585786437626905,
+    "16": 0.15224093497742647,
+    "32": 0.038429439193539104,
+    "64": 0.009630546655606228
+  },
+  "proof": "Substitution of v_k into H gives (2-exp(2pi ik/N)-exp(-2pi ik/N))/a^2. The smallest nonzero value occurs at k=1,N-1. The limits follow from sin(x)/x ->1. The eigenvalue identities and limiting conclusion are analytic; displayed decimal samples are illustrative.",
+  "scope": "One-particle finite quantum Hamiltonian toy; not Yang-Mills, not a Markov-chain inference, and no continuum gauge theory constructed."
+}

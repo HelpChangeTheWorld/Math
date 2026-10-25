@@ -1,0 +1,36 @@
+{
+  "status": "NONCERTIFIED floating-point observation only",
+  "rectangle": "0<=Re(s)<=1;10<=Im(s)<=20",
+  "boundary_samples": 512,
+  "center": [
+    0.5,
+    15.0
+  ],
+  "coefficient_quadrature": {
+    "radius": 8.0,
+    "samples": 128
+  },
+  "sampled_minimum_abs_xi": 3.665542775560723e-05,
+  "sampled_winding": 1.0,
+  "sampled_max_difference_between_em_settings": 1.284549556554206e-15,
+  "missing_certificate": [
+    "uniform Euler-Maclaurin remainder bound",
+    "gamma and arithmetic rounding enclosures",
+    "Cauchy quadrature/aliasing bound",
+    "continuous-boundary nonvanishing and winding enclosure"
+  ],
+  "interpretation": "A sampled winding near1 and small stabilized sampled polynomial residual do NOT certify a zero count or a Rouche inequality.",
+  "direct_circle_em_polynomial_errors": {
+    "8": 0.0007242343839155801,
+    "12": 0.0007242266388901625,
+    "16": 0.0007242266410298496,
+    "24": 0.000724226641028588
+  },
+  "reflection_stabilized_polynomial_sampled_errors": {
+    "8": 9.044570490328436e-05,
+    "12": 4.806571243010547e-07,
+    "16": 2.139510620298224e-09,
+    "24": 9.874182066343355e-16
+  },
+  "numerical_stability_observation": "Reflect xi(s)=xi(1-s) when Re(s)<1/2 during Cauchy-circle evaluation; direct EM there suffers substantial cancellation. The changed residual is a numerical diagnostic, not a certified bound."
+}

@@ -1,0 +1,36 @@
+{
+  "basis": [
+    "1",
+    "e",
+    "pi",
+    "e^2",
+    "e*pi",
+    "pi^2"
+  ],
+  "coefficient_set": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+  ],
+  "normalization": "gcd of coefficients one; first nonzero coefficient positive.",
+  "canonical_polynomials_tested": 7448,
+  "unresolved": [],
+  "smallest_certified_separation_example": {
+    "coefficients": [
+      2,
+      2,
+      -2,
+      1,
+      -1,
+      0
+    ],
+    "evaluation": {
+      "lower": "540045199117431/200000000000000000",
+      "upper": "675056498896789/250000000000000000"
+    }
+  },
+  "certification": "e: 80-term factorial sum and positive tail bound. pi: Machin formula with 70 and 25 arctangent terms and alternating-series error bounds. All polynomial interval arithmetic is rational.",
+  "limit": "A finite family only; no algebraic independence or Schanuel conclusion."
+}

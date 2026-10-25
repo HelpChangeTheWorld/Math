@@ -1,0 +1,301 @@
+[
+  {
+    "id": 33,
+    "attempt": "Constructed K7 with edge 01 subdivided by vertex 7, then identified the nonadjacent vertices 7 and 2.",
+    "result": "The original graph has a K7 minor by contracting 07. Identification produces K7 minus edge 01, which has no K7 minor. Both graphs have chromatic number six; there is no chromatic-number drop.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item33. On seven vertices every K7-minor branch set must be a singleton, so the missing edge is decisive.",
+    "status": "failed_approach",
+    "scope_limit": "This refutes unrestricted identification transfer. The example is outside the chromatic-number-at-least-seven case relevant to the proposed Hadwiger route.",
+    "next_decision": "Require any identification-transfer rule to use the chromatic hypothesis explicitly; do not promote arbitrary certificate transport to a lemma.",
+    "title": "Hadwiger’s conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2609.06867"
+    ]
+  },
+  {
+    "id": 34,
+    "attempt": "Generated 300 random twelve-vertex graphs and forty independent-set blowups of C5; filtered for connectivity, clique number at most three, and absence of an induced P6.",
+    "result": "Forty-one graphs survived. Forty had a dominating set of size at most three. The remaining graph had no such set but had anticomplete triples {0,1,2} and {4,6,8}; no tested graph violated the proposed dichotomy.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item34, stores every accepted edge set and its witness.",
+    "status": "finite_verified",
+    "scope_limit": "This is a 340-proposal calibration, reduced from the larger planned sample. Forty accepted examples belong to the structured blowup family.",
+    "next_decision": "Retain the non-dominated witness when testing strengthened structural claims; it shows why the anticomplete alternative is necessary.",
+    "title": "Erdős–Hajnal conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2606.06258"
+    ]
+  },
+  {
+    "id": 35,
+    "attempt": "Built the fifteen-vertex complete binary tree and added a sixteenth vertex adjacent to every tree vertex.",
+    "result": "Mapping the tree root to the universal vertex makes an induced embedding impossible: a depth-two tree vertex must be nonadjacent to the root. Nevertheless the other fifteen vertices explicitly induce the whole tree. The host has clique number and chromatic number three.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item35, lists the host and tree edges and the identity embedding.",
+    "status": "failed_approach",
+    "scope_limit": "The obstruction rejects inference from one failed rooted search. It neither refutes Gyárfás–Sumner nor supplies the missing bounded-color partition.",
+    "next_decision": "A usable absence certificate must exclude every possible root or justify a complete root-selection reduction.",
+    "title": "Gyárfás–Sumner conjecture",
+    "source_urls": [
+      "https://arxiv.org/html/2606.02030v1"
+    ]
+  },
+  {
+    "id": 36,
+    "attempt": "Enumerated all 1,024 labeled graphs on five vertices, canonically identified their isomorphism types, and computed full vertex-deleted decks with multiplicity.",
+    "result": "There were 34 graph types, including 21 connected types, and 34 distinct decks: no nonisomorphic deck collision occurred. Every type had repeated isomorphic cards, so retaining card multiplicities was necessary throughout.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item36, contains the canonical graph-to-deck lookup table.",
+    "status": "finite_verified",
+    "scope_limit": "This exhausts five-vertex graphs only. It calibrates exact deck handling rather than implementing the previously unfinished separator-alignment protocol.",
+    "next_decision": "Use the verified deck table to check any future alignment procedure, especially its treatment of repeated cards.",
+    "title": "Graph reconstruction conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2504.02353"
+    ]
+  },
+  {
+    "id": 37,
+    "attempt": "Recomputed the four-element equality cases specifically to classify their structure, adding a new analysis beyond the earlier family count.",
+    "result": "All 51 families whose maximum element frequency is exactly one half are precisely unions of pairwise disjoint nonempty minimal blocks. Removing unused elements leaves eleven isomorphism types, classified by the integer partition of block sizes.",
+    "evidence": "discrete_algebra.py; discrete_algebra_results.json, item37, records every family, its minimal blocks, and exact regeneration by all block unions.",
+    "status": "finite_verified",
+    "scope_limit": "This classification is exhaustive on four ground elements only; it does not establish the equality characterization or the union-closed conjecture in general.",
+    "next_decision": "Treat disjoint-block structure as a finite equality pattern requiring a separate general proof, not as an established classification at arbitrary size.",
+    "title": "Union-closed sets conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2211.09055"
+    ]
+  },
+  {
+    "id": 38,
+    "attempt": "Exhausted all 39,363 oriented circulant step sets on orders three through nineteen, replacing the planned unrestricted SAT search with an exact modular enumeration.",
+    "result": "For every tested order n, the largest triangle-free step set had size floor((n−1)/3). Thus every tested oriented circulant at minimum outdegree ceil(n/3) contained a directed triangle.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item38. A triangle exists exactly when a+b+c=0 modulo n for steps a,b,c; repeated steps are included.",
+    "status": "finite_verified",
+    "scope_limit": "Circulants have a special translation symmetry. This does not exhaust all digraphs or address longer-cycle thresholds.",
+    "next_decision": "Any proposed modular counting explanation must state where it uses translation symmetry before attempting extension to arbitrary neighborhoods.",
+    "title": "Caccetta–Häggkvist conjecture",
+    "source_urls": [
+      "https://arxiv.org/html/2604.13700v1"
+    ]
+  },
+  {
+    "id": 39,
+    "attempt": "Enumerated every perfect matching and every graph cycle of length at most eight in the prisms over C10, C12, and C14.",
+    "result": "Across 1,294 perfect matchings, 1,252 had disconnected complementary two-factors. Every one admitted an alternating-cycle exchange of length at most eight that strictly reduced its number of complementary cycles; no local trap occurred.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item39. The three matching totals are 125, 324, and 845.",
+    "status": "finite_verified",
+    "scope_limit": "The result exhausts these three prisms, not all Barnette graphs. Their ladder structure may explain the easy exchanges.",
+    "next_decision": "Analyze the successful prism exchanges for an explicit structural lemma before extrapolating this behavior to other planar cubic graphs.",
+    "title": "Barnette’s conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2508.03531"
+    ]
+  },
+  {
+    "id": 40,
+    "attempt": "Enumerated paths through the two cyclic-rotation orbits of the Petersen graph and checked the analogous complement orbits in the three-cube.",
+    "result": "The Petersen graph admits an explicit Hamiltonian path visiting each orbit contiguously. Each cube complement orbit consists of two nonadjacent vertices, so the same contiguous-fiber rule is impossible there, despite the cube's verified Hamiltonian path.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item40. Cube witness: 0,1,3,2,6,7,5,4.",
+    "status": "failed_approach",
+    "scope_limit": "The cube disproves this restricted orbit-assembly mechanism, not Lovász's conjecture. The obstruction depends on the chosen subgroup.",
+    "next_decision": "Permit orbit re-entry or prove existence of a suitable subgroup; endpoint matching alone cannot repair disconnected fibers.",
+    "title": "Lovász’s Hamiltonian-path conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2606.09742"
+    ]
+  },
+  {
+    "id": 41,
+    "attempt": "For one seeded binary rank-four instance, exhaustively analyzed all 13,824 row arrangements modulo simultaneous column permutations, retaining every row-swap move.",
+    "result": "Every state reached zero rank defect without increasing defect. There were no positive-defect trap components; the longest shortest escape to a smaller defect required two swaps, including a possible plateau move.",
+    "evidence": "discrete_landscapes.py; discrete_landscape_results.json, item41, records the four binary bases and a zero-defect arrangement.",
+    "status": "finite_verified",
+    "scope_limit": "The budget was reduced from twenty instances to one exhaustive instance. Rank-four existence is already proved; this measures exchange geometry within a solved baseline.",
+    "next_decision": "Do not assume strict one-step descent. Any broader exchange argument must explain plateau navigation and its dependence on rank.",
+    "title": "Rota’s basis conjecture",
+    "source_urls": [
+      "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2022.4"
+    ]
+  },
+  {
+    "id": 42,
+    "attempt": "Built a seven-vertex Moser spindle from two exact diamond modules, using arithmetic in Q(√3,√11), instead of the unavailable five-chromatic input modules.",
+    "result": "Checked all 21 squared distances exactly, obtained eleven unit edges, excluded every three-coloring, and exhibited a four-coloring. The two diamond endpoint constraints give a direct independent explanation of the three-color obstruction.",
+    "evidence": "discrete_geometry.py; discrete_geometry_results.json, item42, includes exact coordinate coefficients, all distances, and the coloring certificate.",
+    "status": "finite_verified",
+    "scope_limit": "This is a known four-chromatic construction and an exact module calibration. It does not supply the proposed five-chromatic inputs or improve the plane-coloring lower bound.",
+    "next_decision": "Require future imported modules to pass the same exact geometry and coloring checks before attempting five-color obstruction gluing.",
+    "title": "Hadwiger–Nelson problem",
+    "source_urls": [
+      "https://arxiv.org/abs/1804.02385"
+    ]
+  },
+  {
+    "id": 43,
+    "attempt": "Ran both repeated-distance and fixed-unit-distance greedy pruning on the explicit 9-by-9 integer grid, retaining fifty points; also checked 100 random fifty-point subsets.",
+    "result": "The original grid has 144 unit pairs but 224 pairs at squared distance five. Repeated-distance pruning retained 131 equal-distance pairs, versus 121 under fixed-unit pruning; random subsets ranged from 70 to 109.",
+    "evidence": "discrete_geometry.py; discrete_geometry_results.json, item43, stores retained coordinates and every deletion.",
+    "status": "finite_verified",
+    "scope_limit": "These are toy-grid computations, not instances of the 2026 number-field construction. No suitable small construction input was established; its feasibility remains unresolved.",
+    "next_decision": "Optimize R(A), then rescale its maximizing distance. Keep actual construction feasibility separate from this successful statistic calibration.",
+    "title": "Planar unit-distance problem: exact growth",
+    "source_urls": [
+      "https://arxiv.org/abs/2607.05374"
+    ]
+  },
+  {
+    "id": 44,
+    "attempt": "Constructed exact vertex/facet coverage matrices for a cube, octahedron, and cuboctahedron using all 26 nonzero directions in {−1,0,1}³.",
+    "result": "Exhaustive finite set-cover search found minimum dictionary covers of eight, six, and four directions, respectively. Every selected direction satisfies every required strict incident-facet inequality; dominated coverage masks were removed without changing the optimum.",
+    "evidence": "discrete_geometry.py; discrete_geometry_results.json, item44, includes vertices, facets, directions, and coverage certificates.",
+    "status": "finite_verified",
+    "scope_limit": "This replaces fifty random polytopes with three explicit controls. Minimum cardinality is certified within this finite direction dictionary; no universal illumination theorem follows.",
+    "next_decision": "Use these exact controls to distinguish geometric illumination failures from incompleteness of a future direction dictionary.",
+    "title": "Hadwiger–Boltyanski illumination conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2501.10570"
+    ]
+  },
+  {
+    "id": 45,
+    "attempt": "Computed exact rational permitted-time intersections for 500 seeded gcd-one sets of fourteen speeds at thresholds 1/15, 101/1500, and 1/14.",
+    "result": "All 500 sets had verified witnesses at all three thresholds. The structured control {1,…,14} instead had exactly eight isolated feasible times at 1/15 and none at 101/1500, exposing the sampling method's lack of near-tight examples.",
+    "evidence": "discrete_counts_flows.py; discrete_count_flow_results.json, item45, retains all speeds and rational witnesses.",
+    "status": "finite_verified",
+    "scope_limit": "The sampled sets do not discriminate near-tight behavior, so their additive-relation counts support no claimed correlation or structural reduction.",
+    "next_decision": "Replace broad uniform speed sampling with explicitly structured tight families before interpreting arithmetic predictors.",
+    "title": "Lonely runner conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2609.06259"
+    ]
+  },
+  {
+    "id": 46,
+    "attempt": "Computed exact linear-extension probabilities for 3,618 ordered incomparable pairs across 100 new posets on eight to ten elements.",
+    "result": "Found a same-poset collision in the proposed seven-component local signature: pairs (2,7) and (4,7) in case25 have probabilities 2/3 and 25/36. One is balanced and the other is not, despite identical signatures.",
+    "evidence": "discrete_counts_flows.py; discrete_count_flow_results.json, item46, stores the full order relations, counts, signature, and both witnesses.",
+    "status": "failed_approach",
+    "scope_limit": "This decisively rejects the signature as a complete balanced-pair criterion. Every sampled poset still had a balanced pair, so it is no counterexample to the conjecture.",
+    "next_decision": "Discard this signature as a sufficient classifier; a stronger criterion must capture order information that distinguishes the witness pairs.",
+    "title": "1/3–2/3 conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/1610.00809"
+    ]
+  },
+  {
+    "id": 47,
+    "attempt": "Checked exact orientations in all five-point subsets of a 4-by-4 grid, then searched for an eight-point general-position set containing no convex pentagon.",
+    "result": "All 1,668 general-position five-point subsets contained a convex quadrilateral. After 4,438 eight-point proposals, found and verified a pentagon-free eight-point witness by checking all 56 five-point subsets.",
+    "evidence": "discrete_geometry.py; discrete_geometry_results.json, item47. Witness: (0,1),(1,15),(1,19),(2,16),(2,18),(3,8),(17,6),(19,5).",
+    "status": "finite_verified",
+    "scope_limit": "These are small known-threshold calibrations. No orientation encoding or UNSAT claim for either 33-point layer profile has been completed.",
+    "next_decision": "Require the future orientation model to reproduce these positive and negative controls before attempting the seven-gon instance.",
+    "title": "Erdős–Szekeres convex-polygon conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2512.24061"
+    ]
+  },
+  {
+    "id": 48,
+    "attempt": "Enumerated every Hamiltonian cycle, modulo cyclic shift and reversal, on fixed strictly convex point sets of sizes three through nine.",
+    "result": "Exactly one straight-line thrackle cycle occurred at each odd size and none at each even size. In total, 23,116 cycles were checked using exact alternating-endpoint crossing tests.",
+    "evidence": "discrete_geometry.py; discrete_geometry_results.json, item48, supplies every surviving cycle. Coordinates may be taken as (i,i²).",
+    "status": "finite_verified",
+    "scope_limit": "The result concerns cycles drawn with straight segments on these convex sets. It does not validate the unfinished crossing-order encoding for arbitrary curved edges or subdivided theta graphs.",
+    "next_decision": "Keep these as crossing-rule controls; do not generalize the finite convex-cycle result to arbitrary thrackle drawings.",
+    "title": "Conway’s thrackle conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2506.11808"
+    ]
+  },
+  {
+    "id": 49,
+    "attempt": "Tested all 256 normalized length-three sign quadruples against all 256 eight-sign append choices, covering 65,536 parent/extension pairs.",
+    "result": "Exactly 108 parents satisfied Σ_i C_(s_i)(t)=0 at every nonzero periodic shift. Every valid parent had a complementary length-five extension; their extension counts were 9, 27, 31, or 37, with respective parent frequencies 4, 32, 24, and 48.",
+    "evidence": "discrete_algebra.py; discrete_algebra_results.json, item49. C_s(t)=Σ_j s_j s_((j+t) mod n); appending preserves every original entry and its order.",
+    "status": "finite_verified",
+    "scope_limit": "This verifies only the explicit length-three-to-five append rule for periodic complementarity, not arbitrary lengths or Hadamard existence at all admissible orders.",
+    "next_decision": "Seek an explanation of the finite extension classification before proposing any inductive construction.",
+    "title": "Hadamard matrix conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2306.16812"
+    ]
+  },
+  {
+    "id": 50,
+    "attempt": "Enumerated all 1,024 labeled three-uniform hypergraphs on five vertices, tested tetrahedron exclusion, and canonically classified the survivors.",
+    "result": "Found 768 tetrahedron-free labeled systems in 23 isomorphism types. Their maximum edge count is seven, attained by one isomorphism type. Independently verified the cyclic three-part construction has 54 edges on nine vertices and 136 on twelve.",
+    "evidence": "discrete_algebra.py; discrete_algebra_results.json, item50, records edge-count frequencies and an extremal five-vertex witness.",
+    "status": "finite_verified",
+    "scope_limit": "The raw five-vertex edge bound averages only to density 7/10, above the desired asymptotic 5/9. Finite construction densities also require finite-size corrections.",
+    "next_decision": "Any stronger certificate must use additional consistency or positivity constraints; the enumerated edge-count table alone is insufficient.",
+    "title": "Turán’s tetrahedron problem",
+    "source_urls": [
+      "https://arxiv.org/abs/2609.08336"
+    ]
+  },
+  {
+    "id": 51,
+    "attempt": "After all 100 sampled replacements violated ν=2, exhausted all 2,383 absent partite edges and all eighteen possible deletions from the specified seed.",
+    "result": "Every one of the 42,894 replacements has matching number exactly three. Each new edge avoids at least two seed edges in each copy; deleting one still leaves a disjoint edge from each copy, forming a three-edge matching with the new edge.",
+    "evidence": "discrete_obstructions.py; discrete_obstruction_results.json, item51, certifies every replacement and the avoidance counts.",
+    "status": "failed_approach",
+    "scope_limit": "The entire proposed one-edge neighborhood is empty under the matching-number-two constraint. This rejects that search design, not Ryser's inequality.",
+    "next_decision": "Abandon single-edge replacement for this seed; changing the neighborhood requires preserving matching number by a different explicit mechanism.",
+    "title": "Ryser’s hypergraph conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2505.05339"
+    ]
+  },
+  {
+    "id": 52,
+    "attempt": "Enumerated all partial transversals of size n−1 in the cyclic Latin squares of orders five and seven, then derived the governing sum identity.",
+    "result": "All 75 and 931 partial transversals completed immediately, requiring zero exchanges. More generally, for odd n the sum of all residues is zero modulo n; comparing selected row, column, and symbol sums forces the missing symbol to equal the missing row plus missing column.",
+    "evidence": "discrete_landscapes.py; discrete_landscape_results.json, item52; discrete_restricted_lemmas.txt gives the proof.",
+    "status": "proved_restricted_statement",
+    "scope_limit": "The lemma applies to cyclic odd-order squares. It explains why this benchmark cannot measure exchange difficulty and does not prove the conjecture for arbitrary Latin squares.",
+    "next_decision": "Retire cyclic near-transversals as exchange benchmarks; future tests need squares without this automatic completion identity.",
+    "title": "Ryser’s Latin-square transversal conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/1801.02893"
+    ]
+  },
+  {
+    "id": 53,
+    "attempt": "Enumerated fundamental-cycle coefficient boxes for four graphs, then checked every unrestricted unit-coordinate move at a cube trap.",
+    "result": "At z=(−2,−2,−1,−1,0), the defect potential is one. All ten ±1 coordinate moves raise it to two or three, disproving monotone descent even without the box restriction. An explicit escape reaches a valid flow with maximum potential two, making the required barrier increase exactly one.",
+    "evidence": "discrete_obstructions.py; discrete_obstruction_results.json, item53, records the basis, edge flow, ten neighbors, and escape path.",
+    "status": "failed_approach",
+    "scope_limit": "This refutes this potential-and-move rule. The cube has valid five-flows; the obstruction is algorithmic, not a counterexample to Tutte.",
+    "next_decision": "Permit controlled potential increases or change the move set; a proof cannot rely on unrestricted monotone coordinate descent.",
+    "title": "Tutte’s 5-flow conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2601.12036"
+    ]
+  },
+  {
+    "id": 54,
+    "attempt": "Verified every entry of the nine-vertex rook-graph matrix identity and derived exact block constraints for a hypothetical rooted 99-graph.",
+    "result": "The rook control passed all 81 identity entries. For the 99-graph, the unknown outside adjacency B must satisfy CB=2J−C−MC and B²+B=12I+2J−CᵀC, with row sum twelve; the block proof makes the source of these constraints explicit.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item54; discrete_restricted_lemmas.txt defines C and M and proves the reduction.",
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is an exact necessary-and-sufficient rooted matrix reformulation with a small verified control. No 84-by-84 binary solution or impossibility certificate has been produced.",
+    "next_decision": "Encode the full block system without extra symmetry restrictions; retain the rook instance as the positive control.",
+    "title": "Conway’s 99-graph problem",
+    "source_urls": [
+      "https://arxiv.org/abs/2308.02978"
+    ]
+  },
+  {
+    "id": 55,
+    "attempt": "Exhausted all 1,266 balanced outdegree-type assignments on four five-regular circulants and performed exact augmenting-path orientation and integral-flow lifting.",
+    "result": "The graphs on 6,8,10,12 vertices each had exact edge-connectivity five. Respectively 20,44,102,328 assignments were feasible; all 494 accepted orientations lifted to verified flows with signed values one and minus two and exact conservation.",
+    "evidence": "discrete_counts_flows.py; discrete_count_flow_results.json, item55, stores one complete flow certificate per graph and all assignment totals.",
+    "status": "finite_verified",
+    "scope_limit": "This verifies the orientation/lifting mechanism on four explicit graphs, not on arbitrary 4-edge-connected graphs or arbitrary degrees.",
+    "next_decision": "Separate failures of a chosen outdegree assignment from graph-level failure; a general argument still needs a complete structural reduction.",
+    "title": "Tutte’s 3-flow conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2609.08377"
+    ]
+  }
+]

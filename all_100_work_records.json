@@ -1,0 +1,1403 @@
+[
+  {
+    "id": 1,
+    "title": "Riemann hypothesis",
+    "attempt": "Computed completed-zeta values on 512 rectangle-boundary samples and degree 8–24 polynomial approximations using 128 Cauchy-circle samples, Euler–Maclaurin zeta, and Lanczos gamma.",
+    "result": "Sampled winding is 1. Direct-circle degree 24 error stalled near 7.24e-4; using xi(s)=xi(1−s) on the left half-plane reduced sampled error to 9.87e-16. Sampled minimum |xi| is 3.67e-5.",
+    "evidence": [
+      "captain_riemann.json",
+      "captain_verify_and_refine.py"
+    ],
+    "status": "unresolved_attempt",
+    "scope_limit": "All are double-precision observations. No uniform remainder, rounding enclosure, continuous-boundary bound, or certified zero count was obtained.",
+    "next_decision": "Keep the reflection stabilization; obtain rigorous enclosures before claiming a Rouché certificate. The numerical success does not prove RH.",
+    "source_urls": [
+      "https://dlmf.nist.gov/25.2",
+      "https://www.claymath.org/millennium/riemann-hypothesis/"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "P versus NP",
+    "attempt": "Exhausted all 40,320 variable orders for each of three eight-variable functions, with exact residual truth tables at every cut.",
+    "result": "Parity always has maximum width 2. Equality of four-bit blocks and conjunction of four paired disjunctions both have minimum maximum-width 3 and maximum 16; only 384 orders attain 3. Independently checked width=2^s+1_{c>0} on 512 masks, where s counts split pairs and c completed pairs.",
+    "evidence": [
+      "captain_pnp.json",
+      "captain_verification.json",
+      "captain_calculations.py"
+    ],
+    "status": "finite_verified",
+    "scope_limit": "These are restricted ordered representations and finite calibration results, not lower bounds for unrestricted computation or claims of novelty.",
+    "next_decision": "Reject any order-independent high-width claim for these examples; retain the exact pair formula as an implementation control.",
+    "source_urls": [
+      "https://www.claymath.org/millennium/p-vs-np/"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Birch and Swinnerton-Dyer conjecture",
+    "attempt": "Audited E:y²=x³−x with exact Weierstrass invariants, Nagell–Lutz torsion constraints, and point counts at four good primes.",
+    "result": "Discriminant 64 and c4=48 give j=1728. Nagell–Lutz reduces nonzero-y torsion to |y|≤2; exact substitution leaves only (−1,0),(0,0),(1,0). Including infinity, rational torsion is Z/2×Z/2.",
+    "evidence": [
+      "captain_bsd.json",
+      "captain_calculations.py"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "The torsion conclusion uses the standard Nagell–Lutz theorem. No rank, Sha, real period, Tamagawa factor, or L-function leading coefficient was computed; BSD was not assumed.",
+    "next_decision": "Use torsion order 4 as one independently audited denominator input, then separately establish the still-missing BSD quantities.",
+    "source_urls": [
+      "https://www.claymath.org/millennium/birch-and-swinnerton-dyer-conjecture/"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Hodge conjecture",
+    "attempt": "Calculated intersections of the two fibers, diagonal, and graph of multiplication by i on E×E, for E:y²=x³−x.",
+    "result": "The exact matrix is [[0,1,1,1],[1,0,1,1],[1,1,0,2],[1,1,2,0]], with determinant −4. The final intersection 2 equals deg(i−1). Four independent rational divisor classes therefore span the rational(1,1) subspace, whose dimension is at most the complex Hodge number 4.",
+    "evidence": [
+      "captain_hodge.json",
+      "captain_calculations.py"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This reproduces the established divisor case on one abelian surface; it neither establishes novelty nor constructs higher-codimension cycles generally.",
+    "next_decision": "Retain this fully explicit basis as the calibration; any extension must name a genuinely missing cycle construction.",
+    "source_urls": [
+      "https://www.claymath.org/millennium/hodge-conjecture/"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Yang–Mills existence and mass gap",
+    "attempt": "Diagonalized the periodic one-particle Hamiltonian Hf(j)=[2f(j)−f(j−1)−f(j+1)]/a² exactly using Fourier modes, and tracked its gap through two limits.",
+    "result": "Eigenvalues are 4a^(−2)sin²(πk/N), so every finite N≥3 has positive gap 4a^(−2)sin²(π/N). At fixed spacing it vanishes as N→∞. At fixed physical length L=Na it approaches 4π²/L², which then vanishes as L→∞.",
+    "evidence": [
+      "captain_gap.json",
+      "captain_calculations.py"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is a toy quantum Hamiltonian, not a gauge theory or a Yang–Mills construction. It demonstrates why finite positivity cannot by itself certify an infinite-volume mass gap.",
+    "next_decision": "Require explicit scaling and volume-uniform control in the selected gauge-theory estimate before interpreting its positive finite gap.",
+    "source_urls": [
+      "https://www.claymath.org/millennium/yang-mills-the-maths-gap/"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Collatz conjecture",
+    "attempt": "Executed all 4096 residue classes for twelve steps of the one-division shortcut S; derived each affine numerator and checked three positive representatives independently.",
+    "result": "All 12288 checks passed. In exactly 3302 classes, sufficiently large starting integers decrease at step twelve; 794 classes have no descent at that step. The largest integer threshold is 35, and contracting classes contain only two finite non-descending representatives.",
+    "evidence": "number_compute.py; number_6.json; S^12(n)=(3^a n+b)/4096; descent requires (4096−3^a)n>b.",
+    "status": "finite_verified",
+    "scope_limit": "This classifies a fixed twelve-step operation. It does not show that every trajectory eventually enters a descending class.",
+    "next_decision": "Keep the exact branch inventory; require an adaptive covering argument before expanding the modulus.",
+    "source_urls": [
+      "https://arxiv.org/abs/1909.03562"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Goldbach conjecture",
+    "attempt": "Reduced the proposed range to N≤2000 and computed exact ordered Goldbach counts for every even N, plus six worked local-factor comparisons.",
+    "result": "All 999 even integers had a representation. Among N≥1000 the minimum ordered count was 32. For example R(1000)=56 and R(1260)=136; their local products through prime seven are respectively 175/96 and 35/8.",
+    "evidence": "number_compute.py; number_7.json",
+    "status": "finite_verified",
+    "scope_limit": "No logarithmic-integral residual, smoothing kernel, or uniform error estimate was computed; the original cutoff was 200000.",
+    "next_decision": "Use the exported normalization controls to specify the missing residual inequality before another count scan.",
+    "source_urls": [
+      "https://t5k.org/notes/conjectures/"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Twin prime conjecture",
+    "attempt": "Executed all three rational divisor tapers at R=30 and 100 on both prescribed intervals, with exact weight numerators, prime labels, and prime-factor-count bins.",
+    "result": "Every taper lost to the simple coprimality wheel on both intervals. The best taper assigned prime pairs about 7.94% of its initial mass and 5.83% of its holdout mass; the wheel achieved 17% and 249/1999, about 12.46%. All six improved on uniform weighting, but none improved the stronger baseline.",
+    "evidence": "number_compute.py; number_8.json",
+    "status": "failed_approach",
+    "scope_limit": "This rejects this finite taper family as a promising enrichment improvement, not weighted sieves or the twin-prime conjecture.",
+    "next_decision": "Park these tapers. Require a substantive structural change and a composite-mass argument before further tuning.",
+    "source_urls": [
+      "https://arxiv.org/abs/math/0508185"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Legendre’s conjecture",
+    "attempt": "Integrated the three polynomial kernels exactly, computed their squared derivative norms, and checked prime counts in the first 200 square intervals.",
+    "result": "All normalizations equal one; derivative energies are 120/7, 280/11, and 5040/143. Every checked interval contains a prime. In (25,36), the composite prime power 27 contributes log(3) times the kernel value to a von Mangoldt sum; for the first kernel that coefficient is 9720/14641.",
+    "evidence": "number_compute.py; number_9.json",
+    "status": "finite_verified",
+    "scope_limit": "The 200-interval census is smaller than proposed and supplies no short-interval zeta-zero estimate.",
+    "next_decision": "Retain explicit prime-power subtraction in any positivity claim; compare kernels only after the analytic remainder is specified.",
+    "source_urls": [
+      "https://t5k.org/notes/conjectures/"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Landau’s n²+1 problem",
+    "attempt": "Counted prime norms n²+b² exactly for n≤2000 on five Gaussian-integer lines, with root counts modulo primes through 31 and common-factor controls.",
+    "result": "For b=1,2,3,4,8, the prime counts were 209,217,144,218,213. All 1000 inputs sharing a factor with b=2,4,8 were composite; the same held for 666 such inputs at b=3. Local root counts differ between lines as expected.",
+    "evidence": "number_compute.py; number_10.json",
+    "status": "finite_verified",
+    "scope_limit": "The original cutoff was 20000. These are line counts, not a uniform strip estimate or an infinite prime-value result.",
+    "next_decision": "Keep local obstructions explicit; do not infer control of b=1 from an average over several lines.",
+    "source_urls": [
+      "https://arxiv.org/abs/1807.08899"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Infinitely many Mersenne primes",
+    "attempt": "Ran Lucas–Lehmer at all 31 prime exponents through 127 and compared it with every proper prime trial factor at most 1000.",
+    "result": "Twelve exponents passed the complete primality criterion. Twelve composite Mersenne numbers nevertheless survived the bounded factor sieve, beginning at exponent 41; the missed exponents are listed exactly. Thus bounded factor survival demonstrably fails as a primality surrogate on this reduced sample.",
+    "evidence": "number_compute.py; number_11.json",
+    "status": "finite_verified",
+    "scope_limit": "The proposed limits 1000 and one million were reduced to 127 and 1000 respectively; no divisor-tail bound was obtained.",
+    "next_decision": "Use the missed composites as mandatory controls and stop interpreting a survivor count as a prime count.",
+    "source_urls": [
+      "https://t5k.org/mersenne/"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Odd perfect number problem",
+    "attempt": "Derived and checked an exact abundancy pruning certificate and factored four successive divisor sums under explicitly chosen exponent-two assumptions.",
+    "result": "For d=3²5²7²=11025, σ(d)=22971>22050=2d. Since σ(N)/N≥σ(d)/d whenever d divides N, no perfect N can contain this divisor. The separate conditional chain begins σ(3²)=13 and σ(13²)=3·61; its exponent choices remain visible.",
+    "evidence": "number_compute.py; number_12.json",
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is an established local exclusion, not a complete factor-chain search. Other exponents and the special Euler prime are untouched.",
+    "next_decision": "Use this certificate as a verified pruning rule; require complete branch hypotheses before compressing other chains.",
+    "source_urls": [
+      "https://arxiv.org/abs/2607.19746"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Beal conjecture",
+    "attempt": "Constructed one pairwise-coprime positive triple satisfying every proposed modulus for every exponent triple from three through seven, then checked all 750 congruences.",
+    "result": "With M=10810800, take A=M, B=M+1, C=2M+1. Their residues are 0,1,1 modulo each modulus, so every tested congruence holds. Their actual cubic equation has nonzero residual −7580970550234874192400. The construction works for any finite collection of moduli and all positive exponents.",
+    "evidence": "number_compute.py; number_13.json",
+    "status": "failed_approach",
+    "scope_limit": "It defeats elimination of entire exponent triples by these congruences alone, not stronger valuation constraints or global arithmetic methods.",
+    "next_decision": "Stop adding isolated small moduli; identify a genuine global restriction excluding this local-survival mechanism.",
+    "source_urls": [
+      "https://www.ams.org/profession/prizes-awards/ams-supported/beal-prize"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Erdős–Moser conjecture",
+    "attempt": "Solved the k=1 and k=2 subcases algebraically and checked the quadratic power-sum identity independently for 99 integer values of m.",
+    "result": "For k=1, the equation reduces to m(m−3)=0, giving the intended solution m=3. For k=2, it reduces to m(2m²−9m+1)=0. The quadratic discriminant is 73, strictly between 64 and 81, so no positive integer m≥2 solves that subcase.",
+    "evidence": "number_compute.py; number_14.json",
+    "status": "proved_restricted_statement",
+    "scope_limit": "These are elementary established subcases; no uniform conclusion for arbitrary exponents follows.",
+    "next_decision": "Use the identities as exact controls for future congruence tables, and seek an argument that survives variable k.",
+    "source_urls": [
+      "https://arxiv.org/abs/1011.2940"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Bunyakovsky conjecture",
+    "attempt": "Factored all five polynomial families exactly at inputs 1≤n≤1000, recording primality, factor-count parity data, and survival of primes through 31.",
+    "result": "The three irreducible examples produced 112,581,74 primes; both reducible controls produced none. Yet (n+1)(n²+1) had 55 sieve survivors, all composite. Every value of n²+n+41 survived that small-prime sieve, while only 581 were prime, sharply separating local survival from actual primality.",
+    "evidence": "number_compute.py; number_15.json",
+    "status": "finite_verified",
+    "scope_limit": "The input cutoff was reduced from 10000. Controls were not locally matched, and these counts establish no uniform prime detector.",
+    "next_decision": "Retain the composite survivors as adversarial examples; require an explicit global statistic before fitting any classifier.",
+    "source_urls": [
+      "https://arxiv.org/abs/1807.08899"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Bateman–Horn conjecture",
+    "attempt": "Computed exact joint prime counts through input 1000 and rational local products through primes 31 and 101 for all ten prescribed coefficient pairs.",
+    "result": "The joint counts for a=4,10,16,22,28,34,40,46,52,58 were 42,37,35,67,70,23,36,26,38,92. Every local factor was positive. The admissibility argument extends to every prime: modulo two and three there are allowed inputs, and a degree-three polynomial has fewer roots than any prime at least five.",
+    "evidence": "number_compute.py; number_16.json",
+    "status": "finite_verified",
+    "scope_limit": "The larger input cutoffs, integrals, and Euler-product tails were not computed. Truncated products are not asymptotic constants.",
+    "next_decision": "Separate truncation sensitivity from count discrepancies before selecting a fixed pair for further analysis.",
+    "source_urls": [
+      "https://arxiv.org/abs/1807.08899"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Artin’s primitive root conjecture",
+    "attempt": "Computed exact multiplicative orders at every eligible odd prime through 10000 for bases two, three, five and the excluded controls one and four.",
+    "result": "The three admissible bases were primitive at 470,476,492 tested primes. Small-index tests missed six, eight, and eight failures respectively. For example ord_683(2)=22, so the index is 31 and none of 2,3,5,7,11,13 detects it. Both excluded controls produced zero primitive roots at odd primes.",
+    "evidence": "number_compute.py; number_17.json",
+    "status": "finite_verified",
+    "scope_limit": "The proposed million-prime cutoff was reduced; a finite tail list gives no asymptotic bound.",
+    "next_decision": "Use the explicit large-index failures to test any proposed truncation lemma rather than assuming small obstructions suffice.",
+    "source_urls": [
+      "https://arxiv.org/abs/math/0412262"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Elliott–Halberstam conjecture",
+    "attempt": "Reduced to x=100, computed every reduced-class progression error for q≤25, and enclosed logarithms rigorously using rational series with explicit tails.",
+    "result": "All 25 symbolic prime-power accounting identities passed. The summed maximum errors lie near 5.954689 for q=1, 113.255258 for moduli with largest prime factor at most 13, and 16.351010 for the remaining three moduli. Every displayed approximation has an outward rational enclosure in the output.",
+    "evidence": "number_compute.py; number_18.json",
+    "status": "finite_verified",
+    "scope_limit": "At this small scale the middle factorization band is empty. This is accounting calibration, not evidence for Elliott–Halberstam savings.",
+    "next_decision": "Keep all modulus bands and prime powers in subsequent formulas; derive a dispersion estimate before interpreting band sizes asymptotically.",
+    "source_urls": [
+      "https://arxiv.org/abs/1407.4897"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Chowla’s conjecture",
+    "attempt": "Computed exact two-point Liouville correlations for shifts one through twenty at three cutoffs up to 100000, before and after removing primes at most seven.",
+    "result": "The proposed monotonic improvement fails: at X=1000 and shift one, the original signed sum is 14, while the rough-part sum is 236. Every factorization identity was checked, and the shift-zero control equals 100000 exactly. Removing small primes can therefore substantially increase the observed bias.",
+    "evidence": "number_compute.py; number_19.json",
+    "status": "failed_approach",
+    "scope_limit": "This rejects an unconditional monotonic-bias heuristic. It neither refutes Chowla nor proves that every conditional decomposition is unhelpful.",
+    "next_decision": "Abandon monotonic improvement as a premise; any new conditional cancellation estimate must state and justify additional hypotheses.",
+    "source_urls": [
+      "https://arxiv.org/abs/1509.05422"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Lindelöf hypothesis",
+    "attempt": "Integrated an explicit family of triangular peaks exactly to test whether bounded moments alone could force bounded peak heights.",
+    "result": "For F_H(t)=max(H−H³|t|,0), the second-moment integral is exactly 2/3 for every positive H, while the peak height is H and its half-support width is H^−2. Worked cases H=2,4,8 give widths 1/4,1/16,1/64. The derivative bound grows precisely fast enough to conceal the peaks.",
+    "evidence": "number_compute.py; number_20.json",
+    "status": "proved_restricted_statement",
+    "scope_limit": "These are toy Lipschitz functions, not zeta functions. The result isolates a missing hypothesis rather than disproving a zeta estimate.",
+    "next_decision": "Demand independently proved zeta derivative or peak-width control before using a moment-to-pointwise argument.",
+    "source_urls": [
+      "https://arxiv.org/abs/2606.02407"
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Vinogradov’s least quadratic nonresidue conjecture",
+    "attempt": "Tested the first 200 primes from 10007 through 11927 and enumerated all height-bounded 13-smooth integers for the three compatible primes.",
+    "result": "The compatible primes were 10391,10559,10799; their smooth sets had sizes 744,748,756, and their character sums equaled those sizes exactly. The modulo-17 residue subgroup also had the entire field as its sumset. Both calculations confirm that multiplicative containment and additive growth can coexist without cancellation.",
+    "evidence": "number_compute.py; number_21.json",
+    "status": "finite_verified",
+    "scope_limit": "The fixed smoothness threshold is calibration only. No contradictory character-sum estimate in the p^ε regime was obtained.",
+    "next_decision": "Keep the cancellation inequality as the explicit missing step; reject expansion-only arguments that pass these negative controls.",
+    "source_urls": [
+      "https://arxiv.org/abs/1410.7073"
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Lehmer’s conjecture on Ramanujan’s tau function",
+    "attempt": "Expanded the defining q-product exactly through coefficient 200, checked fourteen prime-power Hecke recurrences, and tested the 691 congruence for every coefficient.",
+    "result": "All checks passed and no computed coefficient vanished. The prime-zero congruence reduces to p≡−1 modulo 691 because gcd(11,690)=1. Among primes through 10000, this necessary filter still admits 1381,5527,8291. They are filter survivors, not zeros of tau.",
+    "evidence": "number_compute.py; number_22.json",
+    "status": "finite_verified",
+    "scope_limit": "The original coefficient cutoff 50000 was reduced to 200. Neither a finite coefficient table nor one congruence excludes all possible zeros.",
+    "next_decision": "Use the three surviving primes to audit any additional filter and attach a valid theorem to each exclusion.",
+    "source_urls": [
+      "https://arxiv.org/abs/2603.29970"
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Lang–Trotter conjecture",
+    "attempt": "Derived the actual mod-two Galois images from the two cubics and enumerated their matrices; this is new work beyond the earlier point-count control.",
+    "result": "E1 has an irreducible cubic with discriminant −23, hence image S3≅GL2(F2). Two of its six matrices have trace one. E2 factors into a rational root and a quadratic of discriminant five, giving the order-two stabilizer; both matrices have trace zero. The exact local trace-one fractions are therefore 1/3 and zero.",
+    "evidence": "number_compute.py; number_23.json",
+    "status": "proved_restricted_statement",
+    "scope_limit": "Only modulus two is certified, with Frobenius comparisons restricted to good odd primes; higher moduli and growing resolution remain uncomputed.",
+    "next_decision": "Use these genuine groups as baselines, then certify the next modular image before fitting trace predictions.",
+    "source_urls": [
+      "https://arxiv.org/abs/2006.11269"
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Leopoldt’s conjecture",
+    "attempt": "Replaced the unprepared cubic computation with an explicit quadratic unit-log calibration in Q(√5) at the split prime eleven.",
+    "result": "Hensel lifting gives √5≡48 modulo 121, hence ε=(1+√5)/2≡85 and ε^10≡111=1+110. Thus v_11(ε^10−1)=1. Every higher term of log(1+u) has valuation at least two, proving v_11(log ε)=1 and a nonzero rank-one logarithm.",
+    "evidence": "number_compute.py; number_24.json",
+    "status": "proved_restricted_statement",
+    "scope_limit": "This reproduces an established quadratic case. No cubic unit basis, regulator matrix, or universal Leopoldt result was obtained.",
+    "next_decision": "Use the nonzero valuation as a precision-control example before attempting the planned cubic fields.",
+    "source_urls": [
+      "https://arxiv.org/abs/1805.00131"
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Lehmer’s Mahler measure problem",
+    "attempt": "Certified exact rational root intervals and Mahler measures for two explicit members of the proposed small-coefficient polynomial family.",
+    "result": "For x²−x−1, the measure lies between 1.618033 and 1.618034. For x³−x−1, it lies between 1.324717 and 1.324718: there is one real root ρ>1 and the conjugate pair has squared modulus 1/ρ<1. Thus an attempted universal lower bound of 1.4 already fails on this known cubic.",
+    "evidence": "number_compute.py; number_25.json",
+    "status": "proved_restricted_statement",
+    "scope_limit": "These are two established examples, not the minimum over the full coefficient box or a degree-independent lower bound.",
+    "next_decision": "Require every auxiliary-resultant inequality to accommodate the cubic control before broader enumeration.",
+    "source_urls": [
+      "https://arxiv.org/abs/1810.13363"
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Lehmer’s totient problem",
+    "attempt": "Executed the complete prescribed census of all 65536 subsets of the first sixteen odd primes, testing totient divisibility with exact integer remainders.",
+    "result": "Exactly seventeen subsets passed: the empty subset n=1 and sixteen single-prime subsets. None of the 65519 composite subsets passed. The closest composite ratio (n−1)/φ(n) to an integer occurred at n=3717740976339, with exact distance 4084631/929437286400.",
+    "evidence": "number_compute.py; number_26.json",
+    "status": "finite_verified",
+    "scope_limit": "This is complete only for the chosen prime set. It does not test arbitrarily large factors or establish any pruning formula.",
+    "next_decision": "Use the full census as an oracle for future interval-pruning rules; require preservation of every positive control.",
+    "source_urls": [
+      "https://arxiv.org/abs/2409.17076"
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Carmichael’s totient conjecture",
+    "attempt": "Implemented complete inverse-totient recursion for every target value at most 100, retaining the special cost-one branch for prime two.",
+    "result": "Exactly 38 target values had preimages; none had exactly one, and the largest preimage was 420. For instance φ^−1(8)={15,16,20,24,30}. Each returned preimage passed an independent totient evaluation. Completeness follows by enumerating every prime-power contribution p^(e−1)(p−1) dividing the remaining target.",
+    "evidence": "number_compute.py; number_27.json",
+    "status": "finite_verified",
+    "scope_limit": "The target cutoff was reduced from 10000. The recursion certifies bounded values, not a partner construction for every integer.",
+    "next_decision": "Use uncovered substitution patterns within these complete fibers to formulate one exact additional identity.",
+    "source_urls": [
+      "https://arxiv.org/abs/math/9907204"
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Zaremba’s conjecture",
+    "attempt": "Produced an exact continued-fraction witness for every denominator two through 2000, checking each witness independently by the numerator and denominator recurrence.",
+    "result": "All 1999 denominators have a witness with digits at most five under the stated convention allowing both finite representations. A separate exhaustive test of the smaller digit bound two fails already at denominator six. The output preserves every successful numerator and digit word, making the finite coverage directly checkable.",
+    "evidence": "number_compute.py; number_28.json",
+    "status": "finite_verified",
+    "scope_limit": "No unbounded repair operation or all-denominator theorem was produced; the weaker bound-two failures do not challenge Zaremba.",
+    "next_decision": "Keep the witness table as calibration and demand a symbolic denominator-preserving identity before proposing a repair mechanism.",
+    "source_urls": [
+      "https://arxiv.org/abs/2603.14116"
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Schanuel’s conjecture",
+    "attempt": "Used rational enclosures for e and π to evaluate every primitive normalized quadratic polynomial in the stated six-monomial basis with coefficients between minus two and two.",
+    "result": "All 7448 canonical polynomials were certified nonzero; none remained unresolved. The smallest certified separation was attained by 2+2e−2π+e²−eπ, whose value lies between 0.002700225995587155 and 0.002700225995587156. Tail bounds and all subsequent interval operations use exact rational arithmetic.",
+    "evidence": "number_compute.py; number_29.json",
+    "status": "finite_verified",
+    "scope_limit": "This excludes a finite coefficient-and-degree family only; it supplies no algebraic-independence or Schanuel theorem.",
+    "next_decision": "Record these exclusions as calibration and seek a uniform symbolic argument before increasing polynomial cutoffs.",
+    "source_urls": [
+      "https://webusers.imj-prg.fr/~michel.waldschmidt/articles/pdf/AWSLecture5.pdf"
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Four exponentials conjecture",
+    "attempt": "Reduced the logarithmic determinant search to integers two through ten, applied exact multiplicative-independence filters, and evaluated every retained determinant with rational intervals.",
+    "result": "All 4158 retained quadruples were certified nonzero. The smallest separation occurred for (a,b,c,d)=(4,5,6,8), with determinant between −0.001007536229224002 and −0.001007536229224001. The exact-zero control (2,4,3,9) was correctly excluded because two and four are multiplicatively dependent.",
+    "evidence": "number_compute.py; number_30.json",
+    "status": "finite_verified",
+    "scope_limit": "The original upper bound thirty was reduced to ten. No uniform logarithmic determinant bound or transcendence conclusion follows.",
+    "next_decision": "Use the smallest determinant to test any proposed quantitative inequality, keeping its independence hypotheses explicit.",
+    "source_urls": [
+      "https://webusers.imj-prg.fr/~michel.waldschmidt/articles/pdf/AWSLecture5.pdf"
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Irrationality of Euler’s constant",
+    "attempt": "Derived elementary bounds for the harmonic approximation remainder and computed its exact denominator-clearing ledger for n=1 through twelve.",
+    "result": "The remainder lies between 1/[2(n+1)] and 1/(2n). At n=12, the common denominator is 27720 and the cleared remainder lies between 13860/13 and 1155, already exceeding 1000. Moreover denominator clearing leaves D_n log n, so the expression is not an integer linear form in γ.",
+    "evidence": "number_compute.py; number_31.json",
+    "status": "proved_restricted_statement",
+    "scope_limit": "This audits the naive harmonic baseline, not the still-unselected integral construction, and proves nothing about irrationality.",
+    "next_decision": "Reject decimal accuracy as the objective; require an explicit construction that controls both denominators and residual logarithms.",
+    "source_urls": [
+      "https://arxiv.org/abs/1303.1856"
+    ]
+  },
+  {
+    "id": 32,
+    "title": "Normality of π",
+    "attempt": "Certified the first 4096 fractional binary digits of π from rational Machin bounds, then tested the explicit shortcut D_k(2N)≤D_k(N) on five scales and eight block lengths.",
+    "result": "The shortcut fails. For one-bit blocks, D_1(1024)=11/1024 but D_1(2048)=31/2048, which is larger. Four further increases occur in the tested grid. Every digit is certified because the upper and lower rational bounds yield the same scaled integer floor.",
+    "evidence": "number_compute.py; number_32.json",
+    "status": "failed_approach",
+    "scope_limit": "Normal sequences can show finite discrepancy increases. This refutes only the monotone-doubling shortcut, not π normality; no BBP orbit bound was proved.",
+    "next_decision": "Abandon strict monotonicity and require a quantitatively justified error allowance in any future scale inequality.",
+    "source_urls": [
+      "https://arxiv.org/abs/math/0101055"
+    ]
+  },
+  {
+    "id": 33,
+    "attempt": "Constructed K7 with edge 01 subdivided by vertex 7, then identified the nonadjacent vertices 7 and 2.",
+    "result": "The original graph has a K7 minor by contracting 07. Identification produces K7 minus edge 01, which has no K7 minor. Both graphs have chromatic number six; there is no chromatic-number drop.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item33. On seven vertices every K7-minor branch set must be a singleton, so the missing edge is decisive.",
+    "status": "failed_approach",
+    "scope_limit": "This refutes unrestricted identification transfer. The example is outside the chromatic-number-at-least-seven case relevant to the proposed Hadwiger route.",
+    "next_decision": "Require any identification-transfer rule to use the chromatic hypothesis explicitly; do not promote arbitrary certificate transport to a lemma.",
+    "title": "Hadwiger’s conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2609.06867"
+    ]
+  },
+  {
+    "id": 34,
+    "attempt": "Generated 300 random twelve-vertex graphs and forty independent-set blowups of C5; filtered for connectivity, clique number at most three, and absence of an induced P6.",
+    "result": "Forty-one graphs survived. Forty had a dominating set of size at most three. The remaining graph had no such set but had anticomplete triples {0,1,2} and {4,6,8}; no tested graph violated the proposed dichotomy.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item34, stores every accepted edge set and its witness.",
+    "status": "finite_verified",
+    "scope_limit": "This is a 340-proposal calibration, reduced from the larger planned sample. Forty accepted examples belong to the structured blowup family.",
+    "next_decision": "Retain the non-dominated witness when testing strengthened structural claims; it shows why the anticomplete alternative is necessary.",
+    "title": "Erdős–Hajnal conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2606.06258"
+    ]
+  },
+  {
+    "id": 35,
+    "attempt": "Built the fifteen-vertex complete binary tree and added a sixteenth vertex adjacent to every tree vertex.",
+    "result": "Mapping the tree root to the universal vertex makes an induced embedding impossible: a depth-two tree vertex must be nonadjacent to the root. Nevertheless the other fifteen vertices explicitly induce the whole tree. The host has clique number and chromatic number three.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item35, lists the host and tree edges and the identity embedding.",
+    "status": "failed_approach",
+    "scope_limit": "The obstruction rejects inference from one failed rooted search. It neither refutes Gyárfás–Sumner nor supplies the missing bounded-color partition.",
+    "next_decision": "A usable absence certificate must exclude every possible root or justify a complete root-selection reduction.",
+    "title": "Gyárfás–Sumner conjecture",
+    "source_urls": [
+      "https://arxiv.org/html/2606.02030v1"
+    ]
+  },
+  {
+    "id": 36,
+    "attempt": "Enumerated all 1,024 labeled graphs on five vertices, canonically identified their isomorphism types, and computed full vertex-deleted decks with multiplicity.",
+    "result": "There were 34 graph types, including 21 connected types, and 34 distinct decks: no nonisomorphic deck collision occurred. Every type had repeated isomorphic cards, so retaining card multiplicities was necessary throughout.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item36, contains the canonical graph-to-deck lookup table.",
+    "status": "finite_verified",
+    "scope_limit": "This exhausts five-vertex graphs only. It calibrates exact deck handling rather than implementing the previously unfinished separator-alignment protocol.",
+    "next_decision": "Use the verified deck table to check any future alignment procedure, especially its treatment of repeated cards.",
+    "title": "Graph reconstruction conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2504.02353"
+    ]
+  },
+  {
+    "id": 37,
+    "attempt": "Recomputed the four-element equality cases specifically to classify their structure, adding a new analysis beyond the earlier family count.",
+    "result": "All 51 families whose maximum element frequency is exactly one half are precisely unions of pairwise disjoint nonempty minimal blocks. Removing unused elements leaves eleven isomorphism types, classified by the integer partition of block sizes.",
+    "evidence": "discrete_algebra.py; discrete_algebra_results.json, item37, records every family, its minimal blocks, and exact regeneration by all block unions.",
+    "status": "finite_verified",
+    "scope_limit": "This classification is exhaustive on four ground elements only; it does not establish the equality characterization or the union-closed conjecture in general.",
+    "next_decision": "Treat disjoint-block structure as a finite equality pattern requiring a separate general proof, not as an established classification at arbitrary size.",
+    "title": "Union-closed sets conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2211.09055"
+    ]
+  },
+  {
+    "id": 38,
+    "attempt": "Exhausted all 39,363 oriented circulant step sets on orders three through nineteen, replacing the planned unrestricted SAT search with an exact modular enumeration.",
+    "result": "For every tested order n, the largest triangle-free step set had size floor((n−1)/3). Thus every tested oriented circulant at minimum outdegree ceil(n/3) contained a directed triangle.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item38. A triangle exists exactly when a+b+c=0 modulo n for steps a,b,c; repeated steps are included.",
+    "status": "finite_verified",
+    "scope_limit": "Circulants have a special translation symmetry. This does not exhaust all digraphs or address longer-cycle thresholds.",
+    "next_decision": "Any proposed modular counting explanation must state where it uses translation symmetry before attempting extension to arbitrary neighborhoods.",
+    "title": "Caccetta–Häggkvist conjecture",
+    "source_urls": [
+      "https://arxiv.org/html/2604.13700v1"
+    ]
+  },
+  {
+    "id": 39,
+    "attempt": "Enumerated every perfect matching and every graph cycle of length at most eight in the prisms over C10, C12, and C14.",
+    "result": "Across 1,294 perfect matchings, 1,252 had disconnected complementary two-factors. Every one admitted an alternating-cycle exchange of length at most eight that strictly reduced its number of complementary cycles; no local trap occurred.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item39. The three matching totals are 125, 324, and 845.",
+    "status": "finite_verified",
+    "scope_limit": "The result exhausts these three prisms, not all Barnette graphs. Their ladder structure may explain the easy exchanges.",
+    "next_decision": "Analyze the successful prism exchanges for an explicit structural lemma before extrapolating this behavior to other planar cubic graphs.",
+    "title": "Barnette’s conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2508.03531"
+    ]
+  },
+  {
+    "id": 40,
+    "attempt": "Enumerated paths through the two cyclic-rotation orbits of the Petersen graph and checked the analogous complement orbits in the three-cube.",
+    "result": "The Petersen graph admits an explicit Hamiltonian path visiting each orbit contiguously. Each cube complement orbit consists of two nonadjacent vertices, so the same contiguous-fiber rule is impossible there, despite the cube's verified Hamiltonian path.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item40. Cube witness: 0,1,3,2,6,7,5,4.",
+    "status": "failed_approach",
+    "scope_limit": "The cube disproves this restricted orbit-assembly mechanism, not Lovász's conjecture. The obstruction depends on the chosen subgroup.",
+    "next_decision": "Permit orbit re-entry or prove existence of a suitable subgroup; endpoint matching alone cannot repair disconnected fibers.",
+    "title": "Lovász’s Hamiltonian-path conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2606.09742"
+    ]
+  },
+  {
+    "id": 41,
+    "attempt": "For one seeded binary rank-four instance, exhaustively analyzed all 13,824 row arrangements modulo simultaneous column permutations, retaining every row-swap move.",
+    "result": "Every state reached zero rank defect without increasing defect. There were no positive-defect trap components; the longest shortest escape to a smaller defect required two swaps, including a possible plateau move.",
+    "evidence": "discrete_landscapes.py; discrete_landscape_results.json, item41, records the four binary bases and a zero-defect arrangement.",
+    "status": "finite_verified",
+    "scope_limit": "The budget was reduced from twenty instances to one exhaustive instance. Rank-four existence is already proved; this measures exchange geometry within a solved baseline.",
+    "next_decision": "Do not assume strict one-step descent. Any broader exchange argument must explain plateau navigation and its dependence on rank.",
+    "title": "Rota’s basis conjecture",
+    "source_urls": [
+      "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2022.4"
+    ]
+  },
+  {
+    "id": 42,
+    "attempt": "Built a seven-vertex Moser spindle from two exact diamond modules, using arithmetic in Q(√3,√11), instead of the unavailable five-chromatic input modules.",
+    "result": "Checked all 21 squared distances exactly, obtained eleven unit edges, excluded every three-coloring, and exhibited a four-coloring. The two diamond endpoint constraints give a direct independent explanation of the three-color obstruction.",
+    "evidence": "discrete_geometry.py; discrete_geometry_results.json, item42, includes exact coordinate coefficients, all distances, and the coloring certificate.",
+    "status": "finite_verified",
+    "scope_limit": "This is a known four-chromatic construction and an exact module calibration. It does not supply the proposed five-chromatic inputs or improve the plane-coloring lower bound.",
+    "next_decision": "Require future imported modules to pass the same exact geometry and coloring checks before attempting five-color obstruction gluing.",
+    "title": "Hadwiger–Nelson problem",
+    "source_urls": [
+      "https://arxiv.org/abs/1804.02385"
+    ]
+  },
+  {
+    "id": 43,
+    "attempt": "Ran both repeated-distance and fixed-unit-distance greedy pruning on the explicit 9-by-9 integer grid, retaining fifty points; also checked 100 random fifty-point subsets.",
+    "result": "The original grid has 144 unit pairs but 224 pairs at squared distance five. Repeated-distance pruning retained 131 equal-distance pairs, versus 121 under fixed-unit pruning; random subsets ranged from 70 to 109.",
+    "evidence": "discrete_geometry.py; discrete_geometry_results.json, item43, stores retained coordinates and every deletion.",
+    "status": "finite_verified",
+    "scope_limit": "These are toy-grid computations, not instances of the 2026 number-field construction. No suitable small construction input was established; its feasibility remains unresolved.",
+    "next_decision": "Optimize R(A), then rescale its maximizing distance. Keep actual construction feasibility separate from this successful statistic calibration.",
+    "title": "Planar unit-distance problem: exact growth",
+    "source_urls": [
+      "https://arxiv.org/abs/2607.05374"
+    ]
+  },
+  {
+    "id": 44,
+    "attempt": "Constructed exact vertex/facet coverage matrices for a cube, octahedron, and cuboctahedron using all 26 nonzero directions in {−1,0,1}³.",
+    "result": "Exhaustive finite set-cover search found minimum dictionary covers of eight, six, and four directions, respectively. Every selected direction satisfies every required strict incident-facet inequality; dominated coverage masks were removed without changing the optimum.",
+    "evidence": "discrete_geometry.py; discrete_geometry_results.json, item44, includes vertices, facets, directions, and coverage certificates.",
+    "status": "finite_verified",
+    "scope_limit": "This replaces fifty random polytopes with three explicit controls. Minimum cardinality is certified within this finite direction dictionary; no universal illumination theorem follows.",
+    "next_decision": "Use these exact controls to distinguish geometric illumination failures from incompleteness of a future direction dictionary.",
+    "title": "Hadwiger–Boltyanski illumination conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2501.10570"
+    ]
+  },
+  {
+    "id": 45,
+    "attempt": "Computed exact rational permitted-time intersections for 500 seeded gcd-one sets of fourteen speeds at thresholds 1/15, 101/1500, and 1/14.",
+    "result": "All 500 sets had verified witnesses at all three thresholds. The structured control {1,…,14} instead had exactly eight isolated feasible times at 1/15 and none at 101/1500, exposing the sampling method's lack of near-tight examples.",
+    "evidence": "discrete_counts_flows.py; discrete_count_flow_results.json, item45, retains all speeds and rational witnesses.",
+    "status": "finite_verified",
+    "scope_limit": "The sampled sets do not discriminate near-tight behavior, so their additive-relation counts support no claimed correlation or structural reduction.",
+    "next_decision": "Replace broad uniform speed sampling with explicitly structured tight families before interpreting arithmetic predictors.",
+    "title": "Lonely runner conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2609.06259"
+    ]
+  },
+  {
+    "id": 46,
+    "attempt": "Computed exact linear-extension probabilities for 3,618 ordered incomparable pairs across 100 new posets on eight to ten elements.",
+    "result": "Found a same-poset collision in the proposed seven-component local signature: pairs (2,7) and (4,7) in case25 have probabilities 2/3 and 25/36. One is balanced and the other is not, despite identical signatures.",
+    "evidence": "discrete_counts_flows.py; discrete_count_flow_results.json, item46, stores the full order relations, counts, signature, and both witnesses.",
+    "status": "failed_approach",
+    "scope_limit": "This decisively rejects the signature as a complete balanced-pair criterion. Every sampled poset still had a balanced pair, so it is no counterexample to the conjecture.",
+    "next_decision": "Discard this signature as a sufficient classifier; a stronger criterion must capture order information that distinguishes the witness pairs.",
+    "title": "1/3–2/3 conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/1610.00809"
+    ]
+  },
+  {
+    "id": 47,
+    "attempt": "Checked exact orientations in all five-point subsets of a 4-by-4 grid, then searched for an eight-point general-position set containing no convex pentagon.",
+    "result": "All 1,668 general-position five-point subsets contained a convex quadrilateral. After 4,438 eight-point proposals, found and verified a pentagon-free eight-point witness by checking all 56 five-point subsets.",
+    "evidence": "discrete_geometry.py; discrete_geometry_results.json, item47. Witness: (0,1),(1,15),(1,19),(2,16),(2,18),(3,8),(17,6),(19,5).",
+    "status": "finite_verified",
+    "scope_limit": "These are small known-threshold calibrations. No orientation encoding or UNSAT claim for either 33-point layer profile has been completed.",
+    "next_decision": "Require the future orientation model to reproduce these positive and negative controls before attempting the seven-gon instance.",
+    "title": "Erdős–Szekeres convex-polygon conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2512.24061"
+    ]
+  },
+  {
+    "id": 48,
+    "attempt": "Enumerated every Hamiltonian cycle, modulo cyclic shift and reversal, on fixed strictly convex point sets of sizes three through nine.",
+    "result": "Exactly one straight-line thrackle cycle occurred at each odd size and none at each even size. In total, 23,116 cycles were checked using exact alternating-endpoint crossing tests.",
+    "evidence": "discrete_geometry.py; discrete_geometry_results.json, item48, supplies every surviving cycle. Coordinates may be taken as (i,i²).",
+    "status": "finite_verified",
+    "scope_limit": "The result concerns cycles drawn with straight segments on these convex sets. It does not validate the unfinished crossing-order encoding for arbitrary curved edges or subdivided theta graphs.",
+    "next_decision": "Keep these as crossing-rule controls; do not generalize the finite convex-cycle result to arbitrary thrackle drawings.",
+    "title": "Conway’s thrackle conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2506.11808"
+    ]
+  },
+  {
+    "id": 49,
+    "attempt": "Tested all 256 normalized length-three sign quadruples against all 256 eight-sign append choices, covering 65,536 parent/extension pairs.",
+    "result": "Exactly 108 parents satisfied Σ_i C_(s_i)(t)=0 at every nonzero periodic shift. Every valid parent had a complementary length-five extension; their extension counts were 9, 27, 31, or 37, with respective parent frequencies 4, 32, 24, and 48.",
+    "evidence": "discrete_algebra.py; discrete_algebra_results.json, item49. C_s(t)=Σ_j s_j s_((j+t) mod n); appending preserves every original entry and its order.",
+    "status": "finite_verified",
+    "scope_limit": "This verifies only the explicit length-three-to-five append rule for periodic complementarity, not arbitrary lengths or Hadamard existence at all admissible orders.",
+    "next_decision": "Seek an explanation of the finite extension classification before proposing any inductive construction.",
+    "title": "Hadamard matrix conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2306.16812"
+    ]
+  },
+  {
+    "id": 50,
+    "attempt": "Enumerated all 1,024 labeled three-uniform hypergraphs on five vertices, tested tetrahedron exclusion, and canonically classified the survivors.",
+    "result": "Found 768 tetrahedron-free labeled systems in 23 isomorphism types. Their maximum edge count is seven, attained by one isomorphism type. Independently verified the cyclic three-part construction has 54 edges on nine vertices and 136 on twelve.",
+    "evidence": "discrete_algebra.py; discrete_algebra_results.json, item50, records edge-count frequencies and an extremal five-vertex witness.",
+    "status": "finite_verified",
+    "scope_limit": "The raw five-vertex edge bound averages only to density 7/10, above the desired asymptotic 5/9. Finite construction densities also require finite-size corrections.",
+    "next_decision": "Any stronger certificate must use additional consistency or positivity constraints; the enumerated edge-count table alone is insufficient.",
+    "title": "Turán’s tetrahedron problem",
+    "source_urls": [
+      "https://arxiv.org/abs/2609.08336"
+    ]
+  },
+  {
+    "id": 51,
+    "attempt": "After all 100 sampled replacements violated ν=2, exhausted all 2,383 absent partite edges and all eighteen possible deletions from the specified seed.",
+    "result": "Every one of the 42,894 replacements has matching number exactly three. Each new edge avoids at least two seed edges in each copy; deleting one still leaves a disjoint edge from each copy, forming a three-edge matching with the new edge.",
+    "evidence": "discrete_obstructions.py; discrete_obstruction_results.json, item51, certifies every replacement and the avoidance counts.",
+    "status": "failed_approach",
+    "scope_limit": "The entire proposed one-edge neighborhood is empty under the matching-number-two constraint. This rejects that search design, not Ryser's inequality.",
+    "next_decision": "Abandon single-edge replacement for this seed; changing the neighborhood requires preserving matching number by a different explicit mechanism.",
+    "title": "Ryser’s hypergraph conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2505.05339"
+    ]
+  },
+  {
+    "id": 52,
+    "attempt": "Enumerated all partial transversals of size n−1 in the cyclic Latin squares of orders five and seven, then derived the governing sum identity.",
+    "result": "All 75 and 931 partial transversals completed immediately, requiring zero exchanges. More generally, for odd n the sum of all residues is zero modulo n; comparing selected row, column, and symbol sums forces the missing symbol to equal the missing row plus missing column.",
+    "evidence": "discrete_landscapes.py; discrete_landscape_results.json, item52; discrete_restricted_lemmas.txt gives the proof.",
+    "status": "proved_restricted_statement",
+    "scope_limit": "The lemma applies to cyclic odd-order squares. It explains why this benchmark cannot measure exchange difficulty and does not prove the conjecture for arbitrary Latin squares.",
+    "next_decision": "Retire cyclic near-transversals as exchange benchmarks; future tests need squares without this automatic completion identity.",
+    "title": "Ryser’s Latin-square transversal conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/1801.02893"
+    ]
+  },
+  {
+    "id": 53,
+    "attempt": "Enumerated fundamental-cycle coefficient boxes for four graphs, then checked every unrestricted unit-coordinate move at a cube trap.",
+    "result": "At z=(−2,−2,−1,−1,0), the defect potential is one. All ten ±1 coordinate moves raise it to two or three, disproving monotone descent even without the box restriction. An explicit escape reaches a valid flow with maximum potential two, making the required barrier increase exactly one.",
+    "evidence": "discrete_obstructions.py; discrete_obstruction_results.json, item53, records the basis, edge flow, ten neighbors, and escape path.",
+    "status": "failed_approach",
+    "scope_limit": "This refutes this potential-and-move rule. The cube has valid five-flows; the obstruction is algorithmic, not a counterexample to Tutte.",
+    "next_decision": "Permit controlled potential increases or change the move set; a proof cannot rely on unrestricted monotone coordinate descent.",
+    "title": "Tutte’s 5-flow conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2601.12036"
+    ]
+  },
+  {
+    "id": 54,
+    "attempt": "Verified every entry of the nine-vertex rook-graph matrix identity and derived exact block constraints for a hypothetical rooted 99-graph.",
+    "result": "The rook control passed all 81 identity entries. For the 99-graph, the unknown outside adjacency B must satisfy CB=2J−C−MC and B²+B=12I+2J−CᵀC, with row sum twelve; the block proof makes the source of these constraints explicit.",
+    "evidence": "discrete_graphs.py; discrete_graph_results.json, item54; discrete_restricted_lemmas.txt defines C and M and proves the reduction.",
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is an exact necessary-and-sufficient rooted matrix reformulation with a small verified control. No 84-by-84 binary solution or impossibility certificate has been produced.",
+    "next_decision": "Encode the full block system without extra symmetry restrictions; retain the rook instance as the positive control.",
+    "title": "Conway’s 99-graph problem",
+    "source_urls": [
+      "https://arxiv.org/abs/2308.02978"
+    ]
+  },
+  {
+    "id": 55,
+    "attempt": "Exhausted all 1,266 balanced outdegree-type assignments on four five-regular circulants and performed exact augmenting-path orientation and integral-flow lifting.",
+    "result": "The graphs on 6,8,10,12 vertices each had exact edge-connectivity five. Respectively 20,44,102,328 assignments were feasible; all 494 accepted orientations lifted to verified flows with signed values one and minus two and exact conservation.",
+    "evidence": "discrete_counts_flows.py; discrete_count_flow_results.json, item55, stores one complete flow certificate per graph and all assignment totals.",
+    "status": "finite_verified",
+    "scope_limit": "This verifies the orientation/lifting mechanism on four explicit graphs, not on arbitrary 4-edge-connected graphs or arbitrary degrees.",
+    "next_decision": "Separate failures of a chosen outdegree assignment from graph-level failure; a general argument still needs a complete structural reduction.",
+    "title": "Tutte’s 3-flow conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2609.08377"
+    ]
+  },
+  {
+    "id": 56,
+    "title": "Smooth four-dimensional Poincaré conjecture",
+    "attempt": "Computed the critical points and pole-chart Hessians of the height function on the standard unit sphere S4 in R5, making the simplest handle certificate explicit.",
+    "result": "There are exactly two critical points. Their Hessians are I4 and −I4, so the Morse indices are 0 and 4 and the associated handle description has one handle of each index.",
+    "evidence": [
+      "h±(x)=±sqrt(1−|x|²); Hess h±(0)=∓I4.",
+      "geometry_calculations.json (item 56)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This verifies the standard sphere only; it extracts no certificate for an arbitrary homotopy sphere or a published four-dimensional candidate.",
+    "next_decision": "Retain this calibration; a candidate-specific proof needs an actual handle description and justified simplifications.",
+    "source_urls": [
+      "https://arxiv.org/abs/2411.10051"
+    ]
+  },
+  {
+    "id": 57,
+    "title": "Smooth four-dimensional Schoenflies conjecture",
+    "attempt": "Constructed explicit parametrizations of both closed hemispheres bounded by the standard equatorial S3 in S4, and checked the sphere equation and inverses algebraically.",
+    "result": "Each hemisphere is smoothly diffeomorphic to the closed four-ball. The denominator in the inverse is at least one on its matching hemisphere, including the boundary.",
+    "evidence": [
+      "Φ±(y)=(2y/(1+r),±(1−r)/(1+r)), r=|y|²≤1.",
+      "4r+(1−r)²=(1+r)²; inverse y=x/(1±t).",
+      "geometry_calculations.json (item 57)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "The embedding is the standard equator. This gives no straightening map for a general smooth embedded three-sphere.",
+    "next_decision": "Use these maps to validate boundary conventions before attempting a nonstandard embedding.",
+    "source_urls": [
+      "https://arxiv.org/abs/2212.02004"
+    ]
+  },
+  {
+    "id": 58,
+    "title": "Andrews–Curtis conjecture",
+    "attempt": "Built a balanced two-generator presentation using eight elementary Andrews–Curtis moves from the trivial presentation, then executed and logged every inverse move with exact free reduction.",
+    "result": "The resulting presentation reduces back to the ordered relators x and y. The saved certificate contains the starting words, all eight reducing moves, and every intermediate state.",
+    "evidence": [
+      "geometry_calculations.py: apply_move, inverse_move, reduce_word; item 58 contains the replayable word certificate.",
+      "geometry_calculations.json (item 58)"
+    ],
+    "status": "finite_verified",
+    "scope_limit": "This deliberately generated example is known trivial by construction. No hard published candidate or stabilization question was resolved.",
+    "next_decision": "The move checker is ready; the next substantive input must be an independently specified candidate presentation.",
+    "source_urls": [
+      "https://arxiv.org/abs/2607.23611"
+    ]
+  },
+  {
+    "id": 59,
+    "title": "Slice–ribbon conjecture",
+    "attempt": "Examined the explicit disk (u,v,0,0) inside the unit four-ball and computed the radial Morse function to certify the ribbon condition for its boundary unknot.",
+    "result": "The restricted squared radius is u²+v². Its only interior critical point is a nondegenerate minimum; there are no interior maxima. Thus the disk is an explicit ribbon disk.",
+    "evidence": [
+      "∇r²=(2u,2v), Hess(r²)=2I2; boundary u²+v²=1.",
+      "geometry_calculations.json (item 59)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This solves only the unknot calibration and says nothing about a nontrivial slice candidate. No failed search is being interpreted as non-ribbonness.",
+    "next_decision": "Move to a specified slice knot only after its slicing certificate and diagram are available.",
+    "source_urls": [
+      "https://arxiv.org/abs/2603.23717"
+    ]
+  },
+  {
+    "id": 60,
+    "title": "Crossing-number additivity conjecture",
+    "attempt": "Multiplied the trefoil Jones polynomial by itself using exact integer convolution, then compared its breadth with the six-crossing connected-sum diagram.",
+    "result": "The product has lowest exponent 2 and highest exponent 8. Jones breadth gives a lower bound of six crossings, matching the diagram upper bound, so two trefoils have additive crossing number.",
+    "evidence": [
+      "(t+t³−t⁴)²=t²+2t⁴−2t⁵+t⁶−2t⁷+t⁸; 6≤c(T#T)≤6.",
+      "geometry_calculations.json (item 60)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is a familiar alternating example. The polynomial breadth need not attain crossing number for general knots.",
+    "next_decision": "Retain this exact control; a wider proof needs a lower bound effective when Jones breadth is deficient.",
+    "source_urls": [
+      "https://arxiv.org/abs/2511.18016",
+      "https://arxiv.org/abs/0907.5374"
+    ]
+  },
+  {
+    "id": 61,
+    "title": "Purely cosmetic surgery conjecture for knots in the three-sphere",
+    "attempt": "Derived the first homology of Dehn filling and applied it to every reduced slope p/q with −4≤p≤4 and 1≤q≤4.",
+    "result": "There are 23 slopes and 253 unordered pairs. Different absolute numerators eliminate 198 pairs for every knot; 55 pairs survive this necessary homological filter.",
+    "evidence": [
+      "H1(S3_{p/q}(K);Z)=Z/pZ because the longitude vanishes in exterior homology and filling kills pμ; p=0 gives Z.",
+      "geometry_calculations.json (item 61)"
+    ],
+    "status": "finite_verified",
+    "scope_limit": "Equal homology does not imply homeomorphism, and the surviving pairs are not verified cosmetic surgeries. The filter ignores orientation-sensitive invariants.",
+    "next_decision": "Apply stronger surgery invariants only to surviving pairs for a specified knot.",
+    "source_urls": [
+      "https://arxiv.org/abs/2512.20511"
+    ]
+  },
+  {
+    "id": 62,
+    "title": "Volume conjecture",
+    "attempt": "Evaluated the figure-eight colored Jones root-of-unity product formula at N=20,40,80 using independently repeated 70-digit and 130-digit Decimal calculations.",
+    "result": "The scaled logarithms are approximately 3.36473742636, 2.85816821563, and 2.52511086864. Both precision runs agree within 10^−65; these finite values remain above the known volume 2.02988321282.",
+    "evidence": [
+      "J_N=Σ(k=0..N−1) Π(j=1..k)4sin²(πj/N); output is (2π/N)log J_N.",
+      "geometry_calculations.json (item 62)"
+    ],
+    "status": "unresolved_attempt",
+    "scope_limit": "Precision agreement is numerical validation, not a rigorous interval enclosure. Three terms do not prove convergence, and the figure-eight case is already known.",
+    "next_decision": "Use this normalization control before evaluating a new knot; do not extrapolate a proof from the trend.",
+    "source_urls": [
+      "https://arxiv.org/abs/2502.18575"
+    ]
+  },
+  {
+    "id": 63,
+    "title": "11/8 conjecture",
+    "attempt": "Translated the 11/8 inequality and the older Furuta 10/8+2 inequality into exact integer conditions for forms 2k(−E8)⊕lH, then tabulated k=1 through 8.",
+    "result": "The target becomes l≥3k, while the older bound gives l≥2k+1. The interval between them contains 28 pairs in this finite table; k=1 has no gap.",
+    "evidence": [
+      "b2=16k+2l, σ=−16k; 11|σ|/8=22k; (10/8)|σ|+2=20k+2.",
+      "geometry_calculations.json (item 63)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "These are arithmetic gaps in one older bound, not realizable manifolds or a list of currently undecided forms. Stronger known restrictions were deliberately not applied.",
+    "next_decision": "Any realizability investigation must first apply the strongest known form-specific obstructions.",
+    "source_urls": [
+      "https://arxiv.org/abs/1812.04052"
+    ]
+  },
+  {
+    "id": 64,
+    "title": "Borel rigidity conjecture",
+    "attempt": "Proved the torus-to-torus case directly using equivariant lifts and checked an explicit five-dimensional integral automorphism and its inverse by exact matrix multiplication.",
+    "result": "A homotopy equivalence f:Tn→Tn inducing A∈GL(n,Z) is homotopic to the linear homeomorphism induced by A. The straight-line homotopy of lifts respects every integer translation.",
+    "evidence": [
+      "H_s(x)=(1−s)F(x)+sAx; H_s(x+z)=H_s(x)+Az; saved 5×5 matrices satisfy AA^−1=I.",
+      "geometry_calculations.json (item 64)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "Both manifolds here are tori. This does not prove rigidity for an arbitrary manifold merely homotopy equivalent to a torus, or for other aspherical manifolds.",
+    "next_decision": "Keep the lift argument as a control; the missing step is geometric identification of a general source manifold.",
+    "source_urls": [
+      "https://arxiv.org/abs/2507.11337"
+    ]
+  },
+  {
+    "id": 65,
+    "title": "Novikov conjecture",
+    "attempt": "Worked out every possible higher signature in dimension two, where positive-degree components of the Hirzebruch L-class cannot contribute.",
+    "result": "For closed oriented surfaces and an orientation-preserving homotopy equivalence h, naturality of cohomology pairing proves the required equality for every degree-two group-cohomology class; all other degrees contribute zero.",
+    "evidence": [
+      "L(M)=1; ⟨(f∘h)*a,[N]⟩=⟨f*a,h_*[N]⟩=⟨f*a,[M]⟩.",
+      "geometry_calculations.json (item 65)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is the elementary surface case. It does not control positive-degree L-classes in higher dimensions or establish the general conjecture.",
+    "next_decision": "Any extension must address those higher characteristic classes rather than reuse dimension-two vanishing.",
+    "source_urls": [
+      "https://arxiv.org/abs/2507.11337"
+    ]
+  },
+  {
+    "id": 66,
+    "title": "Farrell–Jones conjecture",
+    "attempt": "Specialized the Farrell–Jones assembly map to the infinite dihedral group and checked its explicit semidirect-product relation.",
+    "result": "The group Z⋊C2 contains Z with index two, so it is virtually cyclic. Consequently a point is a model for E_VCyc(G), and the assembly map is literally the identity.",
+    "evidence": [
+      "(n,ε)(m,δ)=(n+(−1)^εm,ε+δ mod2); rtr=t^−1; E_VCyc(G)=point.",
+      "geometry_calculations.json (item 66)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is an immediate known base case, not a new assembly calculation for a group outside the virtually cyclic family.",
+    "next_decision": "A nontrivial next attempt needs a specified group for which E_VCyc(G) is not already a point.",
+    "source_urls": [
+      "https://arxiv.org/abs/2507.11337"
+    ]
+  },
+  {
+    "id": 67,
+    "title": "Inverse Galois problem over the rational numbers",
+    "attempt": "Constructed an explicit rational polynomial realization of the finite group S3 and checked the two decisive algebraic conditions.",
+    "result": "The polynomial x³−2 is Eisenstein at 2, hence irreducible. Its discriminant is −108, which is not a rational square; the transitive cubic Galois group is therefore S3.",
+    "evidence": [
+      "disc(x³+ax+b)=−4a³−27b²; a=0,b=−2 gives −108.",
+      "geometry_calculations.json (item 67)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is a standard realization of one already realizable group. It supplies no construction for arbitrary finite groups and no new regular extension.",
+    "next_decision": "Use this example to validate a Galois-group certificate format before choosing a genuinely unresolved group-realization target.",
+    "source_urls": [
+      "https://arxiv.org/abs/1512.08708"
+    ]
+  },
+  {
+    "id": 68,
+    "title": "Tate conjecture",
+    "attempt": "Enumerated the split quadric x0x1−x2x3=0 over F7 and combined its point count with the intersection pairing of its two rational rulings.",
+    "result": "Exactly 64 of the 400 projective points lie on the quadric. Its two rulings have intersection matrix [[0,1],[1,0]], hence independent classes; the product P1×P1 description shows they span H².",
+    "evidence": [
+      "#Q(F7)=64=(7+1)²; det intersection matrix=−1; both ruling cycles are defined over F7 with Qℓ coefficients, ℓ≠7.",
+      "geometry_calculations.json (item 68)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This proves the divisor Tate statement for this split quadric using its known product decomposition, not from point counts alone.",
+    "next_decision": "A non-split surface requires actual Frobenius and cycle calculations instead of this product argument.",
+    "source_urls": [
+      "https://arxiv.org/abs/2505.07337"
+    ]
+  },
+  {
+    "id": 69,
+    "title": "Lefschetz standard conjecture",
+    "attempt": "Computed the Lefschetz operator for the complex abelian surface E×E with product polarization, then supplied algebraic correspondences realizing its inverse.",
+    "result": "In the saved bases H1→H3 is a permutation matrix squaring to identity. Integration on either elliptic factor, represented by E×E times the other diagonal, gives inverse correspondences whose sum inverts this map.",
+    "evidence": [
+      "h=a1∧b1+a2∧b2; h²=2a1∧b1∧a2∧b2. The H4→H0 inverse has coefficient 1/2.",
+      "geometry_restricted_proofs.md, item 69.",
+      "geometry_calculations.json (item 69)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This verifies one complex product-polarized surface. Matrix inversion alone would not suffice without the exhibited algebraic cycles.",
+    "next_decision": "Retain the correspondence certificate; extending to other varieties requires analogous algebraic inverse operators.",
+    "source_urls": [
+      "https://arxiv.org/abs/1002.5011"
+    ]
+  },
+  {
+    "id": 70,
+    "title": "Abundance conjecture",
+    "attempt": "Derived the canonical section counts on X=C×C×E×E, with genus-two C given by y²=x⁵−1 and elliptic E by y²=x³−x.",
+    "result": "K_X pulls back the globally generated canonical bundle on C×C, hence is nef and semiample. Riemann–Roch and Künneth give h0(mK_X)=(2m−1)² for m≥2; m=0..6 yield 1,4,9,25,49,81,121.",
+    "evidence": [
+      "h0(C,mK_C)=2m−1 for m≥2; h0(E,mK_E)=1; numerical dimension ν(K_X)=2.",
+      "geometry_restricted_proofs.md, item 70.",
+      "geometry_calculations.json (item 70)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is an explicit product fourfold. Its canonical map at m=1 includes genus-two hyperelliptic maps; it is not an embedding of C×C.",
+    "next_decision": "Use the exact count as a control; a non-product nef canonical divisor needs a different semiampleness argument.",
+    "source_urls": [
+      "https://arxiv.org/abs/2406.18233"
+    ]
+  },
+  {
+    "id": 71,
+    "title": "Termination of flips conjecture",
+    "attempt": "Tested the logical inference that a strictly decreasing nonnegative real progress measure would force every flip sequence to terminate.",
+    "result": "The exact recurrence x0=1 and x_(n+1)=x_n/(1+x_n) gives x_n=1/(n+1). Eleven values were computed as fractions, and induction proves an infinite strictly decreasing positive sequence.",
+    "evidence": [
+      "x_n−x_(n+1)=1/((n+1)(n+2))>0; inf x_n=0 is never reached.",
+      "geometry_calculations.json (item 71)"
+    ],
+    "status": "failed_approach",
+    "scope_limit": "These numbers are not flips or discrepancies of constructed varieties. The calculation rejects an insufficient termination argument, not the termination conjecture.",
+    "next_decision": "A proposed geometric measure must also have a proved well-founded value set or another finite-descent mechanism.",
+    "source_urls": [
+      "https://arxiv.org/abs/2305.01752"
+    ]
+  },
+  {
+    "id": 72,
+    "title": "Nagata’s conjecture on plane curves",
+    "attempt": "Built exact jet-interpolation matrices for ten explicit integer points and equal multiplicities m=1,2,3, taking maximum prohibited degrees d=3,6,9.",
+    "result": "The matrices have ranks 10/10, 28/28, and 55/55. Independently evaluated square minors modulo 1009 are 6,984,183; their nonvanishing certifies full column rank in characteristic zero.",
+    "evidence": [
+      "Points Pi=(i,(i²+i⁵) mod101), i=0..9; geometry_interpolation_certificates.json records every row, column, and selected minor.",
+      "geometry_calculations.json (item 72)"
+    ],
+    "status": "finite_verified",
+    "scope_limit": "This proves the indicated three multiplicities for very general ten points by openness, including lower degrees by inclusion. It covers neither all multiplicities nor arbitrary point counts.",
+    "next_decision": "Keep the exact minors; future work must introduce an argument controlling unbounded multiplicity.",
+    "source_urls": [
+      "https://arxiv.org/html/1202.0475v1"
+    ]
+  },
+  {
+    "id": 73,
+    "title": "Segre–Harbourne–Gimigliano–Hirschowitz conjecture",
+    "attempt": "Executed three mixed-multiplicity interpolation tests on ten points and a two-double-point special-case control, with exact modular minor certificates.",
+    "result": "For (d;m)=(4;2,1⁹),(4;2²,1⁸),(5;2⁵,1⁵), vector-space dimensions are 3,1,1. The conic control has dimension one, with explicit generator (y−2x)² and rank five.",
+    "evidence": [
+      "geometry_interpolation_certificates.json; in the control E=H−E1−E2, E²=−1, D=2E and D·E=−2.",
+      "geometry_calculations.json (item 73)"
+    ],
+    "status": "finite_verified",
+    "scope_limit": "The first three maximal-rank results hold for very general points. The special control uses eight zero multiplicities and verifies a familiar doubled-line mechanism only.",
+    "next_decision": "Use these positive and negative controls before interpreting a rank defect in a broader mixed system.",
+    "source_urls": [
+      "https://arxiv.org/html/1202.0475v1"
+    ]
+  },
+  {
+    "id": 74,
+    "title": "Hopf’s positive-curvature Euler-characteristic conjecture",
+    "attempt": "Evaluated the six-dimensional Euler form under constant positive sectional curvature, counting its Pfaffian pairings and checking the unit-sphere integral exactly.",
+    "result": "There are 15 pairings. The Euler density is 15κ³/(8π³) times volume, which is positive when κ>0. Multiplying by Vol(S6)=16π³/15 at κ=1 gives Euler characteristic two.",
+    "evidence": [
+      "(2π)^−3 Pf(Ω)=15κ³/(8π³)dvol; (15/8)(16/15)=2.",
+      "geometry_calculations.json (item 74)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This covers constant-curvature six-manifolds via Gauss–Bonnet. Variable positive sectional curvature does not make this substitution legitimate.",
+    "next_decision": "A broader argument must control the full curvature tensor in the Euler polynomial.",
+    "source_urls": [
+      "https://arxiv.org/abs/2507.16936"
+    ]
+  },
+  {
+    "id": 75,
+    "title": "Hopf’s S2 × S2 problem",
+    "attempt": "Applied the exact conformal sectional-curvature formula at a global minimum of an arbitrary smooth conformal factor on the standard product S2×S2.",
+    "result": "Every metric e^(2f)g_product has a plane with nonpositive curvature: choose a mixed plane at the minimum, where df=0 and Hess f is positive semidefinite. Thus no conformal deformation, of any amplitude, achieves everywhere positive curvature.",
+    "evidence": [
+      "K_new(X∧Y)=e^(−2f)[−Hess f(X,X)−Hess f(Y,Y)]≤0 at the minimum.",
+      "geometry_restricted_proofs.md, item 75.",
+      "geometry_calculations.json (item 75)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "Only the conformal class of the standard product metric is excluded. General nonconformal metrics remain outside the argument.",
+    "next_decision": "Discard this conformal search family as a route to a positively curved counterexample.",
+    "source_urls": [
+      "https://arxiv.org/abs/math/0411632"
+    ]
+  },
+  {
+    "id": 76,
+    "title": "Chern’s isoparametric conjecture for minimal hypersurfaces",
+    "attempt": "Constructed and checked a nonzero formal first-derivative tensor for principal curvatures (−3,−1,1,3), enforcing symmetry, differentiated mean/scalar constraints, and the scalar Simons norm identity.",
+    "result": "The tensor satisfies those necessary constraints with S=20 and |∇A|²=320, yet ∇K=(48√5,0,0,0). Therefore the proposed shortcut from these pointwise constraints to constant Gauss–Kronecker curvature fails.",
+    "evidence": [
+      "T111=2√5; symmetric T122=−4√5; symmetric T133=2√5; remaining entries zero. |T|²=S(S−4).",
+      "geometry_calculations.json (item 76)"
+    ],
+    "status": "failed_approach",
+    "scope_limit": "This formal jet is not a constructed local immersion or compact hypersurface. Higher-order compatibility and global realization were not proved.",
+    "next_decision": "Any repaired argument must use constraints beyond this verified first-derivative system.",
+    "source_urls": [
+      "https://arxiv.org/abs/2606.29246"
+    ]
+  },
+  {
+    "id": 77,
+    "title": "Symmetric Mahler conjecture in dimensions four and higher",
+    "attempt": "Derived exact primal and polar volumes for K_t=conv(±e1,…,±e4,±t(1,1,1,1)), throughout t≥1/2, using visible pyramids and clipped-cube integration.",
+    "result": "The volumes are t+1/4 and 32/(3t)−4/(3t³)+1/(4t⁴). Their product exceeds 32/3 because its gap has an explicitly positive polynomial numerator. At t=1 the product is 575/48.",
+    "evidence": [
+      "Product−32/3=(16u³+32u²+14u+1)/(48t⁴), u=2t−1≥0.",
+      "geometry_restricted_proofs.md, item 77.",
+      "geometry_calculations.json (item 77)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This proves the bound for one stated centrally symmetric polytope family, not all four-dimensional bodies. No novelty claim is made.",
+    "next_decision": "Remove this family from counterexample searches; a wider proof needs control beyond its special diagonal symmetry.",
+    "source_urls": [
+      "https://video.renyi.hu/video/artem-zvavitch-volume-product-and-mahler-conjecture-for-convex-bodies-407"
+    ]
+  },
+  {
+    "id": 78,
+    "title": "Zariski cancellation problem in characteristic zero",
+    "attempt": "Tested whether the kernel of one convenient locally nilpotent derivation can canonically identify a coordinate in the cancellation strategy.",
+    "result": "On C[x,y,z]/(xy−z²+1), the explicit derivations δ=(0,2z,x) and ε=(2z,0,y) both preserve the relation and are locally nilpotent. Yet x lies in ker δ while ε(x)=2z≠0.",
+    "evidence": [
+      "δ(xy−z²+1)=ε(xy−z²+1)=0; δ³y=ε³x=0; saved generator chains certify local nilpotence.",
+      "geometry_calculations.json (item 78)"
+    ],
+    "status": "failed_approach",
+    "scope_limit": "This surface calculation refutes the single-derivation invariance shortcut. It is not a counterexample to cancellation of complex affine three-space.",
+    "next_decision": "A canonical invariant must account for all relevant derivations or extra justified structure.",
+    "source_urls": [
+      "https://arxiv.org/abs/2208.14736"
+    ]
+  },
+  {
+    "id": 79,
+    "title": "Bounded negativity conjecture in characteristic zero",
+    "attempt": "Specified ten distinct points (i,i²,1) on the smooth projective conic yz−x²=0 and computed the strict transform after blowing up those points.",
+    "result": "The resulting fixed smooth projective surface contains an irreducible rational curve C with C²=−6. Its canonical intersection is four, and adjunction gives genus zero. Any negativity bound for this surface is at least six.",
+    "evidence": [
+      "C=2H−ΣEi; C²=4−10=−6; K·C=−6+10=4; 2g−2=−2.",
+      "geometry_calculations.json (item 79)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "One negative curve on one fixed surface does not violate bounded negativity. Allowing the number of blowups to vary changes the surface.",
+    "next_decision": "Further attempts must seek an unbounded sequence on this same fixed surface, not move the ambient surface.",
+    "source_urls": [
+      "https://arxiv.org/abs/2101.07187"
+    ]
+  },
+  {
+    "id": 80,
+    "title": "Four-dimensional sphere-packing problem",
+    "attempt": "Verified D4 covolume two and its 24 shortest vectors, then moved one coset in a two-coset description by s times the first coordinate vector.",
+    "result": "The original density is π²/16. Two explicit inter-coset vectors give squared minimum distance at most 2−2|s|+s²<2 for 0<|s|<2. At fixed cell volume, rescaling spheres therefore lowers density along this path.",
+    "evidence": [
+      "D4=L∪(b1+L), L=⟨2b1,b2,b3,b4⟩; vectors ±b1+se1 certify the bound.",
+      "geometry_calculations.json (item 80)"
+    ],
+    "status": "proved_restricted_statement",
+    "scope_limit": "This is one explicit periodic perturbation control, consistent with known periodic extremality. It neither searches all finite deformations nor proves global packing optimality.",
+    "next_decision": "Exclude this displacement path from improvement searches; different finite deformations require new certificates.",
+    "source_urls": [
+      "https://arxiv.org/abs/2206.15373",
+      "https://arxiv.org/abs/0808.2013"
+    ]
+  },
+  {
+    "id": 81,
+    "attempt": "The root searched correlated six-bit uniform samplers and checked the complete ordered width-two Boolean-function class; an independent method reconstructed the same class.",
+    "result": "The exact minimum support is eight. S={0,4,13,14,26,31,33,35} has maximum acceptance error 1/4 over all 18,664 functions. Affine-parity arguments exclude every smaller support.",
+    "evidence": "sampler_search_8.json; method_candidate_8_verification.json; sampler_optimality_proof.md; sampler_search.py; method_oracle.py.",
+    "status": "finite_verified",
+    "scope_limit": "This proves a finite optimum for the specified six-bit model. It neither constructs samplers at growing lengths nor establishes P=BPP; the reported computation was performed by the root and independent verifier.",
+    "next_decision": "Seek a structural construction explaining the eight-point support and test a precisely stated extension to longer programs.",
+    "title": "P versus BPP",
+    "source_urls": [
+      "https://www.math.ias.edu/files/Book-online-Aug0619.pdf"
+    ]
+  },
+  {
+    "id": 82,
+    "attempt": "Generated the three prescribed odd-charge Tseitin CNFs, exhaustively checked assignments, and compared the identical least-variable Shannon proof with and without sharing canonical residual formulas.",
+    "result": "All formulas are unsatisfiable. Tree nodes versus distinct shared residuals are 55 versus 23 for K4, 167 versus 51 for K3,3, and 343 versus 99 for the cube.",
+    "evidence": "computation_batch.py, card82; computation_batch_results.json, item 82; computation_derivations.txt, item 82.",
+    "status": "finite_verified",
+    "scope_limit": "The parity contradiction also has an elementary algebraic proof, but these sharing counts concern one fixed branching representation on three graphs. They provide no general polynomial certificate-size bound.",
+    "next_decision": "Determine which separator restrictions yield a provable sharing bound before extending the input family.",
+    "title": "NP versus coNP",
+    "source_urls": [
+      "https://www.scottaaronson.com/papers/pnp.pdf"
+    ]
+  },
+  {
+    "id": 83,
+    "attempt": "Implemented the two-bit frontier update, proved its induction for arbitrary chains of two-vertex layers, and compared all 256 two-transition instances with graph traversal.",
+    "result": "All promised instances agree. Extending the method by discarding nonlayered edges fails on 1,024 of 4,096 four-vertex digraphs; the two-edge path 0→1→3 is an explicit witness.",
+    "evidence": "m_next(j)=OR_b[m(b) AND E(b,j)]; computation_batch_results.json, item 83; computation_derivations.txt, item 83.",
+    "status": "proved_restricted_statement",
+    "scope_limit": "Four frontier bits plus logarithmic indexing suffice for the promised layered class. The adversarial projection failure identifies exactly why this implementation does not decide unrestricted directed reachability.",
+    "next_decision": "Preserve the proven layered algorithm and specify what additional information would represent within-layer and backward reachability.",
+    "title": "L versus NL",
+    "source_urls": [
+      "https://www.math.ias.edu/files/Book-online-Aug0619.pdf"
+    ]
+  },
+  {
+    "id": 84,
+    "attempt": "Ran all fifteen exact rational chain-and-precision combinations for sixteen steps, rounding the first three coordinates downward and assigning the remaining mass to the fourth.",
+    "result": "Every one of 240 checks satisfies E_next≤(1−ε)E+3·2^(−b). At ε=1/2 the maximum acceptance errors are 3/64, 3/1024, and 3/16384 for b=4,8,12.",
+    "evidence": "computation_batch_results.json, item 84 stores every step; computation_derivations.txt proves contraction and the rounding bound.",
+    "status": "finite_verified",
+    "scope_limit": "The recurrence concerns this explicit contracting four-state family. Exact rational arithmetic here is not an implementation in logarithmic space, and arbitrary randomized configuration graphs need not contract.",
+    "next_decision": "Account for storage and recomputation costs before turning the error recurrence into a space-bounded algorithm.",
+    "title": "L versus BPL",
+    "source_urls": [
+      "https://www.math.ias.edu/files/Book-online-Aug0619.pdf"
+    ]
+  },
+  {
+    "id": 85,
+    "attempt": "Executed ordered decision-diagram quantifier elimination on 200 seeded six-variable formulas under the two alternating prefixes, checking each intermediate function against independent truth-table quantification.",
+    "result": "All 12,600 remaining truth entries agree. The largest reachable diagram contains 25 nodes including terminals across the tested elimination stages.",
+    "evidence": "computation_batch.py, BDD and card85; computation_batch_results.json records all formulas, outcomes, and stage sizes.",
+    "status": "finite_verified",
+    "scope_limit": "This verifies the prescribed representation and elimination operations on a finite sample. A small maximum on six variables does not control worst-case intermediate growth with variable count or quantifier alternation.",
+    "next_decision": "Construct an explicit adversarial family and derive its diagram-size recurrence before claiming an efficient general QBF method.",
+    "title": "P versus PSPACE",
+    "source_urls": [
+      "https://www.scottaaronson.com/papers/pnp.pdf"
+    ]
+  },
+  {
+    "id": 86,
+    "attempt": "Exhaustively optimized deterministic adaptive strategies of depth at most two in the specified hidden-handle Z/7Z game, then directly replayed each attaining tree on all seven secrets.",
+    "result": "Optimal inversion success is 3/7 in the baseline, 4/7 with one challenge-parity query, and 3/7 with a redundant copied handle-index bit.",
+    "evidence": "computation_priority.py; computation_priority_results.json, item 86 includes optimal strategy trees and seven-secret replay outcomes.",
+    "status": "finite_verified",
+    "scope_limit": "The finite oracle exposes only insertion indices; parity is deliberately extra algebraic information. These exact game optima establish neither security of any concrete encoding nor existence of one-way functions.",
+    "next_decision": "Analyze how the optimum changes with group order and query budget while preserving the same explicit oracle semantics.",
+    "title": "Existence of one-way functions",
+    "source_urls": [
+      "https://www.math.ias.edu/files/Book-online-Aug0619.pdf",
+      "https://arxiv.org/abs/2307.03065"
+    ]
+  },
+  {
+    "id": 87,
+    "attempt": "Expanded 100 seeded common-factor sums and 100 exact cancellation controls, applying the prescribed base-seven Kronecker substitution and checking monomial collisions coefficientwise.",
+    "result": "All 100 sums remain nonzero and all 100 cancellation controls remain zero. No distinct monomials collide; the maximum resulting univariate degree is 1,716.",
+    "evidence": "computation_batch_results.json, item 87; computation_derivations.txt proves injectivity for exponent digits between zero and six.",
+    "status": "finite_verified",
+    "scope_limit": "This confirms a known substitution under the explicit degree bound. Expansion and the rapidly increasing substituted degree do not give polynomial-time identity testing for unrestricted circuits.",
+    "next_decision": "Require a uniform cost bound for any proposed smaller substitution before counting common-factor examples as an efficiency improvement.",
+    "title": "Deterministic polynomial identity testing",
+    "source_urls": [
+      "https://www.scottaaronson.com/papers/pnp.pdf"
+    ]
+  },
+  {
+    "id": 88,
+    "attempt": "Built the coefficient-flattening matrices for (x1+y1)^k(x2+y2)^k, k=1,…,6, and compared their exact permutation-matrix ranks with sharing-aware circuit gate counts.",
+    "result": "Ranks are 4,9,16,25,36,49 while circuit sizes are 3,5,7,7,9,9. Already k=1 refutes the candidate inequality rank≤gate count.",
+    "evidence": "The sole nonzero entry in row(a,b) is column(k−a,k−b); computation_batch_results.json, item 88; computation_derivations.txt.",
+    "status": "failed_approach",
+    "scope_limit": "This rejects the raw rank-to-size inequality for general circuits. The weaker logarithmic inequality survives these six examples, which supplies neither its general proof nor a permanent lower bound.",
+    "next_decision": "Abandon raw flattening rank as an unrestricted circuit-size bound and test any replacement measure against reuse and products first.",
+    "title": "VP versus VNP",
+    "source_urls": [
+      "https://www.scottaaronson.com/papers/pnp.pdf"
+    ]
+  },
+  {
+    "id": 89,
+    "attempt": "Executed a revealed-prefix enumeration control on fifty balanced eight-bit semiprimes and derived its exact candidate-count formula, explicitly charging for searching unknown prefixes.",
+    "result": "Revealing 1,2,4,6 leading bits leaves 64,32,8,2 odd candidates. Enumerating all admissible prefixes always returns the original set of 64 odd eight-bit candidates.",
+    "evidence": "2^(t−1)·2^(L−t−1)=2^(L−2); computation_batch_results.json, item 89 stores factors, prefixes, and recovered divisors.",
+    "status": "failed_approach",
+    "scope_limit": "The calculation rejects treating the prefix as free in this plain enumeration baseline. It does not analyze a chosen lattice theorem or prove any lower bound for classical factoring.",
+    "next_decision": "Select an explicit partial-information lattice theorem and compare its total cost with this fully charged enumeration control.",
+    "title": "Efficient classical integer factoring",
+    "source_urls": [
+      "https://www.scottaaronson.com/papers/pnp.pdf"
+    ]
+  },
+  {
+    "id": 90,
+    "attempt": "Constructed the specified rook and Shrikhande graphs, computed an edge-neighborhood invariant, and verified it under one hundred random relabelings of each graph.",
+    "result": "Both graphs have degree six and two common neighbors per distinct pair. Those common neighbors are adjacent for every rook edge and nonadjacent for every Shrikhande edge, giving signatures {1:48} and {0:48}.",
+    "evidence": "computation_batch_results.json, item 90; computation_batch.py, graph90 and signature90.",
+    "status": "finite_verified",
+    "scope_limit": "The invariant rigorously distinguishes this known pair and survives relabeling. Success on two strongly regular graphs is not an algorithm or complexity bound for arbitrary graph isomorphism.",
+    "next_decision": "Find a pair sharing this invariant to identify the next concrete information the proposed method would need.",
+    "title": "Polynomial-time graph isomorphism",
+    "source_urls": [
+      "https://www.scottaaronson.com/papers/pnp.pdf"
+    ]
+  },
+  {
+    "id": 91,
+    "attempt": "Enumerated all 3^8 assignments on the 24 prescribed unique-game instances and derived the exact optimum criterion for arbitrary permutation constraints around a cycle.",
+    "result": "Every C8 optimum is 8/8 or 7/8, exactly as predicted by whether the composed permutation has a fixed point. Nonidentity K8 instances attain between 18/28 and 20/28.",
+    "evidence": "computation_batch_results.json, item 91 records constraints and optimal assignments; computation_derivations.txt gives the cycle proof.",
+    "status": "finite_verified",
+    "scope_limit": "The exhaustive optima provide a correctness baseline, not computational hardness. The proposed SDP comparison was not executed, and no integrality-gap claim follows from these exact values alone.",
+    "next_decision": "Use the saved optima to validate a precisely encoded SDP and distinguish numerical outputs from certified bounds.",
+    "title": "Unique Games Conjecture",
+    "source_urls": [
+      "https://www.math.ias.edu/files/Book-online-Aug0619.pdf"
+    ]
+  },
+  {
+    "id": 92,
+    "attempt": "Derived operator inequalities for the specified positive-product gadget and exactly evaluated its commuting four-projector control on all sixteen computational basis states.",
+    "result": "For 0≤hi,hj≤I, hi≤Gij≤I and ker(Gij)=ker(hi)∩ker(hj). Normalized ground energy cannot decrease. In the four-projector control the normalized spectral gap rises from 1/4 to 1/2.",
+    "evidence": "Gij=2hi−hi²+(I−hi)hj(I−hi); computation_derivations.txt, item 92; computation_batch_results.json, item 92.",
+    "status": "proved_restricted_statement",
+    "scope_limit": "The lemma preserves common zeros and gives one-sided energy control. It does not construct an iterated constant-promise-gap reduction preserving QMA-hardness; the control's spectral gap is a different quantity.",
+    "next_decision": "Determine the locality and promise-gap behavior under repeated application before proposing amplification of hard instances.",
+    "title": "Quantum PCP conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2510.01333"
+    ]
+  },
+  {
+    "id": 93,
+    "attempt": "Screened all 18,424 three-summand sub-tensors of the fixed Strassen tensor square; the captain independently certified an actual nonzero 3×3 flattening minor for every triple.",
+    "result": "Every triple has a rank-three flattening. Therefore no exact three-to-two replacement exists over Q or C while the other 46 summands remain fixed, without any coefficient-alphabet restriction.",
+    "evidence": "computation_priority_results.json, item 93; captain_strassen_minor_certificates.json; captain_priority_audit.py; computation_derivations.txt.",
+    "status": "proved_restricted_statement",
+    "scope_limit": "This closes the proposed local move for this decomposition. It neither proves the full tensor has rank 49 nor excludes replacements involving more summands or global decompositions, and says nothing decisive about ω=2.",
+    "next_decision": "Drop the three-to-two search and specify a genuinely larger replacement move with a new necessary-condition screen.",
+    "title": "Matrix multiplication exponent",
+    "source_urls": [
+      "https://arxiv.org/abs/1610.08364"
+    ]
+  },
+  {
+    "id": 94,
+    "attempt": "Ran both specified DPLL rules on 500 seeded formulas, checked their decisions against exhaustive truth tables, and logged the proposed clause-count potentials after propagation.",
+    "result": "All 1,000 decisions agree. Total recursive calls are 2,751 versus 2,308. Explicit branches make n+(1/2)m2 rise from 8 to 17/2 and n+(1/4)m2 rise from 8 to 33/4.",
+    "evidence": "computation_batch_results.json, item 94 contains original/residual clauses and increasing-potential witnesses; computation_derivations.txt.",
+    "status": "failed_approach",
+    "scope_limit": "These witnesses reject monotonicity of both weighted potentials, while the runtime totals describe only this finite sample. Neither a favorable sample average nor a corrected fixed-base recurrence would settle ETH.",
+    "next_decision": "Redesign the potential and prove its change symbolically for all permitted branch types before fitting a recurrence.",
+    "title": "Exponential Time Hypothesis",
+    "source_urls": [
+      "https://www.scottaaronson.com/papers/pnp.pdf"
+    ]
+  },
+  {
+    "id": 95,
+    "attempt": "Generated 480 benchmark graphs using separate training and testing seeds, fitted the predefined upper-threshold detectors only on training data, and evaluated held-out confusion counts.",
+    "result": "Across six settings, edge and signed-triangle detectors classify between 17 and 27 of 40 test graphs correctly. Exact combinatorial identities for both statistics passed eight additional direct small-graph checks.",
+    "evidence": "computation_batch_results.json, item 95 includes integer statistics, planted sets, thresholds, and confusion counts; computation_derivations.txt derives null moments.",
+    "status": "finite_verified",
+    "scope_limit": "These are small finite detection experiments with mixed outcomes, not clique recovery or asymptotic evidence sufficient to accept or refute the planted-clique conjecture. Test data were not used for threshold selection.",
+    "next_decision": "Use the derived signal-to-noise scaling to decide whether these baseline statistics merit a larger preregistered study.",
+    "title": "Planted clique conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/1806.07508"
+    ]
+  },
+  {
+    "id": 96,
+    "attempt": "Checked the exact bounded-combinatorics hypothesis in the primary MLC theorem, then constructed a concentric-annulus stress test for replacing its uniform bound by pointwise positivity.",
+    "result": "Choosing moduli m_j=2^(−j−1)>0 gives r_N=r0·exp(−2π(1−2^(−N))) and limiting radius r0·exp(−2π)>0. Positive modulus at every scale alone therefore does not force shrinking.",
+    "evidence": "computation_batch_results.json, item 96; computation_derivations.txt; Dudko–Lyubich §1.2, Theorems A–B.",
+    "status": "failed_approach",
+    "scope_limit": "The explicit disks are geometric controls, not renormalization domains or counterexamples to MLC. The theorem's constant depends on a fixed combinatorial bound and its parameter conclusion also invokes rigidity.",
+    "next_decision": "Identify a justified nonsummable modulus estimate for the proposed extension and retain a separate parameter-transfer proof obligation.",
+    "title": "Mandelbrot local-connectivity conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2512.24171",
+      "https://arxiv.org/html/2309.02107v2#S1.SS2"
+    ]
+  },
+  {
+    "id": 97,
+    "attempt": "Converted the fixed-point and genuine two-cycle multiplier conditions into exact rational inequalities and evaluated every entry of the three specified grids near −3/4.",
+    "result": "Thirty entries have certified attracting fixed points and thirty have certified attracting two-cycles. Fifteen remain unclassified, including the three repeated parabolic centers; none of those centers was accepted.",
+    "evidence": "computation_batch_results.json, item 97 stores rational margins; computation_derivations.txt proves the square-root elimination used for fixed points.",
+    "status": "finite_verified",
+    "scope_limit": "There are 75 listed entries, with repeated centers, rather than 75 distinct parameters. Low-period nonacceptance is not a proof of nonhyperbolicity and supplies no density theorem for general complex parameters.",
+    "next_decision": "Preserve these exact certificates as controls when extending the search to higher periods or nearby unclassified parameters.",
+    "title": "Density of hyperbolicity for complex quadratic polynomials",
+    "source_urls": [
+      "https://arxiv.org/abs/0805.1658"
+    ]
+  },
+  {
+    "id": 98,
+    "attempt": "Tried an asymptotic contradiction using invariance along the multiplicative Fourier orbit and the vanishing Cesàro square-coefficient average for nonatomic measures; counted the forced orbit exactly.",
+    "result": "There are 142 positive frequencies 2^a3^b≤10^6. Their forced contribution is only O(log²N/N), so even a fixed nonzero coefficient on this orbit does not contradict the vanishing average.",
+    "evidence": "computation_batch_results.json, item 98; computation_derivations.txt gives the orbit bound and a dominated-convergence proof of the nonatomic average.",
+    "status": "failed_approach",
+    "scope_limit": "This is a new failed cross-scale counting argument after the earlier finite-grid obstruction. It constructs no non-Lebesgue invariant nonatomic measure and does not resolve interactions with positive definiteness or ergodicity.",
+    "next_decision": "Seek a mechanism forcing positive-density Fourier information or another stronger constraint, rather than repeating sparse-orbit counting.",
+    "title": "Furstenberg's ×2, ×3 measure conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2410.22701"
+    ]
+  },
+  {
+    "id": 99,
+    "attempt": "Evaluated the integrability exponent exactly for all sixteen prescribed local corner models and generated their 96 symbolic cutoff-integral expressions, treating the logarithmic case separately.",
+    "result": "Thirteen models converge, two diverge by a power, and one diverges logarithmically. The classification is determined by the rational sign of β=2+p(1/α−1), without numerical extrapolation.",
+    "evidence": "I/π=α^(1−p)(1−δ^β)/β for β≠0; computation_batch_results.json, item 99; computation_derivations.txt handles β=0.",
+    "status": "finite_verified",
+    "scope_limit": "These calculations concern the explicit local power maps. They supply neither global distortion estimates nor Brennan's conjecture for arbitrary domains; no numerical quadrature was performed or claimed.",
+    "next_decision": "Identify a concrete multiscale domain where summing the verified local contributions introduces a new controllable difficulty.",
+    "title": "Brennan's conjecture",
+    "source_urls": [
+      "https://arxiv.org/abs/2604.12240"
+    ]
+  },
+  {
+    "id": 100,
+    "attempt": "Derived the first Melnikov integral, computed both endpoint controls symbolically, and used continuity to test the actual rational perturbation pair (a,b)=(−1/10,1).",
+    "result": "At the separatrix I0→6/5 and I1→6/35; their ratio tends 1/7 and tends 0 at the center. Thus M=I1−I0/10 has at least one interior zero, with positive separatrix limit 9/175.",
+    "evidence": "computation_priority_results.json, item 100; computation_derivations.txt; captain_priority_audit.py and captain_priority_audit.json independently check the integrals.",
+    "status": "proved_restricted_statement",
+    "scope_limit": "The argument establishes an interior first-Melnikov zero, without simplicity, uniqueness, or a limit-cycle count. It provides no uniform bound for polynomial vector fields and does not solve Hilbert's sixteenth problem.",
+    "next_decision": "Test and then prove simplicity or controlled multiplicity of the interior zero before interpreting it as a cycle bifurcation.",
+    "title": "Hilbert's sixteenth problem, limit-cycle part",
+    "source_urls": [
+      "https://arxiv.org/abs/2411.09594"
+    ]
+  }
+]

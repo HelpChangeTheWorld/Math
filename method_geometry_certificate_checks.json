@@ -1,0 +1,142 @@
+[
+  {
+    "id": 72,
+    "degree": 3,
+    "multiplicities": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "minor_size": 10,
+    "determinant_mod_1009": 6,
+    "matches_saved_certificate": true,
+    "kernel_witness_checked": false
+  },
+  {
+    "id": 72,
+    "degree": 6,
+    "multiplicities": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "minor_size": 28,
+    "determinant_mod_1009": 984,
+    "matches_saved_certificate": true,
+    "kernel_witness_checked": false
+  },
+  {
+    "id": 72,
+    "degree": 9,
+    "multiplicities": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "minor_size": 55,
+    "determinant_mod_1009": 183,
+    "matches_saved_certificate": true,
+    "kernel_witness_checked": false
+  },
+  {
+    "id": 73,
+    "degree": 4,
+    "multiplicities": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "minor_size": 12,
+    "determinant_mod_1009": 571,
+    "matches_saved_certificate": true,
+    "kernel_witness_checked": false
+  },
+  {
+    "id": 73,
+    "degree": 4,
+    "multiplicities": [
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "minor_size": 14,
+    "determinant_mod_1009": 162,
+    "matches_saved_certificate": true,
+    "kernel_witness_checked": false
+  },
+  {
+    "id": 73,
+    "degree": 5,
+    "multiplicities": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "minor_size": 20,
+    "determinant_mod_1009": 733,
+    "matches_saved_certificate": true,
+    "kernel_witness_checked": false
+  },
+  {
+    "id": 73,
+    "degree": 2,
+    "multiplicities": [
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "minor_size": 5,
+    "determinant_mod_1009": 1005,
+    "matches_saved_certificate": true,
+    "kernel_witness_checked": true
+  }
+]

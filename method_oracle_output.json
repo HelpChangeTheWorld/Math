@@ -1,0 +1,42 @@
+{
+  "model": "Six ordered bits read once; two states per layer; fixed start0; arbitrary final accepting subset.",
+  "method": "Backward closure of jointly realizable unordered residual-function pairs.",
+  "equivalent_characterization": "At every prefix cut, at most two distinct suffix residual truth functions.",
+  "stages": [
+    {
+      "suffix_bits": 1,
+      "joint_pairs": 10,
+      "distinct_functions": 4
+    },
+    {
+      "suffix_bits": 2,
+      "joint_pairs": 52,
+      "distinct_functions": 16
+    },
+    {
+      "suffix_bits": 3,
+      "joint_pairs": 304,
+      "distinct_functions": 88
+    },
+    {
+      "suffix_bits": 4,
+      "joint_pairs": 1816,
+      "distinct_functions": 520
+    },
+    {
+      "suffix_bits": 5,
+      "joint_pairs": 10888,
+      "distinct_functions": 3112
+    }
+  ],
+  "input_bits": 6,
+  "distinct_functions": 18664,
+  "all_output_functions_pass_residual_characterization": true,
+  "complement_closed": true,
+  "uniform_support_lower_bound_at_error_one_quarter": 8,
+  "lower_bound_argument": "Affine parities are width2. At most six selected points lie in an affine hyperplane over F2, giving parity error1/2. Seven selected points either also lie in a hyperplane, or are affinely independent; in the latter case an affine parity can isolate one point, giving error|1/7-1/2|=5/14. Therefore every support of size<=7 fails.",
+  "lower_bound_limit": "This proves only support>=8, not optimality of any size16 construction.",
+  "function_list_file": "method_oracle_functions.json",
+  "function_list_sha256": "7541b89cf4b5b8d4a38db6de88b9f96d99a3974aa7a6caa19b7a904d04850ec5",
+  "status": "Exact finite enumeration with elementary completeness argument; no novelty claim, no formal proof assistant."
+}

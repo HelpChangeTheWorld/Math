@@ -1,0 +1,50 @@
+{
+  "scope": "Bounded same-workflow review of number_compute.py and output claims6\u201332, with priority exact checks6,8,23,32. Other output derivations were inspected for obvious scope/arithmetic errors; their computations were not rerun.",
+  "confirmed": {
+    "6": {
+      "verdict": "confirmed",
+      "symbolic_records_checked": 4096,
+      "contracting_count_binomial_check": 3302,
+      "noncontracting_count": 794,
+      "finite_exceptions": [
+        1,
+        2
+      ],
+      "scope": "The3302 classes descend AT STEP12 for all sufficiently large starts within the class. The794 others do not descend at that step; no eventual-orbit classification is implied. The parity itinerary is constant modulo4096 for12 one-division steps by induction."
+    },
+    "8": {
+      "verdict": "confirmed from code inspection and exact comparison of stored totals",
+      "configurations_compared": 12,
+      "conclusion": "All six weights beat unweighted prime-pair fractions but lose to the30-wheel baseline in both intervals. This is normalized weighted mass, not classifier accuracy or asymptotic prime detection.",
+      "scope": "Did not recompute every divisor sum. Inspected M\u00f6bius coefficients, n(n+2) divisibility, squared common-denominator weights, prime-pair indicators, and matching interval endpoints; no error found."
+    },
+    "23": {
+      "verdict": "confirmed",
+      "full_group_order": 6,
+      "trace_one_count": 2,
+      "stabilizer_order": 2,
+      "stabilizer_trace_one_count": 0,
+      "proof": "x^3\u2212x+1 has no rational root and discriminant\u221223, giving S3\u2245GL2(F2). The second cubic factors (x\u22121)(x\u00b2+x\u22121), with quadratic discriminant5, giving the order-two point stabilizer.",
+      "scope": "These are group-image fractions. Frobenius interpretations require odd good primes (exclude2,23 for E1 and2,5 for E2). No higher-modulus independence follows."
+    },
+    "32": {
+      "verdict": "confirmed with independent rational interval recomputation",
+      "certified_digits": 4096,
+      "hex_matches_saved_output": true,
+      "one_bit_discrepancy_at1024": "11/1024",
+      "one_bit_discrepancy_at2048": "31/2048",
+      "conclusion": "The saved4096-bit prefix is certified by equal scaled floors. The exact one-bit discrepancy increase disproves monotone doubling for this prefix, not normality.",
+      "method": "Reverse-Horner evaluation of rational alternating arctangent partial sums and explicit next-term bounds, followed by Machin interval combination."
+    }
+  },
+  "corrections": [],
+  "wording_cautions": [
+    "In item6 use eventually-descending-in-class only to mean sufficiently large starts descend at step12; the classification is not eventual convergence.",
+    "Item23 group fractions should not be confused with finite prime-count proportions; Frobenius assertions exclude odd bad primes and prime2."
+  ],
+  "limits": [
+    "No full independent rerun of27 experiments.",
+    "No novelty audit or external mathematical endorsement.",
+    "The factor() helper has a finite prime table; reviewed call sizes lie within its needed trial-division range, but it is not a general primality/factorization certificate for arbitrary large new inputs."
+  ]
+}

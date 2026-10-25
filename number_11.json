@@ -1,0 +1,190 @@
+{
+  "prime_exponent_cutoff": 127,
+  "trial_factor_cutoff": 1000,
+  "rows": [
+    {
+      "p": 2,
+      "lucas_lehmer_prime": true,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 3,
+      "lucas_lehmer_prime": true,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 5,
+      "lucas_lehmer_prime": true,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 7,
+      "lucas_lehmer_prime": true,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 11,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": [
+        23,
+        89
+      ]
+    },
+    {
+      "p": 13,
+      "lucas_lehmer_prime": true,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 17,
+      "lucas_lehmer_prime": true,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 19,
+      "lucas_lehmer_prime": true,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 23,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": [
+        47
+      ]
+    },
+    {
+      "p": 29,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": [
+        233
+      ]
+    },
+    {
+      "p": 31,
+      "lucas_lehmer_prime": true,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 37,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": [
+        223
+      ]
+    },
+    {
+      "p": 41,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 43,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": [
+        431
+      ]
+    },
+    {
+      "p": 47,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 53,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 59,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 61,
+      "lucas_lehmer_prime": true,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 67,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 71,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 73,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": [
+        439
+      ]
+    },
+    {
+      "p": 79,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 83,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": [
+        167
+      ]
+    },
+    {
+      "p": 89,
+      "lucas_lehmer_prime": true,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 97,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 101,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 103,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 107,
+      "lucas_lehmer_prime": true,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 109,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 113,
+      "lucas_lehmer_prime": false,
+      "proper_prime_factors_at_most_1000": []
+    },
+    {
+      "p": 127,
+      "lucas_lehmer_prime": true,
+      "proper_prime_factors_at_most_1000": []
+    }
+  ],
+  "composite_trial_survivors": [
+    41,
+    47,
+    53,
+    59,
+    67,
+    71,
+    79,
+    97,
+    101,
+    103,
+    109,
+    113
+  ]
+}

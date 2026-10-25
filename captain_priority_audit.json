@@ -1,0 +1,34 @@
+{
+  "review_scope": "Independent same-workflow audit of items93 and100 only; no novelty claim or external endorsement.",
+  "93": {
+    "verdict": "CONFIRMED",
+    "triples_with_direct_nonzero_flattening_minor": 18424,
+    "mode_counts": {
+      "0": 18382,
+      "1": 42
+    },
+    "minor_determinant_counts": {
+      "-1": 9211,
+      "1": 9213
+    },
+    "certificates": "captain_strassen_minor_certificates.json",
+    "proof": "A sum of two rank-one three-tensors has every matrix flattening of rank at most2. Every tested triple has an explicitly computed nonzero3x3 minor in one actual flattening, hence tensor rank at least3. The given three-term expression supplies rank at most3, so every triple has tensor rank exactly3 over Q (and C). Thus none admits an exact local3-to2 replacement, with all other terms held fixed and no coefficient-alphabet restriction.",
+    "original_shortcut_justification": "Three rank-one matrices b_i c_i^T are independent when both triples have pairwise nonproportional members: a nontrivial combination of two has matrix rank2 if both coefficients are nonzero, so cannot equal the third rank-one matrix. Zero coefficients reduce to forbidden proportionality. The factor-span shortcut was therefore valid here; direct minors independently avoid relying on it.",
+    "limits": "Does not exclude modifying four or more terms, changing the full decomposition, approximate/border-rank constructions, or faster general matrix multiplication.",
+    "independent_matrix_unit_product_checks": 16
+  },
+  "100": {
+    "verdict": "CONFIRMED with positive integral convention I_j=2 integral x^j sqrt(2(h\u2212V(x))) dx",
+    "endpoint_h": "1/6",
+    "x_interval": [
+      "-1/2",
+      "1"
+    ],
+    "factorization": "2(h\u2212V(x))=(1\u2212x)^2(2x+1)/3",
+    "substitution": "u=sqrt(2x+1); I0=(1/sqrt3) integral_0^sqrt3 (3u^2\u2212u^4)du; I1=(1/(2sqrt3)) integral_0^sqrt3 (4u^4\u2212u^6\u22123u^2)du",
+    "I0": "6/5",
+    "I1": "6/35",
+    "ratio": "1/7",
+    "interior_zero": "Since I0>0, |I1/I0|\u2264max|x|\u21920 as h\u21920. Continuity and endpoint ratio1/7 imply I1/I0=1/10 at some interior h. This does not establish a simple zero or a global cycle-count bound."
+  }
+}

@@ -1,131 +1,57 @@
-# Help Change The World — Math
+# Math Frontiers — Work Round 2 research pack
 
-## 100 difficult math problems. Let's get after them.
+Start with `Math_Frontiers_Work_Round_2.md`. It contains the results, all 100 bounded work records, their limits, and the complete finite sampler proof. `all_100_work_records.json` holds the same records in machine-readable form. These are actual computations and derivations performed in an AI workflow. No major conjecture resolution or established novelty is claimed.
 
-This is an open, AI-assisted research project exploring 100 difficult problems in mathematics.
+## Reproduce the main result
 
-The goal is not to ask an AI to “solve” famous unsolved problems and publish whatever it says. The goal is to build a research process:
+The verification of the eight-point sampler uses Python's standard library. From the extracted archive directory, run:
 
-- Understand what mathematicians already know.
-- Break large problems into smaller, testable questions.
-- Run exact computations where possible.
-- Search aggressively for counterexamples.
-- Try to destroy our own arguments.
-- Preserve the code, calculations, proofs, and failures.
-- Publish everything so other people can check our work.
+```bash
+python3 method_oracle.py --candidate-json sampler_candidate_8.json
+```
 
-## Don't trust us. Check us.
+This regenerates all 18,664 functions by the documented backward recurrence and checks the candidate with exact rational arithmetic. The expected maximum error is `1/4`. The elementary lower-bound proof in `sampler_optimality_proof.md` excludes every support of size at most seven. Thus the exact finite optimum is eight. Running the oracle updates its own output files; preserve an untouched copy if comparing archive hashes.
 
-Large language models can make mistakes, rediscover known mathematics, and produce arguments that sound convincing but are wrong.
+`sampler_search.py` uses a different complete enumeration and a mixed-integer solver to find candidates. It requires NumPy and SciPy (this run used SciPy 1.17.0). It is optional for verification:
 
-That is why we want the evidence public.
+```bash
+python3 sampler_search.py 8 90
+```
 
-For every meaningful result, we will try to distinguish between:
+The last argument is a solver time limit in seconds. A later solver run may choose a different support or time out. The saved candidate's exact verification and the lower-bound proof do not depend on the solver proving optimality.
 
-**Idea** — something worth investigating.
+## Other computations
 
-**Experiment** — something observed computationally.
+The calculation scripts use Python 3 and the standard library, except for the optional sampler search above. Outputs are saved alongside their scripts. Some exhaustive runs may take minutes.
 
-**Finite result** — something exhaustively verified inside a precisely defined model.
+| Work | Runner | Main saved evidence |
+|:--|:--|:--|
+| Targets 1–5 | `captain_calculations.py`, then `captain_verify_and_refine.py` | `captain_*.json` |
+| Targets 6–32 | `number_compute.py` | `number_6.json` through `number_32.json` |
+| Graph constructions and enumerations | `discrete_graphs.py` | `discrete_graph_results.json` |
+| Complementary sequences and equality families | `discrete_algebra.py` | `discrete_algebra_results.json` |
+| Discrete geometry | `discrete_geometry.py` | `discrete_geometry_results.json` |
+| Finite search landscapes | `discrete_landscapes.py` | `discrete_landscape_results.json` |
+| Additional discrete counts and flows | `discrete_counts_flows.py` | `discrete_count_flow_results.json` |
+| Targets 56–80 | `geometry_calculations.py` | `geometry_calculations.json`, `geometry_interpolation_certificates.json` |
+| Targets 86, 93, 100 | `computation_priority.py` | `computation_priority_results.json` |
+| Other targets 81–100 | `computation_batch.py` | `computation_batch_results.json` |
+| Separate audit of 93 and 100 | `captain_priority_audit.py` | `captain_priority_audit.json`, `captain_strassen_minor_certificates.json` |
 
-**Proof** — a mathematical argument establishing the stated claim.
+Narrative records and proof supplements explain arguments that are not exhausted by code execution. Not every record is a new theorem: many are calibrations, finite witnesses, or failed implications. Fixed random seeds and exact models are recorded in the relevant scripts and outputs. Floating-point calculations are explicitly limited in the records; agreement at two precisions alone is not treated as an error certificate.
 
-**New result** — something that has also survived a serious search of the existing mathematical literature.
+The audit of #93 computes a nonzero 3×3 minor of an actual matrix flattening for each of 18,424 triples. This certifies tensor rank three for every triple and excludes any exact three-to-two replacement with all other terms fixed, including over complex coefficients. It says nothing about changing more terms or another full decomposition.
 
-Those are not the same thing.
+The reviewers are other members of the same AI workflow, not external human referees. Independent enumeration or calculation means a distinct derivation or implementation where identified, not institutional endorsement.
 
-## What we've found so far
+## Integrity and report assembly
 
-### #81 — Randomness Reduction / Samplers
+`SHA256SUMS.txt` lists SHA-256 hashes for every other archived file at delivery. `assembly_validation.json` records that IDs 1–100 occur exactly once and that required fields and direct evidence filenames were checked. Archive integrity was also checked when the pack was built. These packaging checks do not prove every mathematical statement.
 
-We studied a six-bit model with 64 possible inputs.
+To regenerate the report and pack from the domain logs:
 
-For programs that all read the six inputs in the same order, we found that **8 sample inputs are sufficient and 7 are not**.
+```bash
+python3 build_work_report.py --output-dir regenerated_output
+```
 
-Under the stronger requirement that the sample must work regardless of the order in which an allowed program reads the inputs, we proved that **11 inputs cannot be sufficient**.
-
-Therefore at least **12** are necessary.
-
-Whether 12 are sufficient remains unresolved in our research.
-
-### #49 — Hadamard-Related Sign Sequences
-
-In a precisely defined finite extension problem, we classified **336,140 valid normalized length-seven starting configurations**.
-
-Most could be extended immediately or after one permitted change.
-
-A small number required two changes.
-
-Exactly **12 required three changes**.
-
-None required more than three under the stated rules.
-
-This answers that finite question. It does **not** solve the general Hadamard Matrix Conjecture.
-
-### #93 — Matrix Multiplication
-
-We tested **211,876 four-term selections** in a specified Strassen-based construction.
-
-None of those four terms could simply be replaced by three while leaving the rest of the construction fixed.
-
-A literature review found stronger related existing results, so we treat this as a reproduced finite obstruction rather than a claim of a new breakthrough.
-
-## The 100 Problems
-
-The research program includes problems connected to:
-
-Riemann Hypothesis · P vs NP · Birch and Swinnerton-Dyer · Hodge Conjecture · Yang-Mills · Collatz · Goldbach · Twin Primes · Hadamard Matrices · P vs BPP · Matrix Multiplication · Hilbert's Sixteenth Problem · and many others.
-
-A complete 100-problem research ledger will be published in this repository.
-
-## How this repository will work
-
-Each research problem will eventually contain:
-
-**Overview**  
-Why the problem matters and what we are trying to learn.
-
-**Current Status**  
-What has actually been established.
-
-**Full Mathematics**  
-Definitions, assumptions, derivations, and proofs.
-
-**Experiments**  
-Computer searches and exact finite calculations.
-
-**Verification**  
-Independent checking scripts and reproducible outputs.
-
-**Literature**  
-Relevant existing mathematical research.
-
-**Failures**  
-Approaches that did not work and why.
-
-**Next Question**  
-The next precise thing worth attacking.
-
-## Found an error?
-
-Good.
-
-Please tell us.
-
-The purpose of making this public is not to defend every result. It is to make the work easier to inspect, criticize, reproduce, correct, and improve.
-
-If something is wrong, we want to know.
-
-If something is already known, we want to know that too.
-
-If something survives, we keep pushing.
-
-## Why?
-
-This is part of a larger experiment documented at **FredEsser.com**:
-
-Can increasingly capable AI tools reduce the cost of helping with serious research?
-
-We don't know.
-
-Let's find out.
+The report builder does not rerun experiments. Some metadata, such as elapsed runtime, can differ on reproduction. The five domain record files are `millennium_work.json`, `number_work.json`, `discrete_work.json`, `geometry_work.json`, and `computation_work.json`.

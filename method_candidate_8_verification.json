@@ -1,0 +1,46 @@
+{
+  "support": [
+    0,
+    4,
+    13,
+    14,
+    26,
+    31,
+    33,
+    35
+  ],
+  "support_size": 8,
+  "uniform_on_distinct_inputs": true,
+  "functions_checked": 18664,
+  "maximum_error": "1/4",
+  "meets_error_one_quarter": true,
+  "witness": {
+    "function_mask": 13107,
+    "sample_accepted": 3,
+    "full_accepted": 8,
+    "residual_widths": [
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  "binary_strings": [
+    "000000",
+    "000100",
+    "001101",
+    "001110",
+    "011010",
+    "011111",
+    "100001",
+    "100011"
+  ],
+  "support_matches_solver_record": true,
+  "method": "Independent backward joint-residual-pair enumeration; explicit rational means over the complete six-bit class.",
+  "minimum_uniform_support_size": 8,
+  "optimality_basis": "Verified8-point upper bound together with elementary affine-parity lower bound excluding every size<=7.",
+  "scope": "Exact finite model only; no novelty or general derandomization claim; same-workflow AI review, not external peer review or formal proof-assistant certification."
+}

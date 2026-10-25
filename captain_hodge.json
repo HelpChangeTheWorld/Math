@@ -1,0 +1,37 @@
+{
+  "surface": "E x E, E:y^2=x^3-x over C",
+  "divisors": [
+    "E x {O}",
+    "{O} x E",
+    "diagonal",
+    "graph of i:(x,y)->(-x,iy)"
+  ],
+  "intersection_matrix": [
+    [
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      2
+    ],
+    [
+      1,
+      1,
+      2,
+      0
+    ]
+  ],
+  "determinant": "-4",
+  "proof": "Each elliptic divisor has self-intersection0 by adjunction on the abelian surface. Fiber intersections are1. Diagonal intersect graph(i) in ker(i-1), of degree norm(i-1)=2. Nonzero determinant proves four independent rational (1,1) classes. Kunneth gives complex h^(1,1)=1+1+2=4, so they span all rational (1,1) classes. This verifies the established divisor case on this particular surface."
+}

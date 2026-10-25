@@ -1,0 +1,64 @@
+{
+  "support": [
+    0,
+    1,
+    4,
+    5,
+    6,
+    10,
+    11,
+    12,
+    31,
+    37,
+    38,
+    46,
+    48,
+    56,
+    58,
+    63
+  ],
+  "support_size": 16,
+  "uniform_on_distinct_inputs": true,
+  "functions_checked": 18664,
+  "maximum_error": "1/4",
+  "meets_error_one_quarter": true,
+  "witness": {
+    "function_mask": 65535,
+    "sample_accepted": 8,
+    "full_accepted": 16,
+    "residual_widths": [
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  "method": "Regenerated full class by independent backward shared-residual-pair closure; explicit rational acceptance means.",
+  "review_scope": "AI verification in the same workflow, not external peer review or a proof-assistant certificate.",
+  "sampler_search_code_review": {
+    "verdict": "No mathematical bug found for the exercised support-size domain.",
+    "coverage": "Root block pairs give520 ordered pairs, consistent with2*304-88 from the independent unordered-pair oracle; three-block composition gives the same18,664 functions.",
+    "integer_constraints": "For support size k and function population b, integer selected acceptance a must satisfy ceil(k*b/64-k/4)<=a<=floor(k*b/64+k/4). Code implements this correctly. For1<=k<=64 all values are exactly representable dyadic rationals; 1e-10 cushions do not cross a distinct1/64-grid bound.",
+    "symmetry": "Fixing inclusion of0 loses no feasible support: translating by xor maps an included point to0 and preserves the class through input-label swaps at each layer.",
+    "postverification": "Binary bounds, integrality, sum=k and exact acceptance recheck separate candidate validity from numerical solver tolerance. Infeasibility alone is correctly not treated as a certified theorem.",
+    "limits": "No assertion that16 is minimal; validation does not establish any asymptotic generator result."
+  },
+  "parity_only_eight_point_control": {
+    "support": [
+      0,
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      63
+    ],
+    "affine_parities_checked": 128,
+    "maximum_error": "1/4",
+    "interpretation": "Parity-only tests cannot rule out all supports of size8. No assertion that this particular support fools the full width2 class."
+  }
+}

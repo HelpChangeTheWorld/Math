@@ -1,0 +1,12 @@
+{
+  "k1_reduction": "m(m-3)=0; m>=2 gives m=3, namely 1+2=3.",
+  "k2_identity": "6*(sum_{j=1}^{m-1}j^2-m^2)=m*(2m^2-9m+1)",
+  "k2_discriminant": 73,
+  "between_consecutive_squares": [
+    64,
+    81
+  ],
+  "conclusion": "No positive integer m>=2 solves the k=2 equation.",
+  "independent_identity_checks": 99,
+  "scope": "Only k=1 and k=2; no uniform argument in k."
+}

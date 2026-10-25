@@ -1,0 +1,2003 @@
+{
+  "42": {
+    "vertices": 7,
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "exact_coordinates": [
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "1/2",
+          "0",
+          "0"
+        ],
+        [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "1/2",
+          "0",
+          "0"
+        ],
+        [
+          "-1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "5/6",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/6"
+        ]
+      ],
+      [
+        [
+          "0",
+          "5/12",
+          "-1/12",
+          "0"
+        ],
+        [
+          "5/12",
+          "0",
+          "0",
+          "1/12"
+        ]
+      ],
+      [
+        [
+          "0",
+          "5/12",
+          "1/12",
+          "0"
+        ],
+        [
+          "-5/12",
+          "0",
+          "0",
+          "1/12"
+        ]
+      ]
+    ],
+    "coordinate_basis": [
+      "1",
+      "sqrt(3)",
+      "sqrt(11)",
+      "sqrt(33)"
+    ],
+    "all_21_squared_distances": [
+      {
+        "pair": [
+          0,
+          1
+        ],
+        "squared_distance_coefficients": [
+          "3",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "pair": [
+          0,
+          2
+        ],
+        "squared_distance_coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "pair": [
+          0,
+          3
+        ],
+        "squared_distance_coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "pair": [
+          0,
+          4
+        ],
+        "squared_distance_coefficients": [
+          "3",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "pair": [
+          0,
+          5
+        ],
+        "squared_distance_coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "pair": [
+          0,
+          6
+        ],
+        "squared_distance_coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "pair": [
+          1,
+          2
+        ],
+        "squared_distance_coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "pair": [
+          1,
+          3
+        ],
+        "squared_distance_coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "pair": [
+          1,
+          4
+        ],
+        "squared_distance_coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "pair": [
+          1,
+          5
+        ],
+        "squared_distance_coefficients": [
+          "3/2",
+          "0",
+          "0",
+          "1/6"
+        ]
+      },
+      {
+        "pair": [
+          1,
+          6
+        ],
+        "squared_distance_coefficients": [
+          "3/2",
+          "0",
+          "0",
+          "-1/6"
+        ]
+      },
+      {
+        "pair": [
+          2,
+          3
+        ],
+        "squared_distance_coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "pair": [
+          2,
+          4
+        ],
+        "squared_distance_coefficients": [
+          "3/2",
+          "0",
+          "0",
+          "-1/6"
+        ]
+      },
+      {
+        "pair": [
+          2,
+          5
+        ],
+        "squared_distance_coefficients": [
+          "1/3",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "pair": [
+          2,
+          6
+        ],
+        "squared_distance_coefficients": [
+          "7/6",
+          "0",
+          "0",
+          "-1/6"
+        ]
+      },
+      {
+        "pair": [
+          3,
+          4
+        ],
+        "squared_distance_coefficients": [
+          "3/2",
+          "0",
+          "0",
+          "1/6"
+        ]
+      },
+      {
+        "pair": [
+          3,
+          5
+        ],
+        "squared_distance_coefficients": [
+          "7/6",
+          "0",
+          "0",
+          "1/6"
+        ]
+      },
+      {
+        "pair": [
+          3,
+          6
+        ],
+        "squared_distance_coefficients": [
+          "1/3",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "pair": [
+          4,
+          5
+        ],
+        "squared_distance_coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "pair": [
+          4,
+          6
+        ],
+        "squared_distance_coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "pair": [
+          5,
+          6
+        ],
+        "squared_distance_coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    ],
+    "three_coloring": null,
+    "four_coloring": [
+      0,
+      0,
+      1,
+      2,
+      1,
+      2,
+      3
+    ],
+    "chromatic_number": 4,
+    "proof": "Each diamond consists of two triangles sharing an edge. In a three-coloring its two degree-two endpoints have the same color. The two diamonds share endpoint 0, forcing vertices 1 and 4 to share its color, but edge 1-4 is present."
+  },
+  "43": {
+    "grid_statistics": {
+      "points": 81,
+      "U_fixed_squared_distance_1": 144,
+      "R_maximum_multiplicity": 224,
+      "maximizing_squared_distances": [
+        5
+      ]
+    },
+    "R_pruning": {
+      "retained_points": [
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          5
+        ]
+      ],
+      "statistics": {
+        "points": 50,
+        "U_fixed_squared_distance_1": 83,
+        "R_maximum_multiplicity": 131,
+        "maximizing_squared_distances": [
+          5
+        ]
+      },
+      "deletion_trace": [
+        {
+          "removed": [
+            0,
+            0
+          ],
+          "remaining_objective": 222
+        },
+        {
+          "removed": [
+            0,
+            8
+          ],
+          "remaining_objective": 220
+        },
+        {
+          "removed": [
+            8,
+            0
+          ],
+          "remaining_objective": 218
+        },
+        {
+          "removed": [
+            8,
+            8
+          ],
+          "remaining_objective": 216
+        },
+        {
+          "removed": [
+            0,
+            1
+          ],
+          "remaining_objective": 213
+        },
+        {
+          "removed": [
+            0,
+            7
+          ],
+          "remaining_objective": 210
+        },
+        {
+          "removed": [
+            1,
+            0
+          ],
+          "remaining_objective": 207
+        },
+        {
+          "removed": [
+            0,
+            2
+          ],
+          "remaining_objective": 204
+        },
+        {
+          "removed": [
+            1,
+            8
+          ],
+          "remaining_objective": 201
+        },
+        {
+          "removed": [
+            0,
+            6
+          ],
+          "remaining_objective": 198
+        },
+        {
+          "removed": [
+            2,
+            0
+          ],
+          "remaining_objective": 195
+        },
+        {
+          "removed": [
+            2,
+            8
+          ],
+          "remaining_objective": 192
+        },
+        {
+          "removed": [
+            7,
+            0
+          ],
+          "remaining_objective": 189
+        },
+        {
+          "removed": [
+            7,
+            8
+          ],
+          "remaining_objective": 186
+        },
+        {
+          "removed": [
+            8,
+            1
+          ],
+          "remaining_objective": 183
+        },
+        {
+          "removed": [
+            6,
+            0
+          ],
+          "remaining_objective": 180
+        },
+        {
+          "removed": [
+            8,
+            2
+          ],
+          "remaining_objective": 177
+        },
+        {
+          "removed": [
+            8,
+            6
+          ],
+          "remaining_objective": 174
+        },
+        {
+          "removed": [
+            8,
+            7
+          ],
+          "remaining_objective": 171
+        },
+        {
+          "removed": [
+            6,
+            8
+          ],
+          "remaining_objective": 168
+        },
+        {
+          "removed": [
+            0,
+            3
+          ],
+          "remaining_objective": 164
+        },
+        {
+          "removed": [
+            1,
+            1
+          ],
+          "remaining_objective": 161
+        },
+        {
+          "removed": [
+            3,
+            0
+          ],
+          "remaining_objective": 158
+        },
+        {
+          "removed": [
+            0,
+            4
+          ],
+          "remaining_objective": 154
+        },
+        {
+          "removed": [
+            1,
+            2
+          ],
+          "remaining_objective": 151
+        },
+        {
+          "removed": [
+            1,
+            6
+          ],
+          "remaining_objective": 148
+        },
+        {
+          "removed": [
+            0,
+            5
+          ],
+          "remaining_objective": 144
+        },
+        {
+          "removed": [
+            1,
+            7
+          ],
+          "remaining_objective": 141
+        },
+        {
+          "removed": [
+            3,
+            8
+          ],
+          "remaining_objective": 138
+        },
+        {
+          "removed": [
+            1,
+            3
+          ],
+          "remaining_objective": 134
+        },
+        {
+          "removed": [
+            2,
+            1
+          ],
+          "remaining_objective": 131
+        }
+      ]
+    },
+    "U_pruning": {
+      "retained_points": [
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "statistics": {
+        "points": 50,
+        "U_fixed_squared_distance_1": 85,
+        "R_maximum_multiplicity": 121,
+        "maximizing_squared_distances": [
+          5
+        ]
+      },
+      "deletion_trace": [
+        {
+          "removed": [
+            0,
+            0
+          ],
+          "remaining_objective": 142
+        },
+        {
+          "removed": [
+            0,
+            1
+          ],
+          "remaining_objective": 140
+        },
+        {
+          "removed": [
+            0,
+            2
+          ],
+          "remaining_objective": 138
+        },
+        {
+          "removed": [
+            0,
+            3
+          ],
+          "remaining_objective": 136
+        },
+        {
+          "removed": [
+            0,
+            4
+          ],
+          "remaining_objective": 134
+        },
+        {
+          "removed": [
+            0,
+            5
+          ],
+          "remaining_objective": 132
+        },
+        {
+          "removed": [
+            0,
+            6
+          ],
+          "remaining_objective": 130
+        },
+        {
+          "removed": [
+            0,
+            7
+          ],
+          "remaining_objective": 128
+        },
+        {
+          "removed": [
+            0,
+            8
+          ],
+          "remaining_objective": 127
+        },
+        {
+          "removed": [
+            1,
+            0
+          ],
+          "remaining_objective": 125
+        },
+        {
+          "removed": [
+            1,
+            1
+          ],
+          "remaining_objective": 123
+        },
+        {
+          "removed": [
+            1,
+            2
+          ],
+          "remaining_objective": 121
+        },
+        {
+          "removed": [
+            1,
+            3
+          ],
+          "remaining_objective": 119
+        },
+        {
+          "removed": [
+            1,
+            4
+          ],
+          "remaining_objective": 117
+        },
+        {
+          "removed": [
+            1,
+            5
+          ],
+          "remaining_objective": 115
+        },
+        {
+          "removed": [
+            1,
+            6
+          ],
+          "remaining_objective": 113
+        },
+        {
+          "removed": [
+            1,
+            7
+          ],
+          "remaining_objective": 111
+        },
+        {
+          "removed": [
+            1,
+            8
+          ],
+          "remaining_objective": 110
+        },
+        {
+          "removed": [
+            2,
+            0
+          ],
+          "remaining_objective": 108
+        },
+        {
+          "removed": [
+            2,
+            1
+          ],
+          "remaining_objective": 106
+        },
+        {
+          "removed": [
+            2,
+            2
+          ],
+          "remaining_objective": 104
+        },
+        {
+          "removed": [
+            2,
+            3
+          ],
+          "remaining_objective": 102
+        },
+        {
+          "removed": [
+            2,
+            4
+          ],
+          "remaining_objective": 100
+        },
+        {
+          "removed": [
+            2,
+            5
+          ],
+          "remaining_objective": 98
+        },
+        {
+          "removed": [
+            2,
+            6
+          ],
+          "remaining_objective": 96
+        },
+        {
+          "removed": [
+            2,
+            7
+          ],
+          "remaining_objective": 94
+        },
+        {
+          "removed": [
+            2,
+            8
+          ],
+          "remaining_objective": 93
+        },
+        {
+          "removed": [
+            3,
+            0
+          ],
+          "remaining_objective": 91
+        },
+        {
+          "removed": [
+            3,
+            1
+          ],
+          "remaining_objective": 89
+        },
+        {
+          "removed": [
+            3,
+            2
+          ],
+          "remaining_objective": 87
+        },
+        {
+          "removed": [
+            3,
+            3
+          ],
+          "remaining_objective": 85
+        }
+      ]
+    },
+    "random_subsets": 100,
+    "random_R_range": [
+      70,
+      109
+    ],
+    "random_U_range": [
+      48,
+      65
+    ],
+    "number_field_construction_status": "No suitable <=200-point input established; feasibility remains unresolved."
+  },
+  "44": {
+    "polytopes": [
+      {
+        "polytope": "cube",
+        "vertices": [
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            1
+          ],
+          [
+            -1,
+            1,
+            -1
+          ],
+          [
+            -1,
+            1,
+            1
+          ],
+          [
+            1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            1
+          ],
+          [
+            1,
+            1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "facet_inequalities": [
+          [
+            [
+              -1,
+              0,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              0,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              -1,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              1,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              0,
+              -1
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              0,
+              1
+            ],
+            1
+          ]
+        ],
+        "dictionary_directions": 26,
+        "distinct_nondominated_cover_masks": 8,
+        "minimum_cover_in_dictionary": 8,
+        "cover_directions": [
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            1
+          ],
+          [
+            -1,
+            1,
+            -1
+          ],
+          [
+            -1,
+            1,
+            1
+          ],
+          [
+            1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            1
+          ],
+          [
+            1,
+            1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "covered_vertex_indices": [
+          [
+            7
+          ],
+          [
+            6
+          ],
+          [
+            5
+          ],
+          [
+            4
+          ],
+          [
+            3
+          ],
+          [
+            2
+          ],
+          [
+            1
+          ],
+          [
+            0
+          ]
+        ],
+        "combinations_checked": 255
+      },
+      {
+        "polytope": "octahedron",
+        "vertices": [
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "facet_inequalities": [
+          [
+            [
+              -1,
+              -1,
+              -1
+            ],
+            1
+          ],
+          [
+            [
+              -1,
+              -1,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              -1,
+              1,
+              -1
+            ],
+            1
+          ],
+          [
+            [
+              -1,
+              1,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              -1,
+              -1
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              -1,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              1,
+              -1
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              1,
+              1
+            ],
+            1
+          ]
+        ],
+        "dictionary_directions": 26,
+        "distinct_nondominated_cover_masks": 6,
+        "minimum_cover_in_dictionary": 6,
+        "cover_directions": [
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "covered_vertex_indices": [
+          [
+            1
+          ],
+          [
+            3
+          ],
+          [
+            5
+          ],
+          [
+            4
+          ],
+          [
+            2
+          ],
+          [
+            0
+          ]
+        ],
+        "combinations_checked": 63
+      },
+      {
+        "polytope": "cuboctahedron",
+        "vertices": [
+          [
+            -1,
+            -1,
+            0
+          ],
+          [
+            -1,
+            0,
+            -1
+          ],
+          [
+            -1,
+            0,
+            1
+          ],
+          [
+            -1,
+            1,
+            0
+          ],
+          [
+            0,
+            -1,
+            -1
+          ],
+          [
+            0,
+            -1,
+            1
+          ],
+          [
+            0,
+            1,
+            -1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            -1,
+            0
+          ],
+          [
+            1,
+            0,
+            -1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "facet_inequalities": [
+          [
+            [
+              -1,
+              0,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              0,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              -1,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              1,
+              0
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              0,
+              -1
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              0,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              -1,
+              -1,
+              -1
+            ],
+            2
+          ],
+          [
+            [
+              -1,
+              -1,
+              1
+            ],
+            2
+          ],
+          [
+            [
+              -1,
+              1,
+              -1
+            ],
+            2
+          ],
+          [
+            [
+              -1,
+              1,
+              1
+            ],
+            2
+          ],
+          [
+            [
+              1,
+              -1,
+              -1
+            ],
+            2
+          ],
+          [
+            [
+              1,
+              -1,
+              1
+            ],
+            2
+          ],
+          [
+            [
+              1,
+              1,
+              -1
+            ],
+            2
+          ],
+          [
+            [
+              1,
+              1,
+              1
+            ],
+            2
+          ]
+        ],
+        "dictionary_directions": 26,
+        "distinct_nondominated_cover_masks": 8,
+        "minimum_cover_in_dictionary": 4,
+        "cover_directions": [
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1,
+            1
+          ],
+          [
+            1,
+            -1,
+            1
+          ],
+          [
+            1,
+            1,
+            -1
+          ]
+        ],
+        "covered_vertex_indices": [
+          [
+            7,
+            10,
+            11
+          ],
+          [
+            4,
+            8,
+            9
+          ],
+          [
+            1,
+            3,
+            6
+          ],
+          [
+            0,
+            2,
+            5
+          ]
+        ],
+        "combinations_checked": 121
+      }
+    ]
+  },
+  "47": {
+    "five_subsets_considered": 4368,
+    "five_point_general_position_subsets": 1668,
+    "five_point_sets_without_convex_quadrilateral": [],
+    "four_point_negative_control": [
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "eight_point_search_proposals": 4438,
+    "eight_point_general_position_proposals": 2676,
+    "eight_point_set_without_convex_pentagon": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        1,
+        19
+      ],
+      [
+        2,
+        16
+      ],
+      [
+        2,
+        18
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        17,
+        6
+      ],
+      [
+        19,
+        5
+      ]
+    ],
+    "five_subsets_verified_in_eight_point_witness": 56
+  },
+  "48": {
+    "convex_point_coordinates": "(i,i^2), for i=0,...,n-1",
+    "orders": [
+      {
+        "n": 3,
+        "cycles_tested": 1,
+        "straight_convex_thrackle_cycles": 1,
+        "witnesses": [
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "n": 4,
+        "cycles_tested": 3,
+        "straight_convex_thrackle_cycles": 0,
+        "witnesses": []
+      },
+      {
+        "n": 5,
+        "cycles_tested": 12,
+        "straight_convex_thrackle_cycles": 1,
+        "witnesses": [
+          [
+            0,
+            2,
+            4,
+            1,
+            3
+          ]
+        ]
+      },
+      {
+        "n": 6,
+        "cycles_tested": 60,
+        "straight_convex_thrackle_cycles": 0,
+        "witnesses": []
+      },
+      {
+        "n": 7,
+        "cycles_tested": 360,
+        "straight_convex_thrackle_cycles": 1,
+        "witnesses": [
+          [
+            0,
+            3,
+            6,
+            2,
+            5,
+            1,
+            4
+          ]
+        ]
+      },
+      {
+        "n": 8,
+        "cycles_tested": 2520,
+        "straight_convex_thrackle_cycles": 0,
+        "witnesses": []
+      },
+      {
+        "n": 9,
+        "cycles_tested": 20160,
+        "straight_convex_thrackle_cycles": 1,
+        "witnesses": [
+          [
+            0,
+            4,
+            8,
+            3,
+            7,
+            2,
+            6,
+            1,
+            5
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "records": 100,
+  "ids_exactly_1_through_100": true,
+  "status_counts": {
+    "unresolved_attempt": 2,
+    "finite_verified": 47,
+    "proved_restricted_statement": 33,
+    "failed_approach": 18
+  },
+  "required_fields_present": true,
+  "direct_evidence_file_references_checked": true,
+  "claims_of_major_conjecture_resolution": 0,
+  "claims_of_established_novelty": 0
+}

@@ -1,0 +1,185 @@
+{
+  "86": {
+    "baseline": {
+      "successful_secrets": 3,
+      "probability": "3/7",
+      "strategy": {
+        "op": "equality",
+        "handles": [
+          0,
+          2
+        ],
+        "branches": {
+          "0": {
+            "op": "equality",
+            "handles": [
+              1,
+              2
+            ],
+            "branches": {
+              "0": {
+                "guess": 2
+              },
+              "1": {
+                "guess": 1
+              }
+            }
+          },
+          "1": {
+            "guess": 0
+          }
+        }
+      },
+      "cached_states": 214,
+      "direct_strategy_successes": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    "parity": {
+      "successful_secrets": 4,
+      "probability": "4/7",
+      "strategy": {
+        "op": "parity",
+        "handle": 2,
+        "branches": {
+          "0": {
+            "op": "equality",
+            "handles": [
+              0,
+              2
+            ],
+            "branches": {
+              "0": {
+                "guess": 2
+              },
+              "1": {
+                "guess": 0
+              }
+            }
+          },
+          "1": {
+            "op": "equality",
+            "handles": [
+              1,
+              2
+            ],
+            "branches": {
+              "0": {
+                "guess": 3
+              },
+              "1": {
+                "guess": 1
+              }
+            }
+          }
+        }
+      },
+      "cached_states": 242,
+      "direct_strategy_successes": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ]
+    },
+    "redundant": {
+      "successful_secrets": 3,
+      "probability": "3/7",
+      "strategy": {
+        "op": "equality",
+        "handles": [
+          0,
+          2
+        ],
+        "branches": {
+          "0": {
+            "op": "equality",
+            "handles": [
+              1,
+              2
+            ],
+            "branches": {
+              "0": {
+                "guess": 2
+              },
+              "1": {
+                "guess": 1
+              }
+            }
+          },
+          "1": {
+            "guess": 0
+          }
+        }
+      },
+      "cached_states": 230,
+      "direct_strategy_successes": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  },
+  "93": {
+    "term_order": "7*i+j, with i,j zero-based in the U,V,W arrays in this script",
+    "seven_term_identity_coefficient_checks": 64,
+    "triples_screened": 18424,
+    "rank_histogram": {
+      "(2, 3, 3)": 42,
+      "(3, 2, 3)": 42,
+      "(3, 3, 2)": 42,
+      "(3, 3, 3)": 18298
+    },
+    "eligible_triples": []
+  },
+  "100": {
+    "separatrix_I0": "6/5",
+    "separatrix_I1": "6/35",
+    "ratio_limit": "1/7",
+    "pairs": [
+      {
+        "a": "0",
+        "b": "0",
+        "M_separatrix_limit": "0"
+      },
+      {
+        "a": "1",
+        "b": "0",
+        "M_separatrix_limit": "6/5"
+      },
+      {
+        "a": "0",
+        "b": "1",
+        "M_separatrix_limit": "6/35"
+      },
+      {
+        "a": "-1/10",
+        "b": "1",
+        "M_separatrix_limit": "9/175"
+      },
+      {
+        "a": "-1/5",
+        "b": "1",
+        "M_separatrix_limit": "-12/175"
+      }
+    ],
+    "interior_zero_pair": [
+      "-1/10",
+      "1"
+    ],
+    "reason": "I1/I0 tends to 0 at the center and to 1/7 at the separatrix; continuity crosses 1/10. Simplicity is not established."
+  }
+}

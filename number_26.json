@@ -1,0 +1,134 @@
+{
+  "base_primes": [
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59
+  ],
+  "subsets_checked": 65536,
+  "composite_subsets_checked": 65519,
+  "divisibility_hits": [
+    {
+      "mask": 0,
+      "n": 1,
+      "phi": 1,
+      "prime_factors": 0
+    },
+    {
+      "mask": 1,
+      "n": 3,
+      "phi": 2,
+      "prime_factors": 1
+    },
+    {
+      "mask": 2,
+      "n": 5,
+      "phi": 4,
+      "prime_factors": 1
+    },
+    {
+      "mask": 4,
+      "n": 7,
+      "phi": 6,
+      "prime_factors": 1
+    },
+    {
+      "mask": 8,
+      "n": 11,
+      "phi": 10,
+      "prime_factors": 1
+    },
+    {
+      "mask": 16,
+      "n": 13,
+      "phi": 12,
+      "prime_factors": 1
+    },
+    {
+      "mask": 32,
+      "n": 17,
+      "phi": 16,
+      "prime_factors": 1
+    },
+    {
+      "mask": 64,
+      "n": 19,
+      "phi": 18,
+      "prime_factors": 1
+    },
+    {
+      "mask": 128,
+      "n": 23,
+      "phi": 22,
+      "prime_factors": 1
+    },
+    {
+      "mask": 256,
+      "n": 29,
+      "phi": 28,
+      "prime_factors": 1
+    },
+    {
+      "mask": 512,
+      "n": 31,
+      "phi": 30,
+      "prime_factors": 1
+    },
+    {
+      "mask": 1024,
+      "n": 37,
+      "phi": 36,
+      "prime_factors": 1
+    },
+    {
+      "mask": 2048,
+      "n": 41,
+      "phi": 40,
+      "prime_factors": 1
+    },
+    {
+      "mask": 4096,
+      "n": 43,
+      "phi": 42,
+      "prime_factors": 1
+    },
+    {
+      "mask": 8192,
+      "n": 47,
+      "phi": 46,
+      "prime_factors": 1
+    },
+    {
+      "mask": 16384,
+      "n": 53,
+      "phi": 52,
+      "prime_factors": 1
+    },
+    {
+      "mask": 32768,
+      "n": 59,
+      "phi": 58,
+      "prime_factors": 1
+    }
+  ],
+  "closest_composite_ratio_to_integer": {
+    "mask": 48689,
+    "n": 3717740976339,
+    "phi": 1858874572800,
+    "remainder": 1858866403538,
+    "distance_to_integer": "4084631/929437286400"
+  },
+  "limit": "Complete only for subsets of these sixteen primes. No pruning rule or unrestricted exclusion is proved."
+}

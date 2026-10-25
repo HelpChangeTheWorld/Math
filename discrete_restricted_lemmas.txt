@@ -1,0 +1,77 @@
+Restricted arguments accompanying discrete work round 2
+
+These are elementary restricted arguments and finite experimental interpretations, not claimed new theorems or solutions to the original open problems. Executed computations are documented in the discrete_*.py scripts and their JSON outputs.
+
+33. Nonadjacent identification need not preserve a clique minor
+
+Let G be K7 on vertices 0,...,6 with edge 01 replaced by the path 0-7-1. Contracting 07 recovers K7. Vertices 7 and 2 are nonadjacent in G. Identifying them adds no missing original clique edge and produces exactly H=K7-01.
+
+The seven nonempty disjoint branch sets of a K7 minor in a seven-vertex graph must be singletons. Consequently H has no K7 minor. Both G and H have chromatic number six: vertices 0 and 1 can share a color; vertex 7 in G can use a different existing color. Both contain a K6.
+
+This rejects unrestricted preservation of K7-minor existence under nonadjacent identification. It is outside the chromatic-number-at-least-seven case needed in the proposed Hadwiger route. In particular, no decrease in chromatic number is asserted: nonadjacent identification cannot lower chromatic number.
+
+35. Failure of one rooted induced embedding is not absence
+
+Let T be the complete binary tree on vertices 0,...,14, with parent of v>0 equal to floor((v-1)/2). Add a universal vertex u. The original fifteen vertices induce T. If an induced embedding sends root 0 to u, tree vertex 3, at distance two from the root, would have to be sent to a vertex nonadjacent to u. No such vertex exists. Thus that rooted search fails although an induced copy is displayed explicitly.
+
+51. The entire proposed one-edge replacement neighborhood fails its matching constraint
+
+The seed is the disjoint union of two copies of the nine edges
+  (x,y,x+y,x+2y), with x,y in F3,
+where tuple position specifies the part. Each copy is intersecting. Its vertices in one part correspond, in the (x,y) plane, to three parallel lines. The four parts give the four directions.
+
+Consider any new partite edge e absent from the seed. In either copy, the coordinates of e that lie in that copy forbid at most one line from each direction.
+
+If at most three coordinates lie in the copy, at most seven of its nine edges are forbidden: three lines in distinct directions cover at most seven points, and fewer lines cover still fewer. If all four coordinates lie there, the four forbidden lines are not concurrent, because concurrency would make e a seed edge. Four lines of distinct directions have six pairwise intersections. With no fourfold concurrency there can be at most one triple concurrence: two distinct triple concurrences would share two lines, contradicting their unique intersection. Inclusion-exclusion therefore gives a union of at most 12-6+1=7 points.
+
+In all cases e avoids at least two old edges in each copy. After deleting one seed edge, an avoiding edge survives in each copy. Those two surviving edges are mutually disjoint, and both avoid e, yielding a matching of size three. A matching can have size at most three because the old seed has matching number two and only one new edge is added.
+
+The script separately verifies this for all 2,383 absent tuples in {0,...,6}^4 and each of the eighteen possible deletions: 42,894 replacement hypergraphs. The failure belongs to the neighborhood design, not Ryser's conjecture.
+
+52. Every near-transversal of an odd cyclic Latin square completes
+
+Let n be odd, and L(r,c)=r+c modulo n. Suppose n-1 selected cells have distinct rows, columns, and symbols. Let r0,c0,s0 be the respective missing row, column, and symbol. Write S=0+1+...+(n-1). Since n is odd, S is divisible by n.
+
+Adding the selected cell symbols in two ways gives
+  S-s0 = (S-r0)+(S-c0) modulo n.
+Hence s0=r0+c0 modulo n. The missing cell (r0,c0) therefore contains exactly the missing symbol and completes the transversal.
+
+This explains the executed counts: all 75 near-transversals at n=5 and all 931 at n=7 were already augmentable. It also explains why those cyclic examples cannot test the difficulty of exchange chains. No corresponding identity has been established here for arbitrary Latin squares.
+
+53. An unrestricted local trap with an exact barrier
+
+The cube uses the lexicographic breadth-first fundamental-cycle basis saved in discrete_obstruction_results.json. At coefficient vector
+  z=(-2,-2,-1,-1,0),
+the resulting signed edge flow in the saved orientation is
+  (4,-1,-3,3,1,-2,1,1,-2,-1,-1,0).
+Its potential, number of zero edges plus the sum of excesses above absolute value four, is one.
+
+Every one of the ten unit coordinate moves, including moves outside the original coefficient box, has potential two or three. Thus no non-increasing first move exists even in the unrestricted integer coordinate lattice. Any escape requires a potential increase of at least one. The saved path has potential sequence
+  1,2,2,2,2,1,0,
+and ends in a verified nowhere-zero five-flow. It attains that lower bound: the least possible maximum potential along an escape is exactly two.
+
+This is an obstruction to a particular potential and move set, not to five-flow existence on the cube.
+
+54. Exact rooted block reformulation of the 99-graph question
+
+For a simple graph with parameters (99,14,1,2), fix a root o. Its fourteen neighbors N form seven disjoint matched pairs: each neighbor has exactly one neighbor within N because an adjacent pair has exactly one common neighbor.
+
+Every vertex outside {o} union N has two neighbors in N. These cannot be a matched pair, since that pair already has o as its unique common neighbor. Conversely, every nonmatched pair of N has o as one common neighbor and exactly one additional common neighbor outside N. Thus the 84 outside vertices W are bijectively labeled by the nonmatched pairs of N.
+
+Let M be the 14-by-14 matching adjacency matrix. Let C be the 14-by-84 incidence matrix of those pair labels. Let B be the unknown 84-by-84 adjacency matrix on W. The complete adjacency matrix is
+  A = [[0, 1^T, 0],
+       [1, M,   C],
+       [0, C^T, B]].
+
+The parameter conditions are equivalent to A being symmetric binary with zero diagonal, degree fourteen, and
+  A^2 + A = 12 I + 2 J.
+
+The N,W block gives
+  C B = 2 J - C - M C.
+The W,W block gives
+  B^2 + B = 12 I + 2 J - C^T C.
+Every outside vertex already has two neighbors in N, so B has row sum twelve.
+
+Conversely, take the fixed matching M and complete nonmatched-pair incidence matrix C, and suppose B is symmetric binary with zero diagonal and row sum twelve and satisfies those two equations. The root blocks of the full identity follow from the matching degree and the column sums of C. In the N,N block, C C^T has diagonal twelve, entry zero at matched pairs, and entry one at nonmatched pairs; hence that block also satisfies the identity. The remaining blocks are exactly the two stipulated equations and their transposes. The assembled A therefore has precisely the required parameters.
+
+This proves equivalence of the rooted matrix system and the original finite existence question. It supplies neither a solution B nor an impossibility certificate. The analogous rook graph on nine vertices, with parameters (9,4,1,2), was checked in all 81 entries as an independent small positive control.

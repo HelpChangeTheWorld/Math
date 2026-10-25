@@ -1,0 +1,37 @@
+{
+  "intervals_checked": 200,
+  "empty_intervals": 0,
+  "kernels": [
+    {
+      "j": 2,
+      "normalizer": "30/1",
+      "integral": "1/1",
+      "derivative_L2_squared": "120/7",
+      "weight_at_m27_in_n5_interval": "9720/14641"
+    },
+    {
+      "j": 3,
+      "normalizer": "140/1",
+      "integral": "1/1",
+      "derivative_L2_squared": "280/11",
+      "weight_at_m27_in_n5_interval": "816480/1771561"
+    },
+    {
+      "j": 4,
+      "normalizer": "630/1",
+      "integral": "1/1",
+      "derivative_L2_squared": "5040/143",
+      "weight_at_m27_in_n5_interval": "66134880/214358881"
+    }
+  ],
+  "prime_power_witness": {
+    "n": 5,
+    "interval": [
+      25,
+      36
+    ],
+    "m": 27,
+    "base_prime": 3,
+    "correction": "At m=27 the von Mangoldt sum includes log(3)*w_j(2/11), while the prime-only sum does not."
+  }
+}

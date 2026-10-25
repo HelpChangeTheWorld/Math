@@ -1,0 +1,189 @@
+{
+  "prime_cutoff": 10000,
+  "rows": [
+    {
+      "g": 2,
+      "odd_good_primes": 1228,
+      "primitive_root_count": 470,
+      "small_index_obstruction_counts": {
+        "2": 603,
+        "3": 200,
+        "5": 60,
+        "11": 6,
+        "7": 29,
+        "13": 6
+      },
+      "large_index_only_failures": [
+        {
+          "p": 683,
+          "order": 22,
+          "index": 31
+        },
+        {
+          "p": 1429,
+          "order": 84,
+          "index": 17
+        },
+        {
+          "p": 1613,
+          "order": 52,
+          "index": 31
+        },
+        {
+          "p": 4523,
+          "order": 266,
+          "index": 17
+        },
+        {
+          "p": 6043,
+          "order": 318,
+          "index": 19
+        },
+        {
+          "p": 6563,
+          "order": 386,
+          "index": 17
+        }
+      ]
+    },
+    {
+      "g": 3,
+      "odd_good_primes": 1227,
+      "primitive_root_count": 476,
+      "small_index_obstruction_counts": {
+        "2": 607,
+        "5": 57,
+        "3": 191,
+        "13": 5,
+        "11": 8,
+        "7": 31
+      },
+      "large_index_only_failures": [
+        {
+          "p": 1181,
+          "order": 20,
+          "index": 59
+        },
+        {
+          "p": 2551,
+          "order": 150,
+          "index": 17
+        },
+        {
+          "p": 2887,
+          "order": 78,
+          "index": 37
+        },
+        {
+          "p": 4591,
+          "order": 270,
+          "index": 17
+        },
+        {
+          "p": 5107,
+          "order": 138,
+          "index": 37
+        },
+        {
+          "p": 7481,
+          "order": 440,
+          "index": 17
+        },
+        {
+          "p": 8501,
+          "order": 500,
+          "index": 17
+        },
+        {
+          "p": 8513,
+          "order": 448,
+          "index": 19
+        }
+      ]
+    },
+    {
+      "g": 5,
+      "odd_good_primes": 1227,
+      "primitive_root_count": 492,
+      "small_index_obstruction_counts": {
+        "2": 609,
+        "3": 200,
+        "5": 58,
+        "7": 24,
+        "13": 9,
+        "11": 11
+      },
+      "large_index_only_failures": [
+        {
+          "p": 1973,
+          "order": 68,
+          "index": 29
+        },
+        {
+          "p": 5023,
+          "order": 162,
+          "index": 31
+        },
+        {
+          "p": 5107,
+          "order": 222,
+          "index": 23
+        },
+        {
+          "p": 5407,
+          "order": 318,
+          "index": 17
+        },
+        {
+          "p": 7603,
+          "order": 42,
+          "index": 181
+        },
+        {
+          "p": 7753,
+          "order": 456,
+          "index": 17
+        },
+        {
+          "p": 8263,
+          "order": 486,
+          "index": 17
+        },
+        {
+          "p": 8467,
+          "order": 102,
+          "index": 83
+        }
+      ]
+    },
+    {
+      "g": 1,
+      "odd_good_primes": 1228,
+      "primitive_root_count": 0,
+      "small_index_obstruction_counts": {
+        "2": 1228,
+        "3": 611,
+        "5": 306,
+        "11": 125,
+        "7": 203,
+        "13": 99
+      },
+      "large_index_only_failures": []
+    },
+    {
+      "g": 4,
+      "odd_good_primes": 1228,
+      "primitive_root_count": 0,
+      "small_index_obstruction_counts": {
+        "2": 1228,
+        "3": 200,
+        "5": 60,
+        "11": 6,
+        "7": 29,
+        "13": 6
+      },
+      "large_index_only_failures": []
+    }
+  ],
+  "limit": "Finite index tails only; no independence or uniform tail estimate."
+}

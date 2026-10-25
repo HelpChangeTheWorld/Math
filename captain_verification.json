@@ -1,0 +1,4 @@
+{
+  "exact_pair_formula_checks": 512,
+  "proof": "Every split pair independently imposes one of two different residual conditions. A fully assigned pair additionally allows an inconsistent assignment, producing the zero function. These functions are distinct, yielding 2^s+1_{c>0}. This applies to both equality pairs and disjunction pairs."
+}

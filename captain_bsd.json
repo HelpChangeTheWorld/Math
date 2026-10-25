@@ -1,0 +1,46 @@
+{
+  "equation": "y^2=x^3-x",
+  "discriminant": 64,
+  "c4": 48,
+  "j": 1728,
+  "bad_prime_candidates": [
+    2
+  ],
+  "nagell_lutz_dependency": "For integral short Weierstrass equations, rational torsion has integral coordinates and y=0 or y^2 divides 4A^3+27B^2.",
+  "possible_y": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+  ],
+  "affine_torsion_candidates": [
+    [
+      -1,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "torsion_group": "Z/2 x Z/2, including infinity",
+  "point_counts_at_good_primes": {
+    "3": 4,
+    "5": 8,
+    "7": 8,
+    "11": 12
+  },
+  "not_computed": [
+    "rank",
+    "Sha",
+    "real period",
+    "Tamagawa factors",
+    "L-function leading coefficient"
+  ],
+  "proof": "Nagell-Lutz bounds |y|<=2 unless y=0. Then -1<=x<=1; direct substitution yields exactly the three displayed y=0 points, each of order2. For y=0 roots are also exactly -1,0,1."
+}

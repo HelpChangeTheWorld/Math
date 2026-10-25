@@ -1,0 +1,32 @@
+{
+  "integer_range": [
+    2,
+    10
+  ],
+  "retained_quadruples": 4158,
+  "unresolved": [],
+  "smallest_separation_example": {
+    "a_b_c_d": [
+      4,
+      5,
+      6,
+      8
+    ],
+    "determinant": {
+      "lower": "-503768114612001/500000000000000000",
+      "upper": "-1007536229224001/1000000000000000000"
+    }
+  },
+  "exact_zero_excluded_control": {
+    "a_b_c_d": [
+      2,
+      4,
+      3,
+      9
+    ],
+    "identity": "log(2)*2log(3)-2log(2)*log(3)=0",
+    "reason": "2 and 4 are multiplicatively dependent."
+  },
+  "certification": "Prime-exponent vectors test independence exactly; rational arctanh-series enclosures certify logarithmic determinants.",
+  "limit": "Only integers 2 through 10, not the original cutoff 30 or all algebraic logarithms."
+}

@@ -1,0 +1,4055 @@
+{
+  "cutoff": 2000,
+  "tested_even_integers": 999,
+  "zero_counts": [],
+  "minimum_count_for_N_at_least_1000": 32,
+  "local_factor_examples": [
+    {
+      "N": 1000,
+      "ordered_count": 56,
+      "truncated_local_factors": {
+        "7": "175/96",
+        "31": "42803602439/24159191040"
+      }
+    },
+    {
+      "N": 1002,
+      "ordered_count": 72,
+      "truncated_local_factors": {
+        "7": "175/64",
+        "31": "42803602439/16106127360"
+      }
+    },
+    {
+      "N": 1010,
+      "ordered_count": 50,
+      "truncated_local_factors": {
+        "7": "175/96",
+        "31": "42803602439/24159191040"
+      }
+    },
+    {
+      "N": 1260,
+      "ordered_count": 136,
+      "truncated_local_factors": {
+        "7": "35/8",
+        "31": "42803602439/10066329600"
+      }
+    },
+    {
+      "N": 1998,
+      "ordered_count": 112,
+      "truncated_local_factors": {
+        "7": "175/64",
+        "31": "42803602439/16106127360"
+      }
+    },
+    {
+      "N": 2000,
+      "ordered_count": 74,
+      "truncated_local_factors": {
+        "7": "175/96",
+        "31": "42803602439/24159191040"
+      }
+    }
+  ],
+  "counts": [
+    {
+      "N": 4,
+      "ordered_representations": 1
+    },
+    {
+      "N": 6,
+      "ordered_representations": 1
+    },
+    {
+      "N": 8,
+      "ordered_representations": 2
+    },
+    {
+      "N": 10,
+      "ordered_representations": 3
+    },
+    {
+      "N": 12,
+      "ordered_representations": 2
+    },
+    {
+      "N": 14,
+      "ordered_representations": 3
+    },
+    {
+      "N": 16,
+      "ordered_representations": 4
+    },
+    {
+      "N": 18,
+      "ordered_representations": 4
+    },
+    {
+      "N": 20,
+      "ordered_representations": 4
+    },
+    {
+      "N": 22,
+      "ordered_representations": 5
+    },
+    {
+      "N": 24,
+      "ordered_representations": 6
+    },
+    {
+      "N": 26,
+      "ordered_representations": 5
+    },
+    {
+      "N": 28,
+      "ordered_representations": 4
+    },
+    {
+      "N": 30,
+      "ordered_representations": 6
+    },
+    {
+      "N": 32,
+      "ordered_representations": 4
+    },
+    {
+      "N": 34,
+      "ordered_representations": 7
+    },
+    {
+      "N": 36,
+      "ordered_representations": 8
+    },
+    {
+      "N": 38,
+      "ordered_representations": 3
+    },
+    {
+      "N": 40,
+      "ordered_representations": 6
+    },
+    {
+      "N": 42,
+      "ordered_representations": 8
+    },
+    {
+      "N": 44,
+      "ordered_representations": 6
+    },
+    {
+      "N": 46,
+      "ordered_representations": 7
+    },
+    {
+      "N": 48,
+      "ordered_representations": 10
+    },
+    {
+      "N": 50,
+      "ordered_representations": 8
+    },
+    {
+      "N": 52,
+      "ordered_representations": 6
+    },
+    {
+      "N": 54,
+      "ordered_representations": 10
+    },
+    {
+      "N": 56,
+      "ordered_representations": 6
+    },
+    {
+      "N": 58,
+      "ordered_representations": 7
+    },
+    {
+      "N": 60,
+      "ordered_representations": 12
+    },
+    {
+      "N": 62,
+      "ordered_representations": 5
+    },
+    {
+      "N": 64,
+      "ordered_representations": 10
+    },
+    {
+      "N": 66,
+      "ordered_representations": 12
+    },
+    {
+      "N": 68,
+      "ordered_representations": 4
+    },
+    {
+      "N": 70,
+      "ordered_representations": 10
+    },
+    {
+      "N": 72,
+      "ordered_representations": 12
+    },
+    {
+      "N": 74,
+      "ordered_representations": 9
+    },
+    {
+      "N": 76,
+      "ordered_representations": 10
+    },
+    {
+      "N": 78,
+      "ordered_representations": 14
+    },
+    {
+      "N": 80,
+      "ordered_representations": 8
+    },
+    {
+      "N": 82,
+      "ordered_representations": 9
+    },
+    {
+      "N": 84,
+      "ordered_representations": 16
+    },
+    {
+      "N": 86,
+      "ordered_representations": 9
+    },
+    {
+      "N": 88,
+      "ordered_representations": 8
+    },
+    {
+      "N": 90,
+      "ordered_representations": 18
+    },
+    {
+      "N": 92,
+      "ordered_representations": 8
+    },
+    {
+      "N": 94,
+      "ordered_representations": 9
+    },
+    {
+      "N": 96,
+      "ordered_representations": 14
+    },
+    {
+      "N": 98,
+      "ordered_representations": 6
+    },
+    {
+      "N": 100,
+      "ordered_representations": 12
+    },
+    {
+      "N": 102,
+      "ordered_representations": 16
+    },
+    {
+      "N": 104,
+      "ordered_representations": 10
+    },
+    {
+      "N": 106,
+      "ordered_representations": 11
+    },
+    {
+      "N": 108,
+      "ordered_representations": 16
+    },
+    {
+      "N": 110,
+      "ordered_representations": 12
+    },
+    {
+      "N": 112,
+      "ordered_representations": 14
+    },
+    {
+      "N": 114,
+      "ordered_representations": 20
+    },
+    {
+      "N": 116,
+      "ordered_representations": 12
+    },
+    {
+      "N": 118,
+      "ordered_representations": 11
+    },
+    {
+      "N": 120,
+      "ordered_representations": 24
+    },
+    {
+      "N": 122,
+      "ordered_representations": 7
+    },
+    {
+      "N": 124,
+      "ordered_representations": 10
+    },
+    {
+      "N": 126,
+      "ordered_representations": 20
+    },
+    {
+      "N": 128,
+      "ordered_representations": 6
+    },
+    {
+      "N": 130,
+      "ordered_representations": 14
+    },
+    {
+      "N": 132,
+      "ordered_representations": 18
+    },
+    {
+      "N": 134,
+      "ordered_representations": 11
+    },
+    {
+      "N": 136,
+      "ordered_representations": 10
+    },
+    {
+      "N": 138,
+      "ordered_representations": 16
+    },
+    {
+      "N": 140,
+      "ordered_representations": 14
+    },
+    {
+      "N": 142,
+      "ordered_representations": 15
+    },
+    {
+      "N": 144,
+      "ordered_representations": 22
+    },
+    {
+      "N": 146,
+      "ordered_representations": 11
+    },
+    {
+      "N": 148,
+      "ordered_representations": 10
+    },
+    {
+      "N": 150,
+      "ordered_representations": 24
+    },
+    {
+      "N": 152,
+      "ordered_representations": 8
+    },
+    {
+      "N": 154,
+      "ordered_representations": 16
+    },
+    {
+      "N": 156,
+      "ordered_representations": 22
+    },
+    {
+      "N": 158,
+      "ordered_representations": 9
+    },
+    {
+      "N": 160,
+      "ordered_representations": 16
+    },
+    {
+      "N": 162,
+      "ordered_representations": 20
+    },
+    {
+      "N": 164,
+      "ordered_representations": 10
+    },
+    {
+      "N": 166,
+      "ordered_representations": 11
+    },
+    {
+      "N": 168,
+      "ordered_representations": 26
+    },
+    {
+      "N": 170,
+      "ordered_representations": 18
+    },
+    {
+      "N": 172,
+      "ordered_representations": 12
+    },
+    {
+      "N": 174,
+      "ordered_representations": 22
+    },
+    {
+      "N": 176,
+      "ordered_representations": 14
+    },
+    {
+      "N": 178,
+      "ordered_representations": 13
+    },
+    {
+      "N": 180,
+      "ordered_representations": 28
+    },
+    {
+      "N": 182,
+      "ordered_representations": 12
+    },
+    {
+      "N": 184,
+      "ordered_representations": 16
+    },
+    {
+      "N": 186,
+      "ordered_representations": 26
+    },
+    {
+      "N": 188,
+      "ordered_representations": 10
+    },
+    {
+      "N": 190,
+      "ordered_representations": 16
+    },
+    {
+      "N": 192,
+      "ordered_representations": 22
+    },
+    {
+      "N": 194,
+      "ordered_representations": 13
+    },
+    {
+      "N": 196,
+      "ordered_representations": 18
+    },
+    {
+      "N": 198,
+      "ordered_representations": 26
+    },
+    {
+      "N": 200,
+      "ordered_representations": 16
+    },
+    {
+      "N": 202,
+      "ordered_representations": 17
+    },
+    {
+      "N": 204,
+      "ordered_representations": 28
+    },
+    {
+      "N": 206,
+      "ordered_representations": 13
+    },
+    {
+      "N": 208,
+      "ordered_representations": 14
+    },
+    {
+      "N": 210,
+      "ordered_representations": 38
+    },
+    {
+      "N": 212,
+      "ordered_representations": 12
+    },
+    {
+      "N": 214,
+      "ordered_representations": 15
+    },
+    {
+      "N": 216,
+      "ordered_representations": 26
+    },
+    {
+      "N": 218,
+      "ordered_representations": 13
+    },
+    {
+      "N": 220,
+      "ordered_representations": 18
+    },
+    {
+      "N": 222,
+      "ordered_representations": 22
+    },
+    {
+      "N": 224,
+      "ordered_representations": 14
+    },
+    {
+      "N": 226,
+      "ordered_representations": 13
+    },
+    {
+      "N": 228,
+      "ordered_representations": 24
+    },
+    {
+      "N": 230,
+      "ordered_representations": 18
+    },
+    {
+      "N": 232,
+      "ordered_representations": 14
+    },
+    {
+      "N": 234,
+      "ordered_representations": 30
+    },
+    {
+      "N": 236,
+      "ordered_representations": 18
+    },
+    {
+      "N": 238,
+      "ordered_representations": 18
+    },
+    {
+      "N": 240,
+      "ordered_representations": 36
+    },
+    {
+      "N": 242,
+      "ordered_representations": 16
+    },
+    {
+      "N": 244,
+      "ordered_representations": 18
+    },
+    {
+      "N": 246,
+      "ordered_representations": 32
+    },
+    {
+      "N": 248,
+      "ordered_representations": 12
+    },
+    {
+      "N": 250,
+      "ordered_representations": 18
+    },
+    {
+      "N": 252,
+      "ordered_representations": 32
+    },
+    {
+      "N": 254,
+      "ordered_representations": 17
+    },
+    {
+      "N": 256,
+      "ordered_representations": 16
+    },
+    {
+      "N": 258,
+      "ordered_representations": 28
+    },
+    {
+      "N": 260,
+      "ordered_representations": 20
+    },
+    {
+      "N": 262,
+      "ordered_representations": 17
+    },
+    {
+      "N": 264,
+      "ordered_representations": 32
+    },
+    {
+      "N": 266,
+      "ordered_representations": 16
+    },
+    {
+      "N": 268,
+      "ordered_representations": 18
+    },
+    {
+      "N": 270,
+      "ordered_representations": 38
+    },
+    {
+      "N": 272,
+      "ordered_representations": 14
+    },
+    {
+      "N": 274,
+      "ordered_representations": 21
+    },
+    {
+      "N": 276,
+      "ordered_representations": 32
+    },
+    {
+      "N": 278,
+      "ordered_representations": 13
+    },
+    {
+      "N": 280,
+      "ordered_representations": 28
+    },
+    {
+      "N": 282,
+      "ordered_representations": 32
+    },
+    {
+      "N": 284,
+      "ordered_representations": 16
+    },
+    {
+      "N": 286,
+      "ordered_representations": 24
+    },
+    {
+      "N": 288,
+      "ordered_representations": 34
+    },
+    {
+      "N": 290,
+      "ordered_representations": 20
+    },
+    {
+      "N": 292,
+      "ordered_representations": 16
+    },
+    {
+      "N": 294,
+      "ordered_representations": 38
+    },
+    {
+      "N": 296,
+      "ordered_representations": 16
+    },
+    {
+      "N": 298,
+      "ordered_representations": 21
+    },
+    {
+      "N": 300,
+      "ordered_representations": 42
+    },
+    {
+      "N": 302,
+      "ordered_representations": 17
+    },
+    {
+      "N": 304,
+      "ordered_representations": 20
+    },
+    {
+      "N": 306,
+      "ordered_representations": 30
+    },
+    {
+      "N": 308,
+      "ordered_representations": 16
+    },
+    {
+      "N": 310,
+      "ordered_representations": 24
+    },
+    {
+      "N": 312,
+      "ordered_representations": 34
+    },
+    {
+      "N": 314,
+      "ordered_representations": 17
+    },
+    {
+      "N": 316,
+      "ordered_representations": 20
+    },
+    {
+      "N": 318,
+      "ordered_representations": 30
+    },
+    {
+      "N": 320,
+      "ordered_representations": 22
+    },
+    {
+      "N": 322,
+      "ordered_representations": 22
+    },
+    {
+      "N": 324,
+      "ordered_representations": 40
+    },
+    {
+      "N": 326,
+      "ordered_representations": 13
+    },
+    {
+      "N": 328,
+      "ordered_representations": 20
+    },
+    {
+      "N": 330,
+      "ordered_representations": 48
+    },
+    {
+      "N": 332,
+      "ordered_representations": 12
+    },
+    {
+      "N": 334,
+      "ordered_representations": 21
+    },
+    {
+      "N": 336,
+      "ordered_representations": 38
+    },
+    {
+      "N": 338,
+      "ordered_representations": 18
+    },
+    {
+      "N": 340,
+      "ordered_representations": 26
+    },
+    {
+      "N": 342,
+      "ordered_representations": 34
+    },
+    {
+      "N": 344,
+      "ordered_representations": 20
+    },
+    {
+      "N": 346,
+      "ordered_representations": 17
+    },
+    {
+      "N": 348,
+      "ordered_representations": 32
+    },
+    {
+      "N": 350,
+      "ordered_representations": 26
+    },
+    {
+      "N": 352,
+      "ordered_representations": 20
+    },
+    {
+      "N": 354,
+      "ordered_representations": 40
+    },
+    {
+      "N": 356,
+      "ordered_representations": 18
+    },
+    {
+      "N": 358,
+      "ordered_representations": 19
+    },
+    {
+      "N": 360,
+      "ordered_representations": 44
+    },
+    {
+      "N": 362,
+      "ordered_representations": 15
+    },
+    {
+      "N": 364,
+      "ordered_representations": 28
+    },
+    {
+      "N": 366,
+      "ordered_representations": 36
+    },
+    {
+      "N": 368,
+      "ordered_representations": 16
+    },
+    {
+      "N": 370,
+      "ordered_representations": 28
+    },
+    {
+      "N": 372,
+      "ordered_representations": 36
+    },
+    {
+      "N": 374,
+      "ordered_representations": 20
+    },
+    {
+      "N": 376,
+      "ordered_representations": 22
+    },
+    {
+      "N": 378,
+      "ordered_representations": 44
+    },
+    {
+      "N": 380,
+      "ordered_representations": 26
+    },
+    {
+      "N": 382,
+      "ordered_representations": 19
+    },
+    {
+      "N": 384,
+      "ordered_representations": 38
+    },
+    {
+      "N": 386,
+      "ordered_representations": 23
+    },
+    {
+      "N": 388,
+      "ordered_representations": 18
+    },
+    {
+      "N": 390,
+      "ordered_representations": 54
+    },
+    {
+      "N": 392,
+      "ordered_representations": 22
+    },
+    {
+      "N": 394,
+      "ordered_representations": 21
+    },
+    {
+      "N": 396,
+      "ordered_representations": 42
+    },
+    {
+      "N": 398,
+      "ordered_representations": 13
+    },
+    {
+      "N": 400,
+      "ordered_representations": 28
+    },
+    {
+      "N": 402,
+      "ordered_representations": 34
+    },
+    {
+      "N": 404,
+      "ordered_representations": 22
+    },
+    {
+      "N": 406,
+      "ordered_representations": 26
+    },
+    {
+      "N": 408,
+      "ordered_representations": 40
+    },
+    {
+      "N": 410,
+      "ordered_representations": 26
+    },
+    {
+      "N": 412,
+      "ordered_representations": 22
+    },
+    {
+      "N": 414,
+      "ordered_representations": 42
+    },
+    {
+      "N": 416,
+      "ordered_representations": 20
+    },
+    {
+      "N": 418,
+      "ordered_representations": 22
+    },
+    {
+      "N": 420,
+      "ordered_representations": 60
+    },
+    {
+      "N": 422,
+      "ordered_representations": 21
+    },
+    {
+      "N": 424,
+      "ordered_representations": 24
+    },
+    {
+      "N": 426,
+      "ordered_representations": 42
+    },
+    {
+      "N": 428,
+      "ordered_representations": 18
+    },
+    {
+      "N": 430,
+      "ordered_representations": 28
+    },
+    {
+      "N": 432,
+      "ordered_representations": 38
+    },
+    {
+      "N": 434,
+      "ordered_representations": 26
+    },
+    {
+      "N": 436,
+      "ordered_representations": 22
+    },
+    {
+      "N": 438,
+      "ordered_representations": 42
+    },
+    {
+      "N": 440,
+      "ordered_representations": 28
+    },
+    {
+      "N": 442,
+      "ordered_representations": 26
+    },
+    {
+      "N": 444,
+      "ordered_representations": 42
+    },
+    {
+      "N": 446,
+      "ordered_representations": 23
+    },
+    {
+      "N": 448,
+      "ordered_representations": 26
+    },
+    {
+      "N": 450,
+      "ordered_representations": 54
+    },
+    {
+      "N": 452,
+      "ordered_representations": 24
+    },
+    {
+      "N": 454,
+      "ordered_representations": 23
+    },
+    {
+      "N": 456,
+      "ordered_representations": 48
+    },
+    {
+      "N": 458,
+      "ordered_representations": 17
+    },
+    {
+      "N": 460,
+      "ordered_representations": 32
+    },
+    {
+      "N": 462,
+      "ordered_representations": 56
+    },
+    {
+      "N": 464,
+      "ordered_representations": 24
+    },
+    {
+      "N": 466,
+      "ordered_representations": 25
+    },
+    {
+      "N": 468,
+      "ordered_representations": 48
+    },
+    {
+      "N": 470,
+      "ordered_representations": 30
+    },
+    {
+      "N": 472,
+      "ordered_representations": 26
+    },
+    {
+      "N": 474,
+      "ordered_representations": 46
+    },
+    {
+      "N": 476,
+      "ordered_representations": 28
+    },
+    {
+      "N": 478,
+      "ordered_representations": 21
+    },
+    {
+      "N": 480,
+      "ordered_representations": 58
+    },
+    {
+      "N": 482,
+      "ordered_representations": 21
+    },
+    {
+      "N": 484,
+      "ordered_representations": 28
+    },
+    {
+      "N": 486,
+      "ordered_representations": 46
+    },
+    {
+      "N": 488,
+      "ordered_representations": 18
+    },
+    {
+      "N": 490,
+      "ordered_representations": 38
+    },
+    {
+      "N": 492,
+      "ordered_representations": 44
+    },
+    {
+      "N": 494,
+      "ordered_representations": 26
+    },
+    {
+      "N": 496,
+      "ordered_representations": 26
+    },
+    {
+      "N": 498,
+      "ordered_representations": 46
+    },
+    {
+      "N": 500,
+      "ordered_representations": 26
+    },
+    {
+      "N": 502,
+      "ordered_representations": 29
+    },
+    {
+      "N": 504,
+      "ordered_representations": 54
+    },
+    {
+      "N": 506,
+      "ordered_representations": 30
+    },
+    {
+      "N": 508,
+      "ordered_representations": 28
+    },
+    {
+      "N": 510,
+      "ordered_representations": 64
+    },
+    {
+      "N": 512,
+      "ordered_representations": 22
+    },
+    {
+      "N": 514,
+      "ordered_representations": 27
+    },
+    {
+      "N": 516,
+      "ordered_representations": 46
+    },
+    {
+      "N": 518,
+      "ordered_representations": 22
+    },
+    {
+      "N": 520,
+      "ordered_representations": 34
+    },
+    {
+      "N": 522,
+      "ordered_representations": 48
+    },
+    {
+      "N": 524,
+      "ordered_representations": 22
+    },
+    {
+      "N": 526,
+      "ordered_representations": 29
+    },
+    {
+      "N": 528,
+      "ordered_representations": 50
+    },
+    {
+      "N": 530,
+      "ordered_representations": 28
+    },
+    {
+      "N": 532,
+      "ordered_representations": 34
+    },
+    {
+      "N": 534,
+      "ordered_representations": 44
+    },
+    {
+      "N": 536,
+      "ordered_representations": 26
+    },
+    {
+      "N": 538,
+      "ordered_representations": 27
+    },
+    {
+      "N": 540,
+      "ordered_representations": 60
+    },
+    {
+      "N": 542,
+      "ordered_representations": 19
+    },
+    {
+      "N": 544,
+      "ordered_representations": 26
+    },
+    {
+      "N": 546,
+      "ordered_representations": 60
+    },
+    {
+      "N": 548,
+      "ordered_representations": 22
+    },
+    {
+      "N": 550,
+      "ordered_representations": 38
+    },
+    {
+      "N": 552,
+      "ordered_representations": 46
+    },
+    {
+      "N": 554,
+      "ordered_representations": 21
+    },
+    {
+      "N": 556,
+      "ordered_representations": 22
+    },
+    {
+      "N": 558,
+      "ordered_representations": 46
+    },
+    {
+      "N": 560,
+      "ordered_representations": 36
+    },
+    {
+      "N": 562,
+      "ordered_representations": 27
+    },
+    {
+      "N": 564,
+      "ordered_representations": 48
+    },
+    {
+      "N": 566,
+      "ordered_representations": 25
+    },
+    {
+      "N": 568,
+      "ordered_representations": 26
+    },
+    {
+      "N": 570,
+      "ordered_representations": 62
+    },
+    {
+      "N": 572,
+      "ordered_representations": 22
+    },
+    {
+      "N": 574,
+      "ordered_representations": 32
+    },
+    {
+      "N": 576,
+      "ordered_representations": 52
+    },
+    {
+      "N": 578,
+      "ordered_representations": 24
+    },
+    {
+      "N": 580,
+      "ordered_representations": 38
+    },
+    {
+      "N": 582,
+      "ordered_representations": 50
+    },
+    {
+      "N": 584,
+      "ordered_representations": 24
+    },
+    {
+      "N": 586,
+      "ordered_representations": 25
+    },
+    {
+      "N": 588,
+      "ordered_representations": 58
+    },
+    {
+      "N": 590,
+      "ordered_representations": 32
+    },
+    {
+      "N": 592,
+      "ordered_representations": 30
+    },
+    {
+      "N": 594,
+      "ordered_representations": 54
+    },
+    {
+      "N": 596,
+      "ordered_representations": 24
+    },
+    {
+      "N": 598,
+      "ordered_representations": 30
+    },
+    {
+      "N": 600,
+      "ordered_representations": 64
+    },
+    {
+      "N": 602,
+      "ordered_representations": 24
+    },
+    {
+      "N": 604,
+      "ordered_representations": 28
+    },
+    {
+      "N": 606,
+      "ordered_representations": 54
+    },
+    {
+      "N": 608,
+      "ordered_representations": 26
+    },
+    {
+      "N": 610,
+      "ordered_representations": 40
+    },
+    {
+      "N": 612,
+      "ordered_representations": 52
+    },
+    {
+      "N": 614,
+      "ordered_representations": 29
+    },
+    {
+      "N": 616,
+      "ordered_representations": 38
+    },
+    {
+      "N": 618,
+      "ordered_representations": 52
+    },
+    {
+      "N": 620,
+      "ordered_representations": 36
+    },
+    {
+      "N": 622,
+      "ordered_representations": 33
+    },
+    {
+      "N": 624,
+      "ordered_representations": 62
+    },
+    {
+      "N": 626,
+      "ordered_representations": 23
+    },
+    {
+      "N": 628,
+      "ordered_representations": 32
+    },
+    {
+      "N": 630,
+      "ordered_representations": 82
+    },
+    {
+      "N": 632,
+      "ordered_representations": 20
+    },
+    {
+      "N": 634,
+      "ordered_representations": 27
+    },
+    {
+      "N": 636,
+      "ordered_representations": 56
+    },
+    {
+      "N": 638,
+      "ordered_representations": 30
+    },
+    {
+      "N": 640,
+      "ordered_representations": 36
+    },
+    {
+      "N": 642,
+      "ordered_representations": 50
+    },
+    {
+      "N": 644,
+      "ordered_representations": 34
+    },
+    {
+      "N": 646,
+      "ordered_representations": 32
+    },
+    {
+      "N": 648,
+      "ordered_representations": 54
+    },
+    {
+      "N": 650,
+      "ordered_representations": 42
+    },
+    {
+      "N": 652,
+      "ordered_representations": 30
+    },
+    {
+      "N": 654,
+      "ordered_representations": 58
+    },
+    {
+      "N": 656,
+      "ordered_representations": 26
+    },
+    {
+      "N": 658,
+      "ordered_representations": 38
+    },
+    {
+      "N": 660,
+      "ordered_representations": 82
+    },
+    {
+      "N": 662,
+      "ordered_representations": 27
+    },
+    {
+      "N": 664,
+      "ordered_representations": 32
+    },
+    {
+      "N": 666,
+      "ordered_representations": 62
+    },
+    {
+      "N": 668,
+      "ordered_representations": 22
+    },
+    {
+      "N": 670,
+      "ordered_representations": 42
+    },
+    {
+      "N": 672,
+      "ordered_representations": 66
+    },
+    {
+      "N": 674,
+      "ordered_representations": 29
+    },
+    {
+      "N": 676,
+      "ordered_representations": 34
+    },
+    {
+      "N": 678,
+      "ordered_representations": 56
+    },
+    {
+      "N": 680,
+      "ordered_representations": 42
+    },
+    {
+      "N": 682,
+      "ordered_representations": 32
+    },
+    {
+      "N": 684,
+      "ordered_representations": 60
+    },
+    {
+      "N": 686,
+      "ordered_representations": 32
+    },
+    {
+      "N": 688,
+      "ordered_representations": 32
+    },
+    {
+      "N": 690,
+      "ordered_representations": 78
+    },
+    {
+      "N": 692,
+      "ordered_representations": 22
+    },
+    {
+      "N": 694,
+      "ordered_representations": 37
+    },
+    {
+      "N": 696,
+      "ordered_representations": 60
+    },
+    {
+      "N": 698,
+      "ordered_representations": 27
+    },
+    {
+      "N": 700,
+      "ordered_representations": 48
+    },
+    {
+      "N": 702,
+      "ordered_representations": 62
+    },
+    {
+      "N": 704,
+      "ordered_representations": 36
+    },
+    {
+      "N": 706,
+      "ordered_representations": 37
+    },
+    {
+      "N": 708,
+      "ordered_representations": 48
+    },
+    {
+      "N": 710,
+      "ordered_representations": 32
+    },
+    {
+      "N": 712,
+      "ordered_representations": 34
+    },
+    {
+      "N": 714,
+      "ordered_representations": 74
+    },
+    {
+      "N": 716,
+      "ordered_representations": 28
+    },
+    {
+      "N": 718,
+      "ordered_representations": 29
+    },
+    {
+      "N": 720,
+      "ordered_representations": 78
+    },
+    {
+      "N": 722,
+      "ordered_representations": 28
+    },
+    {
+      "N": 724,
+      "ordered_representations": 30
+    },
+    {
+      "N": 726,
+      "ordered_representations": 62
+    },
+    {
+      "N": 728,
+      "ordered_representations": 30
+    },
+    {
+      "N": 730,
+      "ordered_representations": 42
+    },
+    {
+      "N": 732,
+      "ordered_representations": 62
+    },
+    {
+      "N": 734,
+      "ordered_representations": 29
+    },
+    {
+      "N": 736,
+      "ordered_representations": 38
+    },
+    {
+      "N": 738,
+      "ordered_representations": 58
+    },
+    {
+      "N": 740,
+      "ordered_representations": 36
+    },
+    {
+      "N": 742,
+      "ordered_representations": 38
+    },
+    {
+      "N": 744,
+      "ordered_representations": 62
+    },
+    {
+      "N": 746,
+      "ordered_representations": 35
+    },
+    {
+      "N": 748,
+      "ordered_representations": 38
+    },
+    {
+      "N": 750,
+      "ordered_representations": 78
+    },
+    {
+      "N": 752,
+      "ordered_representations": 28
+    },
+    {
+      "N": 754,
+      "ordered_representations": 34
+    },
+    {
+      "N": 756,
+      "ordered_representations": 70
+    },
+    {
+      "N": 758,
+      "ordered_representations": 29
+    },
+    {
+      "N": 760,
+      "ordered_representations": 42
+    },
+    {
+      "N": 762,
+      "ordered_representations": 60
+    },
+    {
+      "N": 764,
+      "ordered_representations": 34
+    },
+    {
+      "N": 766,
+      "ordered_representations": 33
+    },
+    {
+      "N": 768,
+      "ordered_representations": 62
+    },
+    {
+      "N": 770,
+      "ordered_representations": 52
+    },
+    {
+      "N": 772,
+      "ordered_representations": 36
+    },
+    {
+      "N": 774,
+      "ordered_representations": 64
+    },
+    {
+      "N": 776,
+      "ordered_representations": 32
+    },
+    {
+      "N": 778,
+      "ordered_representations": 29
+    },
+    {
+      "N": 780,
+      "ordered_representations": 88
+    },
+    {
+      "N": 782,
+      "ordered_representations": 28
+    },
+    {
+      "N": 784,
+      "ordered_representations": 36
+    },
+    {
+      "N": 786,
+      "ordered_representations": 60
+    },
+    {
+      "N": 788,
+      "ordered_representations": 30
+    },
+    {
+      "N": 790,
+      "ordered_representations": 44
+    },
+    {
+      "N": 792,
+      "ordered_representations": 68
+    },
+    {
+      "N": 794,
+      "ordered_representations": 33
+    },
+    {
+      "N": 796,
+      "ordered_representations": 28
+    },
+    {
+      "N": 798,
+      "ordered_representations": 76
+    },
+    {
+      "N": 800,
+      "ordered_representations": 42
+    },
+    {
+      "N": 802,
+      "ordered_representations": 31
+    },
+    {
+      "N": 804,
+      "ordered_representations": 64
+    },
+    {
+      "N": 806,
+      "ordered_representations": 32
+    },
+    {
+      "N": 808,
+      "ordered_representations": 28
+    },
+    {
+      "N": 810,
+      "ordered_representations": 78
+    },
+    {
+      "N": 812,
+      "ordered_representations": 36
+    },
+    {
+      "N": 814,
+      "ordered_representations": 40
+    },
+    {
+      "N": 816,
+      "ordered_representations": 68
+    },
+    {
+      "N": 818,
+      "ordered_representations": 33
+    },
+    {
+      "N": 820,
+      "ordered_representations": 40
+    },
+    {
+      "N": 822,
+      "ordered_representations": 58
+    },
+    {
+      "N": 824,
+      "ordered_representations": 32
+    },
+    {
+      "N": 826,
+      "ordered_representations": 42
+    },
+    {
+      "N": 828,
+      "ordered_representations": 68
+    },
+    {
+      "N": 830,
+      "ordered_representations": 44
+    },
+    {
+      "N": 832,
+      "ordered_representations": 44
+    },
+    {
+      "N": 834,
+      "ordered_representations": 66
+    },
+    {
+      "N": 836,
+      "ordered_representations": 36
+    },
+    {
+      "N": 838,
+      "ordered_representations": 33
+    },
+    {
+      "N": 840,
+      "ordered_representations": 102
+    },
+    {
+      "N": 842,
+      "ordered_representations": 35
+    },
+    {
+      "N": 844,
+      "ordered_representations": 34
+    },
+    {
+      "N": 846,
+      "ordered_representations": 64
+    },
+    {
+      "N": 848,
+      "ordered_representations": 30
+    },
+    {
+      "N": 850,
+      "ordered_representations": 50
+    },
+    {
+      "N": 852,
+      "ordered_representations": 62
+    },
+    {
+      "N": 854,
+      "ordered_representations": 40
+    },
+    {
+      "N": 856,
+      "ordered_representations": 38
+    },
+    {
+      "N": 858,
+      "ordered_representations": 78
+    },
+    {
+      "N": 860,
+      "ordered_representations": 36
+    },
+    {
+      "N": 862,
+      "ordered_representations": 33
+    },
+    {
+      "N": 864,
+      "ordered_representations": 66
+    },
+    {
+      "N": 866,
+      "ordered_representations": 33
+    },
+    {
+      "N": 868,
+      "ordered_representations": 42
+    },
+    {
+      "N": 870,
+      "ordered_representations": 92
+    },
+    {
+      "N": 872,
+      "ordered_representations": 36
+    },
+    {
+      "N": 874,
+      "ordered_representations": 38
+    },
+    {
+      "N": 876,
+      "ordered_representations": 72
+    },
+    {
+      "N": 878,
+      "ordered_representations": 27
+    },
+    {
+      "N": 880,
+      "ordered_representations": 50
+    },
+    {
+      "N": 882,
+      "ordered_representations": 78
+    },
+    {
+      "N": 884,
+      "ordered_representations": 42
+    },
+    {
+      "N": 886,
+      "ordered_representations": 35
+    },
+    {
+      "N": 888,
+      "ordered_representations": 74
+    },
+    {
+      "N": 890,
+      "ordered_representations": 46
+    },
+    {
+      "N": 892,
+      "ordered_representations": 38
+    },
+    {
+      "N": 894,
+      "ordered_representations": 68
+    },
+    {
+      "N": 896,
+      "ordered_representations": 40
+    },
+    {
+      "N": 898,
+      "ordered_representations": 37
+    },
+    {
+      "N": 900,
+      "ordered_representations": 96
+    },
+    {
+      "N": 902,
+      "ordered_representations": 30
+    },
+    {
+      "N": 904,
+      "ordered_representations": 34
+    },
+    {
+      "N": 906,
+      "ordered_representations": 68
+    },
+    {
+      "N": 908,
+      "ordered_representations": 30
+    },
+    {
+      "N": 910,
+      "ordered_representations": 62
+    },
+    {
+      "N": 912,
+      "ordered_representations": 62
+    },
+    {
+      "N": 914,
+      "ordered_representations": 39
+    },
+    {
+      "N": 916,
+      "ordered_representations": 36
+    },
+    {
+      "N": 918,
+      "ordered_representations": 70
+    },
+    {
+      "N": 920,
+      "ordered_representations": 46
+    },
+    {
+      "N": 922,
+      "ordered_representations": 39
+    },
+    {
+      "N": 924,
+      "ordered_representations": 94
+    },
+    {
+      "N": 926,
+      "ordered_representations": 35
+    },
+    {
+      "N": 928,
+      "ordered_representations": 36
+    },
+    {
+      "N": 930,
+      "ordered_representations": 86
+    },
+    {
+      "N": 932,
+      "ordered_representations": 34
+    },
+    {
+      "N": 934,
+      "ordered_representations": 39
+    },
+    {
+      "N": 936,
+      "ordered_representations": 72
+    },
+    {
+      "N": 938,
+      "ordered_representations": 36
+    },
+    {
+      "N": 940,
+      "ordered_representations": 48
+    },
+    {
+      "N": 942,
+      "ordered_representations": 68
+    },
+    {
+      "N": 944,
+      "ordered_representations": 36
+    },
+    {
+      "N": 946,
+      "ordered_representations": 40
+    },
+    {
+      "N": 948,
+      "ordered_representations": 66
+    },
+    {
+      "N": 950,
+      "ordered_representations": 50
+    },
+    {
+      "N": 952,
+      "ordered_representations": 46
+    },
+    {
+      "N": 954,
+      "ordered_representations": 74
+    },
+    {
+      "N": 956,
+      "ordered_representations": 38
+    },
+    {
+      "N": 958,
+      "ordered_representations": 43
+    },
+    {
+      "N": 960,
+      "ordered_representations": 90
+    },
+    {
+      "N": 962,
+      "ordered_representations": 32
+    },
+    {
+      "N": 964,
+      "ordered_representations": 36
+    },
+    {
+      "N": 966,
+      "ordered_representations": 90
+    },
+    {
+      "N": 968,
+      "ordered_representations": 34
+    },
+    {
+      "N": 970,
+      "ordered_representations": 54
+    },
+    {
+      "N": 972,
+      "ordered_representations": 64
+    },
+    {
+      "N": 974,
+      "ordered_representations": 33
+    },
+    {
+      "N": 976,
+      "ordered_representations": 38
+    },
+    {
+      "N": 978,
+      "ordered_representations": 70
+    },
+    {
+      "N": 980,
+      "ordered_representations": 52
+    },
+    {
+      "N": 982,
+      "ordered_representations": 33
+    },
+    {
+      "N": 984,
+      "ordered_representations": 78
+    },
+    {
+      "N": 986,
+      "ordered_representations": 40
+    },
+    {
+      "N": 988,
+      "ordered_representations": 46
+    },
+    {
+      "N": 990,
+      "ordered_representations": 104
+    },
+    {
+      "N": 992,
+      "ordered_representations": 26
+    },
+    {
+      "N": 994,
+      "ordered_representations": 50
+    },
+    {
+      "N": 996,
+      "ordered_representations": 74
+    },
+    {
+      "N": 998,
+      "ordered_representations": 33
+    },
+    {
+      "N": 1000,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1002,
+      "ordered_representations": 72
+    },
+    {
+      "N": 1004,
+      "ordered_representations": 36
+    },
+    {
+      "N": 1006,
+      "ordered_representations": 35
+    },
+    {
+      "N": 1008,
+      "ordered_representations": 84
+    },
+    {
+      "N": 1010,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1012,
+      "ordered_representations": 46
+    },
+    {
+      "N": 1014,
+      "ordered_representations": 78
+    },
+    {
+      "N": 1016,
+      "ordered_representations": 36
+    },
+    {
+      "N": 1018,
+      "ordered_representations": 39
+    },
+    {
+      "N": 1020,
+      "ordered_representations": 102
+    },
+    {
+      "N": 1022,
+      "ordered_representations": 36
+    },
+    {
+      "N": 1024,
+      "ordered_representations": 44
+    },
+    {
+      "N": 1026,
+      "ordered_representations": 84
+    },
+    {
+      "N": 1028,
+      "ordered_representations": 36
+    },
+    {
+      "N": 1030,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1032,
+      "ordered_representations": 72
+    },
+    {
+      "N": 1034,
+      "ordered_representations": 42
+    },
+    {
+      "N": 1036,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1038,
+      "ordered_representations": 80
+    },
+    {
+      "N": 1040,
+      "ordered_representations": 52
+    },
+    {
+      "N": 1042,
+      "ordered_representations": 43
+    },
+    {
+      "N": 1044,
+      "ordered_representations": 78
+    },
+    {
+      "N": 1046,
+      "ordered_representations": 37
+    },
+    {
+      "N": 1048,
+      "ordered_representations": 38
+    },
+    {
+      "N": 1050,
+      "ordered_representations": 114
+    },
+    {
+      "N": 1052,
+      "ordered_representations": 36
+    },
+    {
+      "N": 1054,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1056,
+      "ordered_representations": 88
+    },
+    {
+      "N": 1058,
+      "ordered_representations": 38
+    },
+    {
+      "N": 1060,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1062,
+      "ordered_representations": 74
+    },
+    {
+      "N": 1064,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1066,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1068,
+      "ordered_representations": 78
+    },
+    {
+      "N": 1070,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1072,
+      "ordered_representations": 42
+    },
+    {
+      "N": 1074,
+      "ordered_representations": 80
+    },
+    {
+      "N": 1076,
+      "ordered_representations": 40
+    },
+    {
+      "N": 1078,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1080,
+      "ordered_representations": 108
+    },
+    {
+      "N": 1082,
+      "ordered_representations": 39
+    },
+    {
+      "N": 1084,
+      "ordered_representations": 42
+    },
+    {
+      "N": 1086,
+      "ordered_representations": 78
+    },
+    {
+      "N": 1088,
+      "ordered_representations": 36
+    },
+    {
+      "N": 1090,
+      "ordered_representations": 52
+    },
+    {
+      "N": 1092,
+      "ordered_representations": 96
+    },
+    {
+      "N": 1094,
+      "ordered_representations": 45
+    },
+    {
+      "N": 1096,
+      "ordered_representations": 36
+    },
+    {
+      "N": 1098,
+      "ordered_representations": 80
+    },
+    {
+      "N": 1100,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1102,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1104,
+      "ordered_representations": 88
+    },
+    {
+      "N": 1106,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1108,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1110,
+      "ordered_representations": 108
+    },
+    {
+      "N": 1112,
+      "ordered_representations": 32
+    },
+    {
+      "N": 1114,
+      "ordered_representations": 45
+    },
+    {
+      "N": 1116,
+      "ordered_representations": 82
+    },
+    {
+      "N": 1118,
+      "ordered_representations": 44
+    },
+    {
+      "N": 1120,
+      "ordered_representations": 68
+    },
+    {
+      "N": 1122,
+      "ordered_representations": 94
+    },
+    {
+      "N": 1124,
+      "ordered_representations": 38
+    },
+    {
+      "N": 1126,
+      "ordered_representations": 45
+    },
+    {
+      "N": 1128,
+      "ordered_representations": 78
+    },
+    {
+      "N": 1130,
+      "ordered_representations": 52
+    },
+    {
+      "N": 1132,
+      "ordered_representations": 44
+    },
+    {
+      "N": 1134,
+      "ordered_representations": 98
+    },
+    {
+      "N": 1136,
+      "ordered_representations": 46
+    },
+    {
+      "N": 1138,
+      "ordered_representations": 39
+    },
+    {
+      "N": 1140,
+      "ordered_representations": 116
+    },
+    {
+      "N": 1142,
+      "ordered_representations": 35
+    },
+    {
+      "N": 1144,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1146,
+      "ordered_representations": 76
+    },
+    {
+      "N": 1148,
+      "ordered_representations": 52
+    },
+    {
+      "N": 1150,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1152,
+      "ordered_representations": 72
+    },
+    {
+      "N": 1154,
+      "ordered_representations": 37
+    },
+    {
+      "N": 1156,
+      "ordered_representations": 44
+    },
+    {
+      "N": 1158,
+      "ordered_representations": 84
+    },
+    {
+      "N": 1160,
+      "ordered_representations": 58
+    },
+    {
+      "N": 1162,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1164,
+      "ordered_representations": 86
+    },
+    {
+      "N": 1166,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1168,
+      "ordered_representations": 44
+    },
+    {
+      "N": 1170,
+      "ordered_representations": 116
+    },
+    {
+      "N": 1172,
+      "ordered_representations": 36
+    },
+    {
+      "N": 1174,
+      "ordered_representations": 43
+    },
+    {
+      "N": 1176,
+      "ordered_representations": 98
+    },
+    {
+      "N": 1178,
+      "ordered_representations": 38
+    },
+    {
+      "N": 1180,
+      "ordered_representations": 52
+    },
+    {
+      "N": 1182,
+      "ordered_representations": 80
+    },
+    {
+      "N": 1184,
+      "ordered_representations": 40
+    },
+    {
+      "N": 1186,
+      "ordered_representations": 39
+    },
+    {
+      "N": 1188,
+      "ordered_representations": 86
+    },
+    {
+      "N": 1190,
+      "ordered_representations": 66
+    },
+    {
+      "N": 1192,
+      "ordered_representations": 46
+    },
+    {
+      "N": 1194,
+      "ordered_representations": 90
+    },
+    {
+      "N": 1196,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1198,
+      "ordered_representations": 47
+    },
+    {
+      "N": 1200,
+      "ordered_representations": 108
+    },
+    {
+      "N": 1202,
+      "ordered_representations": 37
+    },
+    {
+      "N": 1204,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1206,
+      "ordered_representations": 86
+    },
+    {
+      "N": 1208,
+      "ordered_representations": 40
+    },
+    {
+      "N": 1210,
+      "ordered_representations": 64
+    },
+    {
+      "N": 1212,
+      "ordered_representations": 84
+    },
+    {
+      "N": 1214,
+      "ordered_representations": 43
+    },
+    {
+      "N": 1216,
+      "ordered_representations": 42
+    },
+    {
+      "N": 1218,
+      "ordered_representations": 98
+    },
+    {
+      "N": 1220,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1222,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1224,
+      "ordered_representations": 90
+    },
+    {
+      "N": 1226,
+      "ordered_representations": 43
+    },
+    {
+      "N": 1228,
+      "ordered_representations": 44
+    },
+    {
+      "N": 1230,
+      "ordered_representations": 110
+    },
+    {
+      "N": 1232,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1234,
+      "ordered_representations": 49
+    },
+    {
+      "N": 1236,
+      "ordered_representations": 84
+    },
+    {
+      "N": 1238,
+      "ordered_representations": 35
+    },
+    {
+      "N": 1240,
+      "ordered_representations": 68
+    },
+    {
+      "N": 1242,
+      "ordered_representations": 88
+    },
+    {
+      "N": 1244,
+      "ordered_representations": 46
+    },
+    {
+      "N": 1246,
+      "ordered_representations": 52
+    },
+    {
+      "N": 1248,
+      "ordered_representations": 90
+    },
+    {
+      "N": 1250,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1252,
+      "ordered_representations": 46
+    },
+    {
+      "N": 1254,
+      "ordered_representations": 102
+    },
+    {
+      "N": 1256,
+      "ordered_representations": 40
+    },
+    {
+      "N": 1258,
+      "ordered_representations": 42
+    },
+    {
+      "N": 1260,
+      "ordered_representations": 136
+    },
+    {
+      "N": 1262,
+      "ordered_representations": 43
+    },
+    {
+      "N": 1264,
+      "ordered_representations": 52
+    },
+    {
+      "N": 1266,
+      "ordered_representations": 84
+    },
+    {
+      "N": 1268,
+      "ordered_representations": 42
+    },
+    {
+      "N": 1270,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1272,
+      "ordered_representations": 80
+    },
+    {
+      "N": 1274,
+      "ordered_representations": 52
+    },
+    {
+      "N": 1276,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1278,
+      "ordered_representations": 84
+    },
+    {
+      "N": 1280,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1282,
+      "ordered_representations": 51
+    },
+    {
+      "N": 1284,
+      "ordered_representations": 92
+    },
+    {
+      "N": 1286,
+      "ordered_representations": 43
+    },
+    {
+      "N": 1288,
+      "ordered_representations": 58
+    },
+    {
+      "N": 1290,
+      "ordered_representations": 120
+    },
+    {
+      "N": 1292,
+      "ordered_representations": 46
+    },
+    {
+      "N": 1294,
+      "ordered_representations": 51
+    },
+    {
+      "N": 1296,
+      "ordered_representations": 98
+    },
+    {
+      "N": 1298,
+      "ordered_representations": 40
+    },
+    {
+      "N": 1300,
+      "ordered_representations": 66
+    },
+    {
+      "N": 1302,
+      "ordered_representations": 106
+    },
+    {
+      "N": 1304,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1306,
+      "ordered_representations": 47
+    },
+    {
+      "N": 1308,
+      "ordered_representations": 92
+    },
+    {
+      "N": 1310,
+      "ordered_representations": 60
+    },
+    {
+      "N": 1312,
+      "ordered_representations": 46
+    },
+    {
+      "N": 1314,
+      "ordered_representations": 92
+    },
+    {
+      "N": 1316,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1318,
+      "ordered_representations": 51
+    },
+    {
+      "N": 1320,
+      "ordered_representations": 132
+    },
+    {
+      "N": 1322,
+      "ordered_representations": 41
+    },
+    {
+      "N": 1324,
+      "ordered_representations": 52
+    },
+    {
+      "N": 1326,
+      "ordered_representations": 106
+    },
+    {
+      "N": 1328,
+      "ordered_representations": 44
+    },
+    {
+      "N": 1330,
+      "ordered_representations": 82
+    },
+    {
+      "N": 1332,
+      "ordered_representations": 94
+    },
+    {
+      "N": 1334,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1336,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1338,
+      "ordered_representations": 90
+    },
+    {
+      "N": 1340,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1342,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1344,
+      "ordered_representations": 108
+    },
+    {
+      "N": 1346,
+      "ordered_representations": 49
+    },
+    {
+      "N": 1348,
+      "ordered_representations": 44
+    },
+    {
+      "N": 1350,
+      "ordered_representations": 120
+    },
+    {
+      "N": 1352,
+      "ordered_representations": 44
+    },
+    {
+      "N": 1354,
+      "ordered_representations": 41
+    },
+    {
+      "N": 1356,
+      "ordered_representations": 82
+    },
+    {
+      "N": 1358,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1360,
+      "ordered_representations": 66
+    },
+    {
+      "N": 1362,
+      "ordered_representations": 88
+    },
+    {
+      "N": 1364,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1366,
+      "ordered_representations": 53
+    },
+    {
+      "N": 1368,
+      "ordered_representations": 96
+    },
+    {
+      "N": 1370,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1372,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1374,
+      "ordered_representations": 94
+    },
+    {
+      "N": 1376,
+      "ordered_representations": 46
+    },
+    {
+      "N": 1378,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1380,
+      "ordered_representations": 122
+    },
+    {
+      "N": 1382,
+      "ordered_representations": 39
+    },
+    {
+      "N": 1384,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1386,
+      "ordered_representations": 118
+    },
+    {
+      "N": 1388,
+      "ordered_representations": 40
+    },
+    {
+      "N": 1390,
+      "ordered_representations": 60
+    },
+    {
+      "N": 1392,
+      "ordered_representations": 88
+    },
+    {
+      "N": 1394,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1396,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1398,
+      "ordered_representations": 90
+    },
+    {
+      "N": 1400,
+      "ordered_representations": 68
+    },
+    {
+      "N": 1402,
+      "ordered_representations": 53
+    },
+    {
+      "N": 1404,
+      "ordered_representations": 96
+    },
+    {
+      "N": 1406,
+      "ordered_representations": 46
+    },
+    {
+      "N": 1408,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1410,
+      "ordered_representations": 116
+    },
+    {
+      "N": 1412,
+      "ordered_representations": 36
+    },
+    {
+      "N": 1414,
+      "ordered_representations": 60
+    },
+    {
+      "N": 1416,
+      "ordered_representations": 94
+    },
+    {
+      "N": 1418,
+      "ordered_representations": 39
+    },
+    {
+      "N": 1420,
+      "ordered_representations": 68
+    },
+    {
+      "N": 1422,
+      "ordered_representations": 82
+    },
+    {
+      "N": 1424,
+      "ordered_representations": 44
+    },
+    {
+      "N": 1426,
+      "ordered_representations": 46
+    },
+    {
+      "N": 1428,
+      "ordered_representations": 114
+    },
+    {
+      "N": 1430,
+      "ordered_representations": 70
+    },
+    {
+      "N": 1432,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1434,
+      "ordered_representations": 100
+    },
+    {
+      "N": 1436,
+      "ordered_representations": 44
+    },
+    {
+      "N": 1438,
+      "ordered_representations": 45
+    },
+    {
+      "N": 1440,
+      "ordered_representations": 120
+    },
+    {
+      "N": 1442,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1444,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1446,
+      "ordered_representations": 90
+    },
+    {
+      "N": 1448,
+      "ordered_representations": 40
+    },
+    {
+      "N": 1450,
+      "ordered_representations": 72
+    },
+    {
+      "N": 1452,
+      "ordered_representations": 98
+    },
+    {
+      "N": 1454,
+      "ordered_representations": 51
+    },
+    {
+      "N": 1456,
+      "ordered_representations": 68
+    },
+    {
+      "N": 1458,
+      "ordered_representations": 96
+    },
+    {
+      "N": 1460,
+      "ordered_representations": 66
+    },
+    {
+      "N": 1462,
+      "ordered_representations": 58
+    },
+    {
+      "N": 1464,
+      "ordered_representations": 94
+    },
+    {
+      "N": 1466,
+      "ordered_representations": 49
+    },
+    {
+      "N": 1468,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1470,
+      "ordered_representations": 146
+    },
+    {
+      "N": 1472,
+      "ordered_representations": 44
+    },
+    {
+      "N": 1474,
+      "ordered_representations": 60
+    },
+    {
+      "N": 1476,
+      "ordered_representations": 102
+    },
+    {
+      "N": 1478,
+      "ordered_representations": 51
+    },
+    {
+      "N": 1480,
+      "ordered_representations": 68
+    },
+    {
+      "N": 1482,
+      "ordered_representations": 104
+    },
+    {
+      "N": 1484,
+      "ordered_representations": 58
+    },
+    {
+      "N": 1486,
+      "ordered_representations": 49
+    },
+    {
+      "N": 1488,
+      "ordered_representations": 104
+    },
+    {
+      "N": 1490,
+      "ordered_representations": 62
+    },
+    {
+      "N": 1492,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1494,
+      "ordered_representations": 100
+    },
+    {
+      "N": 1496,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1498,
+      "ordered_representations": 64
+    },
+    {
+      "N": 1500,
+      "ordered_representations": 134
+    },
+    {
+      "N": 1502,
+      "ordered_representations": 53
+    },
+    {
+      "N": 1504,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1506,
+      "ordered_representations": 102
+    },
+    {
+      "N": 1508,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1510,
+      "ordered_representations": 66
+    },
+    {
+      "N": 1512,
+      "ordered_representations": 118
+    },
+    {
+      "N": 1514,
+      "ordered_representations": 45
+    },
+    {
+      "N": 1516,
+      "ordered_representations": 52
+    },
+    {
+      "N": 1518,
+      "ordered_representations": 112
+    },
+    {
+      "N": 1520,
+      "ordered_representations": 62
+    },
+    {
+      "N": 1522,
+      "ordered_representations": 53
+    },
+    {
+      "N": 1524,
+      "ordered_representations": 96
+    },
+    {
+      "N": 1526,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1528,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1530,
+      "ordered_representations": 138
+    },
+    {
+      "N": 1532,
+      "ordered_representations": 44
+    },
+    {
+      "N": 1534,
+      "ordered_representations": 64
+    },
+    {
+      "N": 1536,
+      "ordered_representations": 94
+    },
+    {
+      "N": 1538,
+      "ordered_representations": 51
+    },
+    {
+      "N": 1540,
+      "ordered_representations": 92
+    },
+    {
+      "N": 1542,
+      "ordered_representations": 92
+    },
+    {
+      "N": 1544,
+      "ordered_representations": 42
+    },
+    {
+      "N": 1546,
+      "ordered_representations": 59
+    },
+    {
+      "N": 1548,
+      "ordered_representations": 102
+    },
+    {
+      "N": 1550,
+      "ordered_representations": 62
+    },
+    {
+      "N": 1552,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1554,
+      "ordered_representations": 124
+    },
+    {
+      "N": 1556,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1558,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1560,
+      "ordered_representations": 144
+    },
+    {
+      "N": 1562,
+      "ordered_representations": 58
+    },
+    {
+      "N": 1564,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1566,
+      "ordered_representations": 102
+    },
+    {
+      "N": 1568,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1570,
+      "ordered_representations": 76
+    },
+    {
+      "N": 1572,
+      "ordered_representations": 114
+    },
+    {
+      "N": 1574,
+      "ordered_representations": 45
+    },
+    {
+      "N": 1576,
+      "ordered_representations": 52
+    },
+    {
+      "N": 1578,
+      "ordered_representations": 94
+    },
+    {
+      "N": 1580,
+      "ordered_representations": 62
+    },
+    {
+      "N": 1582,
+      "ordered_representations": 68
+    },
+    {
+      "N": 1584,
+      "ordered_representations": 116
+    },
+    {
+      "N": 1586,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1588,
+      "ordered_representations": 52
+    },
+    {
+      "N": 1590,
+      "ordered_representations": 142
+    },
+    {
+      "N": 1592,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1594,
+      "ordered_representations": 53
+    },
+    {
+      "N": 1596,
+      "ordered_representations": 128
+    },
+    {
+      "N": 1598,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1600,
+      "ordered_representations": 72
+    },
+    {
+      "N": 1602,
+      "ordered_representations": 106
+    },
+    {
+      "N": 1604,
+      "ordered_representations": 46
+    },
+    {
+      "N": 1606,
+      "ordered_representations": 60
+    },
+    {
+      "N": 1608,
+      "ordered_representations": 94
+    },
+    {
+      "N": 1610,
+      "ordered_representations": 84
+    },
+    {
+      "N": 1612,
+      "ordered_representations": 70
+    },
+    {
+      "N": 1614,
+      "ordered_representations": 106
+    },
+    {
+      "N": 1616,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1618,
+      "ordered_representations": 63
+    },
+    {
+      "N": 1620,
+      "ordered_representations": 130
+    },
+    {
+      "N": 1622,
+      "ordered_representations": 47
+    },
+    {
+      "N": 1624,
+      "ordered_representations": 70
+    },
+    {
+      "N": 1626,
+      "ordered_representations": 110
+    },
+    {
+      "N": 1628,
+      "ordered_representations": 58
+    },
+    {
+      "N": 1630,
+      "ordered_representations": 80
+    },
+    {
+      "N": 1632,
+      "ordered_representations": 120
+    },
+    {
+      "N": 1634,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1636,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1638,
+      "ordered_representations": 134
+    },
+    {
+      "N": 1640,
+      "ordered_representations": 70
+    },
+    {
+      "N": 1642,
+      "ordered_representations": 53
+    },
+    {
+      "N": 1644,
+      "ordered_representations": 104
+    },
+    {
+      "N": 1646,
+      "ordered_representations": 51
+    },
+    {
+      "N": 1648,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1650,
+      "ordered_representations": 152
+    },
+    {
+      "N": 1652,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1654,
+      "ordered_representations": 61
+    },
+    {
+      "N": 1656,
+      "ordered_representations": 110
+    },
+    {
+      "N": 1658,
+      "ordered_representations": 53
+    },
+    {
+      "N": 1660,
+      "ordered_representations": 78
+    },
+    {
+      "N": 1662,
+      "ordered_representations": 108
+    },
+    {
+      "N": 1664,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1666,
+      "ordered_representations": 68
+    },
+    {
+      "N": 1668,
+      "ordered_representations": 106
+    },
+    {
+      "N": 1670,
+      "ordered_representations": 74
+    },
+    {
+      "N": 1672,
+      "ordered_representations": 70
+    },
+    {
+      "N": 1674,
+      "ordered_representations": 112
+    },
+    {
+      "N": 1676,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1678,
+      "ordered_representations": 61
+    },
+    {
+      "N": 1680,
+      "ordered_representations": 166
+    },
+    {
+      "N": 1682,
+      "ordered_representations": 48
+    },
+    {
+      "N": 1684,
+      "ordered_representations": 62
+    },
+    {
+      "N": 1686,
+      "ordered_representations": 112
+    },
+    {
+      "N": 1688,
+      "ordered_representations": 52
+    },
+    {
+      "N": 1690,
+      "ordered_representations": 74
+    },
+    {
+      "N": 1692,
+      "ordered_representations": 114
+    },
+    {
+      "N": 1694,
+      "ordered_representations": 64
+    },
+    {
+      "N": 1696,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1698,
+      "ordered_representations": 104
+    },
+    {
+      "N": 1700,
+      "ordered_representations": 68
+    },
+    {
+      "N": 1702,
+      "ordered_representations": 60
+    },
+    {
+      "N": 1704,
+      "ordered_representations": 110
+    },
+    {
+      "N": 1706,
+      "ordered_representations": 59
+    },
+    {
+      "N": 1708,
+      "ordered_representations": 64
+    },
+    {
+      "N": 1710,
+      "ordered_representations": 156
+    },
+    {
+      "N": 1712,
+      "ordered_representations": 52
+    },
+    {
+      "N": 1714,
+      "ordered_representations": 53
+    },
+    {
+      "N": 1716,
+      "ordered_representations": 136
+    },
+    {
+      "N": 1718,
+      "ordered_representations": 41
+    },
+    {
+      "N": 1720,
+      "ordered_representations": 76
+    },
+    {
+      "N": 1722,
+      "ordered_representations": 128
+    },
+    {
+      "N": 1724,
+      "ordered_representations": 58
+    },
+    {
+      "N": 1726,
+      "ordered_representations": 61
+    },
+    {
+      "N": 1728,
+      "ordered_representations": 106
+    },
+    {
+      "N": 1730,
+      "ordered_representations": 72
+    },
+    {
+      "N": 1732,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1734,
+      "ordered_representations": 110
+    },
+    {
+      "N": 1736,
+      "ordered_representations": 70
+    },
+    {
+      "N": 1738,
+      "ordered_representations": 66
+    },
+    {
+      "N": 1740,
+      "ordered_representations": 152
+    },
+    {
+      "N": 1742,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1744,
+      "ordered_representations": 66
+    },
+    {
+      "N": 1746,
+      "ordered_representations": 110
+    },
+    {
+      "N": 1748,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1750,
+      "ordered_representations": 96
+    },
+    {
+      "N": 1752,
+      "ordered_representations": 104
+    },
+    {
+      "N": 1754,
+      "ordered_representations": 53
+    },
+    {
+      "N": 1756,
+      "ordered_representations": 60
+    },
+    {
+      "N": 1758,
+      "ordered_representations": 110
+    },
+    {
+      "N": 1760,
+      "ordered_representations": 82
+    },
+    {
+      "N": 1762,
+      "ordered_representations": 57
+    },
+    {
+      "N": 1764,
+      "ordered_representations": 138
+    },
+    {
+      "N": 1766,
+      "ordered_representations": 63
+    },
+    {
+      "N": 1768,
+      "ordered_representations": 62
+    },
+    {
+      "N": 1770,
+      "ordered_representations": 146
+    },
+    {
+      "N": 1772,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1774,
+      "ordered_representations": 53
+    },
+    {
+      "N": 1776,
+      "ordered_representations": 106
+    },
+    {
+      "N": 1778,
+      "ordered_representations": 66
+    },
+    {
+      "N": 1780,
+      "ordered_representations": 74
+    },
+    {
+      "N": 1782,
+      "ordered_representations": 118
+    },
+    {
+      "N": 1784,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1786,
+      "ordered_representations": 60
+    },
+    {
+      "N": 1788,
+      "ordered_representations": 104
+    },
+    {
+      "N": 1790,
+      "ordered_representations": 72
+    },
+    {
+      "N": 1792,
+      "ordered_representations": 72
+    },
+    {
+      "N": 1794,
+      "ordered_representations": 132
+    },
+    {
+      "N": 1796,
+      "ordered_representations": 62
+    },
+    {
+      "N": 1798,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1800,
+      "ordered_representations": 150
+    },
+    {
+      "N": 1802,
+      "ordered_representations": 62
+    },
+    {
+      "N": 1804,
+      "ordered_representations": 62
+    },
+    {
+      "N": 1806,
+      "ordered_representations": 144
+    },
+    {
+      "N": 1808,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1810,
+      "ordered_representations": 72
+    },
+    {
+      "N": 1812,
+      "ordered_representations": 106
+    },
+    {
+      "N": 1814,
+      "ordered_representations": 55
+    },
+    {
+      "N": 1816,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1818,
+      "ordered_representations": 106
+    },
+    {
+      "N": 1820,
+      "ordered_representations": 92
+    },
+    {
+      "N": 1822,
+      "ordered_representations": 53
+    },
+    {
+      "N": 1824,
+      "ordered_representations": 116
+    },
+    {
+      "N": 1826,
+      "ordered_representations": 66
+    },
+    {
+      "N": 1828,
+      "ordered_representations": 58
+    },
+    {
+      "N": 1830,
+      "ordered_representations": 152
+    },
+    {
+      "N": 1832,
+      "ordered_representations": 50
+    },
+    {
+      "N": 1834,
+      "ordered_representations": 68
+    },
+    {
+      "N": 1836,
+      "ordered_representations": 124
+    },
+    {
+      "N": 1838,
+      "ordered_representations": 55
+    },
+    {
+      "N": 1840,
+      "ordered_representations": 74
+    },
+    {
+      "N": 1842,
+      "ordered_representations": 108
+    },
+    {
+      "N": 1844,
+      "ordered_representations": 64
+    },
+    {
+      "N": 1846,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1848,
+      "ordered_representations": 140
+    },
+    {
+      "N": 1850,
+      "ordered_representations": 76
+    },
+    {
+      "N": 1852,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1854,
+      "ordered_representations": 108
+    },
+    {
+      "N": 1856,
+      "ordered_representations": 64
+    },
+    {
+      "N": 1858,
+      "ordered_representations": 57
+    },
+    {
+      "N": 1860,
+      "ordered_representations": 152
+    },
+    {
+      "N": 1862,
+      "ordered_representations": 68
+    },
+    {
+      "N": 1864,
+      "ordered_representations": 64
+    },
+    {
+      "N": 1866,
+      "ordered_representations": 106
+    },
+    {
+      "N": 1868,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1870,
+      "ordered_representations": 86
+    },
+    {
+      "N": 1872,
+      "ordered_representations": 116
+    },
+    {
+      "N": 1874,
+      "ordered_representations": 59
+    },
+    {
+      "N": 1876,
+      "ordered_representations": 72
+    },
+    {
+      "N": 1878,
+      "ordered_representations": 122
+    },
+    {
+      "N": 1880,
+      "ordered_representations": 76
+    },
+    {
+      "N": 1882,
+      "ordered_representations": 65
+    },
+    {
+      "N": 1884,
+      "ordered_representations": 122
+    },
+    {
+      "N": 1886,
+      "ordered_representations": 60
+    },
+    {
+      "N": 1888,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1890,
+      "ordered_representations": 182
+    },
+    {
+      "N": 1892,
+      "ordered_representations": 70
+    },
+    {
+      "N": 1894,
+      "ordered_representations": 63
+    },
+    {
+      "N": 1896,
+      "ordered_representations": 126
+    },
+    {
+      "N": 1898,
+      "ordered_representations": 66
+    },
+    {
+      "N": 1900,
+      "ordered_representations": 72
+    },
+    {
+      "N": 1902,
+      "ordered_representations": 110
+    },
+    {
+      "N": 1904,
+      "ordered_representations": 72
+    },
+    {
+      "N": 1906,
+      "ordered_representations": 59
+    },
+    {
+      "N": 1908,
+      "ordered_representations": 116
+    },
+    {
+      "N": 1910,
+      "ordered_representations": 72
+    },
+    {
+      "N": 1912,
+      "ordered_representations": 60
+    },
+    {
+      "N": 1914,
+      "ordered_representations": 132
+    },
+    {
+      "N": 1916,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1918,
+      "ordered_representations": 70
+    },
+    {
+      "N": 1920,
+      "ordered_representations": 162
+    },
+    {
+      "N": 1922,
+      "ordered_representations": 60
+    },
+    {
+      "N": 1924,
+      "ordered_representations": 68
+    },
+    {
+      "N": 1926,
+      "ordered_representations": 116
+    },
+    {
+      "N": 1928,
+      "ordered_representations": 60
+    },
+    {
+      "N": 1930,
+      "ordered_representations": 78
+    },
+    {
+      "N": 1932,
+      "ordered_representations": 136
+    },
+    {
+      "N": 1934,
+      "ordered_representations": 55
+    },
+    {
+      "N": 1936,
+      "ordered_representations": 66
+    },
+    {
+      "N": 1938,
+      "ordered_representations": 130
+    },
+    {
+      "N": 1940,
+      "ordered_representations": 82
+    },
+    {
+      "N": 1942,
+      "ordered_representations": 59
+    },
+    {
+      "N": 1944,
+      "ordered_representations": 116
+    },
+    {
+      "N": 1946,
+      "ordered_representations": 68
+    },
+    {
+      "N": 1948,
+      "ordered_representations": 62
+    },
+    {
+      "N": 1950,
+      "ordered_representations": 166
+    },
+    {
+      "N": 1952,
+      "ordered_representations": 58
+    },
+    {
+      "N": 1954,
+      "ordered_representations": 69
+    },
+    {
+      "N": 1956,
+      "ordered_representations": 106
+    },
+    {
+      "N": 1958,
+      "ordered_representations": 54
+    },
+    {
+      "N": 1960,
+      "ordered_representations": 96
+    },
+    {
+      "N": 1962,
+      "ordered_representations": 112
+    },
+    {
+      "N": 1964,
+      "ordered_representations": 52
+    },
+    {
+      "N": 1966,
+      "ordered_representations": 57
+    },
+    {
+      "N": 1968,
+      "ordered_representations": 124
+    },
+    {
+      "N": 1970,
+      "ordered_representations": 76
+    },
+    {
+      "N": 1972,
+      "ordered_representations": 64
+    },
+    {
+      "N": 1974,
+      "ordered_representations": 142
+    },
+    {
+      "N": 1976,
+      "ordered_representations": 66
+    },
+    {
+      "N": 1978,
+      "ordered_representations": 64
+    },
+    {
+      "N": 1980,
+      "ordered_representations": 164
+    },
+    {
+      "N": 1982,
+      "ordered_representations": 59
+    },
+    {
+      "N": 1984,
+      "ordered_representations": 64
+    },
+    {
+      "N": 1986,
+      "ordered_representations": 116
+    },
+    {
+      "N": 1988,
+      "ordered_representations": 60
+    },
+    {
+      "N": 1990,
+      "ordered_representations": 84
+    },
+    {
+      "N": 1992,
+      "ordered_representations": 118
+    },
+    {
+      "N": 1994,
+      "ordered_representations": 53
+    },
+    {
+      "N": 1996,
+      "ordered_representations": 56
+    },
+    {
+      "N": 1998,
+      "ordered_representations": 112
+    },
+    {
+      "N": 2000,
+      "ordered_representations": 74
+    }
+  ],
+  "not_computed": "Logarithmic integral baselines, smoothing, and asymptotic error estimates."
+}

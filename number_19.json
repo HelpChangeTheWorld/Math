@@ -1,0 +1,372 @@
+{
+  "rows": [
+    {
+      "X": 1000,
+      "h": 1,
+      "liouville_sum": 14,
+      "rough_sum": 236
+    },
+    {
+      "X": 1000,
+      "h": 2,
+      "liouville_sum": -30,
+      "rough_sum": 254
+    },
+    {
+      "X": 1000,
+      "h": 3,
+      "liouville_sum": -12,
+      "rough_sum": 266
+    },
+    {
+      "X": 1000,
+      "h": 4,
+      "liouville_sum": 18,
+      "rough_sum": 264
+    },
+    {
+      "X": 1000,
+      "h": 5,
+      "liouville_sum": 22,
+      "rough_sum": 234
+    },
+    {
+      "X": 1000,
+      "h": 6,
+      "liouville_sum": -10,
+      "rough_sum": 256
+    },
+    {
+      "X": 1000,
+      "h": 7,
+      "liouville_sum": -12,
+      "rough_sum": 260
+    },
+    {
+      "X": 1000,
+      "h": 8,
+      "liouville_sum": -16,
+      "rough_sum": 248
+    },
+    {
+      "X": 1000,
+      "h": 9,
+      "liouville_sum": 50,
+      "rough_sum": 254
+    },
+    {
+      "X": 1000,
+      "h": 10,
+      "liouville_sum": 20,
+      "rough_sum": 236
+    },
+    {
+      "X": 1000,
+      "h": 11,
+      "liouville_sum": 42,
+      "rough_sum": 292
+    },
+    {
+      "X": 1000,
+      "h": 12,
+      "liouville_sum": -36,
+      "rough_sum": 248
+    },
+    {
+      "X": 1000,
+      "h": 13,
+      "liouville_sum": -12,
+      "rough_sum": 256
+    },
+    {
+      "X": 1000,
+      "h": 14,
+      "liouville_sum": 32,
+      "rough_sum": 264
+    },
+    {
+      "X": 1000,
+      "h": 15,
+      "liouville_sum": -10,
+      "rough_sum": 266
+    },
+    {
+      "X": 1000,
+      "h": 16,
+      "liouville_sum": -30,
+      "rough_sum": 232
+    },
+    {
+      "X": 1000,
+      "h": 17,
+      "liouville_sum": -54,
+      "rough_sum": 260
+    },
+    {
+      "X": 1000,
+      "h": 18,
+      "liouville_sum": 28,
+      "rough_sum": 274
+    },
+    {
+      "X": 1000,
+      "h": 19,
+      "liouville_sum": -16,
+      "rough_sum": 254
+    },
+    {
+      "X": 1000,
+      "h": 20,
+      "liouville_sum": -4,
+      "rough_sum": 264
+    },
+    {
+      "X": 10000,
+      "h": 1,
+      "liouville_sum": 112,
+      "rough_sum": 1116
+    },
+    {
+      "X": 10000,
+      "h": 2,
+      "liouville_sum": 12,
+      "rough_sum": 1070
+    },
+    {
+      "X": 10000,
+      "h": 3,
+      "liouville_sum": -38,
+      "rough_sum": 1136
+    },
+    {
+      "X": 10000,
+      "h": 4,
+      "liouville_sum": -38,
+      "rough_sum": 1244
+    },
+    {
+      "X": 10000,
+      "h": 5,
+      "liouville_sum": 60,
+      "rough_sum": 1068
+    },
+    {
+      "X": 10000,
+      "h": 6,
+      "liouville_sum": -64,
+      "rough_sum": 1118
+    },
+    {
+      "X": 10000,
+      "h": 7,
+      "liouville_sum": -40,
+      "rough_sum": 1056
+    },
+    {
+      "X": 10000,
+      "h": 8,
+      "liouville_sum": -38,
+      "rough_sum": 1078
+    },
+    {
+      "X": 10000,
+      "h": 9,
+      "liouville_sum": 80,
+      "rough_sum": 1148
+    },
+    {
+      "X": 10000,
+      "h": 10,
+      "liouville_sum": -14,
+      "rough_sum": 1152
+    },
+    {
+      "X": 10000,
+      "h": 11,
+      "liouville_sum": -38,
+      "rough_sum": 1750
+    },
+    {
+      "X": 10000,
+      "h": 12,
+      "liouville_sum": -110,
+      "rough_sum": 1180
+    },
+    {
+      "X": 10000,
+      "h": 13,
+      "liouville_sum": 78,
+      "rough_sum": 1600
+    },
+    {
+      "X": 10000,
+      "h": 14,
+      "liouville_sum": -4,
+      "rough_sum": 1134
+    },
+    {
+      "X": 10000,
+      "h": 15,
+      "liouville_sum": 0,
+      "rough_sum": 1136
+    },
+    {
+      "X": 10000,
+      "h": 16,
+      "liouville_sum": -128,
+      "rough_sum": 1106
+    },
+    {
+      "X": 10000,
+      "h": 17,
+      "liouville_sum": 160,
+      "rough_sum": 1446
+    },
+    {
+      "X": 10000,
+      "h": 18,
+      "liouville_sum": 114,
+      "rough_sum": 1236
+    },
+    {
+      "X": 10000,
+      "h": 19,
+      "liouville_sum": -148,
+      "rough_sum": 1442
+    },
+    {
+      "X": 10000,
+      "h": 20,
+      "liouville_sum": -52,
+      "rough_sum": 1172
+    },
+    {
+      "X": 100000,
+      "h": 1,
+      "liouville_sum": 68,
+      "rough_sum": 2144
+    },
+    {
+      "X": 100000,
+      "h": 2,
+      "liouville_sum": 258,
+      "rough_sum": 2134
+    },
+    {
+      "X": 100000,
+      "h": 3,
+      "liouville_sum": -74,
+      "rough_sum": 2340
+    },
+    {
+      "X": 100000,
+      "h": 4,
+      "liouville_sum": 130,
+      "rough_sum": 2672
+    },
+    {
+      "X": 100000,
+      "h": 5,
+      "liouville_sum": -176,
+      "rough_sum": 2288
+    },
+    {
+      "X": 100000,
+      "h": 6,
+      "liouville_sum": -118,
+      "rough_sum": 2556
+    },
+    {
+      "X": 100000,
+      "h": 7,
+      "liouville_sum": 160,
+      "rough_sum": 2412
+    },
+    {
+      "X": 100000,
+      "h": 8,
+      "liouville_sum": -192,
+      "rough_sum": 2342
+    },
+    {
+      "X": 100000,
+      "h": 9,
+      "liouville_sum": -100,
+      "rough_sum": 2590
+    },
+    {
+      "X": 100000,
+      "h": 10,
+      "liouville_sum": -20,
+      "rough_sum": 2626
+    },
+    {
+      "X": 100000,
+      "h": 11,
+      "liouville_sum": 170,
+      "rough_sum": 4258
+    },
+    {
+      "X": 100000,
+      "h": 12,
+      "liouville_sum": -452,
+      "rough_sum": 2666
+    },
+    {
+      "X": 100000,
+      "h": 13,
+      "liouville_sum": 494,
+      "rough_sum": 4048
+    },
+    {
+      "X": 100000,
+      "h": 14,
+      "liouville_sum": 118,
+      "rough_sum": 2344
+    },
+    {
+      "X": 100000,
+      "h": 15,
+      "liouville_sum": -184,
+      "rough_sum": 2536
+    },
+    {
+      "X": 100000,
+      "h": 16,
+      "liouville_sum": 90,
+      "rough_sum": 2608
+    },
+    {
+      "X": 100000,
+      "h": 17,
+      "liouville_sum": 562,
+      "rough_sum": 3668
+    },
+    {
+      "X": 100000,
+      "h": 18,
+      "liouville_sum": 146,
+      "rough_sum": 2764
+    },
+    {
+      "X": 100000,
+      "h": 19,
+      "liouville_sum": -142,
+      "rough_sum": 3368
+    },
+    {
+      "X": 100000,
+      "h": 20,
+      "liouville_sum": -386,
+      "rough_sum": 2858
+    }
+  ],
+  "h0_control_at_100000": 100000,
+  "counterexample_to_monotonic_bias_reduction": {
+    "X": 1000,
+    "h": 1,
+    "liouville_sum": 14,
+    "rough_sum": 236
+  },
+  "limit": "These are unweighted two-point finite sums, not an estimate for all orders or all scales."
+}

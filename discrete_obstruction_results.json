@@ -1,0 +1,760 @@
+{
+  "51": {
+    "absent_edges_exhausted": 2383,
+    "deletions_per_edge": 18,
+    "replacement_hypergraphs_verified": 42894,
+    "minimum_avoiding_seed_edges_per_copy": [
+      2,
+      2
+    ],
+    "all_replacements_have_matching_number_exactly": 3,
+    "avoidance_count_distribution": [
+      {
+        "copy_zero": 2,
+        "copy_one": 6,
+        "new_edges": 108
+      },
+      {
+        "copy_zero": 2,
+        "copy_one": 9,
+        "new_edges": 108
+      },
+      {
+        "copy_zero": 3,
+        "copy_one": 6,
+        "new_edges": 216
+      },
+      {
+        "copy_zero": 3,
+        "copy_one": 9,
+        "new_edges": 72
+      },
+      {
+        "copy_zero": 4,
+        "copy_one": 4,
+        "new_edges": 486
+      },
+      {
+        "copy_zero": 4,
+        "copy_one": 6,
+        "new_edges": 324
+      },
+      {
+        "copy_zero": 4,
+        "copy_one": 9,
+        "new_edges": 54
+      },
+      {
+        "copy_zero": 6,
+        "copy_one": 2,
+        "new_edges": 108
+      },
+      {
+        "copy_zero": 6,
+        "copy_one": 3,
+        "new_edges": 216
+      },
+      {
+        "copy_zero": 6,
+        "copy_one": 4,
+        "new_edges": 324
+      },
+      {
+        "copy_zero": 6,
+        "copy_one": 6,
+        "new_edges": 108
+      },
+      {
+        "copy_zero": 6,
+        "copy_one": 9,
+        "new_edges": 12
+      },
+      {
+        "copy_zero": 9,
+        "copy_one": 2,
+        "new_edges": 108
+      },
+      {
+        "copy_zero": 9,
+        "copy_one": 3,
+        "new_edges": 72
+      },
+      {
+        "copy_zero": 9,
+        "copy_one": 4,
+        "new_edges": 54
+      },
+      {
+        "copy_zero": 9,
+        "copy_one": 6,
+        "new_edges": 12
+      },
+      {
+        "copy_zero": 9,
+        "copy_one": 9,
+        "new_edges": 1
+      }
+    ],
+    "examples": [
+      {
+        "added_edge": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "avoiding_edges_in_copy_zero": [
+          [
+            1,
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            0
+          ]
+        ],
+        "avoiding_edges_in_copy_one": [
+          [
+            3,
+            3,
+            3,
+            3
+          ],
+          [
+            3,
+            4,
+            4,
+            5
+          ],
+          [
+            3,
+            5,
+            5,
+            4
+          ],
+          [
+            4,
+            3,
+            4,
+            4
+          ],
+          [
+            4,
+            4,
+            5,
+            3
+          ],
+          [
+            4,
+            5,
+            3,
+            5
+          ],
+          [
+            5,
+            3,
+            5,
+            5
+          ],
+          [
+            5,
+            4,
+            3,
+            4
+          ],
+          [
+            5,
+            5,
+            4,
+            3
+          ]
+        ]
+      },
+      {
+        "added_edge": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "avoiding_edges_in_copy_zero": [
+          [
+            1,
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            0
+          ]
+        ],
+        "avoiding_edges_in_copy_one": [
+          [
+            3,
+            3,
+            3,
+            3
+          ],
+          [
+            3,
+            4,
+            4,
+            5
+          ],
+          [
+            3,
+            5,
+            5,
+            4
+          ],
+          [
+            4,
+            3,
+            4,
+            4
+          ],
+          [
+            4,
+            4,
+            5,
+            3
+          ],
+          [
+            4,
+            5,
+            3,
+            5
+          ],
+          [
+            5,
+            3,
+            5,
+            5
+          ],
+          [
+            5,
+            4,
+            3,
+            4
+          ],
+          [
+            5,
+            5,
+            4,
+            3
+          ]
+        ]
+      },
+      {
+        "added_edge": [
+          0,
+          0,
+          0,
+          3
+        ],
+        "avoiding_edges_in_copy_zero": [
+          [
+            1,
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            0
+          ]
+        ],
+        "avoiding_edges_in_copy_one": [
+          [
+            3,
+            4,
+            4,
+            5
+          ],
+          [
+            3,
+            5,
+            5,
+            4
+          ],
+          [
+            4,
+            3,
+            4,
+            4
+          ],
+          [
+            4,
+            5,
+            3,
+            5
+          ],
+          [
+            5,
+            3,
+            5,
+            5
+          ],
+          [
+            5,
+            4,
+            3,
+            4
+          ]
+        ]
+      }
+    ],
+    "upper_bound_reason": "Removing an edge leaves matching number at most two; adding one edge can increase it by at most one."
+  },
+  "53": {
+    "graph": "cube",
+    "edge_orientation": "lower vertex label to higher",
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "cycle_basis": [
+      [
+        -1,
+        1,
+        0,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        1,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        -1,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        -1,
+        1,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "trap_coefficients": [
+      -2,
+      -2,
+      -1,
+      -1,
+      0
+    ],
+    "trap_flow": [
+      4,
+      -1,
+      -3,
+      3,
+      1,
+      -2,
+      1,
+      1,
+      -2,
+      -1,
+      -1,
+      0
+    ],
+    "trap_potential": 1,
+    "all_ten_unrestricted_unit_coordinate_moves": [
+      {
+        "coordinate": 0,
+        "change": -1,
+        "state": [
+          -3,
+          -2,
+          -1,
+          -1,
+          0
+        ],
+        "potential": 2
+      },
+      {
+        "coordinate": 0,
+        "change": 1,
+        "state": [
+          -1,
+          -2,
+          -1,
+          -1,
+          0
+        ],
+        "potential": 2
+      },
+      {
+        "coordinate": 1,
+        "change": -1,
+        "state": [
+          -2,
+          -3,
+          -1,
+          -1,
+          0
+        ],
+        "potential": 2
+      },
+      {
+        "coordinate": 1,
+        "change": 1,
+        "state": [
+          -2,
+          -1,
+          -1,
+          -1,
+          0
+        ],
+        "potential": 2
+      },
+      {
+        "coordinate": 2,
+        "change": -1,
+        "state": [
+          -2,
+          -2,
+          -2,
+          -1,
+          0
+        ],
+        "potential": 2
+      },
+      {
+        "coordinate": 2,
+        "change": 1,
+        "state": [
+          -2,
+          -2,
+          0,
+          -1,
+          0
+        ],
+        "potential": 3
+      },
+      {
+        "coordinate": 3,
+        "change": -1,
+        "state": [
+          -2,
+          -2,
+          -1,
+          -2,
+          0
+        ],
+        "potential": 2
+      },
+      {
+        "coordinate": 3,
+        "change": 1,
+        "state": [
+          -2,
+          -2,
+          -1,
+          0,
+          0
+        ],
+        "potential": 3
+      },
+      {
+        "coordinate": 4,
+        "change": -1,
+        "state": [
+          -2,
+          -2,
+          -1,
+          -1,
+          -1
+        ],
+        "potential": 2
+      },
+      {
+        "coordinate": 4,
+        "change": 1,
+        "state": [
+          -2,
+          -2,
+          -1,
+          -1,
+          1
+        ],
+        "potential": 2
+      }
+    ],
+    "escape_path": [
+      {
+        "coefficients": [
+          -2,
+          -2,
+          -1,
+          -1,
+          0
+        ],
+        "potential": 1,
+        "flow": [
+          4,
+          -1,
+          -3,
+          3,
+          1,
+          -2,
+          1,
+          1,
+          -2,
+          -1,
+          -1,
+          0
+        ]
+      },
+      {
+        "coefficients": [
+          -3,
+          -2,
+          -1,
+          -1,
+          0
+        ],
+        "potential": 2,
+        "flow": [
+          5,
+          -2,
+          -3,
+          4,
+          1,
+          -3,
+          1,
+          1,
+          -2,
+          -1,
+          -1,
+          0
+        ]
+      },
+      {
+        "coefficients": [
+          -3,
+          -2,
+          -2,
+          -1,
+          0
+        ],
+        "potential": 2,
+        "flow": [
+          5,
+          -1,
+          -4,
+          4,
+          1,
+          -3,
+          2,
+          1,
+          -2,
+          -2,
+          -1,
+          0
+        ]
+      },
+      {
+        "coefficients": [
+          -3,
+          -2,
+          -2,
+          -1,
+          1
+        ],
+        "potential": 2,
+        "flow": [
+          4,
+          0,
+          -4,
+          3,
+          1,
+          -3,
+          3,
+          0,
+          -2,
+          -2,
+          -1,
+          1
+        ]
+      },
+      {
+        "coefficients": [
+          -4,
+          -2,
+          -2,
+          -1,
+          1
+        ],
+        "potential": 2,
+        "flow": [
+          5,
+          -1,
+          -4,
+          4,
+          1,
+          -4,
+          3,
+          0,
+          -2,
+          -2,
+          -1,
+          1
+        ]
+      },
+      {
+        "coefficients": [
+          -4,
+          -2,
+          -2,
+          -1,
+          2
+        ],
+        "potential": 1,
+        "flow": [
+          4,
+          0,
+          -4,
+          3,
+          1,
+          -4,
+          4,
+          -1,
+          -2,
+          -2,
+          -1,
+          2
+        ]
+      },
+      {
+        "coefficients": [
+          -4,
+          -2,
+          -1,
+          -1,
+          2
+        ],
+        "potential": 0,
+        "flow": [
+          4,
+          -1,
+          -3,
+          3,
+          1,
+          -4,
+          3,
+          -1,
+          -2,
+          -1,
+          -1,
+          2
+        ]
+      }
+    ],
+    "escape_maximum_potential": 2,
+    "unrestricted_first_move_lower_bound": 2
+  }
+}

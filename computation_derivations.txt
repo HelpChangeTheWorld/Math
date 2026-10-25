@@ -1,0 +1,100 @@
+Worked derivations accompanying computation_work.json
+11 September 2026. All team roles are simulated. These are bounded calculations or elementary restricted arguments, without novelty or general open-problem claims.
+
+82. Odd-charge parity certificates and sharing
+An edge variable occurs at both incident vertices. Summing all vertex parity equations over F2 makes every edge cancel. With total charge one, the result is 0=1. The program expands each degree-three equation into four forbidden-assignment clauses, then uses least-variable Shannon branching on canonical residual clause sets. The unshared count unfolds the same recurrence; the shared count counts distinct cached residuals. Independent exhaustive assignment checks establish unsatisfiability for all three inputs. These counts concern this fixed representation and are not general short-certificate bounds.
+
+83. Two-bit frontier induction
+For a graph with vertices (i,b), b in {0,1}, and edges only from layer i to layer i+1, let m_i(b) indicate a path from the start to (i,b). Then
+m_(i+1)(j) = OR over b of [m_i(b) AND E((i,b),(i+1,j))].
+Every path into the next layer has exactly such a last edge, proving the update inductively. Two current and two next bits suffice in addition to a logarithmic layer/input counter and constant local indices. The exhaustive 256-instance test covers two transitions. Projecting arbitrary four-vertex digraphs into two layers is invalid: 0→1→3 is a witness if {0,1} share the first layer. The program found 1,024 mismatches among the 4,096 digraphs for that invalid projection.
+
+84. Exact rounding bound
+For probability rows u,v and P_e=(1-e)I+eJ/4, the difference (u-v)P_e=(1-e)(u-v). Thus total variation contracts by exactly 1-e. Flooring the first three coordinates to a grid of spacing eta=2^(-b) loses less than 3 eta mass; assigning that mass to coordinate four makes the rounding total variation at most 3 eta. Consequently E_(t+1) <= (1-e)E_t+3 eta, starting E_0=0. Acceptance error is bounded by total variation. All 240 rational step checks satisfy this recurrence. No logarithmic-space implementation follows from maintaining four exact rational numbers for growing t.
+
+85. Quantifier elimination control
+A reduced ordered decision diagram is a finite Boolean representation. Replacing an innermost existential node by the OR of its cofactors, or a universal node by AND, implements the corresponding quantifier. The program performs these operations on diagrams and independently quantifies truth-table entries. Every one of 12,600 remaining truth entries agrees across 200 six-variable formulas. The maximum reachable diagram size is 25 including terminals. This sample supplies no asymptotic size bound.
+
+86. Exhaustive hidden-handle game
+The model is exactly the revised two-query game over additive Z/7Z. Every handle represents an affine function a*x+b. Add/subtract append the corresponding affine pair and reveal only its slot index. Equality partitions the remaining secret set; the optional parity query partitions it by the least nonnegative x modulo two. At a leaf, one exact guess succeeds for one remaining secret, since the original prior is uniform. Dynamic programming enumerates every allowed query and sums optimal successful-secret counts across response branches. Randomization cannot improve this finite optimum because a randomized strategy is a distribution of deterministic strategies. The three reported trees are replayed directly on all seven secrets.
+Baseline: test x=0, then x=1, otherwise guess 2; success 3/7.
+Parity extension: learn parity, then test x=0 on the even branch or x=1 on the odd branch, otherwise guess 2 or 3 respectively; success 4/7.
+A copied slot-index bit is constant known information and leaves the optimum 3/7.
+
+87. Injective substitution
+Every exponent in the expanded examples lies between zero and six. The substitution x_i=t^(7^(i-1)) maps its exponent vector to a base-seven integer with those exponents as digits. Uniqueness of base-seven expansion proves injectivity, so no distinct monomials collide. All 100 nonzero sums and 100 exact cancellation controls pass. Their largest substituted degree is 1,716; the original total degree is at most six. The argument establishes correctness of an expensive baseline, not polynomial cost as variable count grows.
+
+88. A counterexample to rank bounded by gate count
+For f_k=(x1+y1)^k(x2+y2)^k, rows indexed by (a,b) and columns by (c,d), with entries the coefficient of x1^a*x2^b*y1^c*y2^d, have the sole nonzero entry at (c,d)=(k-a,k-b), equal to C(k,a)C(k,b). Thus rank=(k+1)^2. The stated circuit uses two additions, two exponentiation-by-squaring chains, and one final multiplication: 3+2(floor(log2 k)+popcount(k)-1) gates. Already k=1 has rank four and a three-gate circuit, rejecting rank<=gate-count. The weaker logarithmic inequality survives these six examples only.
+
+89. Cost of enumerating the missing prefix
+For odd L-bit candidates and t revealed leading bits, where t<L, a fixed prefix leaves 2^(L-t-1) odd integers. There are 2^(t-1) admissible leading prefixes. Enumerating all prefixes therefore revisits exactly 2^(L-2) odd L-bit integers, the original candidate set. On fifty eight-bit balanced semiprimes the known-prefix candidate counts are 64,32,8,2 for t=1,2,4,6, while searching all prefixes always covers 64. This rejects treating the missing prefix as free in this plain enumeration baseline. It is not a lower bound on factoring or on lattice methods.
+
+90. An exact graph-isomorphism invariant
+Both specified sixteen-vertex graphs have degree six and exactly two common neighbors for each distinct pair. For an edge, count edges induced by its two common neighbors. The rook graph has value one on all 48 edges; the Shrikhande graph has value zero on all 48. Any isomorphism preserves this statistic, so it distinguishes the pair. One hundred relabelings of each graph preserve its signature. This reproduces a known-case distinction and is not a solution of general graph isomorphism.
+
+91. Cycle unique games
+Orient a cycle consistently and compose the edge label permutations. All edges can be satisfied if and only if this permutation has a fixed point. If it has none, satisfying all edges is impossible; removing one edge leaves a path whose constraints can all be satisfied successively. Therefore the exact optimum is 1 or (n-1)/n. The formula agrees with all twelve tested C8 instances. An exhaustive 3^8 search also supplies optimum assignments for twelve K8 instances. The SDP relaxation was not run, and these values imply no hardness result.
+
+92. Positive-product amplification lemma
+Let 0<=h_i,h_j<=I and G_ij=I-(I-h_i)(I-h_j)(I-h_i). Then
+G_ij = 2h_i-h_i^2 + (I-h_i)h_j(I-h_i).
+The second summand is positive semidefinite and 2h_i-h_i^2>=h_i, hence G_ij>=h_i. Also the subtracted product is positive semidefinite and at most (I-h_i)^2<=I; therefore 0<=G_ij<=I.
+If G_ij v=0, the preceding positive sum forces h_i v=0, after which its second term forces h_j v=0. Conversely a common zero vector is killed by G_ij. For m>=2,
+sum_(i!=j) G_ij >= (m-1) sum_i h_i.
+Dividing by m(m-1), normalized ground energy cannot decrease. In the commuting four-projector example A, a basis vector with r ones has old energy r and new energy r(7-r). Exact enumeration of sixteen basis states gives normalized first excitation gaps 1/4 and 1/2, respectively. This is a spectral-gap statement about A, not the QMA promise-gap conjecture. A general constant-gap hardness-preserving reduction remains absent.
+
+93. All three-to-two moves excluded for the fixed decomposition
+The seven ordered Strassen factors are in computation_priority.py. Their 64 multiplication-tensor coefficients were checked. The tensor square has 49 summands indexed 7*i+j.
+Each three-term sub-tensor has mode flattening ranks recorded in the output. The shortcut computes ranks of three factor vectors: the corresponding other-two-mode product vectors are independent, since a nontrivial sum of two rank-one matrices with independent left and right pairs has rank two and cannot equal a third rank-one matrix.
+There are 18,298 triples of ranks (3,3,3), and 42 each of (2,3,3),(3,2,3),(3,3,2). Thus every triple has a rank-three flattening. The captain independently supplied a nonzero 3x3 minor of an actual flattening for every triple; see captain_strassen_minor_certificates.json and captain_priority_audit.py.
+Any sum of two rank-one tensors has every flattening rank at most two. Consequently no exact replacement of any three summands by two exists over Q or C while the other 46 summands remain fixed. This does not give rank 49 for the full tensor and does not exclude larger or global replacements.
+
+94. Worked potential failures
+The fixed generator produces 500 eight-variable, twelve-clause formulas. Both DPLL rules match exhaustive truth-table satisfiability.
+On case zero, branching x1=false in the least-index rule leaves seven unassigned variables and three binary clauses; initially there were eight variables and no binary clauses. Thus n+(1/2)m2 rises from 8 to 17/2.
+On the same case, the maximum-occurrence rule branches x5=false, leaving seven variables and five binary clauses. Thus n+(1/4)m2 rises from 8 to 33/4.
+The exact original and residual clauses are recorded. These are direct counterexamples to treating either proposed potential as monotonically decreasing. They say nothing by themselves about ETH.
+
+95. Signed-statistic identities and held-out benchmark
+Let e be the edge count, t the triangle count, and d_i the degrees of a simple graph. Direct expansion gives
+E=2e-C(n,2),
+T=8t-4 sum_i C(d_i,2)+2(n-2)e-C(n,3).
+Eight small random controls compare this count formula with direct signed triple products. Under the null, independent centered edge signs give means zero and variances C(n,2) and C(n,3), respectively: distinct edge or triangle monomials are orthogonal. With a fixed planted clique, the means are C(k,2) and C(k,3), since only fully planted monomials have nonzero expectation.
+Training and testing use separate seeded generators. Upper thresholds maximize training accuracy; ties take the smallest threshold. The 480 benchmark graphs cover six settings with twenty examples of each class in each split. Correct held-out counts range from 17 to 27 of forty; these small samples support no asymptotic recovery claim.
+
+96. Where dropping uniform control fails
+Primary source check: Dudko–Lyubich, MLC at Feigenbaum points, https://arxiv.org/html/2309.02107v2#S1.SS2 .
+Section 1.2 defines a common positive modulus bound whose eventual constant depends on a fixed combinatorial bound. Theorem A supplies this bound; the stated passage to Theorem B also invokes rigidity. This does not state the same uniform conclusion when combinatorial bounds increase without limit.
+An elementary stress test makes the missing uniformity concrete. For concentric disks with consecutive annulus moduli m_j, radii satisfy
+r_N=r_0 exp(-2*pi*sum_(j=0)^(N-1) m_j).
+Take m_j=2^(-j-1)>0. Every annulus has positive modulus, but the sum tends to one and r_N tends to r_0 exp(-2*pi)>0. Hence positive moduli at all scales alone do not imply shrinking. This round-disk example is not a dynamical counterexample to MLC; the missing work is a valid nonsummable quantitative bound and parameter-space transfer.
+
+97. Rational low-period certificates
+For D=1-4c=A+iB, let R=|D| and choose sqrt(D)=u+iv with u>0. The attracting fixed-point multiplier is 1-sqrt(D). Its modulus is below one exactly when R<2u. On the entire chosen grid A>0 and L=A^2+B^2-2A>0, so squaring is valid and the condition becomes
+L^2 < 4(A^2+B^2).
+The other fixed multiplier has real part greater than one. A genuine period-two cycle has multiplier 4(c+1); its squared modulus is 16((Re(c)+1)^2+Im(c)^2). The period-two factor collides with a fixed point only at c=-3/4, which is excluded.
+Exact rational comparisons classify thirty entries as attracting fixed points and thirty as attracting two-cycles. Fifteen entries remain unclassified, including the repeated parabolic centers. These are 75 listed grid entries, not 75 distinct parameters.
+
+98. A new cross-scale attempt after the earlier q-grid obstruction
+If μ is invariant under doubling and tripling, μhat(k)=μhat(2^a*3^b*k). For k=1, the program exactly counts the forced positive frequency orbit below N: 20,40,67,101,142 for N=100,1000,10000,100000,1000000.
+For completeness, nonatomicity implies the symmetric Cesaro mean of squared Fourier coefficients tends to zero. Indeed,
+(1/(2N+1)) sum_(|k|<=N) |μhat(k)|^2
+is the integral against μ×μ of the normalized Dirichlet kernel at x-y. That kernel is bounded in absolute value by one, tends to zero off the diagonal and equals one on the diagonal. Dominated convergence makes the limit the diagonal mass, the sum of squared atomic masses, which is zero for nonatomic μ.
+However, the forced orbit has at most (1+log_2 N)(1+log_3 N) elements. Its contribution to that average is only O((log N)^2/N)*|μhat(1)|^2, tending to zero even for a fixed nonzero coefficient. Therefore this particular attempt to contradict nonatomicity by counting the invariant orbit fails. No invariant nonatomic non-Lebesgue measure has been constructed; stronger constraints, such as positive-definiteness interactions, are not resolved by this calculation.
+
+99. Exact local integrability classification
+On 0<arg(z)<alpha*pi, the local map f(z)=z^(1/alpha) has |f'(z)|=alpha^(-1)|z|^(1/alpha-1). In polar coordinates,
+I/pi=alpha^(1-p) integral_delta^1 r^(beta-1) dr,
+where beta=2+p(1/alpha-1).
+For beta nonzero this is alpha^(1-p)(1-delta^beta)/beta; for beta zero it is alpha^(1-p)log(1/delta). Thus convergence as delta→0 is equivalent to beta>0. Exact rational beta values classify the sixteen prescribed parameter pairs as thirteen convergent, two power divergent, and one logarithmic. The script emits all 96 exact cutoff expressions. No quadrature or global Riemann-map conclusion is claimed.
+
+100. Interior Melnikov zero from exact endpoint controls
+Let H=x^2/2+y^2/2-x^3/3, x'=y, and y'=-x+x^2+epsilon*y(a+b*x). Then dH/dt=epsilon*y^2(a+b*x). For the clockwise unperturbed oval H=h,
+M(h)=a I0(h)+b I1(h),
+I0=2 integral_(x-)^(x+) sqrt(2h-x^2+2x^3/3) dx,
+I1=2 integral_(x-)^(x+) x*sqrt(2h-x^2+2x^3/3) dx.
+Here x-,x+ bound the center oval and 0<h<1/6. I0>0. As h→0 the oval shrinks to the origin, and |I1/I0|<=max(|x-|,|x+|)→0.
+At h→1/6, the limiting radicand is (1-x)^2(2x+1)/3 on [-1/2,1]. The substitution u=sqrt(2x+1) gives
+I0→6/5, I1→6/35, I1/I0→1/7.
+Continuity follows from the integral representations on this compact family, including the limiting integrable radicand. For (a,b)=(-1/10,1), M is negative near the center and has positive separatrix limit 9/175. The intermediate value theorem therefore gives at least one interior zero. The zero control is identically zero, the (1,0) control is positive, and the (-1/5,1) separatrix limit is -12/175. No simplicity, uniqueness, limit-cycle count, or uniform Hilbert-sixteenth bound is established. The captain independently checked the endpoint integrals.

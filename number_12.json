@@ -1,0 +1,54 @@
+{
+  "forced_divisor": 11025,
+  "sigma_d": 22971,
+  "twice_d": 22050,
+  "abundancy": "7657/3675",
+  "lemma": "If d divides N then sigma(N)/N >= sigma(d)/d. Therefore 11025 dividing N excludes perfection.",
+  "conditional_chain": [
+    {
+      "assumed_prime_power": [
+        3,
+        2
+      ],
+      "sigma": 13,
+      "factorization": {
+        "13": 1
+      }
+    },
+    {
+      "assumed_prime_power": [
+        13,
+        2
+      ],
+      "sigma": 183,
+      "factorization": {
+        "3": 1,
+        "61": 1
+      }
+    },
+    {
+      "assumed_prime_power": [
+        61,
+        2
+      ],
+      "sigma": 3783,
+      "factorization": {
+        "3": 1,
+        "13": 1,
+        "97": 1
+      }
+    },
+    {
+      "assumed_prime_power": [
+        97,
+        2
+      ],
+      "sigma": 9507,
+      "factorization": {
+        "3": 1,
+        "3169": 1
+      }
+    }
+  ],
+  "limit": "The listed exponent-two choices are assumptions; alternative exponents and the Euler special prime remain unresolved."
+}

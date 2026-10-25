@@ -1,0 +1,120 @@
+{
+  "E1_cubic": "x^3-x+1",
+  "E1_irreducibility": "Monic cubic with constant 1: rational-root candidates +/-1 both fail.",
+  "E1_cubic_discriminant": -23,
+  "E1_galois_image_proof": "Irreducible cubic with nonsquare discriminant has Galois group S3; permutation of nonzero two-torsion identifies this with GL2(F2).",
+  "E1_group": [
+    {
+      "matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "trace_mod_2": 0
+    },
+    {
+      "matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "trace_mod_2": 1
+    },
+    {
+      "matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "trace_mod_2": 0
+    },
+    {
+      "matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "trace_mod_2": 0
+    },
+    {
+      "matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "trace_mod_2": 0
+    },
+    {
+      "matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "trace_mod_2": 1
+    }
+  ],
+  "E1_trace_one_fraction": "1/3",
+  "E2_cubic_factorization": "(x-1)(x^2+x-1)",
+  "E2_quadratic_discriminant": 5,
+  "E2_galois_image_proof": "The quadratic factor splits over Q(sqrt(5)); the rational root is fixed, giving the order-two stabilizer of a nonzero two-torsion vector.",
+  "E2_group": [
+    {
+      "matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "trace_mod_2": 0
+    },
+    {
+      "matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "trace_mod_2": 0
+    }
+  ],
+  "E2_trace_one_fraction": "0/1",
+  "limit": "Only modulus 2 is certified. No modulus-3 image, modulus-6 entanglement, or growing-resolution asymptotic was obtained."
+}
