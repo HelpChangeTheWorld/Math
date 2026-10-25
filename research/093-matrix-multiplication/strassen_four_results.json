@@ -1,0 +1,38 @@
+{
+  "model": "Explicit standard seven-term Strassen decomposition tensored with itself; 49 fixed integer rank-one terms.",
+  "base_identity_verified": true,
+  "tensor_square_identity_verified": true,
+  "term_numbering": "0-based; term7*i+j is base term i tensored with base term j.",
+  "arithmetic": "numpy int64 exact integer Leibniz determinants, dimension<=4; conservative absolute intermediate bound24*16**4=1572864 below2**63.",
+  "rank_certificate": "For a selected k-term subset and a mode, det Gram(mode factors)>0 and det Gram(Khatri-Rao(other two factors))>0 imply that flattening has rank k over Q and C.",
+  "historical_file_comparison": "Original old coefficient archive was unavailable; identity with that archive is not asserted.",
+  "3": {
+    "subsets": 18424,
+    "expected_subsets": 18424,
+    "certified_rank_k_flattening": 18424,
+    "survivors": [],
+    "survivor_count": 0,
+    "certificate_counts_by_mode": [
+      18382,
+      42,
+      0
+    ],
+    "maximum_gram_determinant": 64,
+    "maximum_khatri_rao_gram_determinant": 4096
+  },
+  "4": {
+    "subsets": 211876,
+    "expected_subsets": 211876,
+    "certified_rank_k_flattening": 211876,
+    "survivors": [],
+    "survivor_count": 0,
+    "certificate_counts_by_mode": [
+      209821,
+      1971,
+      84
+    ],
+    "maximum_gram_determinant": 256,
+    "maximum_khatri_rao_gram_determinant": 65536
+  },
+  "interpretation": "Each certified quartet needs at least four rank-one tensor terms, so cannot be replaced by three while other45 terms remain fixed. A survivor would require further work; deficient flattening does not imply compressibility. No rank49 lower bound or matrix multiplication exponent theorem follows."
+}

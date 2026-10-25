@@ -1,0 +1,47 @@
+{
+  "kind": "exact supporting checks plus deterministic randomized smoke tests",
+  "counting_lemma_cases": 20475,
+  "number_of_low_weight_representatives_histogram": {
+    "4": 12600,
+    "5": 7560,
+    "6": 315
+  },
+  "affine_functions_verified": 126,
+  "balanced_quadratics_verified": 1800,
+  "all_quadratics_have_full_acceptances": 32,
+  "all_quadratics_match_explicit_two_state_read_once_program": true,
+  "random_sets_checked": 5000,
+  "random_11_point_sets_checked": 4000,
+  "random_witness_types": {
+    "affine": 4964,
+    "quadratic": 36
+  },
+  "example_11_point_quadratic_witness": {
+    "set": [
+      10,
+      11,
+      26,
+      38,
+      43,
+      49,
+      51,
+      53,
+      58,
+      61,
+      63
+    ],
+    "function": [
+      "quadratic",
+      0,
+      2,
+      0,
+      0,
+      2,
+      0
+    ],
+    "sample_acceptances": 9,
+    "full_acceptances": 32,
+    "sample_size": 11
+  },
+  "universal_statement_justification": "The separate algebraic proof, not random testing."
+}

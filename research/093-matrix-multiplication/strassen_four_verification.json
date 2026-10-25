@@ -1,0 +1,7 @@
+{
+  "quartet_certificates_checked": 211876,
+  "determinants_independently_recomputed": 423752,
+  "all_certificates_passed": true,
+  "all_quartets_present": true,
+  "method": "Python arbitrary-precision integers, fraction-free Bareiss determinant; independently parsed formula coefficients."
+}

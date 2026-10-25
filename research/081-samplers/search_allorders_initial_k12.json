@@ -1,0 +1,62 @@
+[
+  {
+    "iteration": 0,
+    "constraints": 9332,
+    "solver_status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "support": [
+      0,
+      2,
+      15,
+      17,
+      24,
+      29,
+      38,
+      40,
+      46,
+      51,
+      56,
+      59
+    ],
+    "worst_numerator": 320,
+    "denominator": 768,
+    "witness": "0x5555aaaa965569aa",
+    "uniform_count": 32,
+    "sample_count": 1,
+    "violations": 3410,
+    "elapsed": 0.3367745876312256
+  },
+  {
+    "iteration": 1,
+    "constraints": 11332,
+    "solver_status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "support": [
+      0,
+      6,
+      9,
+      16,
+      18,
+      30,
+      38,
+      45,
+      49,
+      57,
+      60,
+      61
+    ],
+    "worst_numerator": 320,
+    "denominator": 768,
+    "witness": "0xff55aa05fa55aa",
+    "uniform_count": 32,
+    "sample_count": 1,
+    "violations": 5778,
+    "elapsed": 29.86080312728882
+  },
+  {
+    "iteration": 2,
+    "constraints": 13332,
+    "solver_status": 1,
+    "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+  }
+]

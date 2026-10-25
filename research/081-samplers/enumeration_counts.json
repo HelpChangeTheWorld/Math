@@ -1,0 +1,30 @@
+{
+  "bits": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "fixed_order": [
+    4,
+    16,
+    88,
+    520,
+    3112,
+    18664
+  ],
+  "all_orders": [
+    4,
+    16,
+    152,
+    2368,
+    47688,
+    1156000
+  ],
+  "six_bit_degree_at_most_two": 8336,
+  "six_bit_balanced_degree_at_most_two": 6966,
+  "six_bit_balanced_quadratic_excluding_affine": 6840,
+  "method": "Exact integer truth-table recurrence; all orders via all subsets and last-variable choices."
+}

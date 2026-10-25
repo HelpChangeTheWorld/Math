@@ -1,0 +1,705 @@
+{
+  "model": "Exact periodic-complementary quadruple extension / sign-repair audit.\nFour ordered sign sequences, each with first sign +1; positions stay ordered.\nAppend two independent signs per row; repairs may flip any noninitial old sign.\nInteger bit coding: bit0 = second sequence position. No symmetry quotient.\n",
+  "results": [
+    {
+      "parent_length": 3,
+      "target_length": 5,
+      "all_normalized_parents": 256,
+      "valid_parents": 108,
+      "valid_extended_quadruples": 7500,
+      "extendable_prefixes_all": 254,
+      "min_repair_histogram_valid_parents": {
+        "0": 108
+      },
+      "unclassified_parents": 0,
+      "witness": null,
+      "parents_requiring_at_least_three_flips": []
+    },
+    {
+      "parent_length": 5,
+      "target_length": 7,
+      "all_normalized_parents": 65536,
+      "valid_parents": 7500,
+      "valid_extended_quadruples": 336140,
+      "extendable_prefixes_all": 54556,
+      "min_repair_histogram_valid_parents": {
+        "0": 7092,
+        "1": 408
+      },
+      "unclassified_parents": 0,
+      "witness": null,
+      "parents_requiring_at_least_three_flips": []
+    },
+    {
+      "parent_length": 7,
+      "target_length": 9,
+      "all_normalized_parents": 16777216,
+      "valid_parents": 336140,
+      "valid_extended_quadruples": 19656756,
+      "extendable_prefixes_all": 7525024,
+      "min_repair_histogram_valid_parents": {
+        "0": 259844,
+        "1": 73644,
+        "2": 2640,
+        "3": 12
+      },
+      "unclassified_parents": 0,
+      "witness": {
+        "parent_code": 1210855,
+        "parent": [
+          [
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1,
+            -1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "parent_correlations": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "minimum_flips": 3,
+        "zero_based_flipped_bit_positions": [
+          0,
+          4,
+          11
+        ],
+        "repaired_prefix": [
+          [
+            1,
+            1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1,
+            -1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "extension": [
+          [
+            1,
+            1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          [
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            1,
+            -1
+          ],
+          [
+            1,
+            1,
+            1,
+            -1,
+            1,
+            1,
+            1,
+            -1,
+            1
+          ]
+        ],
+        "extension_correlations": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "parents_requiring_at_least_three_flips": [
+        {
+          "code": 1210855,
+          "parent": [
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              1,
+              1,
+              -1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "minimum_flips": 3
+        },
+        {
+          "code": 8550887,
+          "parent": [
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              -1
+            ]
+          ],
+          "minimum_flips": 3
+        },
+        {
+          "code": 10242535,
+          "parent": [
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              1,
+              1,
+              -1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ]
+          ],
+          "minimum_flips": 3
+        },
+        {
+          "code": 10357223,
+          "parent": [
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ]
+          ],
+          "minimum_flips": 3
+        },
+        {
+          "code": 10383655,
+          "parent": [
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              1,
+              1,
+              -1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ]
+          ],
+          "minimum_flips": 3
+        },
+        {
+          "code": 10385447,
+          "parent": [
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ]
+          ],
+          "minimum_flips": 3
+        },
+        {
+          "code": 10385860,
+          "parent": [
+            [
+              1,
+              1,
+              1,
+              -1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ]
+          ],
+          "minimum_flips": 3
+        },
+        {
+          "code": 10385888,
+          "parent": [
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ]
+          ],
+          "minimum_flips": 3
+        },
+        {
+          "code": 10385919,
+          "parent": [
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ]
+          ],
+          "minimum_flips": 3
+        },
+        {
+          "code": 10387431,
+          "parent": [
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ]
+          ],
+          "minimum_flips": 3
+        },
+        {
+          "code": 10484199,
+          "parent": [
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ]
+          ],
+          "minimum_flips": 3
+        },
+        {
+          "code": 16677351,
+          "parent": [
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ]
+          ],
+          "minimum_flips": 3
+        }
+      ]
+    }
+  ],
+  "seconds": 1.3481752009975025
+}

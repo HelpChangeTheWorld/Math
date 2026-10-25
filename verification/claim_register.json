@@ -1,0 +1,52 @@
+[
+  {
+    "id": "81-fixed",
+    "claim": "Fixed common order six-bit width-two uniform-distinct sampler optimum is exactly8 at discrepancy1/4.",
+    "status": "Direct lower bound plus exact exhaustive positive certificate; reproduced this turn.",
+    "evidence": [
+      "sampler_audit/INDEPENDENT_AUDIT.md",
+      "sampler_audit/original_support_verification.json"
+    ],
+    "novelty": "Not established."
+  },
+  {
+    "id": "81-all",
+    "claim": "For all variable orders, all sampler sizes1..11 fail; for size11 a balanced allowed test accepts at most2 sample points.",
+    "status": "Direct algebraic proof reconstructed, independently reviewed in this AI workflow; exact supporting checks.",
+    "evidence": [
+      "proof_review/independent_lower_bound_proof.md",
+      "proof_review/lower_bound_checks.json"
+    ],
+    "novelty": "Not established."
+  },
+  {
+    "id": "81-twelve",
+    "claim": "A twelve-point all-order sampler exists.",
+    "status": "UNRESOLVED. Two bounded searches gave neither a construction nor an infeasibility certificate.",
+    "evidence": [
+      "sampler_audit/search_summary.json"
+    ],
+    "novelty": "Not applicable; not proved."
+  },
+  {
+    "id": "49-seven",
+    "claim": "In the frozen append-two-signs-per-row model, every valid normalized ordered length7 parent can be repaired with at most3 old sign changes; some need3.",
+    "status": "Exhaustive exact finite computation; coverage/code review and independent direct hard-witness verification.",
+    "evidence": [
+      "hadamard_audit/RESULT_AND_MODEL.md",
+      "hadamard_audit/results.json",
+      "hadamard_audit/witness_verification.json"
+    ],
+    "novelty": "Not established."
+  },
+  {
+    "id": "93-four",
+    "claim": "Every4term subset of the explicitly supplied standard49term Strassen tensor square has tensor rank4 overQ andC.",
+    "status": "211876 exact certificates independently verified; reproduced benchmark subsumed by stronger reported literature.",
+    "evidence": [
+      "research_portfolio/strassen_four_report.md",
+      "research_portfolio/strassen_four_verification.json"
+    ],
+    "novelty": "Not a new contribution; stronger prior result located."
+  }
+]

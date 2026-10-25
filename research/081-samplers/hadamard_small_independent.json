@@ -1,0 +1,15 @@
+{
+  "3": {
+    "all_ordered_normalized_quadruples": 256,
+    "valid_count_direct_all_shifts": 108
+  },
+  "5": {
+    "all_ordered_normalized_quadruples": 65536,
+    "valid_count_direct_all_shifts": 7500
+  },
+  "3_to_5": {
+    "distinct_extendable_prefixes": 254,
+    "valid_parents_extendable": 108,
+    "valid_parents": 108
+  }
+}

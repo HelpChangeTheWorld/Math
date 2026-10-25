@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-20",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "review_scope": "Three delegated AI agents plus primary assistant; no external human peer review and no proof assistant certification.",
+  "archive_recovery": "Original100record report recovered by text reads; latest priorZIPs could not be materialized. New computations and lower-bound proof independently reconstructed; no claim of byte-identical recovery of old code.",
+  "source_snapshot": "research_portfolio/Math_Frontiers_Work_Round_2.reconstructed.md is retrieved text of September11report, not original byte-for-byte file.",
+  "no_background_execution": "All bounded searches are finished; no scheduled or ongoing process is claimed."
+}

@@ -1,0 +1,25 @@
+{
+  "outcome": "UNKNOWN: no feasible12-point all-order sampler and no infeasibility certificate obtained",
+  "run1": {
+    "script": "search_allorders_initial.py",
+    "log": "search_allorders_initial_k12.json",
+    "objective": "normal(0,1)*0.001; NumPy default_rng seed731",
+    "time_limit_per_subproblem_seconds": 30,
+    "total_budget_seconds": 150,
+    "termination": "third subproblem timed out with no candidate; two prior candidates failed exact verification"
+  },
+  "run2": {
+    "script": "search_allorders.py",
+    "log": "search_allorders_k12.json",
+    "objective": "zero (feasibility)",
+    "initial_constraints": "all fixed-order functions plus all balanced quadratics, complement representatives only",
+    "time_limit_per_subproblem_seconds": 45,
+    "total_budget_seconds": 240,
+    "termination": "first subproblem timed out without a candidate"
+  },
+  "environment": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "integer_support_encoding": "Internal: x1 is bit0. Convert by reversing six bits for external x1-leftmost strings."
+}

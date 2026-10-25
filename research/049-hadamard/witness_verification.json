@@ -1,0 +1,137 @@
+{
+  "original_parent": [
+    [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "normalization": "first sign+1 in each row; fixed row and position order",
+  "repair_rule": "any noninitial old signs may flip; repaired old prefix need not remain complementary",
+  "negative_checks": {
+    "0": {
+      "extensions_checked": 256,
+      "valid": 0
+    },
+    "1": {
+      "extensions_checked": 6144,
+      "valid": 0
+    },
+    "2": {
+      "extensions_checked": 70656,
+      "valid": 0
+    }
+  },
+  "total_negative_candidates": 77056,
+  "three_flip_extension": [
+    [
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    [
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1
+    ]
+  ],
+  "changed_positions_zero_based_row_column": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      6
+    ]
+  ],
+  "parent_all_nonzero_shift_sums": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "extension_all_nonzero_shift_sums": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "minimum_flips_exactly": 3,
+  "seconds": 0.08052529899578076
+}
