@@ -1,0 +1,128 @@
+{
+  "reviewer": "Fresh hostile-but-fair editorial reviewer (AI, not a human peer reviewer). Reviewed the supplied HTML and both checking scripts; reran both documented default checks. Did not audit external literature or verify historical review-session records.",
+  "checks": [
+    {
+      "id": "E01",
+      "question": "Does the headline accurately communicate the scope of the result when read alone?",
+      "verdict": "fail",
+      "evidence": "The title 'Why eleven inputs cannot guarantee an accurate sample' omits six-bit inputs, equal weights, a fixed support, the specified two-state test class, and the chosen error tolerance. It sounds like a general limit on eleven observations. The actual theorem concerns one finite adversarial sampling model. The body repairs this overbreadth, but readers can encounter the headline without the body."
+    },
+    {
+      "id": "E02",
+      "question": "Is the opening claim about a computing shortcut tied to an identified practical proposal?",
+      "verdict": "limitation",
+      "evidence": "The opening says 'a particular shortcut in computing cannot work,' but identifies no deployed method, proposed algorithm, user need, or benchmark that depends on an eleven-point universal sampler in this model. Calling it a finite sampling obstruction would be better grounded. The article subsequently narrows the claim, so this is a framing weakness rather than a false mathematical conclusion."
+    },
+    {
+      "id": "E03",
+      "question": "Is the central theorem a definite and falsifiable mathematical statement?",
+      "verdict": "pass",
+      "evidence": "The appendix explicitly quantifies over every eleven-element subset S of F2^6, gives each point mass 1/11, defines the allowed deterministic programs, and asserts an absolute acceptance-probability discrepancy of at least 7/22. A qualifying support that fooled the entire class within 1/4 would contradict it. This is a real mathematical claim, not merely motivational prose."
+    },
+    {
+      "id": "E04",
+      "question": "Are the adversarial quantifiers and reading-order dependency disclosed?",
+      "verdict": "pass",
+      "evidence": "Both 'What the proof says' and the model section state that the witness program and its fixed reading order may depend on S. The appendix explicitly distinguishes this from proving a witness for every order fixed in advance. The ordinary-language section also separates a fixed test set from the success probability of a newly drawn random sample."
+    },
+    {
+      "id": "E05",
+      "question": "Are the assumptions that materially restrict applicability explicit?",
+      "verdict": "pass",
+      "evidence": "The model states six bits, eleven distinct inputs, equal weights, a uniform full-cube target, two states, six deterministic transitions, one read per coordinate, fixed program order, and arbitrary transitions including merging. It explicitly excludes conclusions about unequal weights, repeated points, and reversible-only programs. Those restrictions are essential to the result and are not hidden."
+    },
+    {
+      "id": "E06",
+      "question": "Does direct examination of the written proof reveal a mathematical gap?",
+      "verdict": "pass",
+      "evidence": "No gap found in this audit. The absence of extreme affine weights makes evaluation injective and yields a [11,7] binary code of minimum distance at least three; its four-row parity-check matrix therefore has eleven distinct nonzero columns. The seven-pair counting argument gives at least four low-weight representatives per nonzero syndrome. Multiplicative closure would imply all eleven point indicators, contradicting dimension seven. Finally, the four nonempty pair cells allow at most three low-weight local corrections, forcing an outside coordinate and hence a balanced witness. This is a reasoned AI assessment, not a correctness certificate."
+    },
+    {
+      "id": "E07",
+      "question": "Are the displayed numerical discrepancy and worked example correct?",
+      "verdict": "pass",
+      "evidence": "Independently rerunning publication_sanity_check.py confirmed that the displayed polynomial accepts sample words 27 and 43 only and accepts 32 of the 64 full-cube inputs. Thus 1/2 - 2/11 = 7/22 = approximately 31.82 percentage points. The amount above the 25-point allowance is 3/44, approximately 6.82 percentage points. The explicit most-significant-bit convention resolves the numerical example."
+    },
+    {
+      "id": "E08",
+      "question": "Is the witness genuinely implementable in the stated two-state model?",
+      "verdict": "pass",
+      "evidence": "Expanding (xi + aj)(xj + ai) gives xi*xj + ai*xi + aj*xj + ai*aj, so the final added constant cancels the extra term. One state bit can store the first factor, AND in the second, and XOR the remaining linear terms. The written realization uses one read per coordinate and may merge states, as explicitly allowed. The rerun sanity checker verified all 1,800 balanced quadratic formulas including constants on all 64 inputs."
+    },
+    {
+      "id": "E09",
+      "question": "Is the claim that 963 balanced test functions suffice justified?",
+      "verdict": "pass",
+      "evidence": "There are 63 nonzero parities. Each of the 15 coordinate pairs admits 64 - 4 = 60 linear coefficient vectors with an outside coordinate, giving 900 quadratic witnesses. Different square-free polynomial coefficients describe different Boolean functions on the cube, and constants can be omitted for absolute discrepancy because complementation preserves it. This supports 63 + 900 = 963 without claiming those are all allowed programs."
+    },
+    {
+      "id": "E10",
+      "question": "Does the article keep computational checking distinct from a universal proof?",
+      "verdict": "pass",
+      "evidence": "The article explicitly says that none of the checking programs exhaustively enumerates every eleven-element cube subset and that the analytic proof supplies universality. The exhaustive syndrome calculation concerns 1,365 column sets times 15 syndromes, not all supports. Random-support counts are expressly presented as results of particular seeded runs, not population probabilities."
+    },
+    {
+      "id": "E11",
+      "question": "Are the main archived checking claims reproducible from the supplied files?",
+      "verdict": "pass",
+      "evidence": "Both documented commands ran successfully in this audit. publication_sanity_check.py reproduced 20,475 syndrome cases, representative frequencies 12,600/7,560/315 for counts 4/5/6, the displayed example, and 1,800 formula checks. eleven_point_obstruction.py --samples 1000 reproduced 992 affine and eight quadratic support witnesses, and affine-image discrepancy counts 914 at 7/22 and 86 at 9/22, matching the archived JSON. This checks the stated computations, not novelty or the complete historical provenance."
+    },
+    {
+      "id": "E12",
+      "question": "Can the claimed fresh reviewers and their complete work be independently audited from this package?",
+      "verdict": "unresolved",
+      "evidence": "The article reports four fresh AI sessions and summarizes their conclusions, but explicitly says that complete code for the fresh-review computations was not archived in this package. The supplied files establish the published checks, not the full session history, reviewer independence, or whether each reviewer worked without shared anchoring. These historical claims are transparently qualified but not independently verified here."
+    },
+    {
+      "id": "E13",
+      "question": "Does the text equate repeated AI agreement with independent peer review?",
+      "verdict": "pass",
+      "evidence": "The prominent status sentence says no external human peer review or proof-assistant certification occurred. The review section warns that separate AI sessions can share blind spots and are not substitutes for independent human review. Repeated agreement supplies no calibrated probability of correctness; the article does not claim that it does. This additional audit remains AI review and must not later be relabeled as external peer review."
+    },
+    {
+      "id": "E14",
+      "question": "Is Fred Esser's byline paired with a candid account of the mathematical contribution?",
+      "verdict": "pass",
+      "evidence": "The byline alone might suggest personal derivation, but the introduction directly states that Fred directed the effort while AI systems developed the mathematical argument, wrote and ran checking programs, and helped prepare the article. It defines 'we' as that human-directed process. Authorship of the public letter is plausible; claiming sole unaided mathematical discovery would exceed this disclosed record."
+    },
+    {
+      "id": "E15",
+      "question": "Are originality and priority established?",
+      "verdict": "unresolved",
+      "evidence": "The article correctly says originality remains unverified and that a bounded literature search not finding the exact statement is not proof of novelty. This audit did not inspect the cited papers or independently search for the result. The references supply claimed context, not evidence that the theorem is new, difficult, or previously open. Their bibliographic accuracy and descriptions remain outside this audit."
+    },
+    {
+      "id": "E16",
+      "question": "Is this demonstrated to solve an established open problem rather than a project-defined finite question?",
+      "verdict": "limitation",
+      "evidence": "No source is offered showing that the precise six-bit, eleven-point, quarter-error question was an established open problem. The text describes it as a target within the author's broader project and does not falsely call it a famous open problem. On the supplied evidence, it is a project-defined finite question that has a plausible self-contained resolution. An established surrounding field does not establish the importance or prior open status of this particular question."
+    },
+    {
+      "id": "E17",
+      "question": "Is the mathematical significance demonstrated beyond the fact that the statement is provable?",
+      "verdict": "limitation",
+      "evidence": "The argument is a substantive structural proof of a narrow impossibility statement; it is not merely a list of failed random searches. But the article gives no application requiring these parameters, no comparison showing an improvement over known bounds, no generalization, and no established optimum. It explicitly says it does not prove twelve-point sufficiency and that smaller-size arguments were not re-audited. The theorem's truth and the theorem's research significance are separate questions; only the former receives a developed argument here."
+    },
+    {
+      "id": "E18",
+      "question": "Does the article turn the author's world-improvement ambition into an unsupported impact claim?",
+      "verdict": "pass",
+      "evidence": "The author expresses a desire to help change the world, then explicitly states that this result delivers neither a faster computer nor a measured public benefit. Its stated immediate value is ruling out one test-set size under precise rules. That is a defensible limited consequence. The letter supplies no demonstrated causal connection to wider social benefit, and it does not actually claim one; the global-stakeholder branding remains motivational."
+    },
+    {
+      "id": "E19",
+      "question": "Is the prose confidence proportionate to the available evidence?",
+      "verdict": "pass",
+      "evidence": "The body distinguishes its mathematical claim from independent acceptance: it labels the theorem under review, states internal AI review prominently, explicitly withholds originality, and requests scrutiny. Calling a complete deductive argument a proof is not itself overconfidence; authors need not replace every theorem assertion with uncertainty language. The overbroad headline is the material exception identified in E01. No numeric confidence level, established-community acceptance, or breakthrough status is asserted."
+    },
+    {
+      "id": "E20",
+      "question": "Is the current HTML ready to publish, and in what capacity?",
+      "verdict": "limitation",
+      "evidence": "It is close to publishable as a transparently labeled, unrefereed AI-assisted research note: the theorem, full argument, code commands, disclosures, and limitations are available. The headline should be narrowed before publication. The HTML mentions an accompanying ZIP but provides no download link, so public reproducibility requires attaching or linking the actual package. It is not ready to announce a verified novel breakthrough, an established open-problem solution, an optimal sampler size, or a demonstrated world-changing result."
+    }
+  ],
+  "summary": "The mathematics in the supplied note appears coherent, and both published checking commands reproduced their saved results. I found no mathematical counterexample or proof gap. That conclusion is another AI audit, not peer review or certification. The main editorial fault is an overbroad headline. The more fundamental limit is significance: the supplied record supports a narrowly specified finite obstruction, not verified novelty, a recognized open-problem resolution, an exact optimum, a practical breakthrough, or public impact. The article itself is mostly honest about these limits. More AI approvals cannot establish the missing priority and significance claims; those require relevant prior-art comparison and outside mathematical judgment. Publishable as an unrefereed note after narrowing the headline and providing the downloadable evidence; not support for a breakthrough announcement.",
+  "recommended_title": "An eleven-point sampling obstruction for two-state programs on six bits",
+  "recommended_status_sentence": "This AI-assisted research note presents a self-contained proof of a finite sampling obstruction and reproducible checks; it has not received external human peer review, and its novelty and broader significance remain unverified."
+}

@@ -1,0 +1,547 @@
+ADVERSARIAL REVIEW OF THE ELEVEN INPUT SAMPLING ARTICLE
+20 October 2026
+
+REALITY CHECK
+The exact finite theorem appears mathematically sound. This review found no
+fatal logical gap or qualifying counterexample. That is a reasoned assessment
+of the argument, not a certificate of correctness or a vote by human experts.
+
+Nothing in the supplied record establishes that the result is new, that it
+resolves an established open problem, that it is important to current research,
+or that it has a demonstrated practical benefit. A small mathematical result
+can be correct without being a significant discovery. More AI agreement does
+not answer the missing questions about prior art and significance.
+
+WHAT WAS ACTUALLY DONE
+Five fresh AI sessions each examined twenty assigned questions, for one hundred
+structured checks. Their roles covered algebra, the computational model,
+verification software, prior literature, and public presentation. This was not
+a panel of one hundred people, one hundred independent model runs, or external
+peer review. Checks overlap where multiple reviewers challenge the same claim;
+their ratings must not be converted into a probability that the theorem is true.
+
+THE EXACT CLAIM THAT SURVIVED
+For every set of eleven distinct, equally weighted six-bit inputs, some
+deterministic two-state program that reads each bit once in a suitable fixed
+order has acceptance-probability error at least 7/22 relative to all 64 inputs.
+The program and its fixed reading order may depend on the selected set.
+The proof permits arbitrary deterministic state transitions, including merging.
+
+This is not a theorem that eleven observations can never estimate anything
+accurately. It is not a theorem about every prescribed reading order, unequal
+weights, repeated sample points, or reversible-only programs. Excluding exactly
+eleven points alone does not prove a minimum of twelve; separate exclusions of
+smaller sizes are needed. No twelve-point construction is established here.
+
+THE MOST IMPORTANT OBJECTIONS
+1. The headline is broader than the theorem. A more accurate title is:
+   An eleven point sampling obstruction for two state programs on six bits
+2. Originality and research significance are unresolved. Failure to locate an
+   exact search match does not establish either one.
+3. The initial eleven-point target was a question in this project. The article
+   does not document that the research community regarded it as an open problem.
+4. The checks are reproducible controls on parts of the reasoning and its
+   implementation. They are not exhaustive enumeration of all eleven-point
+   supports or a formal proof-assistant certificate.
+5. Some checking helpers rely on caller-supplied structural assumptions and
+   Python assertions. Their ordinary generated programs passed the structural
+   checks, but their API is not a hardened independent certificate checker.
+6. For public reproducibility, the blog must attach or link the evidence ZIP.
+   The current draft mentions the package without inventing a public URL.
+
+A CONCRETE ADDITION FROM THE REVIEW
+The example in the article has a stronger failing program than the displayed
+balanced witness. With x1 the most significant bit, let
+
+g(x) = x6 AND (x5 OR ((NOT x1) AND x2 AND x4)).
+
+Read x1,x2,x3,x4,x5,x6 in that order, ignoring x3. The state updates are
+q = NOT x1; q = q AND x2; no change; q = q AND x4;
+q = q OR x5; q = q AND x6. Accept state one.
+
+On S = {15,21,23,27,29,30,31,38,43,56,63}, it accepts eight points:
+{15,21,23,27,29,31,43,63}. It accepts eighteen of all sixty-four cube points.
+Its discrepancy is 8/11 - 18/64 = 157/352, about 44.60 percentage points.
+The coordinating session independently checked this formula and program on all
+64 inputs. This does not contradict the theorem, which supplies a lower bound.
+It shows why the article's 31.82-point example is not evidence of full-class
+optimality. Neither calculation determines the best possible sampler.
+
+PUBLICATION JUDGMENT
+The defensible presentation is an openly reviewable, AI-assisted research note
+about a narrow finite obstruction. Narrow the headline, preserve the exact
+assumptions and AI disclosure, and attach the reproducible evidence. Do not
+describe it as a verified original breakthrough or a world-changing discovery.
+The stated ambition to improve the world is a motivation, not a demonstrated
+consequence of this theorem.
+
+The next useful scrutiny is from a human researcher familiar with pseudorandomness
+or coding theory, especially on whether the argument is already known and whether
+it contributes anything beyond an instructive finite example. No such researcher
+was contacted or represented as endorsing the work during this audit.
+
+The source article was reviewed without being edited. The files in this package
+record the individual questions, evidence, unresolved matters, and sources.
+
+
+ONE HUNDRED STRUCTURED CHECKS
+
+
+ALGEBRA
+AI algebra audit
+
+001 | A01 | PASS
+Does the affine-versus-quadratic case split cover the exact quantifiers and error threshold in the stated theorem?
+For an affine function with nonzero linear part, true acceptance is 1/2. Sample weights 0, 1, 2, 9, 10, or 11 give discrepancy at least 1/2 - 2/11 = 7/22. Complementation converts a high sample weight into a low one. Otherwise every nonconstant affine weight lies in 3 through 8, exactly the premise used subsequently. The construction chooses its coordinate order after S is fixed, consistent with the stated quantifier order.
+
+002 | A02 | PASS
+Are all nonconstant affine tests genuinely balanced and computable in the specified two-state model?
+For a coefficient a_k = 1, the involution x -> x + e_k exchanges the two affine outputs and has no fixed points, giving 32 accepted cube inputs. Initialize q to zero and apply q <- q XOR (a_k x_k) while reading each coordinate once; add the constant in a transition or the acceptance rule. Ignoring a coordinate is an allowed identity transition.
+
+003 | A03 | PASS
+Could evaluation fail to be injective, invalidating the asserted seven-dimensional code?
+The vector space of affine polynomials has dimension seven. A nonzero element in the evaluation kernel cannot be the constant one polynomial, since its evaluation has eleven ones. It would therefore be nonconstant with sample weight zero, contradicting the remaining-case hypothesis. Thus the evaluation map has zero kernel and its image has dimension seven.
+
+004 | A04 | PASS
+Does the claimed minimum weight cover every nonzero codeword, including constants?
+Every nonzero affine polynomial is either the constant one, of evaluation weight eleven, or nonconstant, of evaluation weight between three and eight under the current hypothesis. Consequently every nonzero vector in C has weight at least three. The zero constant is the only zero codeword by injectivity.
+
+005 | A05 | PASS
+Is a rank-four parity-check matrix with precisely this kernel guaranteed to exist?
+Since C has dimension seven inside F2^11, its annihilator under the standard dot product has dimension four. Taking a basis of that annihilator as the rows of H gives rank four, C contained in ker H, and dim ker H = 11 - 4 = 7. Equality of the two seven-dimensional spaces follows. No additional coding-theory classification is needed.
+
+006 | A06 | PASS
+Can H have zero or repeated columns despite the code's minimum-weight statement?
+If column k is zero, H e_k = 0 puts a weight-one vector in C. If columns k and l coincide for distinct indices, H(e_k + e_l) = 0 puts a weight-two vector in C. Both violate A04. Hence H's columns are eleven distinct members of the fifteen nonzero vectors in F2^4.
+
+007 | A07 | PASS
+Is the claim of seven unordered pairs summing to a nonzero syndrome exact?
+Fix s != 0. On F2^4 excluding 0 and s, the map a -> a + s is a fixed-point-free involution on fourteen elements. It therefore forms exactly seven disjoint pairs {a, a+s}. Both entries are nonzero, distinct, and sum to s. Neither 0 nor s participates.
+
+008 | A08 | PASS
+Can deleting four columns leave fewer than four distinct weight-at-most-two representatives of a nonzero syndrome?
+If s is retained, each of the four deleted vectors destroys at most one of A07's seven disjoint pairs, leaving at least three pairs plus the singleton s. If s is omitted, its deletion destroys no pair and the other three deletions leave at least four pairs. Distinct surviving pairs produce distinct weight-two vectors. Independent exhaustive enumeration of all C(15,11) times 15 = 20,475 cases gave representative counts four in 12,600 cases, five in 7,560 cases, and six in 315 cases; none had fewer than four.
+
+009 | A09 | PASS
+Does containment of every coordinate pair product really force the entire affine evaluation code to be multiplicatively closed?
+Write arbitrary codewords as alpha_0*1 + sum alpha_i v_i and beta_0*1 + sum beta_j v_j. Expanding their coordinatewise product gives a linear combination of 1, the v_i, and the v_i v_j. The diagonal products satisfy v_i^2 = v_i because entries are bits. Thus the hypothesized off-diagonal product containment, together with the existing generators, contains every expanded term and their sum.
+
+010 | A10 | PASS
+Does the point-indicator argument actually force dimension eleven, or does it assume interpolation without proof?
+For t in S, each factor x_i + 1 + t_i equals one exactly when x_i = t_i. Their six-factor product is therefore the indicator of t on the full cube. Each factor evaluates into C, and multiplicative closure would place its product in C. Distinct sample points make these eleven evaluations the eleven separate standard basis vectors of F2^11. Their linear independence contradicts dim C = 7. Distinctness is explicitly part of the theorem.
+
+011 | A11 | PASS
+Does the failed closure yield a distinct-coordinate product outside C and transfer the syndrome count to its affine coset?
+By A09-A10 at least one v_i v_j is outside C; it cannot have i = j because v_i^2 = v_i is already in C. For h = v_i v_j, Hh is nonzero. Moreover Hy = Hh if and only if y+h is in ker H = C, so the complete syndrome fiber is exactly h+C. The at-least-four representatives counted in A08 therefore belong to the required coset.
+
+012 | A12 | PASS
+Could a missing pair cell undermine the argument about corrections involving other coordinates?
+For a pair value (u,v), its indicator is (x_i+1+u)(x_j+1+v), which expands as x_i x_j plus an affine polynomial in x_i and x_j. If the cell were empty on S, its evaluation would be zero, implying h belongs to span{1,v_i,v_j}, hence to C. That contradicts the chosen h. All four pair cells must therefore be nonempty.
+
+013 | A13 | PASS
+Are all eight elements of h+L exactly single-cell or three-cell indicators, with no overlooked type?
+On the four pair inputs, the XOR of the four outputs of xy+ax+by+c is one, because the degree-two coefficient is one. Thus its truth table has odd weight: one or three. The eight coefficient triples (a,b,c) give distinct truth tables and exhaust the four singleton indicators and their four complements. Since all pair cells occur on S, their evaluations remain distinct. Independent enumeration of all eight truth tables confirmed four of weight one and four of weight three.
+
+014 | A14 | PASS
+Can h+L contain four low-weight vectors despite having only four nonempty pair cells?
+Every three-cell indicator has sample weight at least three because each cell is nonempty. Hence a vector of weight at most two in h+L must indicate a single cell of size one or two. If all four cells had size at most two, S would have at most eight elements, contradicting its size eleven. Thus there are at most three such vectors. The count compares distinct evaluation vectors, not merely polynomial expressions.
+
+015 | A15 | PASS
+Does the counting difference really force an affine correction using an outside coordinate?
+The coset h+C has at least four low-weight vectors, while its subset h+L has at most three. Choose y in the set difference and put p = y+h. Then p is in C but not L. Injectivity of affine evaluation supplies a unique affine polynomial for p. If that polynomial used only x_i, x_j, and a constant, its evaluation would lie in L. Therefore at least one other coordinate has coefficient one.
+
+016 | A16 | PASS
+Can the selected quadratic fail to be balanced, invalidating its claimed discrepancy?
+Choose k outside {i,j} with coefficient one in p. Flipping x_k leaves the product x_i x_j unchanged and flips p, so it flips f = x_i x_j + p. The cube partitions into 32 opposite-output pairs, giving acceptance exactly 1/2. Its evaluation is y, of weight at most two, so its discrepancy is at least 1/2 - 2/11 = 7/22. Finally 7/22 - 1/4 = 3/44 > 0, establishing the stated quarter-error impossibility.
+
+017 | A17 | PASS
+Is the quadratic identity and its two-state realization correct for every coefficient choice, including constants and ignored coordinates?
+Expanding (x_i+a_j)(x_j+a_i) gives x_i x_j + a_i x_i + a_j x_j + a_i a_j. Adding b+a_i a_j cancels the extra product constant. Store x_i+a_j, AND with x_j+a_i, then XOR the selected remaining bits and the final constant. Each update uses only the current state and current input, and every coordinate is read once; overwrite and AND transitions are legal in this model. Independent evaluation of all 1,800 balanced coefficient/constant formulas on all 64 inputs produced 115,200 pointwise comparisons with no implementation disagreement and no unbalanced formula.
+
+018 | A18 | PASS
+Is the claimed family of 963 balanced tests sufficient, correctly counted, and free of accidental duplicates?
+There are 2^6-1 = 63 nonzero linear parities. For each of C(6,2)=15 quadratic pairs, the outside four coefficients have 15 nonzero assignments and the inside two have four assignments, giving 60 choices and 900 quadratics. Different algebraic normal forms give different Boolean functions. Complementing a function preserves absolute discrepancy, so constant terms may be dropped for this claim, although doing so can change low sample weight into high sample weight. Independent enumeration found exactly 963 distinct truth tables, all with 32 ones.
+
+019 | A19 | PASS
+Does the published numerical example work under its explicitly stated bit convention?
+Using x_1 as the most significant bit and x_6 as the least significant bit, direct evaluation of x_5 x_6 + x_4 + x_5 + x_6 on the eleven listed integers accepts exactly 27 and 43, and accepts 32 of all 64 integers. The displayed first two transitions produce (1+x_6)(1+x_5); the third XORs x_4+1, yielding exactly the stated polynomial. The discrepancy is therefore exactly 7/22 for this particular function and sample.
+
+020 | A20 | LIMITATION
+Does the equality example establish that 7/22 is the best possible worst-case discrepancy for the whole program class?
+No. On the same displayed sample, the allowed program g(x) = x_6 AND (x_5 OR ((1+x_1) AND x_2 AND x_4)), with x_3 ignored, accepts eight sample points and eighteen cube points. Its discrepancy is 8/11 - 18/64 = 157/352, approximately 0.446023, strictly above 7/22. It is realized in order x_1,...,x_6 by q <- 1+x_1; q <- q AND x_2; ignore x_3; q <- q AND x_4; q <- q OR x_5; q <- q AND x_6. Independent enumeration of all 18,664 functions in that fixed order confirmed this larger discrepancy. The article explicitly disclaims an exact optimum, so this is a boundary on interpretation rather than a failure of its stated theorem.
+
+Reviewer assessment
+The exact stated theorem passes this adversarial algebra audit: for every eleven-element subset of F2^6 with equal weights, an allowed deterministic two-state read-once program, with its order chosen for that subset, has discrepancy at least 7/22 and hence greater than 1/4. The affine-code, syndrome-counting, multiplicative-closure, pair-cell, balancing, and implementation steps all withstand independent re-derivation. No substantive proof gap or counterexample to that theorem was found. This is an AI audit, not independent human endorsement. Fresh exhaustive finite checks covered 20,475 syndrome cases, eight pair-cell truth tables, all 1,800 balanced quadratic implementations on 64 inputs, and the displayed example; they did not enumerate all eleven-element cube subsets. Universality rests on the analytic proof. The result is a lower bound, not an exact optimum for the full program class; the displayed sample itself admits the stronger discrepancy 157/352. No conclusion about twelve-point sufficiency, nonuniform sampling, prescribed arbitrary orders, reversible-only programs, or novelty follows from this audit.
+
+
+MODEL
+Fresh AI review of the computational model and quantifiers; one AI session performing 20 structured checks, not 20 independent mathematicians
+
+021 | M01 | PASS
+Is the target distribution precisely specified, rather than an unstated population or input distribution?
+The model defines U as uniform on all 64 elements of F_2^6. Every true acceptance probability and balancing argument is relative to this distribution. The theorem makes no unsupported claim for an arbitrary real-world distribution.
+
+022 | M02 | LIMITATION
+Can the result be transferred directly from eleven distinct support points to eleven draws with repetitions?
+No. S is explicitly an eleven-element subset, with eleven distinct points. Repeated draws produce a weighted distribution on a smaller support. Step three uses distinctness to make each point indicator evaluate to a separate unit vector; this argument cannot simply be reused on repeated list entries. The appendix expressly excludes repeated sample points, but the standalone headline does not convey this restriction.
+
+023 | M03 | LIMITATION
+Does the proof rule out an arbitrary distribution supported on eleven points?
+No. The proof turns a Boolean vector of weight at most two into acceptance probability at most 2/11, which requires equal masses. With nonuniform masses, two accepted support points might carry much more mass. Nothing here rules out an eleven-point distribution with optimized unequal weights. The theorem and unresolved-questions section correctly state this exclusion.
+
+024 | M04 | PASS
+Does the text state the correct adversarial order of quantifiers?
+The text explicitly states: for every S, there exists a program and a fixed reading order, both allowed to depend on S. This is exactly the quantifier order needed to disprove a single fixed distribution fooling every program. It is not a statement that the witness must be chosen before the sample.
+
+025 | M05 | PASS
+Could a reader incorrectly infer that one universal balanced program defeats every eleven-point sample?
+The text explicitly says the failing program may depend on the sample. This distinction is necessary: for any fixed balanced Boolean program, choose five accepted inputs and six rejected inputs. Its sample error is then |5/11 - 1/2| = 1/22, far below 7/22. Thus a single universal balanced witness is impossible, and the article does not claim one.
+
+026 | M06 | LIMITATION
+Does the construction prove the same lower bound for every coordinate order fixed in advance?
+No. The constructed witness reads its selected product coordinates first, then the remaining coordinates. The proof therefore establishes a result for the union of the program classes over all fixed permutations. It does not establish the stronger quantifier order: for each prescribed permutation and each S, a witness exists in that order. The appendix explicitly acknowledges this point.
+
+027 | M07 | PASS
+Does choosing the reading order after seeing S secretly introduce input-adaptive queries?
+No. S selects the witness program before that program is run on an input x. Within each execution the six-coordinate permutation is fixed and does not depend on the values read. This is an oblivious read-once program, even though the adversary selects which such program to use against S.
+
+028 | M08 | LIMITATION
+Does 'only two internal states' mean an autonomous two-state machine with a single transition rule and no externally specified position?
+No. The formal model is a layered width-two program: the input order and six transition functions are part of its fixed description, and the transition function may depend on the layer. Two states measure the state carried between layers, not the complete program description or all control needed by a physical implementation. The ordinary-language section does specify step-dependent rules, but 'very small program' is not a formal program-size bound beyond this model.
+
+029 | M09 | LIMITATION
+Is arbitrary deterministic state merging genuinely allowed, and can the result be asserted for reversible transitions?
+State merging is explicitly allowed in the model, so the AND update is legal. For an input bit making its second factor zero, this update sends both prior states to zero and is noninvertible. The proof consequently does not establish the claim for reversible or permutation transitions. Both the model and the example disclose this limitation.
+
+030 | M10 | PASS
+Can every proposed pair-product witness actually be computed with two states under the stated rules?
+I independently enumerated all 15 coordinate pairs, all 60 affine coefficient vectors having a nonzero coefficient outside the pair, and both constants. For all 1,800 formulas and all 64 inputs, the pair-first state updates agreed with the formula. The identity (x_i+a_j)(x_j+a_i) + r + b + a_i*a_j expands to x_i*x_j + a_i*x_i + a_j*x_j + r + b over F_2. No additional stored input bit is needed.
+
+031 | M11 | PASS
+Does the construction require an unmentioned choice of initial state or a more powerful acceptance rule?
+It does not. Starting at state zero, the first update stores x_i+a_j. The final constant b+a_i*a_j can be XORed into the last of the four remaining transitions, after which acceptance is simply final state one. I used exactly this convention in the exhaustive 1,800-formula implementation check.
+
+032 | M12 | PASS
+Are irrelevant coordinates actually read once, and does ignoring their value violate the model?
+The construction schedules every coordinate exactly once. A coordinate with coefficient zero uses the identity transition on the state for either input bit. Reading a variable does not require the computed function to depend on it, and the stated arbitrary-transition model imposes no such requirement. This also makes ordinary parity functions legal six-step programs.
+
+033 | M13 | PASS
+Is the asserted true acceptance rate of exactly one half justified for the nonlinear witnesses?
+Step four selects an affine correction using at least one coordinate outside the product pair. Toggling that outside coordinate toggles the output and leaves the product unchanged, pairing the 64 cube points into opposite-output pairs. Independently generated truth tables for all 963 stated functions each contained exactly 32 ones.
+
+034 | M14 | PASS
+Does the numerical discrepancy really violate the inclusive error allowance, without a bias-convention error?
+The quantity is absolute acceptance-probability error: 1/2 - 2/11 = 7/22, and 7/22 - 1/4 = 3/44 > 0. This is 31.818... percentage points, exceeding 25 points by 6.818... points. A signed parity bias would be twice this number; the article explicitly distinguishes that convention. I also checked that the displayed example accepts exactly sample points 27 and 43 and exactly 32 full-cube points.
+
+035 | M15 | PASS
+Are there really 963 distinct balanced tests in the proposed finite witness family?
+There are 63 nonzero linear parities. For each of the 15 unordered coordinate pairs, 64 minus 4 equals 60 linear coefficient vectors use an outside coordinate, giving 900 quadratics. I generated every truth table and found exactly 963 distinct tables, all balanced. Distinct quadratic monomials also distinguish pairs in the unique Boolean multilinear representation.
+
+036 | M16 | PASS
+Is failure against this small test family logically sufficient for failure against the full program class?
+Yes. Every member of the 963-function family has an allowed program implementation, so the family is a subclass. An absolute-error witness in this family defeats the larger class. The article correctly avoids the converse: these 963 functions do not represent every allowed program, and passing them on some other distribution would not by itself prove fooling of the full class.
+
+037 | M17 | LIMITATION
+After constants are removed, does the 963-function family still guarantee a witness with sample rate at most 2/11?
+It guarantees the absolute discrepancy, but the selected constant-free member may have sample rate at least 9/11 rather than at most 2/11. Complementing it recovers the low-rate witness and remains legal in the full program class. The finite-family section correctly invokes preservation of absolute discrepancy; its 963 count should not be restated as 963 tests that always supply the low-tail witness themselves.
+
+038 | M18 | LIMITATION
+Does this theorem imply that a random eleven-input sample fails to estimate a fixed program with high probability?
+No. For each realized eleven-point subset there is some witness, and that witness may vary with the realized subset. This is a simultaneous guarantee over the class, not a probability estimate for one program fixed independently of the sample. The ordinary-language section makes this distinction explicitly. The reported seeded random-check frequencies supply no contrary probabilistic theorem.
+
+039 | M19 | LIMITATION
+Does ruling out exactly eleven equal-weight points prove a lower bound of twelve on the optimal support size?
+Not by itself. The theorem excludes exactly eleven distinct equally weighted points. Padding a smaller sample to eleven changes all its weights, so a smaller feasible equal-weight sample would not automatically yield an eleven-point one. Separate arguments are required for every smaller size, and twelve-point feasibility is also unproved here. The article expressly limits its self-contained theorem accordingly.
+
+040 | M20 | PASS
+Is the existential witness operationally obtainable, and do the finite checks replace the universal proof?
+A concrete constructor can enumerate the fixed 963-family truth tables, evaluate them on S, choose a failing member, and complement if necessary. The proof establishes that such a search succeeds for every eligible S; the explicit pair-first construction then supplies a program. My exhaustive formula checks verify representation and balancing, not all eleven-subsets of the cube. The article accurately reserves universality for the analytic argument rather than claiming its sampled experiments exhaust all supports.
+
+Reviewer assessment
+Exactly 20 structured checks: 12 pass, 8 limitations, 0 fail, 0 unresolved. I found no contradiction in the stated computational model or its use of witnesses. The strongest interpretive risks are upgrading a union-over-orders result to a prescribed-order result, upgrading eleven equal masses to arbitrary eleven-point distributions or repeated samples, treating two layered states as the complete size of an autonomous machine, and mistaking the complement-free 963 family for a guaranteed low-tail family. The article explicitly discloses most of these restrictions. Its headline is broader than the theorem when read without the body. The independent finite execution verified all 963 distinct balanced truth tables, all 1,800 quadratic implementations on the 64-point cube, and the displayed example; it is not an exhaustive enumeration of eleven-point supports or external human review.
+
+
+COMPUTATION
+AI adversarial computation reviewer; independent deterministic audit, not human peer review or proof-assistant certification
+
+041 | C01 | PASS
+Do the inspected article, checkers, and recorded outputs match the package's own version manifest?
+Independent hashlib SHA-256 computation matched all ten entries of stakeholders_letter_20261020/SHA256SUMS.txt, including the HTML article, both Python checkers, and both evidence JSON files. See computation_work/results.json: hashes. This establishes internal version consistency, not external authenticity.
+
+042 | C02 | PASS
+Does the deterministic publication checker actually reproduce its archived output?
+Ran python3 stakeholders_letter_20261020/evidence/publication_sanity_check.py and compared parsed JSON with evidence/publication_sanity_check.json. Exact match: 20,475 syndrome cases, counts {4:12600,5:7560,6:315}, example accepted words [27,43], full count 32, error 7/22, and 1,800 quadratic formulas. See computation_work/results.json: publication_rerun.
+
+043 | C03 | PASS
+Can the packed affine transition implementation disagree with the asserted affine polynomial?
+Independently decoded each 4-entry transition table and simulated all 128 affine coefficient/constant combinations on all 64 inputs. All 8,192 outputs matched a separate sum-modulo-two oracle. The 126 nonconstant functions had 32 ones; the two constants had 0 and 64. Source and execution: computation_work/independent_checks.py, formula_exhaustion.
+
+044 | C04 | PASS
+Can the AND/XOR quadratic implementation, including its folded constant, fail on an untested coefficient pattern?
+Exhausted 15 coordinate pairs times 64 linear masks times 2 constants times 64 inputs using a separate polynomial oracle and packed-table decoder: 122,880 output comparisons, all equal. Of the 1,920 formulas, exactly 1,800 satisfy the outside-coordinate condition and are balanced. The 120 excluded local formulas have 16 or 48 ones, confirming that the condition is necessary for the stated balance argument. See computation_work/results.json: formula_exhaustion.
+
+045 | C05 | PASS
+Do the actual program generators obey the six-coordinate, two-state, fixed-order model?
+For all 2,048 generated programs covered in C03-C04, separately required sorted(order)==[0,1,2,3,4,5], six transitions, and every transition code between 0 and 15. All passed. The independent simulator starts in state 0 and every table output is one bit. This closes a structural check absent from the supplied execute_and_verify helper, noted separately in C17.
+
+046 | C06 | PASS
+Does the displayed MSB-first example correspond to the constructor's LSB-zero formula and transitions?
+Independent truth table for LSB-zero pair (0,1), mask 7, constant 0 accepts exactly sample integers [27,43] and 32 cube integers. This is displayed x5*x6+x4+x5+x6. The canonical constructor returns pair [0,1], mask 7, order [6,5,4,3,2,1] in displayed coordinates, and transitions [5,4,9,12,12,12]. The publication checker independently uses x[0] as the most significant bit and agrees.
+
+047 | C07 | PASS
+Are discrepancy and margin calculations exact, with no rounding or percentage-unit mistake?
+Recomputed with fractions.Fraction: 1/2-2/11=7/22; 7/22-1/4=3/44. These equal approximately 31.81818 and 6.81818 percentage points. Original execute_and_verify computes abs(Fraction(accepted,11)-Fraction(full,64)); it does not use floating-point threshold tests. See computation_work/results.json: example.
+
+048 | C08 | PASS
+Does an independently indexed exhaustive syndrome calculation falsify the claimed minimum of four low-weight representatives?
+Enumerated every one of C(15,11)=1,365 column sets and all 67 eleven-bit vectors of weights 0,1,2. Calculated syndromes by four binary matrix dot products rather than the supplied XOR-pair counting routine. Across 20,475 nonzero syndromes, representative counts were {4:12600,5:7560,6:315}. Every zero syndrome had only the zero vector among these 67 vectors. No count below four occurred. See independent_syndromes in computation_work/results.json.
+
+049 | C09 | PASS
+Does the canonical example actually reach the injective dimension-seven affine-code branch assumed by the quadratic construction?
+Separately evaluated all 128 affine functions on the canonical eleven points. There are 128 distinct evaluations, so dimension seven. Exact weight enumerator is {0:1,3:13,4:26,5:24,6:24,7:26,8:13,11:1}. Thus no nonconstant affine evaluation has weight <=2 or >=9, and minimum nonzero code weight is three. See computation_work/results.json: canonical_code.
+
+050 | C10 | PASS
+Are the local-versus-global low-weight counts and the cell-size bound numerically sound?
+For all 13 coordinate products outside the canonical affine code, independently found four or six low-weight coset vectors, at most three local ones, and all four pair cells nonempty. Pair (0,1) has cell sizes [1,2,2,6], six coset vectors and three local ones, matching the archive. Also exhausted all C(10,3)=120 positive ordered four-cell compositions of 11: among each cell and its complement, at most three have weight <=2. See canonical_code and cell_size_exhaustion.
+
+051 | C11 | PASS
+Is the stated 963-function witness family overcounted or missing its balanced-function restriction?
+Constructed and deduplicated full 64-bit truth tables, rather than relying solely on parameter counts. Exactly 963 distinct balanced functions occur without constants: 63 nonzero affine parities and 900 eligible quadratics. Including both constants gives exactly 1,926 distinct balanced functions. No pair/coefficient collision or affine/quadratic collision occurred. See computation_work/results.json: formula_exhaustion.
+
+052 | C12 | PASS
+Does omitting complements preserve every discrepancy threshold used by the finite-family argument?
+For each possible sample acceptance count k=0,...,11, exactly compared |k/11-1/2| with |(11-k)/11-1/2|. All match. Counts 0,1,2,9,10,11 give errors 1/2,9/22,7/22,7/22,9/22,1/2 respectively, so both low and high branches satisfy the asserted >=7/22 threshold. See computation_work/results.json: complements.
+
+053 | C13 | PASS
+Can a rank-deficient or affine-hyperplane support reach an invalid injectivity assertion before yielding its easy witness?
+Targeted the support [0,2,4,6,8,10,12,14,16,18,20], which lies in the x6=0 hyperplane. Constructor returns the affine function with mask 1, sample acceptance 0, cube acceptance 32, and exact error 1/2 before requiring 128 distinct evaluations. Source control flow similarly returns immediately for any nonconstant zero evaluation. See computation_work/results.json: targeted_witnesses.
+
+054 | C14 | PASS
+Can list ordering of the same support corrupt affine-evaluation bit positions or the reported function?
+Ran the canonical support in its eleven cyclic list rotations and reversed order. All twelve executions returned the identical formula and 64-bit function mask. Counts remained 2/11 and 32/64. This is a targeted indexing check, not a claim to enumerate all list permutations or supports. See computation_work/results.json: support_order_invariance.
+
+055 | C15 | PASS
+Does normal Python execution reject inputs outside the theorem's support domain?
+Direct witness calls rejected six concrete invalid inputs: ten points; a repeated point; 64; -1; boolean True; and floating-point 1.0. Each raised AssertionError. The source uses len(support)==len(set(support))==11 and exact type(x) is int with 0<=x<64. See computation_work/results.json: default_validation. This result assumes assertions are enabled; C18 tests the opposite setting.
+
+056 | C16 | LIMITATION
+Does the constructor always normalize its witness to the article's at-most-two sample acceptances?
+Concrete counterexample to that normalization expectation: --support 1 3 5 7 9 11 13 15 17 19 21 returns mask 1, b=0, sample_accepted=11, full_accepted=32, exact_error=1/2. The affine branch returns immediately on weight >=9 and does not complement. This is not a counterexample to the stated absolute-discrepancy theorem: the returned witness is valid, and complementing it gives zero sample acceptances exactly as the proof explains. It matters only if readers expect every emitted witness to have the low-side presentation.
+
+057 | C17 | LIMITATION
+Is execute_and_verify itself a complete verifier of the declared read-once six-input program model?
+Concrete falsifier: execute_and_verify([1,3,5,7,9,11,13,15,17,19,21], [0], [6], {'kind':'affine','a_mask_lsb0':1,'b':0}) returns successfully with displayed order [6]. It reads only one coordinate. The helper uses zip(order,transitions) and validates functional agreement and discrepancy, but neither lengths nor coordinate permutation. Actual supplied generators pass the exhaustive structural check in C05, so this does not invalidate their emitted programs or the theorem. An external caller should not treat the helper as a full structural certificate.
+
+058 | C18 | LIMITATION
+Do the checkers retain input and correctness guards when Python assertions are disabled?
+Ran python3 -O evidence/eleven_point_obstruction.py --support 1 1 1 1 1 1 1 1 1 1 1. It returned JSON successfully with sample_accepted=11 and error 1/2 despite the repeated-point input violating the theorem. The support guards and most checker claims are assert statements, so -O or PYTHONOPTIMIZE disables them. The documented commands use ordinary python3 and were checked with assertions enabled; the issue is a reproducibility/hardening limitation, not a failure under documented normal execution.
+
+059 | C19 | UNRESOLVED
+Can this package independently authenticate every historical computation attributed to the fresh review sessions?
+The HTML explicitly says the fresh-review session code was not archived. The evidence folder contains only eleven_point_obstruction.py, publication_sanity_check.py, and their two JSON outputs. Thus the separately reported 3,000 random supports and 1,000 affine images cannot be independently audited as those historical sessions from this package. The deterministic publication reproduction is available and passes; it does not authenticate missing session provenance. No additional random trials were run in this audit.
+
+060 | C20 | LIMITATION
+Do successful archived and independent computations by themselves establish the universal eleven-support theorem?
+No. Independently computed C(64,11)=743,595,781,824 possible distinct supports. The supplied source samples 1,000 ordinary supports and 1,000 affine images, while its exhaustive loops cover syndrome column sets and implementations rather than all supports. This review likewise exhausts finite algebra/implementation subclaims and selected adversarial cases, not all supports or a formally verified proof. The HTML accurately discloses this and assigns universality to the analytic proof. This is the strongest evidentiary limitation.
+
+Reviewer assessment
+{
+  "core_verdict": "No serious computational error or counterexample to the central absolute-discrepancy claim was found. Exact arithmetic, coordinate conversion, all generated formula implementations, finite-family cardinalities, and exhaustive syndrome counts agree with the article.",
+  "counts": {
+    "pass": 15,
+    "fail": 0,
+    "limitation": 4,
+    "unresolved": 1
+  },
+  "strongest_limitation": "These computations do not certify universality across the 743,595,781,824 eleven-point supports; that conclusion rests on the analytic proof, which has no external human review or proof-assistant certificate here.",
+  "concrete_caveats": "The constructor can return a high-side affine witness; execute_and_verify does not itself enforce six-coordinate structure; assertion-disabled execution accepts out-of-domain inputs; complete historical fresh-review session code is absent. None of these caveats falsifies the documented theorem or the normally generated witness programs.",
+  "independent_reproduction_command": "python3 /workspace/scratch/4b5e11f9698b/cynical_review_20261020/computation_work/independent_checks.py",
+  "independent_results": "/workspace/scratch/4b5e11f9698b/cynical_review_20261020/computation_work/results.json",
+  "scope": "AI review with exactly twenty evidence-backed checks; no subagents, no randomized resampling, and no edits to the existing publication artifacts."
+}
+
+
+LITERATURE
+Fresh skeptical literature and significance review; 20 checks; six bounded web queries plus primary-paper inspection and independent finite calculations; 2026-10-20
+
+061 | L01 | PASS
+Does the cited width-two literature concern a genuinely related computational model?
+Bogdanov, Dvir, Verbin and Yehudayoff (BDVY), Theorem 1.1, treats width-two programs reading k bits per transition, including programs that are not read-once. The note's one-bit, read-once model is a restricted case. Source: https://theoryofcomputing.org/articles/v009a007/v009a007.pdf, primary paper, browser refs turn29view0 and turn31view3.
+
+062 | L02 | PASS
+Does BDVY's cited theorem already state the eleven-support impossibility?
+Its Theorem 1.1 transfers epsilon-fooling of degree-k polynomials to t*epsilon-fooling of their branching-program class. This is a sufficient-condition theorem, not the stated eleven-point lower bound; failure of its hypothesis cannot be used to infer impossibility. Section 1.3 discusses the older read-once, one-bit case. This comparison supports the note's description, without proving independence from every other result.
+
+063 | L03 | PASS
+Is the parity/sample-space/linear-code connection genuinely prior art?
+Yes. Alon, Goldreich, Hastad and Peralta (AGHP), Section 7, explicitly translates small-bias sample spaces into binary linear codes and back. Naor and Naor, Section 3.1.2, gives the generator-column and minimum-distance connection. These are established ingredients, appropriately credited rather than available as novelty claims. Primary URLs and browser references are in sources.
+
+064 | L04 | PASS
+Are literature bias parameters compared in the correct units?
+For a balanced Boolean parity, signed bias is twice acceptance-probability discrepancy. Thus the note's epsilon=1/4 target permits signed bias 1/2. AGHP Section 7 defines its parameter using probabilities in [1/2-epsilon,1/2+epsilon]. The note explicitly warns about this convention difference. A lower bound using a different epsilon convention must be converted before numerical substitution.
+
+065 | L05 | LIMITATION
+Is the affine evaluation code itself plausibly a new coding-theoretic object?
+No such novelty is demonstrated. Independently of literature searching, its rank-four check matrix has eleven distinct nonzero columns in F2^4. Appending the four missing columns produces the usual full fifteen-column Hamming check matrix; the original kernel is obtained by setting the added coordinates to zero and deleting them. Thus it has the familiar structure of a four-coordinate shortening of the binary length-fifteen Hamming code. This is a direct identification from the proof, not a claim about a newly located classification paper.
+
+066 | L06 | PASS
+Do elementary exact coding bounds already contradict the affine code parameters?
+They do not. For a binary [11,7,3] code, disjoint radius-one balls require 2^7*(1+11)<=2^11; the exact values are 1536<=2048. The Griesmer necessary length for dimension seven and distance three is 3+2+1+1+1+1+1=10, also below eleven. These arithmetic checks show only that these two necessary bounds do not exclude the parameters; they do not establish absence of a stronger relevant result.
+
+067 | L07 | PASS
+Is there concrete evidence that parity tests alone cannot supply the claimed obstruction?
+Independent enumeration on the displayed support {15,21,23,27,29,30,31,38,43,56,63} gave nonzero parity weights {4:26,6:24,8:13} across all 63 parities. Constants only complement these weights. Its largest affine discrepancy is therefore 5/22<1/4. Consequently an impossibility theorem using only parity tests is false at these parameters. The quadratic step supplies a real increment over the parity-only requirement.
+
+068 | L08 | PASS
+Does the elementary finite Fourier lower bound already yield the target obstruction?
+No. For uniform S of size eleven in F2^6, character orthogonality gives sum over nonzero a of |E_S(-1)^(a.x)|^2=64/11-1=53/11. Averaging over 63 parities gives a discrepancy lower bound of (1/2)*sqrt(53/693), about 0.138274, below 1/4. This is an independent exact finite comparison, not an asymptotic estimate or a claim that Fourier methods cannot do better.
+
+069 | L09 | PASS
+Can the asymptotic small-bias lower bounds in the cited manuscript simply be read as an exact twelve-point requirement?
+No. AGHP Section 7 states bounds with unspecified absolute constants and discusses an MRRW-derived asymptotic estimate. Those displayed bounds do not by themselves certify an exact integer threshold of twelve at n=6 and probability discrepancy 1/4. More decisively, L07 gives an eleven-point support meeting that parity discrepancy target. The stronger branching-program claim needs additional reasoning.
+
+070 | L10 | PASS
+Is there an exact finite sharpness observation worth adding, without claiming full-class optimality?
+Independent enumeration of all 963 stated balanced witnesses on the displayed support gave weights {2:25,3:36,4:226,5:112,6:363,7:84,8:109,9:8}. The maximum discrepancy in this restricted family is exactly 7/22. Combined with the analytic theorem, if correct, this makes 7/22 the exact minimax discrepancy for that witness family over eleven-point supports. It does not upper-bound discrepancy for every width-two program. Archive a small enumerator if this observation is added.
+
+071 | L11 | UNRESOLVED
+Has sharpness for the entire branching-program class or the minimum feasible support been established?
+No upper bound for all programs on any eleven-point support is supplied, and twelve-point feasibility remains open in this note. An exact minimum also requires the separate smaller-support claims, which this literature review did not audit. The article states these limits accurately. L10 concerns only the 963-function witness family and must not be promoted to full-class sharpness.
+
+072 | L12 | UNRESOLVED
+Was an exact prior statement of the six-bit, eleven-point, 7/22 theorem located?
+No exact statement was located in this bounded search or in the inspected primary papers. That is a search outcome, not evidence establishing novelty. An equivalent formulation could occur in covering-code, finite discrepancy, epsilon-approximation, or branching-program work without those numerical keywords.
+
+073 | L13 | UNRESOLVED
+Has novelty of the particular four-versus-three argument been established?
+The candidate contribution is the combination of at least four low-weight coset representatives with at most three local-cell representatives, forcing an affine correction using an outside variable and hence a balanced width-two witness. The individual ingredients are elementary code and Boolean-function arguments. This review found no source proving or disproving priority of their combination. A specialist comparison with shortened-Hamming coset structure and covering arguments remains necessary.
+
+074 | L14 | LIMITATION
+Was the literature search sufficiently comprehensive to certify originality?
+No. Six focused queries covered the cited width-two paper, small-bias lower bounds and [11,7,3] coding terms. Several returned irrelevant or secondary results; only inspected primary sources support historical claims here. This did not systematically cover all bibliographic databases, unpublished notes, coding classifications or alternate problem terminology. Search availability and search failure are not novelty proofs.
+
+075 | L15 | LIMITATION
+Are the quantifiers and model restrictions material to the significance claim?
+Yes. The witness and its fixed reading order may depend on S; the argument starts by reading the chosen quadratic pair. It does not establish a witness for every order prescribed in advance. Equal weights, eleven distinct points, read-once access and arbitrary deterministic transitions are essential stated restrictions. Claims about nonuniform weights, repeated samples or reversible transitions would require separate proofs. The article preserves these distinctions.
+
+076 | L16 | LIMITATION
+Does this establish a broad or asymptotic advance in pseudorandomness?
+The note supplies one fixed finite parameter obstruction. It gives no family indexed by dimension, improved asymptotic seed length or support lower bound, or general theorem explaining how the four-versus-three count scales. A six-bit theorem can still be mathematically valid and instructive, but evidence of a major advance is absent. Generalizing the counting mechanism would materially strengthen significance.
+
+077 | L17 | PASS
+Is the finite result nevertheless more than evidence from an unsuccessful random search?
+Yes, conditional on the analytic proof's correctness: it asserts an obstruction for every eleven-element support and gives a witness in a concrete small function family. The displayed example proves that passing all affine tests does not settle the branching-program question. These are precise mathematical statements that are more informative than random failures, even on a small universe. This review does not replace the separate full proof audit.
+
+078 | L18 | LIMITATION
+Does the article establish a practical application or a broadly important research target?
+No application, performance gain, external open-problem designation or evidence that practitioners need exactly these parameters is supplied. The article admits the absence of a measured public benefit. The choice of six bits, eleven equally weighted distinct inputs and tolerance 1/4 currently looks like a narrowly selected finite design problem. Explain why those parameters arose before suggesting practical importance.
+
+079 | L19 | PASS
+Is there a credible modest use for the work even if it remains a small finite exercise?
+Reviewer assessment: it could serve as a self-contained example connecting affine evaluation codes, coset counting and explicit two-state realizations, or as a benchmark for constructive witness software. L07 and L10 give particularly concrete ways to explain what the nonlinear step adds. These are plausible educational and verification uses, not claims of observed adoption or expert endorsement.
+
+080 | L20 | UNRESOLVED
+What level of novelty and significance is supported for public presentation?
+Treat it as an AI-assisted finite mathematical note with unverified originality. There is a coherent incremental result beyond parity tests, but current evidence does not support a major-breakthrough description. Strengthen it by adding the parity-safe comparison, archiving the restricted-family sharpness calculation, resolving twelve-point feasibility or generalizing the argument, and seeking a targeted human prior-art review. No journal-acceptance prediction or unobserved expert opinion is warranted.
+
+Reviewer assessment
+Twenty checks completed: 11 pass, 5 limitation, 4 unresolved, 0 demonstrated failures. The note accurately limits its claims and its cited primary sources are relevant. Its exact obstruction is not implied by the elementary parity-only comparisons checked here: the supplied support passes every affine test at epsilon=1/4. The four-versus-three synthesis therefore has concrete finite content, but novelty remains unverified and significance is presently modest. The proof is best presented as a narrow research/expository note, not a major pseudorandomness breakthrough. The 7/22 constant is independently verified as sharp for the specified 963-function witness family on the displayed support, conditional on the theorem for the matching lower bound; no full-class optimum or twelve-point construction follows. Six searches cannot establish absence of prior art.
+
+Source
+{"url": "https://theoryofcomputing.org/articles/v009a007/", "title": "Pseudorandomness for Width-2 Branching Programs — journal landing page", "role": "Primary bibliographic metadata: authors, 2013 publication, volume 9, article 7, pages 283–293. Browser refs turn28search0 and turn28view0."}
+
+Source
+{"url": "https://theoryofcomputing.org/articles/v009a007/v009a007.pdf", "title": "Andrej Bogdanov, Zeev Dvir, Elad Verbin and Amir Yehudayoff, Pseudorandomness for Width-2 Branching Programs", "role": "Primary full text; Theorem 1.1 and Section 1.3 inspected for precise scope and direction of implication. Browser refs turn29view0, turn30view3, turn30view4 and turn31view3."}
+
+Source
+{"url": "https://tau.ac.il/~nogaa/PDFS/aghp4.pdf", "title": "Noga Alon, Oded Goldreich, Johan Hastad and Rene Peralta, Simple Constructions of Almost k-wise Independent Random Variables", "role": "Author-hosted primary manuscript; Section 7 inspected for the sample/code equivalence, parameter convention and asymptotic bound limitations. Browser refs turn28view1, turn31view0 and turn31view1."}
+
+Source
+{"url": "https://www.wisdom.weizmann.ac.il/~naor/PAPERS/bias.pdf", "title": "Joseph Naor and Moni Naor, Small-bias Probability Spaces: Efficient Constructions and Applications", "role": "Author-hosted primary manuscript; Section 3.1.2 inspected for the established linear-code connection. Browser refs turn28view2 and turn31view4."}
+
+
+EDITORIAL
+Fresh hostile-but-fair editorial reviewer (AI, not a human peer reviewer). Reviewed the supplied HTML and both checking scripts; reran both documented default checks. Did not audit external literature or verify historical review-session records.
+
+081 | E01 | FAIL
+Does the headline accurately communicate the scope of the result when read alone?
+The title 'Why eleven inputs cannot guarantee an accurate sample' omits six-bit inputs, equal weights, a fixed support, the specified two-state test class, and the chosen error tolerance. It sounds like a general limit on eleven observations. The actual theorem concerns one finite adversarial sampling model. The body repairs this overbreadth, but readers can encounter the headline without the body.
+
+082 | E02 | LIMITATION
+Is the opening claim about a computing shortcut tied to an identified practical proposal?
+The opening says 'a particular shortcut in computing cannot work,' but identifies no deployed method, proposed algorithm, user need, or benchmark that depends on an eleven-point universal sampler in this model. Calling it a finite sampling obstruction would be better grounded. The article subsequently narrows the claim, so this is a framing weakness rather than a false mathematical conclusion.
+
+083 | E03 | PASS
+Is the central theorem a definite and falsifiable mathematical statement?
+The appendix explicitly quantifies over every eleven-element subset S of F2^6, gives each point mass 1/11, defines the allowed deterministic programs, and asserts an absolute acceptance-probability discrepancy of at least 7/22. A qualifying support that fooled the entire class within 1/4 would contradict it. This is a real mathematical claim, not merely motivational prose.
+
+084 | E04 | PASS
+Are the adversarial quantifiers and reading-order dependency disclosed?
+Both 'What the proof says' and the model section state that the witness program and its fixed reading order may depend on S. The appendix explicitly distinguishes this from proving a witness for every order fixed in advance. The ordinary-language section also separates a fixed test set from the success probability of a newly drawn random sample.
+
+085 | E05 | PASS
+Are the assumptions that materially restrict applicability explicit?
+The model states six bits, eleven distinct inputs, equal weights, a uniform full-cube target, two states, six deterministic transitions, one read per coordinate, fixed program order, and arbitrary transitions including merging. It explicitly excludes conclusions about unequal weights, repeated points, and reversible-only programs. Those restrictions are essential to the result and are not hidden.
+
+086 | E06 | PASS
+Does direct examination of the written proof reveal a mathematical gap?
+No gap found in this audit. The absence of extreme affine weights makes evaluation injective and yields a [11,7] binary code of minimum distance at least three; its four-row parity-check matrix therefore has eleven distinct nonzero columns. The seven-pair counting argument gives at least four low-weight representatives per nonzero syndrome. Multiplicative closure would imply all eleven point indicators, contradicting dimension seven. Finally, the four nonempty pair cells allow at most three low-weight local corrections, forcing an outside coordinate and hence a balanced witness. This is a reasoned AI assessment, not a correctness certificate.
+
+087 | E07 | PASS
+Are the displayed numerical discrepancy and worked example correct?
+Independently rerunning publication_sanity_check.py confirmed that the displayed polynomial accepts sample words 27 and 43 only and accepts 32 of the 64 full-cube inputs. Thus 1/2 - 2/11 = 7/22 = approximately 31.82 percentage points. The amount above the 25-point allowance is 3/44, approximately 6.82 percentage points. The explicit most-significant-bit convention resolves the numerical example.
+
+088 | E08 | PASS
+Is the witness genuinely implementable in the stated two-state model?
+Expanding (xi + aj)(xj + ai) gives xi*xj + ai*xi + aj*xj + ai*aj, so the final added constant cancels the extra term. One state bit can store the first factor, AND in the second, and XOR the remaining linear terms. The written realization uses one read per coordinate and may merge states, as explicitly allowed. The rerun sanity checker verified all 1,800 balanced quadratic formulas including constants on all 64 inputs.
+
+089 | E09 | PASS
+Is the claim that 963 balanced test functions suffice justified?
+There are 63 nonzero parities. Each of the 15 coordinate pairs admits 64 - 4 = 60 linear coefficient vectors with an outside coordinate, giving 900 quadratic witnesses. Different square-free polynomial coefficients describe different Boolean functions on the cube, and constants can be omitted for absolute discrepancy because complementation preserves it. This supports 63 + 900 = 963 without claiming those are all allowed programs.
+
+090 | E10 | PASS
+Does the article keep computational checking distinct from a universal proof?
+The article explicitly says that none of the checking programs exhaustively enumerates every eleven-element cube subset and that the analytic proof supplies universality. The exhaustive syndrome calculation concerns 1,365 column sets times 15 syndromes, not all supports. Random-support counts are expressly presented as results of particular seeded runs, not population probabilities.
+
+091 | E11 | PASS
+Are the main archived checking claims reproducible from the supplied files?
+Both documented commands ran successfully in this audit. publication_sanity_check.py reproduced 20,475 syndrome cases, representative frequencies 12,600/7,560/315 for counts 4/5/6, the displayed example, and 1,800 formula checks. eleven_point_obstruction.py --samples 1000 reproduced 992 affine and eight quadratic support witnesses, and affine-image discrepancy counts 914 at 7/22 and 86 at 9/22, matching the archived JSON. This checks the stated computations, not novelty or the complete historical provenance.
+
+092 | E12 | UNRESOLVED
+Can the claimed fresh reviewers and their complete work be independently audited from this package?
+The article reports four fresh AI sessions and summarizes their conclusions, but explicitly says that complete code for the fresh-review computations was not archived in this package. The supplied files establish the published checks, not the full session history, reviewer independence, or whether each reviewer worked without shared anchoring. These historical claims are transparently qualified but not independently verified here.
+
+093 | E13 | PASS
+Does the text equate repeated AI agreement with independent peer review?
+The prominent status sentence says no external human peer review or proof-assistant certification occurred. The review section warns that separate AI sessions can share blind spots and are not substitutes for independent human review. Repeated agreement supplies no calibrated probability of correctness; the article does not claim that it does. This additional audit remains AI review and must not later be relabeled as external peer review.
+
+094 | E14 | PASS
+Is Fred Esser's byline paired with a candid account of the mathematical contribution?
+The byline alone might suggest personal derivation, but the introduction directly states that Fred directed the effort while AI systems developed the mathematical argument, wrote and ran checking programs, and helped prepare the article. It defines 'we' as that human-directed process. Authorship of the public letter is plausible; claiming sole unaided mathematical discovery would exceed this disclosed record.
+
+095 | E15 | UNRESOLVED
+Are originality and priority established?
+The article correctly says originality remains unverified and that a bounded literature search not finding the exact statement is not proof of novelty. This audit did not inspect the cited papers or independently search for the result. The references supply claimed context, not evidence that the theorem is new, difficult, or previously open. Their bibliographic accuracy and descriptions remain outside this audit.
+
+096 | E16 | LIMITATION
+Is this demonstrated to solve an established open problem rather than a project-defined finite question?
+No source is offered showing that the precise six-bit, eleven-point, quarter-error question was an established open problem. The text describes it as a target within the author's broader project and does not falsely call it a famous open problem. On the supplied evidence, it is a project-defined finite question that has a plausible self-contained resolution. An established surrounding field does not establish the importance or prior open status of this particular question.
+
+097 | E17 | LIMITATION
+Is the mathematical significance demonstrated beyond the fact that the statement is provable?
+The argument is a substantive structural proof of a narrow impossibility statement; it is not merely a list of failed random searches. But the article gives no application requiring these parameters, no comparison showing an improvement over known bounds, no generalization, and no established optimum. It explicitly says it does not prove twelve-point sufficiency and that smaller-size arguments were not re-audited. The theorem's truth and the theorem's research significance are separate questions; only the former receives a developed argument here.
+
+098 | E18 | PASS
+Does the article turn the author's world-improvement ambition into an unsupported impact claim?
+The author expresses a desire to help change the world, then explicitly states that this result delivers neither a faster computer nor a measured public benefit. Its stated immediate value is ruling out one test-set size under precise rules. That is a defensible limited consequence. The letter supplies no demonstrated causal connection to wider social benefit, and it does not actually claim one; the global-stakeholder branding remains motivational.
+
+099 | E19 | PASS
+Is the prose confidence proportionate to the available evidence?
+The body distinguishes its mathematical claim from independent acceptance: it labels the theorem under review, states internal AI review prominently, explicitly withholds originality, and requests scrutiny. Calling a complete deductive argument a proof is not itself overconfidence; authors need not replace every theorem assertion with uncertainty language. The overbroad headline is the material exception identified in E01. No numeric confidence level, established-community acceptance, or breakthrough status is asserted.
+
+100 | E20 | LIMITATION
+Is the current HTML ready to publish, and in what capacity?
+It is close to publishable as a transparently labeled, unrefereed AI-assisted research note: the theorem, full argument, code commands, disclosures, and limitations are available. The headline should be narrowed before publication. The HTML mentions an accompanying ZIP but provides no download link, so public reproducibility requires attaching or linking the actual package. It is not ready to announce a verified novel breakthrough, an established open-problem solution, an optimal sampler size, or a demonstrated world-changing result.
+
+Reviewer assessment
+The mathematics in the supplied note appears coherent, and both published checking commands reproduced their saved results. I found no mathematical counterexample or proof gap. That conclusion is another AI audit, not peer review or certification. The main editorial fault is an overbroad headline. The more fundamental limit is significance: the supplied record supports a narrowly specified finite obstruction, not verified novelty, a recognized open-problem resolution, an exact optimum, a practical breakthrough, or public impact. The article itself is mostly honest about these limits. More AI approvals cannot establish the missing priority and significance claims; those require relevant prior-art comparison and outside mathematical judgment. Publishable as an unrefereed note after narrowing the headline and providing the downloadable evidence; not support for a breakthrough announcement.

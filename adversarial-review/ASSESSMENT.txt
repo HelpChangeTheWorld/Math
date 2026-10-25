@@ -1,0 +1,84 @@
+ADVERSARIAL REVIEW OF THE ELEVEN INPUT SAMPLING ARTICLE
+20 October 2026
+
+REALITY CHECK
+The exact finite theorem appears mathematically sound. This review found no
+fatal logical gap or qualifying counterexample. That is a reasoned assessment
+of the argument, not a certificate of correctness or a vote by human experts.
+
+Nothing in the supplied record establishes that the result is new, that it
+resolves an established open problem, that it is important to current research,
+or that it has a demonstrated practical benefit. A small mathematical result
+can be correct without being a significant discovery. More AI agreement does
+not answer the missing questions about prior art and significance.
+
+WHAT WAS ACTUALLY DONE
+Five fresh AI sessions each examined twenty assigned questions, for one hundred
+structured checks. Their roles covered algebra, the computational model,
+verification software, prior literature, and public presentation. This was not
+a panel of one hundred people, one hundred independent model runs, or external
+peer review. Checks overlap where multiple reviewers challenge the same claim;
+their ratings must not be converted into a probability that the theorem is true.
+
+THE EXACT CLAIM THAT SURVIVED
+For every set of eleven distinct, equally weighted six-bit inputs, some
+deterministic two-state program that reads each bit once in a suitable fixed
+order has acceptance-probability error at least 7/22 relative to all 64 inputs.
+The program and its fixed reading order may depend on the selected set.
+The proof permits arbitrary deterministic state transitions, including merging.
+
+This is not a theorem that eleven observations can never estimate anything
+accurately. It is not a theorem about every prescribed reading order, unequal
+weights, repeated sample points, or reversible-only programs. Excluding exactly
+eleven points alone does not prove a minimum of twelve; separate exclusions of
+smaller sizes are needed. No twelve-point construction is established here.
+
+THE MOST IMPORTANT OBJECTIONS
+1. The headline is broader than the theorem. A more accurate title is:
+   An eleven point sampling obstruction for two state programs on six bits
+2. Originality and research significance are unresolved. Failure to locate an
+   exact search match does not establish either one.
+3. The initial eleven-point target was a question in this project. The article
+   does not document that the research community regarded it as an open problem.
+4. The checks are reproducible controls on parts of the reasoning and its
+   implementation. They are not exhaustive enumeration of all eleven-point
+   supports or a formal proof-assistant certificate.
+5. Some checking helpers rely on caller-supplied structural assumptions and
+   Python assertions. Their ordinary generated programs passed the structural
+   checks, but their API is not a hardened independent certificate checker.
+6. For public reproducibility, the blog must attach or link the evidence ZIP.
+   The current draft mentions the package without inventing a public URL.
+
+A CONCRETE ADDITION FROM THE REVIEW
+The example in the article has a stronger failing program than the displayed
+balanced witness. With x1 the most significant bit, let
+
+g(x) = x6 AND (x5 OR ((NOT x1) AND x2 AND x4)).
+
+Read x1,x2,x3,x4,x5,x6 in that order, ignoring x3. The state updates are
+q = NOT x1; q = q AND x2; no change; q = q AND x4;
+q = q OR x5; q = q AND x6. Accept state one.
+
+On S = {15,21,23,27,29,30,31,38,43,56,63}, it accepts eight points:
+{15,21,23,27,29,31,43,63}. It accepts eighteen of all sixty-four cube points.
+Its discrepancy is 8/11 - 18/64 = 157/352, about 44.60 percentage points.
+The coordinating session independently checked this formula and program on all
+64 inputs. This does not contradict the theorem, which supplies a lower bound.
+It shows why the article's 31.82-point example is not evidence of full-class
+optimality. Neither calculation determines the best possible sampler.
+
+PUBLICATION JUDGMENT
+The defensible presentation is an openly reviewable, AI-assisted research note
+about a narrow finite obstruction. Narrow the headline, preserve the exact
+assumptions and AI disclosure, and attach the reproducible evidence. Do not
+describe it as a verified original breakthrough or a world-changing discovery.
+The stated ambition to improve the world is a motivation, not a demonstrated
+consequence of this theorem.
+
+The next useful scrutiny is from a human researcher familiar with pseudorandomness
+or coding theory, especially on whether the argument is already known and whether
+it contributes anything beyond an instructive finite example. No such researcher
+was contacted or represented as endorsing the work during this audit.
+
+The source article was reviewed without being edited. The files in this package
+record the individual questions, evidence, unresolved matters, and sources.

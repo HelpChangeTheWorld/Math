@@ -1,0 +1,148 @@
+{
+  "reviewer": "Fresh skeptical literature and significance review; 20 checks; six bounded web queries plus primary-paper inspection and independent finite calculations; 2026-10-20",
+  "checks": [
+    {
+      "id": "L01",
+      "question": "Does the cited width-two literature concern a genuinely related computational model?",
+      "verdict": "pass",
+      "evidence": "Bogdanov, Dvir, Verbin and Yehudayoff (BDVY), Theorem 1.1, treats width-two programs reading k bits per transition, including programs that are not read-once. The note's one-bit, read-once model is a restricted case. Source: https://theoryofcomputing.org/articles/v009a007/v009a007.pdf, primary paper, browser refs turn29view0 and turn31view3."
+    },
+    {
+      "id": "L02",
+      "question": "Does BDVY's cited theorem already state the eleven-support impossibility?",
+      "verdict": "pass",
+      "evidence": "Its Theorem 1.1 transfers epsilon-fooling of degree-k polynomials to t*epsilon-fooling of their branching-program class. This is a sufficient-condition theorem, not the stated eleven-point lower bound; failure of its hypothesis cannot be used to infer impossibility. Section 1.3 discusses the older read-once, one-bit case. This comparison supports the note's description, without proving independence from every other result."
+    },
+    {
+      "id": "L03",
+      "question": "Is the parity/sample-space/linear-code connection genuinely prior art?",
+      "verdict": "pass",
+      "evidence": "Yes. Alon, Goldreich, Hastad and Peralta (AGHP), Section 7, explicitly translates small-bias sample spaces into binary linear codes and back. Naor and Naor, Section 3.1.2, gives the generator-column and minimum-distance connection. These are established ingredients, appropriately credited rather than available as novelty claims. Primary URLs and browser references are in sources."
+    },
+    {
+      "id": "L04",
+      "question": "Are literature bias parameters compared in the correct units?",
+      "verdict": "pass",
+      "evidence": "For a balanced Boolean parity, signed bias is twice acceptance-probability discrepancy. Thus the note's epsilon=1/4 target permits signed bias 1/2. AGHP Section 7 defines its parameter using probabilities in [1/2-epsilon,1/2+epsilon]. The note explicitly warns about this convention difference. A lower bound using a different epsilon convention must be converted before numerical substitution."
+    },
+    {
+      "id": "L05",
+      "question": "Is the affine evaluation code itself plausibly a new coding-theoretic object?",
+      "verdict": "limitation",
+      "evidence": "No such novelty is demonstrated. Independently of literature searching, its rank-four check matrix has eleven distinct nonzero columns in F2^4. Appending the four missing columns produces the usual full fifteen-column Hamming check matrix; the original kernel is obtained by setting the added coordinates to zero and deleting them. Thus it has the familiar structure of a four-coordinate shortening of the binary length-fifteen Hamming code. This is a direct identification from the proof, not a claim about a newly located classification paper."
+    },
+    {
+      "id": "L06",
+      "question": "Do elementary exact coding bounds already contradict the affine code parameters?",
+      "verdict": "pass",
+      "evidence": "They do not. For a binary [11,7,3] code, disjoint radius-one balls require 2^7*(1+11)<=2^11; the exact values are 1536<=2048. The Griesmer necessary length for dimension seven and distance three is 3+2+1+1+1+1+1=10, also below eleven. These arithmetic checks show only that these two necessary bounds do not exclude the parameters; they do not establish absence of a stronger relevant result."
+    },
+    {
+      "id": "L07",
+      "question": "Is there concrete evidence that parity tests alone cannot supply the claimed obstruction?",
+      "verdict": "pass",
+      "evidence": "Independent enumeration on the displayed support {15,21,23,27,29,30,31,38,43,56,63} gave nonzero parity weights {4:26,6:24,8:13} across all 63 parities. Constants only complement these weights. Its largest affine discrepancy is therefore 5/22<1/4. Consequently an impossibility theorem using only parity tests is false at these parameters. The quadratic step supplies a real increment over the parity-only requirement."
+    },
+    {
+      "id": "L08",
+      "question": "Does the elementary finite Fourier lower bound already yield the target obstruction?",
+      "verdict": "pass",
+      "evidence": "No. For uniform S of size eleven in F2^6, character orthogonality gives sum over nonzero a of |E_S(-1)^(a.x)|^2=64/11-1=53/11. Averaging over 63 parities gives a discrepancy lower bound of (1/2)*sqrt(53/693), about 0.138274, below 1/4. This is an independent exact finite comparison, not an asymptotic estimate or a claim that Fourier methods cannot do better."
+    },
+    {
+      "id": "L09",
+      "question": "Can the asymptotic small-bias lower bounds in the cited manuscript simply be read as an exact twelve-point requirement?",
+      "verdict": "pass",
+      "evidence": "No. AGHP Section 7 states bounds with unspecified absolute constants and discusses an MRRW-derived asymptotic estimate. Those displayed bounds do not by themselves certify an exact integer threshold of twelve at n=6 and probability discrepancy 1/4. More decisively, L07 gives an eleven-point support meeting that parity discrepancy target. The stronger branching-program claim needs additional reasoning."
+    },
+    {
+      "id": "L10",
+      "question": "Is there an exact finite sharpness observation worth adding, without claiming full-class optimality?",
+      "verdict": "pass",
+      "evidence": "Independent enumeration of all 963 stated balanced witnesses on the displayed support gave weights {2:25,3:36,4:226,5:112,6:363,7:84,8:109,9:8}. The maximum discrepancy in this restricted family is exactly 7/22. Combined with the analytic theorem, if correct, this makes 7/22 the exact minimax discrepancy for that witness family over eleven-point supports. It does not upper-bound discrepancy for every width-two program. Archive a small enumerator if this observation is added."
+    },
+    {
+      "id": "L11",
+      "question": "Has sharpness for the entire branching-program class or the minimum feasible support been established?",
+      "verdict": "unresolved",
+      "evidence": "No upper bound for all programs on any eleven-point support is supplied, and twelve-point feasibility remains open in this note. An exact minimum also requires the separate smaller-support claims, which this literature review did not audit. The article states these limits accurately. L10 concerns only the 963-function witness family and must not be promoted to full-class sharpness."
+    },
+    {
+      "id": "L12",
+      "question": "Was an exact prior statement of the six-bit, eleven-point, 7/22 theorem located?",
+      "verdict": "unresolved",
+      "evidence": "No exact statement was located in this bounded search or in the inspected primary papers. That is a search outcome, not evidence establishing novelty. An equivalent formulation could occur in covering-code, finite discrepancy, epsilon-approximation, or branching-program work without those numerical keywords."
+    },
+    {
+      "id": "L13",
+      "question": "Has novelty of the particular four-versus-three argument been established?",
+      "verdict": "unresolved",
+      "evidence": "The candidate contribution is the combination of at least four low-weight coset representatives with at most three local-cell representatives, forcing an affine correction using an outside variable and hence a balanced width-two witness. The individual ingredients are elementary code and Boolean-function arguments. This review found no source proving or disproving priority of their combination. A specialist comparison with shortened-Hamming coset structure and covering arguments remains necessary."
+    },
+    {
+      "id": "L14",
+      "question": "Was the literature search sufficiently comprehensive to certify originality?",
+      "verdict": "limitation",
+      "evidence": "No. Six focused queries covered the cited width-two paper, small-bias lower bounds and [11,7,3] coding terms. Several returned irrelevant or secondary results; only inspected primary sources support historical claims here. This did not systematically cover all bibliographic databases, unpublished notes, coding classifications or alternate problem terminology. Search availability and search failure are not novelty proofs."
+    },
+    {
+      "id": "L15",
+      "question": "Are the quantifiers and model restrictions material to the significance claim?",
+      "verdict": "limitation",
+      "evidence": "Yes. The witness and its fixed reading order may depend on S; the argument starts by reading the chosen quadratic pair. It does not establish a witness for every order prescribed in advance. Equal weights, eleven distinct points, read-once access and arbitrary deterministic transitions are essential stated restrictions. Claims about nonuniform weights, repeated samples or reversible transitions would require separate proofs. The article preserves these distinctions."
+    },
+    {
+      "id": "L16",
+      "question": "Does this establish a broad or asymptotic advance in pseudorandomness?",
+      "verdict": "limitation",
+      "evidence": "The note supplies one fixed finite parameter obstruction. It gives no family indexed by dimension, improved asymptotic seed length or support lower bound, or general theorem explaining how the four-versus-three count scales. A six-bit theorem can still be mathematically valid and instructive, but evidence of a major advance is absent. Generalizing the counting mechanism would materially strengthen significance."
+    },
+    {
+      "id": "L17",
+      "question": "Is the finite result nevertheless more than evidence from an unsuccessful random search?",
+      "verdict": "pass",
+      "evidence": "Yes, conditional on the analytic proof's correctness: it asserts an obstruction for every eleven-element support and gives a witness in a concrete small function family. The displayed example proves that passing all affine tests does not settle the branching-program question. These are precise mathematical statements that are more informative than random failures, even on a small universe. This review does not replace the separate full proof audit."
+    },
+    {
+      "id": "L18",
+      "question": "Does the article establish a practical application or a broadly important research target?",
+      "verdict": "limitation",
+      "evidence": "No application, performance gain, external open-problem designation or evidence that practitioners need exactly these parameters is supplied. The article admits the absence of a measured public benefit. The choice of six bits, eleven equally weighted distinct inputs and tolerance 1/4 currently looks like a narrowly selected finite design problem. Explain why those parameters arose before suggesting practical importance."
+    },
+    {
+      "id": "L19",
+      "question": "Is there a credible modest use for the work even if it remains a small finite exercise?",
+      "verdict": "pass",
+      "evidence": "Reviewer assessment: it could serve as a self-contained example connecting affine evaluation codes, coset counting and explicit two-state realizations, or as a benchmark for constructive witness software. L07 and L10 give particularly concrete ways to explain what the nonlinear step adds. These are plausible educational and verification uses, not claims of observed adoption or expert endorsement."
+    },
+    {
+      "id": "L20",
+      "question": "What level of novelty and significance is supported for public presentation?",
+      "verdict": "unresolved",
+      "evidence": "Treat it as an AI-assisted finite mathematical note with unverified originality. There is a coherent incremental result beyond parity tests, but current evidence does not support a major-breakthrough description. Strengthen it by adding the parity-safe comparison, archiving the restricted-family sharpness calculation, resolving twelve-point feasibility or generalizing the argument, and seeking a targeted human prior-art review. No journal-acceptance prediction or unobserved expert opinion is warranted."
+    }
+  ],
+  "summary": "Twenty checks completed: 11 pass, 5 limitation, 4 unresolved, 0 demonstrated failures. The note accurately limits its claims and its cited primary sources are relevant. Its exact obstruction is not implied by the elementary parity-only comparisons checked here: the supplied support passes every affine test at epsilon=1/4. The four-versus-three synthesis therefore has concrete finite content, but novelty remains unverified and significance is presently modest. The proof is best presented as a narrow research/expository note, not a major pseudorandomness breakthrough. The 7/22 constant is independently verified as sharp for the specified 963-function witness family on the displayed support, conditional on the theorem for the matching lower bound; no full-class optimum or twelve-point construction follows. Six searches cannot establish absence of prior art.",
+  "sources": [
+    {
+      "url": "https://theoryofcomputing.org/articles/v009a007/",
+      "title": "Pseudorandomness for Width-2 Branching Programs — journal landing page",
+      "role": "Primary bibliographic metadata: authors, 2013 publication, volume 9, article 7, pages 283–293. Browser refs turn28search0 and turn28view0."
+    },
+    {
+      "url": "https://theoryofcomputing.org/articles/v009a007/v009a007.pdf",
+      "title": "Andrej Bogdanov, Zeev Dvir, Elad Verbin and Amir Yehudayoff, Pseudorandomness for Width-2 Branching Programs",
+      "role": "Primary full text; Theorem 1.1 and Section 1.3 inspected for precise scope and direction of implication. Browser refs turn29view0, turn30view3, turn30view4 and turn31view3."
+    },
+    {
+      "url": "https://tau.ac.il/~nogaa/PDFS/aghp4.pdf",
+      "title": "Noga Alon, Oded Goldreich, Johan Hastad and Rene Peralta, Simple Constructions of Almost k-wise Independent Random Variables",
+      "role": "Author-hosted primary manuscript; Section 7 inspected for the sample/code equivalence, parameter convention and asymptotic bound limitations. Browser refs turn28view1, turn31view0 and turn31view1."
+    },
+    {
+      "url": "https://www.wisdom.weizmann.ac.il/~naor/PAPERS/bias.pdf",
+      "title": "Joseph Naor and Moni Naor, Small-bias Probability Spaces: Efficient Constructions and Applications",
+      "role": "Author-hosted primary manuscript; Section 3.1.2 inspected for the established linear-code connection. Browser refs turn28view2 and turn31view4."
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "reviewer": "AI algebra audit",
+  "checks": [
+    {
+      "id": "A01",
+      "question": "Does the affine-versus-quadratic case split cover the exact quantifiers and error threshold in the stated theorem?",
+      "verdict": "pass",
+      "evidence": "For an affine function with nonzero linear part, true acceptance is 1/2. Sample weights 0, 1, 2, 9, 10, or 11 give discrepancy at least 1/2 - 2/11 = 7/22. Complementation converts a high sample weight into a low one. Otherwise every nonconstant affine weight lies in 3 through 8, exactly the premise used subsequently. The construction chooses its coordinate order after S is fixed, consistent with the stated quantifier order."
+    },
+    {
+      "id": "A02",
+      "question": "Are all nonconstant affine tests genuinely balanced and computable in the specified two-state model?",
+      "verdict": "pass",
+      "evidence": "For a coefficient a_k = 1, the involution x -> x + e_k exchanges the two affine outputs and has no fixed points, giving 32 accepted cube inputs. Initialize q to zero and apply q <- q XOR (a_k x_k) while reading each coordinate once; add the constant in a transition or the acceptance rule. Ignoring a coordinate is an allowed identity transition."
+    },
+    {
+      "id": "A03",
+      "question": "Could evaluation fail to be injective, invalidating the asserted seven-dimensional code?",
+      "verdict": "pass",
+      "evidence": "The vector space of affine polynomials has dimension seven. A nonzero element in the evaluation kernel cannot be the constant one polynomial, since its evaluation has eleven ones. It would therefore be nonconstant with sample weight zero, contradicting the remaining-case hypothesis. Thus the evaluation map has zero kernel and its image has dimension seven."
+    },
+    {
+      "id": "A04",
+      "question": "Does the claimed minimum weight cover every nonzero codeword, including constants?",
+      "verdict": "pass",
+      "evidence": "Every nonzero affine polynomial is either the constant one, of evaluation weight eleven, or nonconstant, of evaluation weight between three and eight under the current hypothesis. Consequently every nonzero vector in C has weight at least three. The zero constant is the only zero codeword by injectivity."
+    },
+    {
+      "id": "A05",
+      "question": "Is a rank-four parity-check matrix with precisely this kernel guaranteed to exist?",
+      "verdict": "pass",
+      "evidence": "Since C has dimension seven inside F2^11, its annihilator under the standard dot product has dimension four. Taking a basis of that annihilator as the rows of H gives rank four, C contained in ker H, and dim ker H = 11 - 4 = 7. Equality of the two seven-dimensional spaces follows. No additional coding-theory classification is needed."
+    },
+    {
+      "id": "A06",
+      "question": "Can H have zero or repeated columns despite the code's minimum-weight statement?",
+      "verdict": "pass",
+      "evidence": "If column k is zero, H e_k = 0 puts a weight-one vector in C. If columns k and l coincide for distinct indices, H(e_k + e_l) = 0 puts a weight-two vector in C. Both violate A04. Hence H's columns are eleven distinct members of the fifteen nonzero vectors in F2^4."
+    },
+    {
+      "id": "A07",
+      "question": "Is the claim of seven unordered pairs summing to a nonzero syndrome exact?",
+      "verdict": "pass",
+      "evidence": "Fix s != 0. On F2^4 excluding 0 and s, the map a -> a + s is a fixed-point-free involution on fourteen elements. It therefore forms exactly seven disjoint pairs {a, a+s}. Both entries are nonzero, distinct, and sum to s. Neither 0 nor s participates."
+    },
+    {
+      "id": "A08",
+      "question": "Can deleting four columns leave fewer than four distinct weight-at-most-two representatives of a nonzero syndrome?",
+      "verdict": "pass",
+      "evidence": "If s is retained, each of the four deleted vectors destroys at most one of A07's seven disjoint pairs, leaving at least three pairs plus the singleton s. If s is omitted, its deletion destroys no pair and the other three deletions leave at least four pairs. Distinct surviving pairs produce distinct weight-two vectors. Independent exhaustive enumeration of all C(15,11) times 15 = 20,475 cases gave representative counts four in 12,600 cases, five in 7,560 cases, and six in 315 cases; none had fewer than four."
+    },
+    {
+      "id": "A09",
+      "question": "Does containment of every coordinate pair product really force the entire affine evaluation code to be multiplicatively closed?",
+      "verdict": "pass",
+      "evidence": "Write arbitrary codewords as alpha_0*1 + sum alpha_i v_i and beta_0*1 + sum beta_j v_j. Expanding their coordinatewise product gives a linear combination of 1, the v_i, and the v_i v_j. The diagonal products satisfy v_i^2 = v_i because entries are bits. Thus the hypothesized off-diagonal product containment, together with the existing generators, contains every expanded term and their sum."
+    },
+    {
+      "id": "A10",
+      "question": "Does the point-indicator argument actually force dimension eleven, or does it assume interpolation without proof?",
+      "verdict": "pass",
+      "evidence": "For t in S, each factor x_i + 1 + t_i equals one exactly when x_i = t_i. Their six-factor product is therefore the indicator of t on the full cube. Each factor evaluates into C, and multiplicative closure would place its product in C. Distinct sample points make these eleven evaluations the eleven separate standard basis vectors of F2^11. Their linear independence contradicts dim C = 7. Distinctness is explicitly part of the theorem."
+    },
+    {
+      "id": "A11",
+      "question": "Does the failed closure yield a distinct-coordinate product outside C and transfer the syndrome count to its affine coset?",
+      "verdict": "pass",
+      "evidence": "By A09-A10 at least one v_i v_j is outside C; it cannot have i = j because v_i^2 = v_i is already in C. For h = v_i v_j, Hh is nonzero. Moreover Hy = Hh if and only if y+h is in ker H = C, so the complete syndrome fiber is exactly h+C. The at-least-four representatives counted in A08 therefore belong to the required coset."
+    },
+    {
+      "id": "A12",
+      "question": "Could a missing pair cell undermine the argument about corrections involving other coordinates?",
+      "verdict": "pass",
+      "evidence": "For a pair value (u,v), its indicator is (x_i+1+u)(x_j+1+v), which expands as x_i x_j plus an affine polynomial in x_i and x_j. If the cell were empty on S, its evaluation would be zero, implying h belongs to span{1,v_i,v_j}, hence to C. That contradicts the chosen h. All four pair cells must therefore be nonempty."
+    },
+    {
+      "id": "A13",
+      "question": "Are all eight elements of h+L exactly single-cell or three-cell indicators, with no overlooked type?",
+      "verdict": "pass",
+      "evidence": "On the four pair inputs, the XOR of the four outputs of xy+ax+by+c is one, because the degree-two coefficient is one. Thus its truth table has odd weight: one or three. The eight coefficient triples (a,b,c) give distinct truth tables and exhaust the four singleton indicators and their four complements. Since all pair cells occur on S, their evaluations remain distinct. Independent enumeration of all eight truth tables confirmed four of weight one and four of weight three."
+    },
+    {
+      "id": "A14",
+      "question": "Can h+L contain four low-weight vectors despite having only four nonempty pair cells?",
+      "verdict": "pass",
+      "evidence": "Every three-cell indicator has sample weight at least three because each cell is nonempty. Hence a vector of weight at most two in h+L must indicate a single cell of size one or two. If all four cells had size at most two, S would have at most eight elements, contradicting its size eleven. Thus there are at most three such vectors. The count compares distinct evaluation vectors, not merely polynomial expressions."
+    },
+    {
+      "id": "A15",
+      "question": "Does the counting difference really force an affine correction using an outside coordinate?",
+      "verdict": "pass",
+      "evidence": "The coset h+C has at least four low-weight vectors, while its subset h+L has at most three. Choose y in the set difference and put p = y+h. Then p is in C but not L. Injectivity of affine evaluation supplies a unique affine polynomial for p. If that polynomial used only x_i, x_j, and a constant, its evaluation would lie in L. Therefore at least one other coordinate has coefficient one."
+    },
+    {
+      "id": "A16",
+      "question": "Can the selected quadratic fail to be balanced, invalidating its claimed discrepancy?",
+      "verdict": "pass",
+      "evidence": "Choose k outside {i,j} with coefficient one in p. Flipping x_k leaves the product x_i x_j unchanged and flips p, so it flips f = x_i x_j + p. The cube partitions into 32 opposite-output pairs, giving acceptance exactly 1/2. Its evaluation is y, of weight at most two, so its discrepancy is at least 1/2 - 2/11 = 7/22. Finally 7/22 - 1/4 = 3/44 > 0, establishing the stated quarter-error impossibility."
+    },
+    {
+      "id": "A17",
+      "question": "Is the quadratic identity and its two-state realization correct for every coefficient choice, including constants and ignored coordinates?",
+      "verdict": "pass",
+      "evidence": "Expanding (x_i+a_j)(x_j+a_i) gives x_i x_j + a_i x_i + a_j x_j + a_i a_j. Adding b+a_i a_j cancels the extra product constant. Store x_i+a_j, AND with x_j+a_i, then XOR the selected remaining bits and the final constant. Each update uses only the current state and current input, and every coordinate is read once; overwrite and AND transitions are legal in this model. Independent evaluation of all 1,800 balanced coefficient/constant formulas on all 64 inputs produced 115,200 pointwise comparisons with no implementation disagreement and no unbalanced formula."
+    },
+    {
+      "id": "A18",
+      "question": "Is the claimed family of 963 balanced tests sufficient, correctly counted, and free of accidental duplicates?",
+      "verdict": "pass",
+      "evidence": "There are 2^6-1 = 63 nonzero linear parities. For each of C(6,2)=15 quadratic pairs, the outside four coefficients have 15 nonzero assignments and the inside two have four assignments, giving 60 choices and 900 quadratics. Different algebraic normal forms give different Boolean functions. Complementing a function preserves absolute discrepancy, so constant terms may be dropped for this claim, although doing so can change low sample weight into high sample weight. Independent enumeration found exactly 963 distinct truth tables, all with 32 ones."
+    },
+    {
+      "id": "A19",
+      "question": "Does the published numerical example work under its explicitly stated bit convention?",
+      "verdict": "pass",
+      "evidence": "Using x_1 as the most significant bit and x_6 as the least significant bit, direct evaluation of x_5 x_6 + x_4 + x_5 + x_6 on the eleven listed integers accepts exactly 27 and 43, and accepts 32 of all 64 integers. The displayed first two transitions produce (1+x_6)(1+x_5); the third XORs x_4+1, yielding exactly the stated polynomial. The discrepancy is therefore exactly 7/22 for this particular function and sample."
+    },
+    {
+      "id": "A20",
+      "question": "Does the equality example establish that 7/22 is the best possible worst-case discrepancy for the whole program class?",
+      "verdict": "limitation",
+      "evidence": "No. On the same displayed sample, the allowed program g(x) = x_6 AND (x_5 OR ((1+x_1) AND x_2 AND x_4)), with x_3 ignored, accepts eight sample points and eighteen cube points. Its discrepancy is 8/11 - 18/64 = 157/352, approximately 0.446023, strictly above 7/22. It is realized in order x_1,...,x_6 by q <- 1+x_1; q <- q AND x_2; ignore x_3; q <- q AND x_4; q <- q OR x_5; q <- q AND x_6. Independent enumeration of all 18,664 functions in that fixed order confirmed this larger discrepancy. The article explicitly disclaims an exact optimum, so this is a boundary on interpretation rather than a failure of its stated theorem."
+    }
+  ],
+  "summary": "The exact stated theorem passes this adversarial algebra audit: for every eleven-element subset of F2^6 with equal weights, an allowed deterministic two-state read-once program, with its order chosen for that subset, has discrepancy at least 7/22 and hence greater than 1/4. The affine-code, syndrome-counting, multiplicative-closure, pair-cell, balancing, and implementation steps all withstand independent re-derivation. No substantive proof gap or counterexample to that theorem was found. This is an AI audit, not independent human endorsement. Fresh exhaustive finite checks covered 20,475 syndrome cases, eight pair-cell truth tables, all 1,800 balanced quadratic implementations on 64 inputs, and the displayed example; they did not enumerate all eleven-element cube subsets. Universality rests on the analytic proof. The result is a lower bound, not an exact optimum for the full program class; the displayed sample itself admits the stronger discrepancy 157/352. No conclusion about twelve-point sufficiency, nonuniform sampling, prescribed arbitrary orders, reversible-only programs, or novelty follows from this audit."
+}

@@ -1,0 +1,374 @@
+{
+  "hashes": [
+    {
+      "file": "README.txt",
+      "matches": true
+    },
+    {
+      "file": "Stakeholders_Letter_Eleven_Inputs.docx",
+      "matches": true
+    },
+    {
+      "file": "Stakeholders_Letter_Eleven_Inputs.html",
+      "matches": true
+    },
+    {
+      "file": "Stakeholders_Letter_Eleven_Inputs.txt",
+      "matches": true
+    },
+    {
+      "file": "Stakeholders_Letter_Eleven_Inputs_Blog_Fragment.html",
+      "matches": true
+    },
+    {
+      "file": "build_publication.py",
+      "matches": true
+    },
+    {
+      "file": "evidence/constructive_eleven_check.json",
+      "matches": true
+    },
+    {
+      "file": "evidence/eleven_point_obstruction.py",
+      "matches": true
+    },
+    {
+      "file": "evidence/publication_sanity_check.json",
+      "matches": true
+    },
+    {
+      "file": "evidence/publication_sanity_check.py",
+      "matches": true
+    }
+  ],
+  "publication_rerun": {
+    "syndrome_cases": 20475,
+    "representative_count_distribution": {
+      "4": 12600,
+      "5": 7560,
+      "6": 315
+    },
+    "example_coordinate_convention": "x1 is most significant bit",
+    "example_sample_accepted_words": [
+      27,
+      43
+    ],
+    "example_full_cube_accepted": 32,
+    "example_exact_error": "7/22",
+    "quadratic_formulas_checked": 1800,
+    "inputs_per_formula": 64,
+    "all_checks_passed": true
+  },
+  "formula_exhaustion": {
+    "counts": {
+      "affine_including_constants": 128,
+      "excluded_local_quadratic": 120,
+      "balanced_quadratic": 1800
+    },
+    "inputs_per_formula": 64,
+    "unique_without_constants": 963,
+    "unique_with_constants": 1926
+  },
+  "example": {
+    "full_accepted": 32,
+    "sample_accepted_words": [
+      27,
+      43
+    ],
+    "error": "7/22",
+    "excess_over_allowance": "3/44"
+  },
+  "independent_syndromes": {
+    "column_sets": 1365,
+    "syndrome_cases": 20475,
+    "weight_at_most_two_vectors_per_set": 67,
+    "nonzero_syndrome_representation_distribution": {
+      "4": 12600,
+      "5": 7560,
+      "6": 315
+    },
+    "zero_syndrome_low_vectors": 1
+  },
+  "canonical_code": {
+    "distinct_affine_evaluations": 128,
+    "dimension": 7,
+    "weight_enumerator": {
+      "0": 1,
+      "3": 13,
+      "4": 26,
+      "5": 24,
+      "6": 24,
+      "7": 26,
+      "8": 13,
+      "11": 1
+    },
+    "outside_products": [
+      {
+        "lsb0_pair": [
+          0,
+          1
+        ],
+        "low_coset": 6,
+        "low_local": 3,
+        "cell_sizes_00_01_10_11": [
+          1,
+          2,
+          2,
+          6
+        ]
+      },
+      {
+        "lsb0_pair": [
+          0,
+          2
+        ],
+        "low_coset": 6,
+        "low_local": 3,
+        "cell_sizes_00_01_10_11": [
+          1,
+          2,
+          2,
+          6
+        ]
+      },
+      {
+        "lsb0_pair": [
+          0,
+          3
+        ],
+        "low_coset": 6,
+        "low_local": 3,
+        "cell_sizes_00_01_10_11": [
+          1,
+          2,
+          2,
+          6
+        ]
+      },
+      {
+        "lsb0_pair": [
+          0,
+          4
+        ],
+        "low_coset": 6,
+        "low_local": 3,
+        "cell_sizes_00_01_10_11": [
+          1,
+          2,
+          2,
+          6
+        ]
+      },
+      {
+        "lsb0_pair": [
+          0,
+          5
+        ],
+        "low_coset": 6,
+        "low_local": 3,
+        "cell_sizes_00_01_10_11": [
+          1,
+          2,
+          6,
+          2
+        ]
+      },
+      {
+        "lsb0_pair": [
+          1,
+          2
+        ],
+        "low_coset": 6,
+        "low_local": 3,
+        "cell_sizes_00_01_10_11": [
+          1,
+          2,
+          2,
+          6
+        ]
+      },
+      {
+        "lsb0_pair": [
+          1,
+          3
+        ],
+        "low_coset": 4,
+        "low_local": 3,
+        "cell_sizes_00_01_10_11": [
+          1,
+          2,
+          2,
+          6
+        ]
+      },
+      {
+        "lsb0_pair": [
+          1,
+          5
+        ],
+        "low_coset": 6,
+        "low_local": 2,
+        "cell_sizes_00_01_10_11": [
+          2,
+          1,
+          5,
+          3
+        ]
+      },
+      {
+        "lsb0_pair": [
+          2,
+          4
+        ],
+        "low_coset": 4,
+        "low_local": 3,
+        "cell_sizes_00_01_10_11": [
+          1,
+          2,
+          2,
+          6
+        ]
+      },
+      {
+        "lsb0_pair": [
+          2,
+          5
+        ],
+        "low_coset": 4,
+        "low_local": 3,
+        "cell_sizes_00_01_10_11": [
+          1,
+          2,
+          6,
+          2
+        ]
+      },
+      {
+        "lsb0_pair": [
+          3,
+          4
+        ],
+        "low_coset": 6,
+        "low_local": 3,
+        "cell_sizes_00_01_10_11": [
+          1,
+          2,
+          2,
+          6
+        ]
+      },
+      {
+        "lsb0_pair": [
+          3,
+          5
+        ],
+        "low_coset": 6,
+        "low_local": 2,
+        "cell_sizes_00_01_10_11": [
+          2,
+          1,
+          5,
+          3
+        ]
+      },
+      {
+        "lsb0_pair": [
+          4,
+          5
+        ],
+        "low_coset": 4,
+        "low_local": 3,
+        "cell_sizes_00_01_10_11": [
+          1,
+          2,
+          6,
+          2
+        ]
+      }
+    ]
+  },
+  "cell_size_exhaustion": {
+    "positive_compositions_of_11": 120,
+    "max_low_local": 3
+  },
+  "targeted_witnesses": [
+    {
+      "case": "all_odd",
+      "kind": "affine",
+      "sample_accepted": 11,
+      "full_accepted": 32,
+      "exact_error": "1/2",
+      "formula": {
+        "kind": "affine",
+        "a_mask_lsb0": 1,
+        "b": 0
+      }
+    },
+    {
+      "case": "all_even",
+      "kind": "affine",
+      "sample_accepted": 0,
+      "full_accepted": 32,
+      "exact_error": "1/2",
+      "formula": {
+        "kind": "affine",
+        "a_mask_lsb0": 1,
+        "b": 0
+      }
+    },
+    {
+      "case": "canonical",
+      "kind": "quadratic",
+      "sample_accepted": 2,
+      "full_accepted": 32,
+      "exact_error": "7/22",
+      "formula": {
+        "kind": "quadratic",
+        "product_bits_lsb0": [
+          0,
+          1
+        ],
+        "a_mask_lsb0": 7,
+        "b": 0
+      }
+    }
+  ],
+  "support_order_invariance": {
+    "orders_checked": 12,
+    "same_formula_and_mask": true
+  },
+  "default_validation": {
+    "invalid_inputs": 6,
+    "rejected": 6
+  },
+  "verifier_structure_gap": {
+    "one_read_program_accepted_by_helper": true,
+    "returned_order": [
+      6
+    ],
+    "valid_generated_programs_exhaustively_checked_separately": true
+  },
+  "optimization_validation_gap": {
+    "optimized_cli_accepted_eleven_repetitions_of_one": true,
+    "sample_accepted": 11,
+    "exact_error": "1/2"
+  },
+  "complements": {
+    "all_twelve_acceptance_counts_checked": true,
+    "exact_errors_k_0_through_11": [
+      "1/2",
+      "9/22",
+      "7/22",
+      "5/22",
+      "3/22",
+      "1/22",
+      "1/22",
+      "3/22",
+      "5/22",
+      "7/22",
+      "9/22",
+      "1/2"
+    ]
+  },
+  "support_universe": 743595781824
+}

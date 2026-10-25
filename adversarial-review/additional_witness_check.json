@@ -1,0 +1,43 @@
+{
+  "coordinate_convention": "Displayed x1 is most significant bit",
+  "parity_sample_weight_histogram": {
+    "4": 26,
+    "6": 24,
+    "8": 13
+  },
+  "parity_maximum_discrepancy": "5/22",
+  "restricted_family_distinct_functions": 963,
+  "restricted_family_sample_weight_histogram": {
+    "2": 25,
+    "3": 36,
+    "4": 226,
+    "5": 112,
+    "6": 363,
+    "7": 84,
+    "8": 109,
+    "9": 8
+  },
+  "restricted_family_maximum_discrepancy": "7/22",
+  "stronger_witness_formula": "x6 AND (x5 OR ((NOT x1) AND x2 AND x4))",
+  "stronger_witness_reading_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "stronger_witness_sample_accepted": [
+    15,
+    21,
+    23,
+    27,
+    29,
+    31,
+    43,
+    63
+  ],
+  "stronger_witness_full_cube_accepted": 18,
+  "stronger_witness_discrepancy": "157/352",
+  "all_checks_passed": true
+}

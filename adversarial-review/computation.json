@@ -1,0 +1,134 @@
+{
+  "reviewer": "AI adversarial computation reviewer; independent deterministic audit, not human peer review or proof-assistant certification",
+  "checks": [
+    {
+      "id": "C01",
+      "question": "Do the inspected article, checkers, and recorded outputs match the package's own version manifest?",
+      "verdict": "pass",
+      "evidence": "Independent hashlib SHA-256 computation matched all ten entries of stakeholders_letter_20261020/SHA256SUMS.txt, including the HTML article, both Python checkers, and both evidence JSON files. See computation_work/results.json: hashes. This establishes internal version consistency, not external authenticity."
+    },
+    {
+      "id": "C02",
+      "question": "Does the deterministic publication checker actually reproduce its archived output?",
+      "verdict": "pass",
+      "evidence": "Ran python3 stakeholders_letter_20261020/evidence/publication_sanity_check.py and compared parsed JSON with evidence/publication_sanity_check.json. Exact match: 20,475 syndrome cases, counts {4:12600,5:7560,6:315}, example accepted words [27,43], full count 32, error 7/22, and 1,800 quadratic formulas. See computation_work/results.json: publication_rerun."
+    },
+    {
+      "id": "C03",
+      "question": "Can the packed affine transition implementation disagree with the asserted affine polynomial?",
+      "verdict": "pass",
+      "evidence": "Independently decoded each 4-entry transition table and simulated all 128 affine coefficient/constant combinations on all 64 inputs. All 8,192 outputs matched a separate sum-modulo-two oracle. The 126 nonconstant functions had 32 ones; the two constants had 0 and 64. Source and execution: computation_work/independent_checks.py, formula_exhaustion."
+    },
+    {
+      "id": "C04",
+      "question": "Can the AND/XOR quadratic implementation, including its folded constant, fail on an untested coefficient pattern?",
+      "verdict": "pass",
+      "evidence": "Exhausted 15 coordinate pairs times 64 linear masks times 2 constants times 64 inputs using a separate polynomial oracle and packed-table decoder: 122,880 output comparisons, all equal. Of the 1,920 formulas, exactly 1,800 satisfy the outside-coordinate condition and are balanced. The 120 excluded local formulas have 16 or 48 ones, confirming that the condition is necessary for the stated balance argument. See computation_work/results.json: formula_exhaustion."
+    },
+    {
+      "id": "C05",
+      "question": "Do the actual program generators obey the six-coordinate, two-state, fixed-order model?",
+      "verdict": "pass",
+      "evidence": "For all 2,048 generated programs covered in C03-C04, separately required sorted(order)==[0,1,2,3,4,5], six transitions, and every transition code between 0 and 15. All passed. The independent simulator starts in state 0 and every table output is one bit. This closes a structural check absent from the supplied execute_and_verify helper, noted separately in C17."
+    },
+    {
+      "id": "C06",
+      "question": "Does the displayed MSB-first example correspond to the constructor's LSB-zero formula and transitions?",
+      "verdict": "pass",
+      "evidence": "Independent truth table for LSB-zero pair (0,1), mask 7, constant 0 accepts exactly sample integers [27,43] and 32 cube integers. This is displayed x5*x6+x4+x5+x6. The canonical constructor returns pair [0,1], mask 7, order [6,5,4,3,2,1] in displayed coordinates, and transitions [5,4,9,12,12,12]. The publication checker independently uses x[0] as the most significant bit and agrees."
+    },
+    {
+      "id": "C07",
+      "question": "Are discrepancy and margin calculations exact, with no rounding or percentage-unit mistake?",
+      "verdict": "pass",
+      "evidence": "Recomputed with fractions.Fraction: 1/2-2/11=7/22; 7/22-1/4=3/44. These equal approximately 31.81818 and 6.81818 percentage points. Original execute_and_verify computes abs(Fraction(accepted,11)-Fraction(full,64)); it does not use floating-point threshold tests. See computation_work/results.json: example."
+    },
+    {
+      "id": "C08",
+      "question": "Does an independently indexed exhaustive syndrome calculation falsify the claimed minimum of four low-weight representatives?",
+      "verdict": "pass",
+      "evidence": "Enumerated every one of C(15,11)=1,365 column sets and all 67 eleven-bit vectors of weights 0,1,2. Calculated syndromes by four binary matrix dot products rather than the supplied XOR-pair counting routine. Across 20,475 nonzero syndromes, representative counts were {4:12600,5:7560,6:315}. Every zero syndrome had only the zero vector among these 67 vectors. No count below four occurred. See independent_syndromes in computation_work/results.json."
+    },
+    {
+      "id": "C09",
+      "question": "Does the canonical example actually reach the injective dimension-seven affine-code branch assumed by the quadratic construction?",
+      "verdict": "pass",
+      "evidence": "Separately evaluated all 128 affine functions on the canonical eleven points. There are 128 distinct evaluations, so dimension seven. Exact weight enumerator is {0:1,3:13,4:26,5:24,6:24,7:26,8:13,11:1}. Thus no nonconstant affine evaluation has weight <=2 or >=9, and minimum nonzero code weight is three. See computation_work/results.json: canonical_code."
+    },
+    {
+      "id": "C10",
+      "question": "Are the local-versus-global low-weight counts and the cell-size bound numerically sound?",
+      "verdict": "pass",
+      "evidence": "For all 13 coordinate products outside the canonical affine code, independently found four or six low-weight coset vectors, at most three local ones, and all four pair cells nonempty. Pair (0,1) has cell sizes [1,2,2,6], six coset vectors and three local ones, matching the archive. Also exhausted all C(10,3)=120 positive ordered four-cell compositions of 11: among each cell and its complement, at most three have weight <=2. See canonical_code and cell_size_exhaustion."
+    },
+    {
+      "id": "C11",
+      "question": "Is the stated 963-function witness family overcounted or missing its balanced-function restriction?",
+      "verdict": "pass",
+      "evidence": "Constructed and deduplicated full 64-bit truth tables, rather than relying solely on parameter counts. Exactly 963 distinct balanced functions occur without constants: 63 nonzero affine parities and 900 eligible quadratics. Including both constants gives exactly 1,926 distinct balanced functions. No pair/coefficient collision or affine/quadratic collision occurred. See computation_work/results.json: formula_exhaustion."
+    },
+    {
+      "id": "C12",
+      "question": "Does omitting complements preserve every discrepancy threshold used by the finite-family argument?",
+      "verdict": "pass",
+      "evidence": "For each possible sample acceptance count k=0,...,11, exactly compared |k/11-1/2| with |(11-k)/11-1/2|. All match. Counts 0,1,2,9,10,11 give errors 1/2,9/22,7/22,7/22,9/22,1/2 respectively, so both low and high branches satisfy the asserted >=7/22 threshold. See computation_work/results.json: complements."
+    },
+    {
+      "id": "C13",
+      "question": "Can a rank-deficient or affine-hyperplane support reach an invalid injectivity assertion before yielding its easy witness?",
+      "verdict": "pass",
+      "evidence": "Targeted the support [0,2,4,6,8,10,12,14,16,18,20], which lies in the x6=0 hyperplane. Constructor returns the affine function with mask 1, sample acceptance 0, cube acceptance 32, and exact error 1/2 before requiring 128 distinct evaluations. Source control flow similarly returns immediately for any nonconstant zero evaluation. See computation_work/results.json: targeted_witnesses."
+    },
+    {
+      "id": "C14",
+      "question": "Can list ordering of the same support corrupt affine-evaluation bit positions or the reported function?",
+      "verdict": "pass",
+      "evidence": "Ran the canonical support in its eleven cyclic list rotations and reversed order. All twelve executions returned the identical formula and 64-bit function mask. Counts remained 2/11 and 32/64. This is a targeted indexing check, not a claim to enumerate all list permutations or supports. See computation_work/results.json: support_order_invariance."
+    },
+    {
+      "id": "C15",
+      "question": "Does normal Python execution reject inputs outside the theorem's support domain?",
+      "verdict": "pass",
+      "evidence": "Direct witness calls rejected six concrete invalid inputs: ten points; a repeated point; 64; -1; boolean True; and floating-point 1.0. Each raised AssertionError. The source uses len(support)==len(set(support))==11 and exact type(x) is int with 0<=x<64. See computation_work/results.json: default_validation. This result assumes assertions are enabled; C18 tests the opposite setting."
+    },
+    {
+      "id": "C16",
+      "question": "Does the constructor always normalize its witness to the article's at-most-two sample acceptances?",
+      "verdict": "limitation",
+      "evidence": "Concrete counterexample to that normalization expectation: --support 1 3 5 7 9 11 13 15 17 19 21 returns mask 1, b=0, sample_accepted=11, full_accepted=32, exact_error=1/2. The affine branch returns immediately on weight >=9 and does not complement. This is not a counterexample to the stated absolute-discrepancy theorem: the returned witness is valid, and complementing it gives zero sample acceptances exactly as the proof explains. It matters only if readers expect every emitted witness to have the low-side presentation."
+    },
+    {
+      "id": "C17",
+      "question": "Is execute_and_verify itself a complete verifier of the declared read-once six-input program model?",
+      "verdict": "limitation",
+      "evidence": "Concrete falsifier: execute_and_verify([1,3,5,7,9,11,13,15,17,19,21], [0], [6], {'kind':'affine','a_mask_lsb0':1,'b':0}) returns successfully with displayed order [6]. It reads only one coordinate. The helper uses zip(order,transitions) and validates functional agreement and discrepancy, but neither lengths nor coordinate permutation. Actual supplied generators pass the exhaustive structural check in C05, so this does not invalidate their emitted programs or the theorem. An external caller should not treat the helper as a full structural certificate."
+    },
+    {
+      "id": "C18",
+      "question": "Do the checkers retain input and correctness guards when Python assertions are disabled?",
+      "verdict": "limitation",
+      "evidence": "Ran python3 -O evidence/eleven_point_obstruction.py --support 1 1 1 1 1 1 1 1 1 1 1. It returned JSON successfully with sample_accepted=11 and error 1/2 despite the repeated-point input violating the theorem. The support guards and most checker claims are assert statements, so -O or PYTHONOPTIMIZE disables them. The documented commands use ordinary python3 and were checked with assertions enabled; the issue is a reproducibility/hardening limitation, not a failure under documented normal execution."
+    },
+    {
+      "id": "C19",
+      "question": "Can this package independently authenticate every historical computation attributed to the fresh review sessions?",
+      "verdict": "unresolved",
+      "evidence": "The HTML explicitly says the fresh-review session code was not archived. The evidence folder contains only eleven_point_obstruction.py, publication_sanity_check.py, and their two JSON outputs. Thus the separately reported 3,000 random supports and 1,000 affine images cannot be independently audited as those historical sessions from this package. The deterministic publication reproduction is available and passes; it does not authenticate missing session provenance. No additional random trials were run in this audit."
+    },
+    {
+      "id": "C20",
+      "question": "Do successful archived and independent computations by themselves establish the universal eleven-support theorem?",
+      "verdict": "limitation",
+      "evidence": "No. Independently computed C(64,11)=743,595,781,824 possible distinct supports. The supplied source samples 1,000 ordinary supports and 1,000 affine images, while its exhaustive loops cover syndrome column sets and implementations rather than all supports. This review likewise exhausts finite algebra/implementation subclaims and selected adversarial cases, not all supports or a formally verified proof. The HTML accurately discloses this and assigns universality to the analytic proof. This is the strongest evidentiary limitation."
+    }
+  ],
+  "summary": {
+    "core_verdict": "No serious computational error or counterexample to the central absolute-discrepancy claim was found. Exact arithmetic, coordinate conversion, all generated formula implementations, finite-family cardinalities, and exhaustive syndrome counts agree with the article.",
+    "counts": {"pass": 15, "fail": 0, "limitation": 4, "unresolved": 1},
+    "strongest_limitation": "These computations do not certify universality across the 743,595,781,824 eleven-point supports; that conclusion rests on the analytic proof, which has no external human review or proof-assistant certificate here.",
+    "concrete_caveats": "The constructor can return a high-side affine witness; execute_and_verify does not itself enforce six-coordinate structure; assertion-disabled execution accepts out-of-domain inputs; complete historical fresh-review session code is absent. None of these caveats falsifies the documented theorem or the normally generated witness programs.",
+    "independent_reproduction_command": "python3 /workspace/scratch/4b5e11f9698b/cynical_review_20261020/computation_work/independent_checks.py",
+    "independent_results": "/workspace/scratch/4b5e11f9698b/cynical_review_20261020/computation_work/results.json",
+    "scope": "AI review with exactly twenty evidence-backed checks; no subagents, no randomized resampling, and no edits to the existing publication artifacts."
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "reviewer": "Fresh AI review of the computational model and quantifiers; one AI session performing 20 structured checks, not 20 independent mathematicians",
+  "checks": [
+    {
+      "id": "M01",
+      "question": "Is the target distribution precisely specified, rather than an unstated population or input distribution?",
+      "verdict": "pass",
+      "evidence": "The model defines U as uniform on all 64 elements of F_2^6. Every true acceptance probability and balancing argument is relative to this distribution. The theorem makes no unsupported claim for an arbitrary real-world distribution."
+    },
+    {
+      "id": "M02",
+      "question": "Can the result be transferred directly from eleven distinct support points to eleven draws with repetitions?",
+      "verdict": "limitation",
+      "evidence": "No. S is explicitly an eleven-element subset, with eleven distinct points. Repeated draws produce a weighted distribution on a smaller support. Step three uses distinctness to make each point indicator evaluate to a separate unit vector; this argument cannot simply be reused on repeated list entries. The appendix expressly excludes repeated sample points, but the standalone headline does not convey this restriction."
+    },
+    {
+      "id": "M03",
+      "question": "Does the proof rule out an arbitrary distribution supported on eleven points?",
+      "verdict": "limitation",
+      "evidence": "No. The proof turns a Boolean vector of weight at most two into acceptance probability at most 2/11, which requires equal masses. With nonuniform masses, two accepted support points might carry much more mass. Nothing here rules out an eleven-point distribution with optimized unequal weights. The theorem and unresolved-questions section correctly state this exclusion."
+    },
+    {
+      "id": "M04",
+      "question": "Does the text state the correct adversarial order of quantifiers?",
+      "verdict": "pass",
+      "evidence": "The text explicitly states: for every S, there exists a program and a fixed reading order, both allowed to depend on S. This is exactly the quantifier order needed to disprove a single fixed distribution fooling every program. It is not a statement that the witness must be chosen before the sample."
+    },
+    {
+      "id": "M05",
+      "question": "Could a reader incorrectly infer that one universal balanced program defeats every eleven-point sample?",
+      "verdict": "pass",
+      "evidence": "The text explicitly says the failing program may depend on the sample. This distinction is necessary: for any fixed balanced Boolean program, choose five accepted inputs and six rejected inputs. Its sample error is then |5/11 - 1/2| = 1/22, far below 7/22. Thus a single universal balanced witness is impossible, and the article does not claim one."
+    },
+    {
+      "id": "M06",
+      "question": "Does the construction prove the same lower bound for every coordinate order fixed in advance?",
+      "verdict": "limitation",
+      "evidence": "No. The constructed witness reads its selected product coordinates first, then the remaining coordinates. The proof therefore establishes a result for the union of the program classes over all fixed permutations. It does not establish the stronger quantifier order: for each prescribed permutation and each S, a witness exists in that order. The appendix explicitly acknowledges this point."
+    },
+    {
+      "id": "M07",
+      "question": "Does choosing the reading order after seeing S secretly introduce input-adaptive queries?",
+      "verdict": "pass",
+      "evidence": "No. S selects the witness program before that program is run on an input x. Within each execution the six-coordinate permutation is fixed and does not depend on the values read. This is an oblivious read-once program, even though the adversary selects which such program to use against S."
+    },
+    {
+      "id": "M08",
+      "question": "Does 'only two internal states' mean an autonomous two-state machine with a single transition rule and no externally specified position?",
+      "verdict": "limitation",
+      "evidence": "No. The formal model is a layered width-two program: the input order and six transition functions are part of its fixed description, and the transition function may depend on the layer. Two states measure the state carried between layers, not the complete program description or all control needed by a physical implementation. The ordinary-language section does specify step-dependent rules, but 'very small program' is not a formal program-size bound beyond this model."
+    },
+    {
+      "id": "M09",
+      "question": "Is arbitrary deterministic state merging genuinely allowed, and can the result be asserted for reversible transitions?",
+      "verdict": "limitation",
+      "evidence": "State merging is explicitly allowed in the model, so the AND update is legal. For an input bit making its second factor zero, this update sends both prior states to zero and is noninvertible. The proof consequently does not establish the claim for reversible or permutation transitions. Both the model and the example disclose this limitation."
+    },
+    {
+      "id": "M10",
+      "question": "Can every proposed pair-product witness actually be computed with two states under the stated rules?",
+      "verdict": "pass",
+      "evidence": "I independently enumerated all 15 coordinate pairs, all 60 affine coefficient vectors having a nonzero coefficient outside the pair, and both constants. For all 1,800 formulas and all 64 inputs, the pair-first state updates agreed with the formula. The identity (x_i+a_j)(x_j+a_i) + r + b + a_i*a_j expands to x_i*x_j + a_i*x_i + a_j*x_j + r + b over F_2. No additional stored input bit is needed."
+    },
+    {
+      "id": "M11",
+      "question": "Does the construction require an unmentioned choice of initial state or a more powerful acceptance rule?",
+      "verdict": "pass",
+      "evidence": "It does not. Starting at state zero, the first update stores x_i+a_j. The final constant b+a_i*a_j can be XORed into the last of the four remaining transitions, after which acceptance is simply final state one. I used exactly this convention in the exhaustive 1,800-formula implementation check."
+    },
+    {
+      "id": "M12",
+      "question": "Are irrelevant coordinates actually read once, and does ignoring their value violate the model?",
+      "verdict": "pass",
+      "evidence": "The construction schedules every coordinate exactly once. A coordinate with coefficient zero uses the identity transition on the state for either input bit. Reading a variable does not require the computed function to depend on it, and the stated arbitrary-transition model imposes no such requirement. This also makes ordinary parity functions legal six-step programs."
+    },
+    {
+      "id": "M13",
+      "question": "Is the asserted true acceptance rate of exactly one half justified for the nonlinear witnesses?",
+      "verdict": "pass",
+      "evidence": "Step four selects an affine correction using at least one coordinate outside the product pair. Toggling that outside coordinate toggles the output and leaves the product unchanged, pairing the 64 cube points into opposite-output pairs. Independently generated truth tables for all 963 stated functions each contained exactly 32 ones."
+    },
+    {
+      "id": "M14",
+      "question": "Does the numerical discrepancy really violate the inclusive error allowance, without a bias-convention error?",
+      "verdict": "pass",
+      "evidence": "The quantity is absolute acceptance-probability error: 1/2 - 2/11 = 7/22, and 7/22 - 1/4 = 3/44 > 0. This is 31.818... percentage points, exceeding 25 points by 6.818... points. A signed parity bias would be twice this number; the article explicitly distinguishes that convention. I also checked that the displayed example accepts exactly sample points 27 and 43 and exactly 32 full-cube points."
+    },
+    {
+      "id": "M15",
+      "question": "Are there really 963 distinct balanced tests in the proposed finite witness family?",
+      "verdict": "pass",
+      "evidence": "There are 63 nonzero linear parities. For each of the 15 unordered coordinate pairs, 64 minus 4 equals 60 linear coefficient vectors use an outside coordinate, giving 900 quadratics. I generated every truth table and found exactly 963 distinct tables, all balanced. Distinct quadratic monomials also distinguish pairs in the unique Boolean multilinear representation."
+    },
+    {
+      "id": "M16",
+      "question": "Is failure against this small test family logically sufficient for failure against the full program class?",
+      "verdict": "pass",
+      "evidence": "Yes. Every member of the 963-function family has an allowed program implementation, so the family is a subclass. An absolute-error witness in this family defeats the larger class. The article correctly avoids the converse: these 963 functions do not represent every allowed program, and passing them on some other distribution would not by itself prove fooling of the full class."
+    },
+    {
+      "id": "M17",
+      "question": "After constants are removed, does the 963-function family still guarantee a witness with sample rate at most 2/11?",
+      "verdict": "limitation",
+      "evidence": "It guarantees the absolute discrepancy, but the selected constant-free member may have sample rate at least 9/11 rather than at most 2/11. Complementing it recovers the low-rate witness and remains legal in the full program class. The finite-family section correctly invokes preservation of absolute discrepancy; its 963 count should not be restated as 963 tests that always supply the low-tail witness themselves."
+    },
+    {
+      "id": "M18",
+      "question": "Does this theorem imply that a random eleven-input sample fails to estimate a fixed program with high probability?",
+      "verdict": "limitation",
+      "evidence": "No. For each realized eleven-point subset there is some witness, and that witness may vary with the realized subset. This is a simultaneous guarantee over the class, not a probability estimate for one program fixed independently of the sample. The ordinary-language section makes this distinction explicitly. The reported seeded random-check frequencies supply no contrary probabilistic theorem."
+    },
+    {
+      "id": "M19",
+      "question": "Does ruling out exactly eleven equal-weight points prove a lower bound of twelve on the optimal support size?",
+      "verdict": "limitation",
+      "evidence": "Not by itself. The theorem excludes exactly eleven distinct equally weighted points. Padding a smaller sample to eleven changes all its weights, so a smaller feasible equal-weight sample would not automatically yield an eleven-point one. Separate arguments are required for every smaller size, and twelve-point feasibility is also unproved here. The article expressly limits its self-contained theorem accordingly."
+    },
+    {
+      "id": "M20",
+      "question": "Is the existential witness operationally obtainable, and do the finite checks replace the universal proof?",
+      "verdict": "pass",
+      "evidence": "A concrete constructor can enumerate the fixed 963-family truth tables, evaluate them on S, choose a failing member, and complement if necessary. The proof establishes that such a search succeeds for every eligible S; the explicit pair-first construction then supplies a program. My exhaustive formula checks verify representation and balancing, not all eleven-subsets of the cube. The article accurately reserves universality for the analytic argument rather than claiming its sampled experiments exhaust all supports."
+    }
+  ],
+  "summary": "Exactly 20 structured checks: 12 pass, 8 limitations, 0 fail, 0 unresolved. I found no contradiction in the stated computational model or its use of witnesses. The strongest interpretive risks are upgrading a union-over-orders result to a prescribed-order result, upgrading eleven equal masses to arbitrary eleven-point distributions or repeated samples, treating two layered states as the complete size of an autonomous machine, and mistaking the complement-free 963 family for a guaranteed low-tail family. The article explicitly discloses most of these restrictions. Its headline is broader than the theorem when read without the body. The independent finite execution verified all 963 distinct balanced truth tables, all 1,800 quadratic implementations on the 64-point cube, and the displayed example; it is not an exhaustive enumeration of eleven-point supports or external human review."
+}
